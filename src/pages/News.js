@@ -1,100 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award, Newspaper, Users, ExternalLink, ChevronRight, Mail, Star } from 'lucide-react';
+import { Calendar, Award, Newspaper, Users, ChevronRight, Mail, Star } from 'lucide-react';
 import newsData from '../data/news.json';
 
 const News = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [email, setEmail] = useState('');
   const [newsItems, setNewsItems] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load data from JSON file
     setNewsItems(newsData.news);
-    setLoading(false);
   }, []);
-
-  const sampleNewsItems = [
-    {
-      id: 1,
-      title: 'HCI Lab Receives $2M NSF Grant for Neural Interface Research',
-      excerpt: 'Our lab has been awarded a prestigious NSF grant to advance brain-computer interface technology for assistive applications.',
-      content: 'The National Science Foundation has awarded our Human-Computer Interaction Lab a $2 million grant to develop next-generation neural interface technologies. This funding will support our research into non-invasive brain-computer interfaces that can help individuals with disabilities interact more naturally with digital systems.',
-      category: 'awards',
-      date: '2024-01-15',
-      author: 'Dr. Priya Sharma',
-      image: '/api/placeholder/400/250',
-      featured: true,
-      tags: ['NSF', 'Funding', 'Neural Interfaces', 'Research'],
-      readTime: '3 min read'
-    },
-    {
-      id: 2,
-      title: 'Best Paper Award at CHI 2024 Conference',
-      excerpt: 'Our research on gesture recognition systems wins the prestigious Best Paper Award at the top HCI conference.',
-      content: 'We are thrilled to announce that our paper "GestureFlow: Deep Learning for Natural User Interfaces" has received the Best Paper Award at CHI 2024. This recognition highlights the impact of our work in making human-computer interaction more intuitive and accessible.',
-      category: 'awards',
-      date: '2024-02-20',
-      author: 'Prof. Michael Chen',
-      image: '/api/placeholder/400/250',
-      featured: true,
-      tags: ['CHI', 'Best Paper', 'Gesture Recognition', 'Awards'],
-      readTime: '2 min read'
-    },
-    {
-      id: 3,
-      title: 'New Publication in Nature Human Behaviour',
-      excerpt: 'Our study on eye-tracking in educational interfaces published in top-tier journal.',
-      content: 'Our latest research on using eye-tracking technology to improve educational interfaces has been published in Nature Human Behaviour. The study demonstrates how gaze patterns can be used to personalize learning experiences and improve student outcomes.',
-      category: 'publications',
-      date: '2024-01-08',
-      author: 'Dr. Sarah Johnson',
-      image: '/api/placeholder/400/250',
-      featured: false,
-      tags: ['Nature', 'Eye Tracking', 'Education', 'Publication'],
-      readTime: '4 min read'
-    },
-    {
-      id: 4,
-      title: 'HCI Lab Hosts International Workshop on Accessible Computing',
-      excerpt: 'Leading researchers gather to discuss the future of accessible human-computer interaction.',
-      content: 'Our lab successfully hosted the International Workshop on Accessible Computing, bringing together over 150 researchers, industry professionals, and accessibility advocates. The event featured keynote presentations, panel discussions, and hands-on demonstrations of cutting-edge accessible technologies.',
-      category: 'events',
-      date: '2023-12-10',
-      author: 'Event Organizing Committee',
-      image: '/api/placeholder/400/250',
-      featured: false,
-      tags: ['Workshop', 'Accessibility', 'Community', 'International'],
-      readTime: '3 min read'
-    },
-    {
-      id: 5,
-      title: 'Industry Partnership with Tech Giants',
-      excerpt: 'New collaborations with leading technology companies to advance HCI research.',
-      content: 'We are excited to announce new industry partnerships with several leading technology companies. These collaborations will accelerate the translation of our research into real-world applications and provide valuable internship opportunities for our students.',
-      category: 'news',
-      date: '2023-11-22',
-      author: 'Lab Administration',
-      image: '/api/placeholder/400/250',
-      featured: false,
-      tags: ['Industry', 'Partnership', 'Collaboration', 'Students'],
-      readTime: '2 min read'
-    },
-    {
-      id: 6,
-      title: 'Student Research Competition Winners Announced',
-      excerpt: 'Congratulations to our graduate students for their outstanding research achievements.',
-      content: 'We are proud to announce that three of our graduate students have won major research competitions this year. Their innovative work in neural interfaces, gesture recognition, and haptic feedback continues to push the boundaries of human-computer interaction.',
-      category: 'awards',
-      date: '2023-11-05',
-      author: 'Dr. Priya Sharma',
-      image: '/api/placeholder/400/250',
-      featured: false,
-      tags: ['Students', 'Competition', 'Research', 'Recognition'],
-      readTime: '3 min read'
-    }
-  ];
 
   const filters = [
     { id: 'all', label: 'All News', icon: Newspaper },

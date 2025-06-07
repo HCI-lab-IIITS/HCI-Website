@@ -10,14 +10,12 @@ const Publications = () => {
   const [publications, setPublications] = useState([]);
   const [years, setYears] = useState(['all']);
   const [types, setTypes] = useState(['all']);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load data from JSON file
     setPublications(publicationsData.publications);
     setYears(publicationsData.years);
     setTypes(publicationsData.types);
-    setLoading(false);
   }, []);
 
   const filteredPublications = publications.filter(pub => {

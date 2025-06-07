@@ -6,7 +6,6 @@ import peopleData from '../data/people.json';
 const People = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [people, setPeople] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load data from JSON file
@@ -16,121 +15,7 @@ const People = () => {
       ...peopleData.alumni
     ];
     setPeople(allPeople);
-    setLoading(false);
   }, []);
-
-  const samplePeople = [
-    {
-      id: 1,
-      name: 'Dr. Priya Sharma',
-      role: 'Principal Investigator',
-      category: 'faculty',
-      image: '/api/placeholder/300/400',
-      education: 'PhD in Computer Science, MIT',
-      expertise: ['Brain-Computer Interfaces', 'Neural Signal Processing', 'Machine Learning'],
-      achievements: ['NSF CAREER Award', 'IEEE Fellow', 'Best Paper Award CHI 2023'],
-      bio: 'Dr. Sharma leads cutting-edge research in brain-computer interfaces with over 15 years of experience.',
-      email: 'priya.sharma@iiitsricty.ac.in',
-      linkedin: 'https://linkedin.com/in/priyasharma',
-      website: 'https://priyasharma.research.com',
-      location: 'Sri City, India'
-    },
-    {
-      id: 2,
-      name: 'Prof. Michael Chen',
-      role: 'Co-Principal Investigator',
-      category: 'faculty',
-      image: '/api/placeholder/300/400',
-      education: 'PhD in Cognitive Science, Stanford',
-      expertise: ['Human Factors', 'Usability Engineering', 'Cognitive Modeling'],
-      achievements: ['ACM Distinguished Scientist', 'Google Faculty Award', 'SIGCHI Lifetime Achievement'],
-      bio: 'Prof. Chen specializes in understanding human cognition for better interface design.',
-      email: 'michael.chen@iiitsricty.ac.in',
-      linkedin: 'https://linkedin.com/in/michaelchen',
-      github: 'https://github.com/mchen',
-      location: 'Sri City, India'
-    },
-    {
-      id: 3,
-      name: 'Dr. Sarah Johnson',
-      role: 'Associate Professor',
-      category: 'faculty',
-      image: '/api/placeholder/300/400',
-      education: 'PhD in Electrical Engineering, Carnegie Mellon',
-      expertise: ['Haptic Feedback', 'Virtual Reality', 'Sensory Substitution'],
-      achievements: ['IEEE Early Career Award', 'Best Demo Award UIST 2022'],
-      bio: 'Dr. Johnson explores haptic technologies for immersive virtual experiences.',
-      email: 'sarah.johnson@iiitsricty.ac.in',
-      website: 'https://sarahjohnson.lab.com',
-      location: 'Sri City, India'
-    },
-    {
-      id: 4,
-      name: 'Alex Kumar',
-      role: 'PhD Student',
-      category: 'students',
-      image: '/api/placeholder/300/400',
-      education: 'MS in Computer Science, IIT Delhi',
-      expertise: ['Deep Learning', 'Computer Vision', 'Gesture Recognition'],
-      achievements: ['Google PhD Fellowship', 'Best Student Paper ICMI 2023'],
-      bio: 'Alex is developing next-generation gesture recognition systems using deep learning.',
-      email: 'alex.kumar@research.iiitsricty.ac.in',
-      github: 'https://github.com/alexkumar',
-      linkedin: 'https://linkedin.com/in/alexkumar'
-    },
-    {
-      id: 5,
-      name: 'Emma Rodriguez',
-      role: 'PhD Student',
-      category: 'students',
-      image: '/api/placeholder/300/400',
-      education: 'MS in Biomedical Engineering, Johns Hopkins',
-      expertise: ['Neural Interfaces', 'Signal Processing', 'Rehabilitation Technology'],
-      achievements: ['NIH Graduate Fellowship', 'Outstanding Presentation Award'],
-      bio: 'Emma focuses on neural interfaces for rehabilitation and assistive technologies.',
-      email: 'emma.rodriguez@research.iiitsricty.ac.in',
-      linkedin: 'https://linkedin.com/in/emmarodriguez'
-    },
-    {
-      id: 6,
-      name: 'David Kim',
-      role: 'Research Assistant',
-      category: 'students',
-      image: '/api/placeholder/300/400',
-      education: 'BS in Computer Engineering, IIIT Sri City',
-      expertise: ['Web Development', 'Data Analysis', 'User Studies'],
-      achievements: ['Dean\'s List', 'Hackathon Winner 2023'],
-      bio: 'David assists in user studies and develops tools for research data analysis.',
-      email: 'david.kim@student.iiitsricty.ac.in',
-      github: 'https://github.com/davidkim'
-    },
-    {
-      id: 7,
-      name: 'Dr. Jennifer Lee',
-      role: 'Senior Research Scientist',
-      category: 'alumni',
-      image: '/api/placeholder/300/400',
-      education: 'PhD in HCI, University of Washington',
-      expertise: ['Eye Tracking', 'Attention Modeling', 'Educational Technology'],
-      achievements: ['Microsoft Research Award', 'Best Paper CHI 2021'],
-      bio: 'Now at Google Research, Jennifer continues her work in attention-aware interfaces.',
-      currentPosition: 'Senior Researcher at Google',
-      location: 'Mountain View, CA'
-    },
-    {
-      id: 8,
-      name: 'Robert Taylor',
-      role: 'Former Postdoc',
-      category: 'alumni',
-      image: '/api/placeholder/300/400',
-      education: 'PhD in Robotics, ETH Zurich',
-      expertise: ['Human-Robot Interaction', 'Autonomous Systems', 'Safety'],
-      achievements: ['Best Dissertation Award', 'IEEE RAS Award'],
-      bio: 'Robert now leads HRI research at a major automotive company.',
-      currentPosition: 'Principal Scientist at Tesla',
-      location: 'Austin, TX'
-    }
-  ];
 
   const filters = [
     { id: 'all', label: 'All Members', icon: Users },

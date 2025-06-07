@@ -6,103 +6,11 @@ import projectsData from '../data/projects.json';
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load data from JSON file
     setProjects(projectsData.projects);
-    setLoading(false);
   }, []);
-
-  const sampleProjects = [
-    {
-      id: 1,
-      title: 'NeuroLink Interface',
-      description: 'Advanced brain-computer interface system for real-time neural signal processing and control',
-      fullDescription: 'A comprehensive neural interface platform that enables direct communication between the brain and external devices. Features machine learning algorithms for signal classification and adaptive user interfaces.',
-      status: 'active',
-      progress: 85,
-      startDate: '2023-01-15',
-      expectedCompletion: '2024-12-31',
-      team: ['Dr. Priya Sharma', 'Alex Kumar', 'Emma Rodriguez'],
-      technologies: ['Python', 'TensorFlow', 'Signal Processing', 'React'],
-      funding: 'NSF Grant - $500K',
-      github: 'https://github.com/hcilab/neurolink',
-      demo: 'https://neurolink-demo.hcilab.edu',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'GestureFlow Recognition',
-      description: 'Deep learning-powered gesture recognition system for natural user interfaces',
-      fullDescription: 'An innovative gesture recognition platform using computer vision and deep learning to enable intuitive interaction with digital systems through hand movements and body gestures.',
-      status: 'active',
-      progress: 70,
-      startDate: '2023-06-01',
-      expectedCompletion: '2024-08-15',
-      team: ['Prof. Michael Chen', 'David Kim', 'Sarah Tech'],
-      technologies: ['OpenCV', 'PyTorch', 'MediaPipe', 'JavaScript'],
-      funding: 'Industry Partnership - $300K',
-      github: 'https://github.com/hcilab/gestureflow',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'EyeGuide Tracking System',
-      description: 'High-precision eye tracking for attention analysis and gaze-based interaction',
-      fullDescription: 'A sophisticated eye tracking system designed for educational applications, providing real-time gaze analysis to improve learning interfaces and attention modeling.',
-      status: 'completed',
-      progress: 100,
-      startDate: '2022-03-01',
-      expectedCompletion: '2023-11-30',
-      team: ['Dr. Sarah Johnson', 'Jennifer Lee', 'Mark Wilson'],
-      technologies: ['C++', 'OpenGL', 'Computer Vision', 'Qt'],
-      funding: 'Internal Funding - $150K',
-      publications: ['Best Paper CHI 2023', 'IEEE VR Conference 2023'],
-      github: 'https://github.com/hcilab/eyeguide'
-    },
-    {
-      id: 4,
-      title: 'HaptiCare Rehabilitation',
-      description: 'Haptic feedback system for virtual rehabilitation and physical therapy',
-      fullDescription: 'A virtual reality rehabilitation platform incorporating advanced haptic feedback to assist patients in physical therapy and motor skill recovery programs.',
-      status: 'completed',
-      progress: 100,
-      startDate: '2022-01-01',
-      expectedCompletion: '2023-06-30',
-      team: ['Dr. Sarah Johnson', 'Emma Rodriguez', 'Clinical Partners'],
-      technologies: ['Unity', 'Haptic SDK', 'VR', 'Medical Devices'],
-      funding: 'NIH Grant - $750K',
-      publications: ['Nature Medicine 2023'],
-      demo: 'https://hapticare-demo.hcilab.edu'
-    },
-    {
-      id: 5,
-      title: 'AI-Assisted Interface Design',
-      description: 'Machine learning tools for automated accessible interface generation',
-      fullDescription: 'An AI-powered platform that automatically generates accessible user interfaces based on user needs and preferences, making technology more inclusive for users with disabilities.',
-      status: 'planning',
-      progress: 15,
-      startDate: '2024-02-01',
-      expectedCompletion: '2025-12-31',
-      team: ['Prof. Michael Chen', 'New PhD Student', 'Accessibility Consultants'],
-      technologies: ['Machine Learning', 'NLP', 'Accessibility APIs', 'React'],
-      funding: 'Pending - Google Research Grant'
-    },
-    {
-      id: 6,
-      title: 'Smart Environment Control',
-      description: 'Multi-modal interaction system for IoT and smart home environments',
-      fullDescription: 'A comprehensive smart environment control system combining voice, gesture, and gaze input for seamless interaction with IoT devices and smart home systems.',
-      status: 'active',
-      progress: 45,
-      startDate: '2023-09-01',
-      expectedCompletion: '2024-10-31',
-      team: ['Dr. Alex Chen', 'David Kim', 'IoT Partners'],
-      technologies: ['IoT', 'Voice Processing', 'Computer Vision', 'Node.js'],
-      funding: 'Industry Partnership - $400K'
-    }
-  ];
 
   const filters = [
     { id: 'all', label: 'All Projects', icon: Cpu },

@@ -8,16 +8,12 @@ const Home = () => {
   const [heroData, setHeroData] = useState({});
   const [stats, setStats] = useState([]);
   const [researchAreas, setResearchAreas] = useState([]);
-  const [callToAction, setCallToAction] = useState({});
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Load data from JSON file
     setHeroData(homeData.hero);
     setStats(homeData.statistics);
     setResearchAreas(homeData.researchAreas);
-    setCallToAction(homeData.callToAction);
-    setLoading(false);
   }, []);
 
   const floatingElements = [
@@ -49,39 +45,76 @@ const Home = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.1, scale: 1 }}
           transition={{ delay: element.delay, duration: 1 }}
-          className={`absolute ${element.position} hidden lg:block`}
+          style={{
+            position: 'absolute',
+            top: element.position.includes('top-20') ? '5rem' : 'auto',
+            bottom: element.position.includes('bottom-20') ? '5rem' : element.position.includes('bottom-40') ? '10rem' : 'auto',
+            left: element.position.includes('left-10') ? '2.5rem' : element.position.includes('left-20') ? '5rem' : 'auto',
+            right: element.position.includes('right-10') ? '2.5rem' : element.position.includes('right-20') ? '5rem' : 'auto',
+            display: window.innerWidth >= 1024 ? 'block' : 'none'
+          }}
         >
           <motion.div
             animate={{ y: [-20, 20, -20] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <element.icon className="h-32 w-32 text-primary-300" />
+            <element.icon size={128} style={{ color: 'rgba(2, 132, 199, 0.3)' }} />
           </motion.div>
         </motion.div>
       ))}
 
       {/* Hero Section */}
-      <section className="hero">
+      <section style={{
+        padding: '8rem 2rem 4rem',
+        textAlign: 'center',
+        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+        minHeight: '80vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="animate-fade-in"
+          style={{ maxWidth: '1000px', width: '100%' }}
         >
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
+            style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: 700,
+              marginBottom: '2rem',
+              lineHeight: 1.2
+            }}
           >
-            <span className="gradient-text">{heroData.title?.split(' ').slice(0, -2).join(' ')}</span>
+            <span style={{
+              background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}>
+              {heroData.title?.split(' ').slice(0, -2).join(' ')}
+            </span>
             <br />
-            <span>{heroData.title?.split(' ').slice(-2).join(' ')}</span>
+            <span style={{ color: '#0f172a' }}>
+              {heroData.title?.split(' ').slice(-2).join(' ')}
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
+            style={{
+              fontSize: '1.25rem',
+              color: '#64748b',
+              maxWidth: '800px',
+              margin: '0 auto 3rem',
+              lineHeight: 1.6
+            }}
           >
             {heroData.description}
           </motion.p>
@@ -90,22 +123,52 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="hero-buttons"
+            style={{
+              display: 'flex',
+              gap: '1.5rem',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}
           >
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary"
+              style={{
+                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                color: 'white',
+                padding: '1rem 2rem',
+                borderRadius: '2rem',
+                border: 'none',
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                boxShadow: '0 10px 25px rgba(2, 132, 199, 0.3)',
+                transition: 'all 0.3s ease'
+              }}
             >
               <span>Explore Research</span>
               <ArrowRight size={20} />
             </motion.button>
 
-            <Link to="/people">
+            <Link to="/people" style={{ textDecoration: 'none' }}>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-secondary"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  color: '#0284c7',
+                  padding: '1rem 2rem',
+                  borderRadius: '2rem',
+                  border: '2px solid #0284c7',
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  backdropFilter: 'blur(10px)',
+                  transition: 'all 0.3s ease'
+                }}
               >
                 Meet Our Team
               </motion.button>
@@ -115,7 +178,15 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="stats animate-fade-in animate-delay-1">
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'white',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gap: '2rem',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
         {stats.map((stat, index) => {
           const IconComponent = iconMap[stat.label] || Brain;
           return (
@@ -125,7 +196,16 @@ const Home = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="stat-card"
+              style={{
+                background: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '1.5rem',
+                padding: '2rem',
+                textAlign: 'center',
+                border: '1px solid rgba(59, 130, 246, 0.1)',
+                backdropFilter: 'blur(10px)',
+                transition: 'all 0.3s ease'
+              }}
+              whileHover={{ y: -10 }}
             >
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -144,29 +224,75 @@ const Home = () => {
               >
                 <IconComponent size={32} color="white" />
               </motion.div>
-              <div className="stat-number">{stat.number}{stat.suffix}</div>
-              <div className="stat-label">{stat.label}</div>
+              <div style={{
+                fontSize: '2.5rem',
+                fontWeight: 700,
+                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent',
+                marginBottom: '0.5rem'
+              }}>
+                {stat.number}{stat.suffix}
+              </div>
+              <div style={{
+                color: '#64748b',
+                fontSize: '1rem',
+                fontWeight: 500
+              }}>
+                {stat.label}
+              </div>
             </motion.div>
           );
         })}
       </section>
 
       {/* Research Areas */}
-      <section className="research-areas">
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)'
+      }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          style={{ textAlign: 'center', marginBottom: '4rem' }}
+          style={{ 
+            textAlign: 'center', 
+            marginBottom: '4rem',
+            maxWidth: '1200px',
+            margin: '0 auto 4rem'
+          }}
         >
-          <h2>Research Areas</h2>
-          <p>
+          <h2 style={{
+            fontSize: '2.5rem',
+            fontWeight: 700,
+            marginBottom: '1.5rem',
+            background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            color: 'transparent'
+          }}>
+            Research Areas
+          </h2>
+          <p style={{
+            fontSize: '1.25rem',
+            color: '#64748b',
+            maxWidth: '600px',
+            margin: '0 auto',
+            lineHeight: 1.6
+          }}>
             Our interdisciplinary research spans multiple domains of human-computer interaction
           </p>
         </motion.div>
 
-        <div className="research-grid">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          maxWidth: '1200px',
+          margin: '0 auto'
+        }}>
           {researchAreas.map((area, index) => {
             const IconComponent = iconMap[area.title] || Brain;
             return (
@@ -177,13 +303,48 @@ const Home = () => {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
-                className="research-card"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  borderRadius: '1.5rem',
+                  padding: '2rem',
+                  textAlign: 'center',
+                  border: '1px solid rgba(59, 130, 246, 0.1)',
+                  backdropFilter: 'blur(10px)',
+                  transition: 'all 0.3s ease',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}
               >
-                <div className="research-icon">
-                  <IconComponent size={28} color="white" />
+                <div style={{
+                  width: '80px',
+                  height: '80px',
+                  background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                  borderRadius: '1.5rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '1.5rem',
+                  boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)'
+                }}>
+                  <IconComponent size={40} color="white" />
                 </div>
-                <h3>{area.title}</h3>
-                <p>{area.description}</p>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  color: '#0f172a',
+                  marginBottom: '1rem'
+                }}>
+                  {area.title}
+                </h3>
+                <p style={{
+                  color: '#64748b',
+                  lineHeight: 1.6,
+                  fontSize: '1rem'
+                }}>
+                  {area.description}
+                </p>
               </motion.div>
             );
           })}
