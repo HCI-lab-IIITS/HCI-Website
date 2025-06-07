@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Human-Computer Interaction Lab",
+    "subtitle": "IIIT Sri City",
+    "description": "Pioneering research in human-computer interaction, developing innovative technologies that enhance the way humans interact with digital systems.",
+    "cta": {
+      "text": "Explore Our Research",
+      "link": "/projects"
+    }
+  },
+  "statistics": [
+    {
+      "number": 50,
+      "suffix": "+",
+      "label": "Research Papers"
+    },
+    {
+      "number": 25,
+      "suffix": "+",
+      "label": "Team Members"
+    },
+    {
+      "number": 15,
+      "suffix": "+",
+      "label": "Active Projects"
+    },
+    {
+      "number": 100,
+      "suffix": "+",
+      "label": "Citations"
+    }
+  ],
+  "researchAreas": [
+    {
+      "id": 1,
+      "title": "Neural Interfaces",
+      "description": "Advanced brain-computer interfaces for medical and assistive applications",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
+      "link": "/projects"
+    },
+    {
+      "id": 2,
+      "title": "Gesture Recognition",
+      "description": "Computer vision and machine learning for natural human-computer interaction",
+      "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop",
+      "link": "/projects"
+    },
+    {
+      "id": 3,
+      "title": "Eye Tracking",
+      "description": "Gaze-based interfaces and attention analysis for improved user experience",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+      "link": "/projects"
+    },
+    {
+      "id": 4,
+      "title": "Haptic Technology",
+      "description": "Touch-based feedback systems for virtual and augmented reality applications",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop",
+      "link": "/projects"
+    },
+    {
+      "id": 5,
+      "title": "Accessibility",
+      "description": "Assistive technologies for users with disabilities and special needs",
+      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
+      "link": "/projects"
+    },
+    {
+      "id": 6,
+      "title": "Mixed Reality",
+      "description": "Immersive technologies combining virtual and physical environments",
+      "image": "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=400&h=250&fit=crop",
+      "link": "/projects"
+    }
+  ],
+  "callToAction": {
+    "title": "Join Our Research Community",
+    "description": "Discover opportunities to collaborate with our world-class researchers and contribute to cutting-edge HCI innovations.",
+    "primaryButton": {
+      "text": "View Opportunities",
+      "link": "/people"
+    },
+    "secondaryButton": {
+      "text": "Contact Us",
+      "link": "/contact"
+    }
+  }
+} 

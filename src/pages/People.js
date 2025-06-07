@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Users, GraduationCap, Award, Mail, Linkedin, Github, Globe, MapPin } from 'lucide-react';
+import peopleData from '../data/people.json';
 
 const People = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const people = [
+  useEffect(() => {
+    // Load data from JSON file
+    const allPeople = [
+      ...peopleData.faculty,
+      ...peopleData.students,
+      ...peopleData.alumni
+    ];
+    setPeople(allPeople);
+    setLoading(false);
+  }, []);
+
+  const samplePeople = [
     {
       id: 1,
       name: 'Dr. Priya Sharma',
@@ -125,9 +139,22 @@ const People = () => {
     { id: 'alumni', label: 'Alumni', icon: Award },
   ];
 
-  const filteredPeople = people.filter(person => 
-    activeFilter === 'all' || person.category === activeFilter
-  );
+  const filteredPeople = people.filter(person => {
+    if (activeFilter === 'all') return true;
+    
+    // Determine category from original data structure
+    if (activeFilter === 'faculty') {
+      return peopleData.faculty.some(f => f.id === person.id);
+    }
+    if (activeFilter === 'students') {
+      return peopleData.students.some(s => s.id === person.id);
+    }
+    if (activeFilter === 'alumni') {
+      return peopleData.alumni.some(a => a.id === person.id);
+    }
+    
+    return false;
+  });
 
   const PersonCard = ({ person, index }) => (
     <motion.div

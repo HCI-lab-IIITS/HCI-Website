@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Zap, CheckCircle, Clock, PlayCircle, Github, ExternalLink, Users, Calendar } from 'lucide-react';
+import projectsData from '../data/projects.json';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const projects = [
+  useEffect(() => {
+    // Load data from JSON file
+    setProjects(projectsData.projects);
+    setLoading(false);
+  }, []);
+
+  const sampleProjects = [
     {
       id: 1,
       title: 'NeuroLink Interface',

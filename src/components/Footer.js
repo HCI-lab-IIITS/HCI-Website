@@ -43,10 +43,25 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-neural-900 text-white relative overflow-hidden">
+    <footer style={{
+      background: '#0f172a',
+      color: 'white',
+      position: 'relative',
+      overflow: 'hidden',
+      marginTop: '4rem'
+    }}>
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="grid grid-cols-12 gap-4 h-full">
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        opacity: 0.05
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(12, 1fr)',
+          gap: '1rem',
+          height: '100%'
+        }}>
           {Array.from({ length: 60 }).map((_, i) => (
             <motion.div
               key={i}
@@ -58,46 +73,92 @@ const Footer = () => {
                 repeat: Infinity,
                 repeatDelay: 5
               }}
-              className="bg-primary-400 rounded-full w-2 h-2"
+              style={{
+                background: '#0284c7',
+                borderRadius: '50%',
+                width: '8px',
+                height: '8px'
+              }}
             />
           ))}
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div style={{
+        position: 'relative',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '4rem 2rem'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '2rem'
+        }}>
           {/* Lab Info */}
-          <div className="lg:col-span-1">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="mb-8"
+              style={{ marginBottom: '2rem' }}
             >
-              <Link to="/" className="flex items-center space-x-3 mb-6">
+              <Link to="/" style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                marginBottom: '1.5rem',
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.5 }}
-                  className="relative"
+                  style={{ position: 'relative' }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full animate-pulse opacity-20"></div>
-                  <Brain className="h-10 w-10 text-primary-400 relative z-10" />
+                  <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                    borderRadius: '50%',
+                    opacity: 0.2,
+                    animation: 'pulse 2s infinite'
+                  }}></div>
+                  <Brain size={40} style={{ color: '#0284c7', position: 'relative', zIndex: 10 }} />
                 </motion.div>
-                <div className="flex flex-col">
-                  <span className="text-xl font-bold gradient-text">HCI Lab</span>
-                  <span className="text-sm text-neural-400">IIIT Sri City</span>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{
+                    fontSize: '1.25rem',
+                    fontWeight: 700,
+                    background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    color: 'transparent'
+                  }}>
+                    HCI Lab
+                  </span>
+                  <span style={{
+                    fontSize: '0.875rem',
+                    color: '#94a3b8'
+                  }}>
+                    IIIT Sri City
+                  </span>
                 </div>
               </Link>
               
-              <p className="text-neural-300 leading-relaxed mb-6">
+              <p style={{
+                color: '#cbd5e1',
+                lineHeight: 1.6,
+                marginBottom: '1.5rem'
+              }}>
                 Pioneering research in human-computer interaction, developing innovative technologies 
                 that enhance the way humans interact with digital systems.
               </p>
 
               {/* Social Links */}
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
+              <div style={{ display: 'flex', gap: '1rem' }}>
+                {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.url}
@@ -105,9 +166,23 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-neural-800 rounded-xl hover:bg-primary-600 transition-all duration-300 group"
+                    style={{
+                      padding: '0.75rem',
+                      background: '#1e293b',
+                      borderRadius: '0.75rem',
+                      transition: 'all 0.3s ease',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = '#0284c7';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = '#1e293b';
+                    }}
                   >
-                    <social.icon className="h-5 w-5 text-neural-400 group-hover:text-white transition-colors duration-300" />
+                    <social.icon size={20} style={{ color: '#94a3b8' }} />
                   </motion.a>
                 ))}
               </div>
@@ -115,15 +190,32 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-6 gradient-text">Quick Links</h3>
-              <ul className="space-y-3">
+              <h3 style={{
+                fontSize: '1.125rem',
+                fontWeight: 600,
+                marginBottom: '1.5rem',
+                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
+                Quick Links
+              </h3>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem'
+              }}>
                 {quickLinks.map((link, index) => (
                   <motion.li
                     key={link.name}
@@ -134,9 +226,29 @@ const Footer = () => {
                   >
                     <Link
                       to={link.path}
-                      className="text-neural-300 hover:text-primary-400 transition-colors duration-200 flex items-center space-x-2 group"
+                      style={{
+                        color: '#cbd5e1',
+                        textDecoration: 'none',
+                        transition: 'color 0.3s ease',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.color = '#0284c7';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.color = '#cbd5e1';
+                      }}
                     >
-                      <span className="w-1 h-1 bg-primary-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                      <span style={{
+                        width: '4px',
+                        height: '4px',
+                        background: '#0284c7',
+                        borderRadius: '50%',
+                        opacity: 0,
+                        transition: 'opacity 0.3s ease'
+                      }}></span>
                       <span>{link.name}</span>
                     </Link>
                   </motion.li>
@@ -146,15 +258,32 @@ const Footer = () => {
           </div>
 
           {/* Research Areas */}
-          <div className="lg:col-span-1">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-6 gradient-text">Research Areas</h3>
-              <ul className="space-y-3">
+              <h3 style={{
+                fontSize: '1.125rem',
+                fontWeight: 600,
+                marginBottom: '1.5rem',
+                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
+                Research Areas
+              </h3>
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem'
+              }}>
                 {researchAreas.map((area, index) => (
                   <motion.li
                     key={area}
@@ -162,9 +291,20 @@ const Footer = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                     viewport={{ once: true }}
-                    className="text-neural-300 text-sm flex items-center space-x-2"
+                    style={{
+                      color: '#cbd5e1',
+                      fontSize: '0.875rem',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}
                   >
-                    <div className="w-1 h-1 bg-accent-400 rounded-full"></div>
+                    <div style={{
+                      width: '4px',
+                      height: '4px',
+                      background: '#c026d3',
+                      borderRadius: '50%'
+                    }}></div>
                     <span>{area}</span>
                   </motion.li>
                 ))}
@@ -173,15 +313,29 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="lg:col-span-1">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-lg font-semibold mb-6 gradient-text">Contact Us</h3>
-              <div className="space-y-4">
+              <h3 style={{
+                fontSize: '1.125rem',
+                fontWeight: 600,
+                marginBottom: '1.5rem',
+                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>
+                Contact Us
+              </h3>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '1rem'
+              }}>
                 {contactInfo.map((contact, index) => (
                   <motion.div
                     key={index}
@@ -189,12 +343,24 @@ const Footer = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                     viewport={{ once: true }}
-                    className="flex items-start space-x-3"
+                    style={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem'
+                    }}
                   >
-                    <div className="p-2 bg-neural-800 rounded-lg">
-                      <contact.icon className="h-4 w-4 text-primary-400" />
+                    <div style={{
+                      padding: '0.5rem',
+                      background: '#1e293b',
+                      borderRadius: '0.5rem'
+                    }}>
+                      <contact.icon size={16} style={{ color: '#0284c7' }} />
                     </div>
-                    <span className="text-neural-300 text-sm leading-relaxed">
+                    <span style={{
+                      color: '#cbd5e1',
+                      fontSize: '0.875rem',
+                      lineHeight: 1.6
+                    }}>
                       {contact.text}
                     </span>
                   </motion.div>
@@ -208,10 +374,29 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 mt-6 bg-gradient-to-r from-primary-600 to-accent-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:shadow-lg transition-all duration-300"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  marginTop: '1.5rem',
+                  padding: '0.75rem 1rem',
+                  background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                  borderRadius: '0.75rem',
+                  textDecoration: 'none',
+                  color: 'white',
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  transition: 'all 0.3s ease',
+                  hover: {
+                    shadow: '0 0 20px rgba(2, 132, 199, 0.5)'
+                  },
+                  tap: {
+                    scale: 0.95
+                  }
+                }}
               >
                 <span>Visit Us</span>
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink size={16} />
               </motion.a>
             </motion.div>
           </div>
@@ -223,24 +408,32 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
-          className="border-t border-neural-800 mt-12 pt-8 text-center"
+          style={{
+            borderTop: '1px solid #334155',
+            marginTop: '3rem',
+            paddingTop: '2rem',
+            textAlign: 'center'
+          }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-neural-400 text-sm">
-              © 2024 Human-Computer Interaction Lab, IIIT Sri City. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6 text-sm">
-              <button className="text-neural-400 hover:text-primary-400 transition-colors duration-200">
-                Privacy Policy
-              </button>
-              <button className="text-neural-400 hover:text-primary-400 transition-colors duration-200">
-                Terms of Use
-              </button>
-              <button className="text-neural-400 hover:text-primary-400 transition-colors duration-200">
-                Accessibility
-              </button>
-            </div>
-          </div>
+          <p style={{
+            color: '#64748b',
+            fontSize: '0.875rem'
+          }}>
+            © 2024 HCI Lab, IIIT Sri City. All rights reserved. 
+            <span style={{ margin: '0 0.5rem' }}>|</span>
+            <button 
+              style={{
+                background: 'none',
+                border: 'none',
+                color: '#0284c7',
+                cursor: 'pointer',
+                fontSize: 'inherit'
+              }}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              Back to Top
+            </button>
+          </p>
         </motion.div>
       </div>
     </footer>

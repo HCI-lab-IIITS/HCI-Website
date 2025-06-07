@@ -1,0 +1,82 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "HCI Lab Receives $2.5M NSF Grant for Neural Interface Research",
+      "excerpt": "The lab has been awarded a significant grant to advance brain-computer interface technology for paralyzed patients.",
+      "content": "The Human-Computer Interaction Lab at IIIT Sri City has been awarded a prestigious $2.5 million grant from the National Science Foundation to develop next-generation brain-computer interfaces. This funding will support the NeuroLink project, which aims to create more efficient and accessible neural interfaces for paralyzed patients. The research, led by Dr. Sarah Chen, will focus on improving signal processing algorithms and developing more comfortable, long-lasting neural implants.",
+      "category": "awards",
+      "date": "2024-01-15",
+      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
+      "author": "Dr. Sarah Chen",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Best Paper Award at CHI 2024 Conference",
+      "excerpt": "Dr. Emily Rodriguez wins prestigious award for groundbreaking research in eye-tracking technology.",
+      "content": "Dr. Emily Rodriguez from the HCI Lab has received the Best Paper Award at the CHI 2024 Conference for her research on 'Eye-Tracking Based Attention Analysis in Virtual Reality Environments.' The paper presents novel methodologies for understanding user attention patterns in VR applications, which has significant implications for VR interface design and user experience optimization. This recognition highlights the lab's commitment to cutting-edge research in human-computer interaction.",
+      "category": "awards",
+      "date": "2024-03-10",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
+      "author": "Conference Committee",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "New Research Publication in Nature Neuroscience",
+      "excerpt": "Breakthrough research in neural interface design published in top-tier journal.",
+      "content": "The HCI Lab's latest research on 'Neural Interface Design for Enhanced Brain-Computer Communication' has been published in Nature Neuroscience. The study, conducted by Dr. Sarah Chen and her team, demonstrates a 40% improvement in brain-computer communication efficiency through innovative interface design. This research represents a significant step forward in making brain-computer interfaces more practical and accessible for clinical applications.",
+      "category": "publications",
+      "date": "2024-02-20",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+      "author": "Dr. Sarah Chen",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "International Workshop on Gesture Recognition",
+      "excerpt": "HCI Lab to host international workshop bringing together leading researchers in gesture recognition.",
+      "content": "The HCI Lab will host an International Workshop on Gesture Recognition Technologies on March 15-16, 2024. The workshop will bring together leading researchers from around the world to discuss the latest advances in gesture recognition, computer vision, and human-computer interaction. Prof. Michael Johnson will serve as the workshop chair, and presentations will cover topics ranging from deep learning approaches to real-world applications in healthcare and accessibility.",
+      "category": "events",
+      "date": "2024-03-15",
+      "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop",
+      "author": "Prof. Michael Johnson",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Student Research Excellence Award",
+      "excerpt": "Ph.D. student Alex Kumar receives prestigious award for outstanding research contributions.",
+      "content": "Alex Kumar, a Ph.D. student in the HCI Lab, has been awarded the Student Research Excellence Award by the ACM SIGCHI organization. The award recognizes Alex's outstanding contributions to deep learning applications in computer vision and robotics. Alex's research on improving gesture recognition accuracy through advanced neural network architectures has been published in multiple top-tier conferences and has practical applications in assistive technology.",
+      "category": "awards",
+      "date": "2024-01-30",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
+      "author": "ACM SIGCHI",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Partnership with Meta Reality Labs",
+      "excerpt": "HCI Lab announces strategic partnership with Meta Reality Labs for VR research collaboration.",
+      "content": "The HCI Lab has announced a strategic partnership with Meta Reality Labs to advance research in virtual and augmented reality technologies. The collaboration will focus on developing more intuitive and accessible VR interfaces, with particular emphasis on haptic feedback and gesture recognition. This partnership provides access to cutting-edge VR hardware and creates opportunities for student internships and collaborative research projects.",
+      "category": "events",
+      "date": "2024-02-05",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop",
+      "author": "HCI Lab",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Accessibility Technology Showcase",
+      "excerpt": "Annual showcase demonstrates latest assistive technologies developed by the lab.",
+      "content": "The HCI Lab's Annual Accessibility Technology Showcase will take place on April 10, 2024, featuring demonstrations of the latest assistive technologies developed by our research teams. The event will showcase the EyeGuide navigation system, advanced gesture recognition interfaces, and innovative haptic feedback devices. The showcase is open to the public and aims to demonstrate how cutting-edge research can improve quality of life for individuals with disabilities.",
+      "category": "events",
+      "date": "2024-04-10",
+      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
+      "author": "HCI Lab",
+      "featured": false
+    }
+  ],
+  "categories": ["all", "awards", "publications", "events"]
+} 

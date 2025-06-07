@@ -1,79 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Calendar, Users, Award, ExternalLink, BookOpen, Star } from 'lucide-react';
+import publicationsData from '../data/publications.json';
 
 const Publications = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedYear, setSelectedYear] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
+  const [publications, setPublications] = useState([]);
+  const [years, setYears] = useState(['all']);
+  const [types, setTypes] = useState(['all']);
+  const [loading, setLoading] = useState(true);
 
-  const publications = [
-    {
-      id: 1,
-      title: 'Neural Interface Design for Enhanced Brain-Computer Communication',
-      authors: ['Dr. Sarah Chen', 'Prof. Michael Johnson', 'Dr. Alex Kumar'],
-      journal: 'Nature Neuroscience',
-      year: 2024,
-      type: 'Journal',
-      citations: 45,
-      doi: '10.1038/nn.2024.123',
-      abstract: 'This study presents a novel neural interface design that significantly improves brain-computer communication efficiency by 40%.',
-      award: 'Best Paper Award',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Gesture Recognition Using Deep Learning for Assistive Technologies',
-      authors: ['Dr. Emily Rodriguez', 'Prof. David Kim', 'Lisa Wang'],
-      journal: 'ACM CHI Conference',
-      year: 2024,
-      type: 'Conference',
-      citations: 32,
-      doi: '10.1145/chi.2024.456',
-      abstract: 'A comprehensive study on implementing deep learning algorithms for gesture recognition in assistive technology applications.',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'Eye-Tracking Based Attention Analysis in Virtual Reality Environments',
-      authors: ['Prof. James Wilson', 'Dr. Maria Garcia', 'Tom Anderson'],
-      journal: 'IEEE VR Conference',
-      year: 2023,
-      type: 'Conference',
-      citations: 28,
-      doi: '10.1109/vr.2023.789',
-      abstract: 'Investigation of attention patterns in VR environments using advanced eye-tracking methodologies.',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Haptic Feedback Systems for Enhanced User Experience',
-      authors: ['Dr. Rachel Brown', 'Prof. Kevin Lee', 'Mark Thompson'],
-      journal: 'International Journal of HCI',
-      year: 2023,
-      type: 'Journal',
-      citations: 41,
-      doi: '10.1016/ijhci.2023.012',
-      abstract: 'Development and evaluation of advanced haptic feedback systems for improved user interaction.',
-      award: 'Outstanding Research Award',
-      featured: true
-    },
-    {
-      id: 5,
-      title: 'Machine Learning Approaches for Predictive User Modeling',
-      authors: ['Dr. Andrew Davis', 'Prof. Jennifer Taylor', 'Chris Martinez'],
-      journal: 'AI & Society',
-      year: 2022,
-      type: 'Journal',
-      citations: 36,
-      doi: '10.1007/ai-soc.2022.345',
-      abstract: 'Novel machine learning approaches for creating accurate predictive models of user behavior.',
-      featured: false
-    }
-  ];
-
-  const years = ['all', ...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
-  const types = ['all', ...new Set(publications.map(pub => pub.type))];
+  useEffect(() => {
+    // Load data from JSON file
+    setPublications(publicationsData.publications);
+    setYears(publicationsData.years);
+    setTypes(publicationsData.types);
+    setLoading(false);
+  }, []);
 
   const filteredPublications = publications.filter(pub => {
     const matchesSearch = pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||

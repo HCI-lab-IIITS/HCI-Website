@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Users, BookOpen, Lightbulb, ArrowRight, Cpu, Eye, Hand } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import homeData from '../data/home.json';
 
 const Home = () => {
+  const [heroData, setHeroData] = useState({});
+  const [stats, setStats] = useState([]);
+  const [researchAreas, setResearchAreas] = useState([]);
+  const [callToAction, setCallToAction] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Load data from JSON file
+    setHeroData(homeData.hero);
+    setStats(homeData.statistics);
+    setResearchAreas(homeData.researchAreas);
+    setCallToAction(homeData.callToAction);
+    setLoading(false);
+  }, []);
+
   const floatingElements = [
     { icon: Brain, delay: 0, position: 'top-20 left-10' },
     { icon: Eye, delay: 0.5, position: 'top-40 right-20' },
@@ -11,35 +27,18 @@ const Home = () => {
     { icon: Cpu, delay: 1.5, position: 'bottom-20 right-10' },
   ];
 
-  const stats = [
-    { number: '50+', label: 'Research Papers', icon: BookOpen },
-    { number: '25+', label: 'Team Members', icon: Users },
-    { number: '15+', label: 'Active Projects', icon: Lightbulb },
-    { number: '100+', label: 'Citations', icon: Brain },
-  ];
-
-  const researchAreas = [
-    {
-      title: 'Neural Interfaces',
-      description: 'Brain-computer interfaces and neural signal processing',
-      icon: Brain,
-    },
-    {
-      title: 'Gesture Recognition',
-      description: 'Hand tracking and gesture-based interaction systems',
-      icon: Hand,
-    },
-    {
-      title: 'Eye Tracking',
-      description: 'Gaze-based interfaces and attention modeling',
-      icon: Eye,
-    },
-    {
-      title: 'AI-Human Collaboration',
-      description: 'Intelligent systems that augment human capabilities',
-      icon: Cpu,
-    },
-  ];
+  const iconMap = {
+    'Research Papers': BookOpen,
+    'Team Members': Users,
+    'Active Projects': Lightbulb,
+    'Citations': Brain,
+    'Neural Interfaces': Brain,
+    'Gesture Recognition': Hand,
+    'Eye Tracking': Eye,
+    'Haptic Technology': Hand,
+    'Accessibility': Users,
+    'Mixed Reality': Cpu
+  };
 
   return (
     <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -74,9 +73,9 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="gradient-text">Human-Computer</span>
+            <span className="gradient-text">{heroData.title?.split(' ').slice(0, -2).join(' ')}</span>
             <br />
-            <span>Interaction Lab</span>
+            <span>{heroData.title?.split(' ').slice(-2).join(' ')}</span>
           </motion.h1>
 
           <motion.p
@@ -84,10 +83,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Pioneering the future of human-computer interaction through 
-            <span className="gradient-text" style={{ fontWeight: 600 }}> innovative research</span>, 
-            cutting-edge technology, and 
-            <span className="gradient-text" style={{ fontWeight: 600 }}> collaborative innovation</span>
+            {heroData.description}
           </motion.p>
 
           <motion.div
@@ -120,36 +116,39 @@ const Home = () => {
 
       {/* Stats Section */}
       <section className="stats animate-fade-in animate-delay-1">
-        {stats.map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-            viewport={{ once: true }}
-            className="stat-card"
-          >
+        {stats.map((stat, index) => {
+          const IconComponent = iconMap[stat.label] || Brain;
+          return (
             <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '4rem',
-                height: '4rem',
-                background: 'linear-gradient(135deg, #0284c7, #c026d3)',
-                borderRadius: '1rem',
-                marginBottom: '1rem',
-                boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)',
-                transition: 'all 0.3s ease'
-              }}
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              className="stat-card"
             >
-              <stat.icon size={32} color="white" />
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '4rem',
+                  height: '4rem',
+                  background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                  borderRadius: '1rem',
+                  marginBottom: '1rem',
+                  boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <IconComponent size={32} color="white" />
+              </motion.div>
+              <div className="stat-number">{stat.number}{stat.suffix}</div>
+              <div className="stat-label">{stat.label}</div>
             </motion.div>
-            <div className="stat-number">{stat.number}</div>
-            <div className="stat-label">{stat.label}</div>
-          </motion.div>
-        ))}
+          );
+        })}
       </section>
 
       {/* Research Areas */}
@@ -168,23 +167,26 @@ const Home = () => {
         </motion.div>
 
         <div className="research-grid">
-          {researchAreas.map((area, index) => (
-            <motion.div
-              key={area.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="research-card"
-            >
-              <div className="research-icon">
-                <area.icon size={28} color="white" />
-              </div>
-              <h3>{area.title}</h3>
-              <p>{area.description}</p>
-            </motion.div>
-          ))}
+          {researchAreas.map((area, index) => {
+            const IconComponent = iconMap[area.title] || Brain;
+            return (
+              <motion.div
+                key={area.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+                className="research-card"
+              >
+                <div className="research-icon">
+                  <IconComponent size={28} color="white" />
+                </div>
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 

@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Award, Newspaper, Users, ExternalLink, ChevronRight, Mail, Star } from 'lucide-react';
+import newsData from '../data/news.json';
 
 const News = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [email, setEmail] = useState('');
+  const [newsItems, setNewsItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const newsItems = [
+  useEffect(() => {
+    // Load data from JSON file
+    setNewsItems(newsData.news);
+    setLoading(false);
+  }, []);
+
+  const sampleNewsItems = [
     {
       id: 1,
       title: 'HCI Lab Receives $2M NSF Grant for Neural Interface Research',
