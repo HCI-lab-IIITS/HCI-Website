@@ -9,7 +9,9 @@
       "date": "2024-01-15",
       "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
       "author": "Dr. Sarah Chen",
-      "featured": true
+      "featured": true,
+      "tags": ["neural", "nsf", "funding", "research"],
+      "readTime": "3 min read"
     },
     {
       "id": 2,
@@ -20,7 +22,9 @@
       "date": "2024-03-10",
       "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
       "author": "Conference Committee",
-      "featured": true
+      "featured": true,
+      "tags": ["chi", "award", "vr", "eye-tracking"],
+      "readTime": "4 min read"
     },
     {
       "id": 3,
@@ -31,7 +35,9 @@
       "date": "2024-02-20",
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
       "author": "Dr. Sarah Chen",
-      "featured": false
+      "featured": false,
+      "tags": ["nature", "publication", "neural", "bci"],
+      "readTime": "6 min read"
     },
     {
       "id": 4,
@@ -42,7 +48,9 @@
       "date": "2024-03-15",
       "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop",
       "author": "Prof. Michael Johnson",
-      "featured": true
+      "featured": true,
+      "tags": ["workshop", "gesture", "ai", "accessibility"],
+      "readTime": "5 min read"
     },
     {
       "id": 5,
@@ -53,7 +61,9 @@
       "date": "2024-01-30",
       "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
       "author": "ACM SIGCHI",
-      "featured": false
+      "featured": false,
+      "tags": ["student", "award", "acm", "deep-learning"],
+      "readTime": "3 min read"
     },
     {
       "id": 6,
@@ -64,7 +74,9 @@
       "date": "2024-02-05",
       "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop",
       "author": "HCI Lab",
-      "featured": false
+      "featured": false,
+      "tags": ["meta", "partnership", "vr", "haptics"],
+      "readTime": "4 min read"
     },
     {
       "id": 7,
@@ -75,7 +87,9 @@
       "date": "2024-04-10",
       "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
       "author": "HCI Lab",
-      "featured": false
+      "featured": false,
+      "tags": ["accessibility", "showcase", "assistive", "eyeguide"],
+      "readTime": "5 min read"
     }
   ],
   "categories": ["all", "awards", "publications", "events"]
