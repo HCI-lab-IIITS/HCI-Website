@@ -19,7 +19,7 @@ const Projects = () => {
     { id: 'planning', label: 'Planning', icon: Clock },
   ];
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     activeFilter === 'all' || project.status === activeFilter
   );
 
@@ -42,8 +42,11 @@ const Projects = () => {
   };
 
   const ProjectCard = ({ project, index }) => {
+    const [showAllMembers, setShowAllMembers] = useState(false); 
     const StatusIcon = getStatusIcon(project.status);
-    
+
+    const visibleTeam = showAllMembers ? project.team : project.team.slice(0, 3);
+
     return (
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -51,13 +54,13 @@ const Projects = () => {
         transition={{ delay: index * 0.1, duration: 0.6 }}
         whileHover={{ y: -10 }}
         style={{
-          background: project.featured ? 
-            'linear-gradient(135deg, rgba(2, 132, 199, 0.05), rgba(192, 38, 211, 0.05))' : 
+          background: project.featured ?
+            'linear-gradient(135deg, rgba(2, 132, 199, 0.05), rgba(192, 38, 211, 0.05))' :
             'rgba(255, 255, 255, 0.8)',
           borderRadius: '1.5rem',
           padding: '2rem',
-          border: project.featured ? 
-            '2px solid rgba(2, 132, 199, 0.2)' : 
+          border: project.featured ?
+            '2px solid rgba(2, 132, 199, 0.2)' :
             '1px solid rgba(59, 130, 246, 0.1)',
           backdropFilter: 'blur(10px)',
           transition: 'all 0.3s ease',
@@ -86,9 +89,9 @@ const Projects = () => {
 
         {/* Header */}
         <div style={{ marginBottom: '1.5rem' }}>
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
             justifyContent: 'space-between',
             marginBottom: '1rem'
           }}>
@@ -177,7 +180,7 @@ const Projects = () => {
             </span>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-            {project.team.slice(0, 3).map((member, i) => (
+            {visibleTeam.map((member, i) => (
               <span
                 key={i}
                 style={{
@@ -192,15 +195,19 @@ const Projects = () => {
                 {member}
               </span>
             ))}
-            {project.team.length > 3 && (
-              <span style={{
-                background: 'rgba(100, 116, 139, 0.1)',
-                color: '#64748b',
-                padding: '0.25rem 0.75rem',
-                borderRadius: '1rem',
-                fontSize: '0.75rem',
-                fontWeight: 500
-              }}>
+            {project.team.length > 3 && !showAllMembers && (
+              <span
+                onClick={() => setShowAllMembers(true)}
+                style={{
+                  background: 'rgba(100, 116, 139, 0.1)',
+                  color: '#64748b',
+                  padding: '0.25rem 0.75rem',
+                  borderRadius: '1rem',
+                  fontSize: '0.75rem',
+                  fontWeight: 500,
+                  cursor: 'pointer'
+                }}
+              >
                 +{project.team.length - 3} more
               </span>
             )}
@@ -445,12 +452,12 @@ const Projects = () => {
                 fontWeight: 600,
                 fontSize: '0.875rem',
                 transition: 'all 0.3s ease',
-                background: activeFilter === filter.id 
+                background: activeFilter === filter.id
                   ? 'linear-gradient(135deg, #0284c7, #c026d3)'
                   : 'rgba(255, 255, 255, 0.8)',
                 color: activeFilter === filter.id ? 'white' : '#64748b',
                 backdropFilter: 'blur(10px)',
-                boxShadow: activeFilter === filter.id 
+                boxShadow: activeFilter === filter.id
                   ? '0 10px 25px rgba(59, 130, 246, 0.3)'
                   : '0 2px 10px rgba(0, 0, 0, 0.1)'
               }}
@@ -487,12 +494,9 @@ const Projects = () => {
             }}
           >
             <Cpu size={48} style={{ color: '#64748b', margin: '0 auto 1rem' }} />
-            <h3 style={{ color: '#64748b', fontSize: '1.25rem', marginBottom: '0.5rem' }}>
-              No projects found
+            <h3 style={{ color: '#64748b', fontSize: '1.25rem', fontWeight: 600 }}>
+              No projects found for this category
             </h3>
-            <p style={{ color: '#94a3b8' }}>
-              Try selecting a different filter
-            </p>
           </motion.div>
         )}
       </section>
@@ -500,4 +504,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
