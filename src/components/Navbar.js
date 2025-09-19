@@ -6,14 +6,22 @@ import { Brain, Menu, X, Zap } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(() => typeof window !== 'undefined' ? window.innerWidth >= 768 : true);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const navItems = [
@@ -29,9 +37,9 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       style={{
-        background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.9)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(59, 130, 246, 0.1)',
+        background: scrolled ? 'rgba(2, 6, 23, 0.8)' : 'rgba(2, 6, 23, 0.6)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
         position: 'fixed',
         top: 0,
         left: 0,
@@ -73,14 +81,14 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="nav-links" style={{ display: window.innerWidth >= 768 ? 'flex' : 'none' }}>
+        <div className="nav-links" style={{ display: isDesktop ? 'flex' : 'none' }}>
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               style={{
                 textDecoration: 'none',
-                color: location.pathname === item.path ? '#0284c7' : '#334155',
+                color: location.pathname === item.path ? '#ffffff' : '#ffffff',
                 fontWeight: 500,
                 padding: '0.5rem 1rem',
                 borderRadius: '0.5rem',
@@ -101,8 +109,8 @@ const Navbar = () => {
                     bottom: '-2px',
                     left: 0,
                     right: 0,
-                    height: '2px',
-                    background: 'linear-gradient(135deg, #0284c7, #c026d3)',
+                  height: '2px',
+                  background: 'linear-gradient(135deg, #ffffff, #ffffff)',
                     borderRadius: '1px'
                   }}
                 />
@@ -115,7 +123,7 @@ const Navbar = () => {
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          style={{ display: window.innerWidth >= 768 ? 'block' : 'none' }}
+          style={{ display: isDesktop ? 'block' : 'none' }}
         >
           <button className="contact-btn">
             <Zap size={16} />
@@ -127,9 +135,9 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           style={{
-            display: window.innerWidth < 768 ? 'block' : 'none',
-            background: 'rgba(255, 255, 255, 0.8)',
-            border: '1px solid rgba(59, 130, 246, 0.2)',
+            display: isDesktop ? 'none' : 'block',
+            background: 'rgba(2, 6, 23, 0.6)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
             borderRadius: '0.5rem',
             padding: '0.5rem',
             cursor: 'pointer'
@@ -151,7 +159,7 @@ const Navbar = () => {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           style={{
-            background: 'rgba(255, 255, 255, 0.95)',
+            background: 'rgba(2, 6, 23, 0.8)',
             borderRadius: '0.5rem',
             marginTop: '1rem',
             padding: '1rem',
@@ -172,7 +180,7 @@ const Navbar = () => {
                   display: 'block',
                   padding: '0.75rem 1rem',
                   textDecoration: 'none',
-                  color: location.pathname === item.path ? '#0284c7' : '#334155',
+                  color: location.pathname === item.path ? '#ffffff' : '#ffffff',
                   fontWeight: 500,
                   borderRadius: '0.5rem',
                   transition: 'all 0.3s ease',

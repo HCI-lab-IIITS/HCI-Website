@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { Brain, Users, BookOpen, Lightbulb, ArrowRight, Cpu, Eye, Hand } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import homeData from '../data/home.json';
+import SplineScene from '../components/SplineScene';
+import Spotlight from '../components/Spotlight';
+import NeuralBackground from '../components/NeuralBackground';
 
 const Home = () => {
   const [heroData, setHeroData] = useState({});
@@ -64,7 +67,7 @@ const Home = () => {
       ))}
 
       {/* Hero Section */}
-      <section style={{
+      {/* <section style={{
         padding: '8rem 2rem 4rem',
         textAlign: 'center',
         background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
@@ -175,12 +178,60 @@ const Home = () => {
             </Link>
           </motion.div>
         </motion.div>
+      </section> */}
+
+      {/* 3D Robot Section */}
+      <section style={{ padding: '0 1rem', margin: '2rem auto', maxWidth: '1400px' }}>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          style={{
+            width: '100%',
+            height: '760px',
+            background: 'transparent',
+            borderRadius: '0',
+            position: 'relative',
+            overflow: 'visible',
+            border: 'none'
+          }}
+        >
+          
+          <Spotlight />
+          <div style={{ display: 'flex', height: '100%', flexDirection: window.innerWidth < 1024 ? 'column' : 'row' }}>
+            {/* Left content */}
+            <div style={{ flex: 1, padding: '2.25rem', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <h2 style={{
+                fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                fontWeight: 800,
+                background: 'linear-gradient(180deg, #ffffff, #e2e8f0)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>Human-Computer Interaction Lab</h2>
+              <p style={{ marginTop: '1rem', color: '#ffffff', maxWidth: '720px', lineHeight: 1.75, fontSize: '1.1rem' }}>
+                We explore how people interact with technology and build human-centered systems that are
+                usable, accessible, and intelligent. Our work spans eye tracking, gesture recognition,
+                haptics, accessibility, and mixed reality—bridging rigorous research with real-world impact.
+              </p>
+            </div>
+
+            {/* Right content */}
+            <div style={{ flex: 1, position: 'relative', transform: window.innerWidth < 1024 ? 'scale(1)' : 'scale(1.05)', transformOrigin: 'center', height: window.innerWidth < 1024 ? '360px' : 'auto' }}>
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                style={{ width: '100%', height: '100%' }}
+              />
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Stats Section */}
       <section style={{
         padding: '4rem 2rem',
-        background: 'white',
+        background: 'transparent',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
         gap: '2rem',
@@ -197,12 +248,12 @@ const Home = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
               style={{
-                background: 'rgba(255, 255, 255, 0.8)',
+                background: 'rgba(17, 24, 39, 0.6)',
                 borderRadius: '1.5rem',
                 padding: '2rem',
                 textAlign: 'center',
-                border: '1px solid rgba(59, 130, 246, 0.1)',
-                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                backdropFilter: 'blur(12px)',
                 transition: 'all 0.3s ease'
               }}
               whileHover={{ y: -10 }}
@@ -236,7 +287,7 @@ const Home = () => {
                 {stat.number}{stat.suffix}
               </div>
               <div style={{
-                color: '#64748b',
+                color: '#cbd5e1',
                 fontSize: '1rem',
                 fontWeight: 500
               }}>
@@ -250,7 +301,7 @@ const Home = () => {
       {/* Research Areas */}
       <section style={{
         padding: '4rem 2rem',
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)'
+        background: 'transparent'
       }}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -304,12 +355,12 @@ const Home = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
                 style={{
-                  background: 'rgba(255, 255, 255, 0.8)',
+                  background: 'rgba(17, 24, 39, 0.6)',
                   borderRadius: '1.5rem',
                   padding: '2rem',
                   textAlign: 'center',
-                  border: '1px solid rgba(59, 130, 246, 0.1)',
-                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  backdropFilter: 'blur(12px)',
                   transition: 'all 0.3s ease',
                   height: '100%',
                   display: 'flex',
@@ -333,13 +384,13 @@ const Home = () => {
                 <h3 style={{
                   fontSize: '1.5rem',
                   fontWeight: 700,
-                  color: '#0f172a',
+                  color: '#e5e7eb',
                   marginBottom: '1rem'
                 }}>
                   {area.title}
                 </h3>
                 <p style={{
-                  color: '#64748b',
+                  color: '#cbd5e1',
                   lineHeight: 1.6,
                   fontSize: '1rem'
                 }}>
