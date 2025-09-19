@@ -2,67 +2,399 @@
   "publications": [
     {
       "id": 1,
-      "title": "Neural Interface Design for Enhanced Brain-Computer Communication",
-      "authors": ["Dr. Sarah Chen", "Prof. Michael Johnson", "Dr. Alex Kumar"],
-      "journal": "Nature Neuroscience",
-      "year": 2024,
-      "type": "Journal",
-      "citations": 45,
-      "doi": "10.1038/nn.2024.123",
-      "abstract": "This study presents a novel neural interface design that significantly improves brain-computer communication efficiency by 40%.",
-      "award": "Best Paper Award",
-      "featured": true
+      "title": "Towards a Modular XR Platform for Personalized Upper Limb Rehab",
+      "authors": [
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Gabriel Zachmann",
+        "Himangshu Sarma"
+      ],
+      "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
+      "year": 2025,
+      "type": "Conference"
     },
     {
       "id": 2,
-      "title": "Gesture Recognition Using Deep Learning for Assistive Technologies",
-      "authors": ["Dr. Emily Rodriguez", "Prof. David Kim", "Lisa Wang"],
-      "journal": "ACM CHI Conference",
-      "year": 2024,
-      "type": "Conference",
-      "citations": 32,
-      "doi": "10.1145/chi.2024.456",
-      "abstract": "A comprehensive study on implementing deep learning algorithms for gesture recognition in assistive technology applications.",
-      "featured": false
+      "title": "Neurological Insights into Interactive VR Learning: An EEG-Based Comparative Study",
+      "authors": [
+        "Abhijit Patil",
+        "Himangshu Sarma",
+        "Annushree Bablani"
+      ],
+      "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
+      "year": 2025,
+      "type": "Conference"
     },
     {
       "id": 3,
-      "title": "Eye-Tracking Based Attention Analysis in Virtual Reality Environments",
-      "authors": ["Prof. James Wilson", "Dr. Maria Garcia", "Tom Anderson"],
-      "journal": "IEEE VR Conference",
-      "year": 2023,
-      "type": "Conference",
-      "citations": 28,
-      "doi": "10.1109/vr.2023.789",
-      "abstract": "Investigation of attention patterns in VR environments using advanced eye-tracking methodologies.",
-      "featured": false
+      "title": "PageLLM: Incremental approach for updating a Security Knowledge Graph by using Page ranking and Large language model.",
+      "authors": [
+        "Mishra, Chinmaya",
+        "Himangshu Sarma",
+        "M. Saravanan"
+      ],
+      "journal": "Information Processing & Management",
+      "year": 2025,
+      "type": "Journal",
+      "volume": 62,
+      "issue": 3,
+      "pages": "104045"
     },
     {
       "id": 4,
-      "title": "Haptic Feedback Systems for Enhanced User Experience",
-      "authors": ["Dr. Rachel Brown", "Prof. Kevin Lee", "Mark Thompson"],
-      "journal": "International Journal of HCI",
-      "year": 2023,
+      "title": "ChronoSentinel: Incremental temporal embedding for Security Knowledge Graph using Dynamic Reachability Centrality and Efficient language model.",
+      "authors": [
+        "Mishra, Chinmaya",
+        "Himangshu Sarma",
+        "M. Saravanan"
+      ],
+      "journal": "Information Fusion",
+      "year": 2025,
       "type": "Journal",
-      "citations": 41,
-      "doi": "10.1016/ijhci.2023.012",
-      "abstract": "Development and evaluation of advanced haptic feedback systems for improved user interaction.",
-      "award": "Outstanding Research Award",
-      "featured": true
+      "pages": "103662",
+      "issn": "1566-2535"
     },
     {
       "id": 5,
-      "title": "Machine Learning Approaches for Predictive User Modeling",
-      "authors": ["Dr. Andrew Davis", "Prof. Jennifer Taylor", "Chris Martinez"],
-      "journal": "AI & Society",
-      "year": 2022,
+      "title": "Integrated dual-level dependency analysis framework for multi-task judicial decision prognosis in murder cases.",
+      "authors": [
+        "Madambakam, Prameela",
+        "Himangshu Sarma"
+      ],
+      "journal": "Engineering Applications of Artificial Intelligence",
+      "year": 2025,
       "type": "Journal",
-      "citations": 36,
-      "doi": "10.1007/ai-soc.2022.345",
-      "abstract": "Novel machine learning approaches for creating accurate predictive models of user behavior.",
-      "featured": false
+      "volume": 160,
+      "pages": "112002"
+    },
+    {
+      "id": 6,
+      "title": "PageLLM: Incremental approach for updating a Security Knowledge Graph by using Page ranking and Large language model.",
+      "authors": [
+        "Mishra, Chinmaya",
+        "Himangshu Sarma",
+        "M. Saravanan"
+      ],
+      "journal": "Information Processing & Management",
+      "year": 2025,
+      "type": "Journal",
+      "volume": 62,
+      "issue": 3,
+      "pages": "104045"
+    },
+    {
+      "id": 7,
+      "title": "A Case study on VR Teaching: Projectile Motion and Gravity",
+      "authors": [
+        "Shiva Rama Krishna",
+        "Vedantam Sai Suvanth",
+        "Shardul Kurdukar",
+        "Himangshu Sarma"
+      ],
+      "journal": "2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
+      "year": 2024,
+      "type": "Conference",
+      "pages": "329-330"
+    },
+    {
+      "id": 8,
+      "title": "Enhancing STEM curriculum with virtual reality: electricity and magnetism simulations.",
+      "authors": [
+        "Shinde, Nishant",
+        "Himangshu Sarma"
+      ],
+      "journal": "Multimedia Tools and Applications",
+      "year": 2024,
+      "type": "Journal",
+      "pages": "1-20"
+    },
+    {
+      "id": 9,
+      "title": "Game Based Virtual Reality Platform for Geometry.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Mahaboob Shaik",
+        "Surya Teja Tangirala",
+        "Satyam Kumar Singh"
+      ],
+      "journal": "2023 IEEE International Conference on Big Data (BigData)",
+      "year": 2023,
+      "type": "Conference",
+      "pages": "4812-4818"
+    },
+    {
+      "id": 10,
+      "title": "Teaching and Learning Crystal structures through Virtual Reality based systems",
+      "authors": [
+        "Vishawash Kumar",
+        "Sahil Gulati",
+        "Bhargab Deka",
+        "Himangshu Sarma"
+      ],
+      "journal": "Advanced Engineering Informatics",
+      "year": 2021,
+      "type": "Journal",
+      "volume": 50,
+      "pages": "101362",
+      "issn": "1474-0346"
+    },
+    {
+      "id": 11,
+      "title": "A text to animation system for physical exercises.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Robert Porzel",
+        "Jan D. Smeddinck",
+        "Rainer Malaka",
+        "Arun Baran Samaddar"
+      ],
+      "journal": "The Computer Journal",
+      "year": 2018,
+      "type": "Journal",
+      "volume": 61,
+      "issue": 11,
+      "pages": "1589-1604"
+    },
+    {
+      "id": 12,
+      "title": "Development and analysis of speech recognition systems for Assamese using HTK",
+      "authors": [
+        "Himangshu Sarma",
+        "Navanath Saharia",
+        "Utpal Sharma"
+      ],
+      "journal": "ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)",
+      "year": 2017,
+      "type": "Journal"
+    },
+    {
+      "id": 13,
+      "title": "Updating Bayesian networks using crowds",
+      "authors": [
+        "Himangshu Sarma",
+        "Arun B Samaddar",
+        "Robert Porzel",
+        "Jan D Smeddinck",
+        "Rainer Malaka"
+      ],
+      "journal": "Neural Network World (NNW)",
+      "year": 2017,
+      "type": "Journal",
+      "volume": 27,
+      "issue": 5,
+      "pages": "529-540"
+    },
+    {
+      "id": 14,
+      "title": "A Traffic Sign Recognition and Speech-Based Feedback Generation System to Assist Drivers.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Navanath Saharia"
+      ],
+      "journal": "2023 IEEE 5th International Conference on Cybernetics, Cognition and Machine Learning Applications (IC-CCMLA)",
+      "year": 2023,
+      "type": "Conference",
+      "pages": "53-57"
+    },
+    {
+      "id": 15,
+      "title": "Semantic Map Injected GAN Training for Image-to-Image Translation.",
+      "authors": [
+        "Kshatriya, Balaram Singh",
+        "Shiv Ram Dubey",
+        "Himangshu Sarma",
+        "Kunal Chaudhary",
+        "Meva Ram Gurjar",
+        "Rahul Rai",
+        "Sunny Manchanda"
+      ],
+      "journal": "Proceedings of the Satellite Workshops of ICVGIP 2021",
+      "year": 2022,
+      "type": "Conference",
+      "pages": "235-249"
+    },
+    {
+      "id": 16,
+      "title": "A Self Learning Yoga Monitoring System Based on Pose Estimation.",
+      "authors": [
+        "Movva, Prahitha",
+        "Hemanth Pasupuleti",
+        "Himangshu Sarma"
+      ],
+      "journal": "International Conference on Human-Computer Interaction",
+      "year": 2022,
+      "type": "Conference",
+      "pages": "81-91"
+    },
+    {
+      "id": 17,
+      "title": "Data augmentation enhanced speaker enrollment for text-dependent speaker verification.",
+      "authors": [
+        "Sarkar, Achintya Kumar",
+        "Himangshu Sarma",
+        "Priyanka Dwivedi",
+        "Zheng-Hua Tan"
+      ],
+      "journal": "2020 3rd International Conference on Energy, Power and Environment: Towards Clean Energy Technologies",
+      "year": 2021,
+      "type": "Conference",
+      "pages": "1-6"
+    },
+    {
+      "id": 18,
+      "title": "Finding out the needy one from Tweets: An analysis using# kerelafloods.",
+      "authors": [
+        "Ranjan, Rahul",
+        "Himangshu Sarma",
+        "Navanath Saharia"
+      ],
+      "journal": "2018 3rd International Conference on Contemporary Computing and Informatics (IC3I)",
+      "year": 2018,
+      "type": "Conference",
+      "pages": "184-187"
+    },
+    {
+      "id": 19,
+      "title": "A speech-based driver assisting module for Intelligent Transport System",
+      "authors": [
+        "Himangshu Sarma",
+        "Navanath Saharia"
+      ],
+      "journal": "3rd International Conference on Contemporary Computing and Informatics (IC3I)",
+      "year": 2018,
+      "type": "Conference"
+    },
+    {
+      "id": 20,
+      "title": "A Step Towards Textual Instructions to Virtual Actions.",
+      "authors": [
+        "Himangshu Sarma",
+        "Robert Porzel",
+        "Rainer Malaka",
+        "Arun Baran Samaddar"
+      ],
+      "journal": "7th IEEE International Advance Computing Conference, IACC 2017",
+      "year": 2017,
+      "type": "Conference"
+    },
+    {
+      "id": 21,
+      "title": "Virtual Movement from Textual Instructions.",
+      "authors": [
+        "Himangshu Sarma"
+      ],
+      "journal": "International Conference on Human Computation & Crowdsourcing, INTERACT 2017",
+      "year": 2017,
+      "type": "Conference"
+    },
+    {
+      "id": 22,
+      "title": "A Step Towards Automated Simulation in Industry",
+      "authors": [
+        "Himangshu Sarma",
+        "Robert Porzel",
+        "Rainer Malaka"
+      ],
+      "journal": "5th International Conference on Dynamics in Logistics, Bremen, Germany, LDIC 2016",
+      "year": 2016,
+      "type": "Conference"
+    },
+    {
+      "id": 23,
+      "title": "Towards Generating Virtual Movement from Textual Instructions A Case Study in Quality Assessment.",
+      "authors": [
+        "Himangshu Sarma",
+        "Robert Porzel",
+        "Jan Smeddinck",
+        "Rainer Malaka"
+      ],
+      "journal": "International Conference on Human Computation & Crowdsourcing, HCOMP 2015",
+      "year": 2015,
+      "type": "Conference"
+    },
+    {
+      "id": 24,
+      "title": "Virtual Movement from Textual Instructions.",
+      "authors": [
+        "Himangshu Sarma"
+      ],
+      "journal": "International Conference on Human Computation & Crowdsourcing, HCOMP 2015",
+      "year": 2015,
+      "type": "Conference"
+    },
+    {
+      "id": 25,
+      "title": "Development of Assamese Speech Corpus and Automatic Transcription Using HTK.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Navanath Saharia",
+        "Utpal Sharma"
+      ],
+      "journal": "Advances in Signal Processing and Intelligent Recognition Systems. Springer International Publishing",
+      "year": 2014,
+      "type": "Book Chapter",
+      "pages": "119-132"
+    },
+    {
+      "id": 26,
+      "title": "A Preliminary Study on the VOT Patterns of the Assamese Language and Its Nalbaria Variety.",
+      "authors": [
+        "Nath, Sanghamitra",
+        "Himangshu Sarma",
+        "Utpal Sharma"
+      ],
+      "journal": "Computational Linguistics and Intelligent Text Processing. Springer Berlin Heidelberg",
+      "year": 2014,
+      "type": "Book Chapter",
+      "pages": "542-552"
+    },
+    {
+      "id": 27,
+      "title": "Assamese Dialect Translation System- A Preliminary Proposal.",
+      "authors": [
+        "Nath, Sanghamitra",
+        "Himangshu Sarma",
+        "Utpal Sharma"
+      ],
+      "journal": "International Conference On Natural Language Processing And Cognitive Computing (ICONACC)-2014",
+      "year": 2014,
+      "type": "Conference"
+    },
+    {
+      "id": 28,
+      "title": "Development and transcription of Assamese speech corpus.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Navanath Saharia",
+        "Utpal Sharma",
+        "Smriti Kumar Sinha",
+        "Mancha Jyoti Malakar"
+      ],
+      "journal": "National seminar cum Conference on Recent threads and Techniques in Computer Sciences, Kokrajhar, Assam, India",
+      "year": 2013,
+      "type": "Conference"
     }
   ],
-  "years": ["all", 2024, 2023, 2022],
-  "types": ["all", "Journal", "Conference"]
-} 
+  "years": [
+    "all",
+    2025,
+    2024,
+    2023,
+    2022,
+    2021,
+    2018,
+    2017,
+    2016,
+    2015,
+    2014,
+    2013
+  ],
+  "types": [
+    "all",
+    "Conference",
+    "Journal",
+    "Book Chapter"
+  ]
+}
