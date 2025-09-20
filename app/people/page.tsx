@@ -140,7 +140,7 @@ export default function PeoplePage() {
       <section className="relative pb-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPeople.map((person: Person) => (
+            {filteredPeople.map((person) => (
               <div
                 key={person.id}
                 className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
