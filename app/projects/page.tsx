@@ -27,7 +27,7 @@ export default function ProjectsPage() {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
 
   const filteredProjects = useMemo(() => {
-    return projectsData.projects.filter((project: Project) => {
+    return projectsData.projects.filter((project) => {
       const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            project.technologies.some(tech => 
@@ -177,7 +177,7 @@ export default function ProjectsPage() {
       <section className="relative pb-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {filteredProjects.map((project: Project) => (
+            {filteredProjects.map((project) => (
               <div
                 key={project.id}
                 className={`group bg-white/5 border rounded-2xl p-6 hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm ${

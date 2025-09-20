@@ -5,19 +5,6 @@ import { Search, Users, GraduationCap, Award } from 'lucide-react';
 import Image from 'next/image';
 import peopleData from '../../data/people.json';
 
-interface Person {
-  id: number;
-  name: string;
-  type: 'faculty' | 'student' | 'alumni';
-  title?: string;
-  year?: string;
-  email: string;
-  imageUrl?: string | null;
-  researchAreas: string[];
-  bio: string;
-  currentPosition?: string;
-}
-
 export default function PeoplePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState('all');
