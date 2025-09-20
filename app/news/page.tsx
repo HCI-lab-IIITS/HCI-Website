@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { Search, Calendar, Newspaper, Star } from 'lucide-react';
+import Image from 'next/image';
 import newsData from '../../data/news.json';
 
 interface NewsArticle {
@@ -141,9 +142,11 @@ export default function NewsPage() {
               >
                 {/* Article Image */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
+                  <Image
                     src={article.image}
                     alt={article.title}
+                    width={400}
+                    height={192}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   {article.featured && (

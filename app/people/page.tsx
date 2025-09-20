@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Users, GraduationCap, Filter, Award } from 'lucide-react';
+import { Search, Users, GraduationCap, Award } from 'lucide-react';
+import Image from 'next/image';
 import peopleData from '../../data/people.json';
 
 interface Person {
@@ -23,7 +24,7 @@ export default function PeoplePage() {
   const [selectedYear, setSelectedYear] = useState('all');
 
   const filteredPeople = useMemo(() => {
-    return peopleData.people.filter((person: Person) => {
+    return peopleData.people.filter((person) => {
       const matchesSearch = person.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            person.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            person.researchAreas.some(area => 
@@ -148,9 +149,11 @@ export default function PeoplePage() {
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center text-white font-medium text-lg flex-shrink-0">
                     {person.imageUrl ? (
-                      <img
+                      <Image
                         src={person.imageUrl}
                         alt={person.name}
+                        width={64}
+                        height={64}
                         className="w-full h-full rounded-xl object-cover"
                       />
                     ) : (
