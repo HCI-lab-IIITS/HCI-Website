@@ -14,7 +14,7 @@
       "id": 2,
       "name": "Abhijit Patil",
       "type": "student",
-      "year": "UG4",
+      "year": "UG3",
       "email": "abhijit.patil@iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["Brain-Computer Interface", "VR Learning"],
@@ -24,10 +24,10 @@
       "id": 3,
       "name": "Sambhav Manohar",
       "type": "student",
-      "year": "UG4",
+      "year": "UG2",
       "email": "sambhav.manohar@iiits.ac.in",
       "imageUrl": null,
-      "researchAreas": ["Extended Reality", "Rehabilitation"],
+      "researchAreas": ["Extended Reality", "Adaptive Systems"],
       "bio": "Developing modular XR platforms for upper limb rehabilitation."
     },
     {
