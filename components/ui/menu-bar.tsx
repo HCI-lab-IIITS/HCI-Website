@@ -35,8 +35,8 @@ const backVariants = {
 const glowVariants = {
   initial: { opacity: 0, scale: 0.8 },
   hover: {
-    opacity: 1,
-    scale: 2,
+    opacity: 0.6,                       // Less opacity (was 1)
+    scale: 1,
     transition: { duration: 0.5 },
   },
 }
@@ -44,7 +44,7 @@ const glowVariants = {
 const navGlowVariants = {
   initial: { opacity: 0 },
   hover: {
-    opacity: 1,
+    opacity: 0.5,
     transition: {
       duration: 0.5,
     },
@@ -62,7 +62,7 @@ export const MenuBar = React.forwardRef<HTMLDivElement, MenuBarProps>(
       <motion.nav
         ref={ref}
         className={cn(
-          'p-2 rounded-2xl bg-gradient-to-b from-background/80 to-background/40 backdrop-blur-lg border border-border/40 shadow-lg relative overflow-hidden',
+          'p-2 rounded-2xl bg-gradient-to-b from-background/20 to-background/10 backdrop-blur-lg border border-border/40 shadow-lg relative overflow-hidden',
           className,
         )}
         initial="initial"
