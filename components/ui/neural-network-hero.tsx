@@ -4,6 +4,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame, extend, ReactThreeFiber, useThree } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
+import { ChevronDown } from 'lucide-react';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -384,9 +385,16 @@ export default function Hero({
           {microDetails.map((detail, index) => {
             const refMap = [microItem1Ref, microItem2Ref, microItem3Ref] as const;
             const liRef = index < refMap.length ? refMap[index] : undefined;
+            const isScrollText = detail.toLowerCase().includes('scroll');
             return (
               <li key={index} ref={liRef} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-white/40" /> {detail}
+                {isScrollText ? (
+                  <ChevronDown className="h-3 w-3 text-white/60 animate-bounce" />
+                ) : (
+                  <span className="h-1 w-1 rounded-full bg-white/40" />
+                )}
+                {detail}
+                
               </li>
             );
           })}

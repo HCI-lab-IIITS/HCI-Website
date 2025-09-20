@@ -1,0 +1,126 @@
+{
+  "people": [
+    {
+      "id": 1,
+      "name": "Dr. Himangshu Sarma",
+      "type": "faculty",
+      "title": "Assistant Professor & Lab Director",
+      "email": "himangshu@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Human-Computer Interaction", "Virtual Reality", "Machine Learning"],
+      "bio": "Leading research in HCI and VR applications for education and rehabilitation."
+    },
+    {
+      "id": 2,
+      "name": "Abhijit Patil",
+      "type": "student",
+      "year": "UG4",
+      "email": "abhijit.patil@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Brain-Computer Interface", "VR Learning"],
+      "bio": "Undergraduate researcher focusing on EEG-based VR learning systems."
+    },
+    {
+      "id": 3,
+      "name": "Sambhav Manohar",
+      "type": "student",
+      "year": "UG4",
+      "email": "sambhav.manohar@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Extended Reality", "Rehabilitation"],
+      "bio": "Developing modular XR platforms for upper limb rehabilitation."
+    },
+    {
+      "id": 4,
+      "name": "Mohit Madhu",
+      "type": "student",
+      "year": "UG3",
+      "email": "mohit.madhu@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["VR Development", "Human-Computer Interaction"],
+      "bio": "Working on immersive VR experiences for educational applications."
+    },
+    {
+      "id": 5,
+      "name": "Chaitanya Anand",
+      "type": "student",
+      "year": "UG3",
+      "email": "chaitanya.anand@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Mixed Reality", "Spatial Computing"],
+      "bio": "Exploring spatial computing and mixed reality interfaces."
+    },
+    {
+      "id": 6,
+      "name": "Annushree Bablani",
+      "type": "student",
+      "year": "UG2",
+      "email": "annushree.bablani@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Cognitive Science", "VR Learning"],
+      "bio": "Studying cognitive aspects of interactive VR learning environments."
+    },
+    {
+      "id": 7,
+      "name": "Chinmaya Mishra",
+      "type": "student",
+      "year": "PG2",
+      "email": "chinmaya.mishra@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Knowledge Graphs", "Natural Language Processing"],
+      "bio": "Research in security knowledge graphs and temporal embeddings."
+    },
+    {
+      "id": 8,
+      "name": "Prameela Madambakam",
+      "type": "student",
+      "year": "PG1",
+      "email": "prameela.madambakam@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["AI Applications", "Judicial Decision Support"],
+      "bio": "Working on AI applications for judicial decision prognosis."
+    },
+    {
+      "id": 9,
+      "name": "Shiva Rama Krishna",
+      "type": "student",
+      "year": "UG4",
+      "email": "shiva.rama@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Physics Education", "VR Simulations"],
+      "bio": "Developing VR simulations for physics education, particularly projectile motion."
+    },
+    {
+      "id": 10,
+      "name": "Vedantam Sai Suvanth",
+      "type": "student",
+      "year": "UG3",
+      "email": "vedantam.sai@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Educational Technology", "VR Development"],
+      "bio": "Creating immersive educational experiences using virtual reality."
+    },
+    {
+      "id": 11,
+      "name": "Shardul Kurdukar",
+      "type": "student",
+      "year": "UG3",
+      "email": "shardul.kurdukar@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Game Development", "VR Education"],
+      "bio": "Developing game-based VR platforms for educational purposes."
+    },
+    {
+      "id": 12,
+      "name": "Nishant Shinde",
+      "type": "student",
+      "year": "UG2",
+      "email": "nishant.shinde@iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["STEM Education", "VR Simulations"],
+      "bio": "Enhancing STEM curriculum with virtual reality simulations for electricity and magnetism."
+    }
+  ],
+  "types": ["all", "faculty", "student"],
+  "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"]
+}
