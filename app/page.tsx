@@ -1,103 +1,82 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Hero from "@/components/ui/neural-network-hero";
+import { MenuBar } from "@/components/ui/menu-bar";
+import { Newspaper, Users2, FolderGit2, ScrollText, Home } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
+import { useMemo } from "react";
+
+export default function DemoOne() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const items = useMemo(() => [
+    {
+      icon: Home,
+      label: "Home",
+      href: "/",
+      gradient: "radial-gradient(200px 200px at center, rgba(59,130,246,0.35), rgba(168,85,247,0.25), rgba(239,68,68,0.2))",
+      iconColor: "text-blue-400",
+    },
+    {
+      icon: ScrollText,
+      label: "Publications",
+      href: "/publications",
+      gradient: "radial-gradient(200px 200px at center, rgba(168,85,247,0.35), rgba(59,130,246,0.25), rgba(34,197,94,0.2))",
+      iconColor: "text-purple-400",
+    },
+    {
+      icon: Users2,
+      label: "People",
+      href: "/people",
+      gradient: "radial-gradient(200px 200px at center, rgba(34,197,94,0.35), rgba(59,130,246,0.25), rgba(168,85,247,0.2))",
+      iconColor: "text-emerald-400",
+    },
+    {
+      icon: FolderGit2,
+      label: "Projects",
+      href: "/projects",
+      gradient: "radial-gradient(200px 200px at center, rgba(59,130,246,0.35), rgba(34,197,94,0.25), rgba(168,85,247,0.2))",
+      iconColor: "text-sky-400",
+    },
+    {
+      icon: Newspaper,
+      label: "News",
+      href: "/news",
+      gradient: "radial-gradient(200px 200px at center, rgba(239,68,68,0.35), rgba(168,85,247,0.25), rgba(59,130,246,0.2))",
+      iconColor: "text-red-400",
+    },
+  ], []);
+
+  const active = useMemo(() => {
+    const match = items.find((i) => i.href === pathname);
+    return match?.label ?? "Home";
+  }, [items, pathname]);
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="w-screen h-screen flex flex-col relative">
+      <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 px-4 max-w-full overflow-x-auto">
+        <MenuBar
+          items={items}
+          activeItem={active}
+          onItemClick={(label) => {
+            const dest = items.find((i) => i.label === label)?.href ?? "/";
+            router.push(dest);
+          }}
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <Hero 
+        title="Human Computer Interaction Lab IIITS"
+        description="HCI lab at IIITS is one of the lead labs in India pushing the boundries of Human Computr Interaction and crafting the future"
+        badgeText="XR Hackathon"
+        badgeLabel="New"
+        ctaButtons={[
+          { text: "Get started", href: "#get-started", primary: true },
+          { text: "View showcase", href: "#showcase" }
+        ]}
+        microDetails={["Virtual Reality", "Artificial Intelligence", "Brain Computer Interaction"]}
+      />
     </div>
   );
 }
+
+
