@@ -11,5 +11,7 @@
       "featured": true,
       "author": "HCI Lab Team"
     }
-  ]
+  ],
+  "categories": ["all", "Awards", "Partnerships", "Research Impact", "Publications", "Events", "Product Launch", "Innovation"],
+  "years": ["all", "2025", "2024", "2023", "2022"]
 }
