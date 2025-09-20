@@ -1,19 +1,20 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Users, GraduationCap, Filter } from 'lucide-react';
+import { Search, Users, GraduationCap, Filter, Award } from 'lucide-react';
 import peopleData from '../../data/people.json';
 
 interface Person {
   id: number;
   name: string;
-  type: 'faculty' | 'student';
+  type: 'faculty' | 'student' | 'alumni';
   title?: string;
   year?: string;
   email: string;
   imageUrl?: string | null;
   researchAreas: string[];
   bio: string;
+  currentPosition?: string;
 }
 
 export default function PeoplePage() {
@@ -32,7 +33,8 @@ export default function PeoplePage() {
       const matchesType = selectedType === 'all' || person.type === selectedType;
       
       const matchesYear = selectedYear === 'all' || 
-                         (person.type === 'student' && person.year === selectedYear);
+                         ((person.type === 'student' && person.year === selectedYear) ||
+                          (person.type === 'alumni' && person.year === selectedYear));
       
       return matchesSearch && matchesType && matchesYear;
     });
@@ -53,6 +55,8 @@ export default function PeoplePage() {
         return 'bg-purple-400/20 text-purple-400 border-purple-400/30';
       case 'student':
         return 'bg-blue-400/20 text-blue-400 border-blue-400/30';
+      case 'alumni':
+        return 'bg-amber-400/20 text-amber-400 border-amber-400/30';
       default:
         return 'bg-gray-400/20 text-gray-400 border-gray-400/30';
     }
@@ -111,13 +115,13 @@ export default function PeoplePage() {
                 ))}
               </select>
 
-              {selectedType === 'student' && (
+              {(selectedType === 'student' || selectedType === 'alumni') && (
                 <select
                   value={selectedYear}
                   onChange={(e) => setSelectedYear(e.target.value)}
                   className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
                 >
-                  {peopleData.studentYears.map((year) => (
+                  {(selectedType === 'student' ? peopleData.studentYears : peopleData.alumniYears).map((year) => (
                     <option key={year} value={year} className="bg-black text-white">
                       {year === 'all' ? 'All Years' : year}
                     </option>
@@ -161,10 +165,12 @@ export default function PeoplePage() {
                       <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium border ${getTypeColor(person.type)}`}>
                         {person.type === 'faculty' ? (
                           <GraduationCap className="w-3 h-3 mr-1" />
-                        ) : (
+                        ) : person.type === 'student' ? (
                           <Users className="w-3 h-3 mr-1" />
+                        ) : (
+                          <Award className="w-3 h-3 mr-1" />
                         )}
-                        {person.type === 'faculty' ? 'Faculty' : 'Student'}
+                        {person.type === 'faculty' ? 'Faculty' : person.type === 'student' ? 'Student' : 'Alumni'}
                       </span>
                       
                       {person.year && (
@@ -180,6 +186,13 @@ export default function PeoplePage() {
                 {person.title && (
                   <p className="text-sm text-white/60 mb-3 font-light">
                     {person.title}
+                  </p>
+                )}
+
+                {/* Current Position (for alumni) */}
+                {person.currentPosition && (
+                  <p className="text-sm text-amber-400/80 mb-3 font-light">
+                    Currently: {person.currentPosition}
                   </p>
                 )}
 

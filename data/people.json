@@ -119,8 +119,75 @@
       "imageUrl": null,
       "researchAreas": ["STEM Education", "VR Simulations"],
       "bio": "Enhancing STEM curriculum with virtual reality simulations for electricity and magnetism."
+    },
+    {
+      "id": 13,
+      "name": "Dr. Mahaboob Shaik",
+      "type": "alumni",
+      "year": "2023",
+      "email": "mahaboob.shaik@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["VR Development", "Game-Based Learning"],
+      "bio": "Former undergraduate researcher who worked on VR platforms for geometry education. Now pursuing higher studies.",
+      "currentPosition": "Graduate Student at IIT Delhi"
+    },
+    {
+      "id": 14,
+      "name": "Surya Teja Tangirala",
+      "type": "alumni",
+      "year": "2023",
+      "email": "surya.tangirala@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Virtual Reality", "Educational Technology"],
+      "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry.",
+      "currentPosition": "Software Engineer at Microsoft"
+    },
+    {
+      "id": 15,
+      "name": "Satyam Kumar Singh",
+      "type": "alumni",
+      "year": "2022",
+      "email": "satyam.singh@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["VR Applications", "Computer Graphics"],
+      "bio": "Former undergraduate researcher specializing in VR applications and computer graphics. Now in academia.",
+      "currentPosition": "Research Assistant at IISc Bangalore"
+    },
+    {
+      "id": 16,
+      "name": "Vishawash Kumar",
+      "type": "alumni",
+      "year": "2021",
+      "email": "vishawash.kumar@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["Virtual Reality", "Crystal Structures", "Educational VR"],
+      "bio": "Former team member who worked on VR systems for teaching crystal structures. Now pursuing PhD.",
+      "currentPosition": "PhD Student at Stanford University"
+    },
+    {
+      "id": 17,
+      "name": "Sahil Gulati",
+      "type": "alumni",
+      "year": "2021",
+      "email": "sahil.gulati@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["VR Development", "Educational Technology"],
+      "bio": "Former undergraduate researcher who contributed to VR-based educational systems. Currently in industry.",
+      "currentPosition": "Product Manager at Meta"
+    },
+    {
+      "id": 18,
+      "name": "Bhargab Deka",
+      "type": "alumni",
+      "year": "2020",
+      "email": "bhargab.deka@alumni.iiits.ac.in",
+      "imageUrl": null,
+      "researchAreas": ["VR Research", "Human-Computer Interaction"],
+      "bio": "Former team member who worked on advanced VR research projects. Now a research scientist.",
+      "currentPosition": "Research Scientist at Google"
     }
   ],
-  "types": ["all", "faculty", "student"],
-  "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"]
+  "types": ["all", "faculty", "student", "alumni"],
+  "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"],
+  "alumniYears": ["all", "2020", "2021", "2022", "2023", "2024", "2025"]
 }

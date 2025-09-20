@@ -1,0 +1,191 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Tirumala Darshan with AR",
+      "description": "Immersive AR for Tirumala Darshan - Navigate , Discover Idols, and Experience 3D Divine Realms",
+      "status": "active",
+      "progress": 50,
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Prathik M Hadagali",
+        "Yaswanth Sai",
+        "Charan Goud",
+        "Rama Krishna",
+        "Jaynil",
+        "Satyma Kumar"
+      ],
+      "technologies": [
+        "ARCore",
+        "LangChain",
+        "Neural Networks",
+        "Unity"
+      ],
+      "funding": "$1.3M",
+      "fundingAgency": "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Design and development of communication system for the speech and hearing disorder persons",
+      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "status": "active",
+      "progress": 50,
+      "startDate": "2023-01-01",
+      "endDate": "2025-12-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Dhanvanth Singari",
+        "Aditya Pal",
+        "Anudeep Tippabathuni",
+        "Dwara Gowri Sri Prabha",
+        "Abhilash Surapuchetty",
+        "Susrith Dasari",
+        "Sambi Reddy Kalumuri",
+        "Mamatha Jonnalagadda"
+      ],
+      "technologies": [
+        "Deep Learning",
+        "Computer Vision",
+        "Transfer Learning on Vision Models",
+        "Holistic Pose Detection",
+        "Transformers",
+        "Generative Models"
+      ],
+      "funding": "$1.5B",
+      "fundingAgency": "IHub-Data IIIT Hyderabad DST India",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "VR-Based Physics Education Platform",
+      "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2020-06-01",
+      "endDate": "2021-12-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Shiva Rama Krishna",
+        "Vedantam Sai Suvanth",
+        "Shardul Kurdukar"
+      ],
+      "technologies": [
+        "Unity",
+        "VR Development",
+        "Physics Simulation",
+        "Educational Technology"
+      ],
+      "funding": "$500K",
+      "fundingAgency": "Ministry of Education, Government of India",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Brain-Computer Interface for VR Learning",
+      "description": "EEG-based brain-computer interface system for adaptive VR learning environments that respond to cognitive states.",
+      "status": "active",
+      "progress": 75,
+      "startDate": "2022-03-01",
+      "endDate": "2024-12-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Abhijit Patil",
+        "Annushree Bablani"
+      ],
+      "technologies": [
+        "EEG Signal Processing",
+        "Machine Learning",
+        "VR Integration",
+        "Real-time Analytics"
+      ],
+      "funding": "$800K",
+      "fundingAgency": "Science and Engineering Research Board (SERB)",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Modular XR Platform for Upper Limb Rehabilitation",
+      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "status": "active",
+      "progress": 60,
+      "startDate": "2023-06-01",
+      "endDate": "2025-06-30",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand"
+      ],
+      "technologies": [
+        "Mixed Reality",
+        "Motion Tracking",
+        "Rehabilitation Science",
+        "Personalization Algorithms"
+      ],
+      "funding": "$1.2M",
+      "fundingAgency": "Department of Science and Technology (DST)",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "STEM Education Enhancement through VR Simulations",
+      "description": "Comprehensive VR simulation platform for electricity and magnetism education in STEM curriculum.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2021-09-01",
+      "endDate": "2022-08-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Nishant Shinde"
+      ],
+      "technologies": [
+        "VR Development",
+        "Physics Simulation",
+        "Educational Design",
+        "User Experience"
+      ],
+      "funding": "$300K",
+      "fundingAgency": "University Research Grant",
+      "featured": false
+    }
+  ],
+  "statuses": ["all", "active", "completed", "planned"],
+  "fundingAgencies": [
+    "all",
+    "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
+    "IHub-Data IIIT Hyderabad DST India",
+    "Ministry of Education, Government of India",
+    "Science and Engineering Research Board (SERB)",
+    "Department of Science and Technology (DST)",
+    "University Research Grant"
+  ],
+  "technologies": [
+    "all",
+    "ARCore",
+    "LangChain",
+    "Neural Networks",
+    "Unity",
+    "Deep Learning",
+    "Computer Vision",
+    "Transfer Learning on Vision Models",
+    "Holistic Pose Detection",
+    "Transformers",
+    "Generative Models",
+    "VR Development",
+    "Physics Simulation",
+    "Educational Technology",
+    "EEG Signal Processing",
+    "Machine Learning",
+    "VR Integration",
+    "Real-time Analytics",
+    "Mixed Reality",
+    "Motion Tracking",
+    "Rehabilitation Science",
+    "Personalization Algorithms",
+    "Educational Design",
+    "User Experience"
+  ]
+}
