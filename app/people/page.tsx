@@ -77,21 +77,23 @@ export default function PeoplePage() {
 
   return (
     <div className="w-screen min-h-screen flex flex-col relative bg-black">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-6 md:px-16">
+      {/* Header */}
+      <div className="pt-24 pb-12 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-extralight tracking-tight text-white mb-4">
-              Our People
-            </h1>
-            <p className="text-lg text-white/70 font-light max-w-2xl mx-auto">
-              Meet the researchers, faculty, and students driving innovation in Human-Computer Interaction
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-6xl font-extralight text-white/100 tracking-tight mb-4">
+            Our People
+          </h1>
+          <p className="text-lg text-white/70 font-light max-w-2xl">
+            Meet the researchers driving innovation in Human-Computer Interaction
+          </p>
+        </div>
+      </div>
 
-          {/* Search and Filters */}
-          <div className="flex flex-col md:flex-row gap-4 mb-8 max-w-4xl mx-auto">
-            <div className="relative flex-1">
+      {/* Search and Filters */}
+      <div className="px-6 md:px-16 pb-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
+            <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/40" />
               <input
                 type="text"
@@ -131,7 +133,7 @@ export default function PeoplePage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* People Grid */}
       <section className="relative pb-24 px-6 md:px-16">

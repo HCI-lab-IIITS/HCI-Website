@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, FolderGit2, Calendar, DollarSign, Users, Star, Play, CheckCircle, Clock } from 'lucide-react';
+import { Search, FolderGit2, Calendar, Users, Star, Play, CheckCircle, Clock } from 'lucide-react';
 import projectsData from '../../data/projects.json';
 
 interface Project {
@@ -88,22 +88,24 @@ export default function ProjectsPage() {
 
   return (
     <div className="w-screen min-h-screen flex flex-col relative bg-black">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-6 md:px-16">
+      {/* Header */}
+      <div className="pt-24 pb-12 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-extralight tracking-tight text-white mb-4">
-              Research Projects
-            </h1>
-            <p className="text-lg text-white/70 font-light max-w-2xl mx-auto">
-              Explore our cutting-edge research initiatives in Human-Computer Interaction, Virtual Reality, and AI
-            </p>
-          </div>
+          <h1 className="text-4xl md:text-6xl font-extralight text-white/100 tracking-tight mb-4">
+            Research Projects
+          </h1>
+          <p className="text-lg text-white/70 font-light max-w-2xl">
+            Explore our cutting-edge research initiatives in HCI
+          </p>
+        </div>
+      </div>
 
-          {/* Search and Filters */}
-          <div className="space-y-4 mb-8 max-w-6xl mx-auto">
+      {/* Search and Filters */}
+      <div className="px-6 md:px-16 pb-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-4">
             {/* Search Bar */}
-            <div className="relative">
+            <div className="relative max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/40" />
               <input
                 type="text"
@@ -115,7 +117,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Filters Row */}
-            <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
               <div className="flex flex-wrap gap-3">
                 <select
                   value={selectedStatus}
@@ -169,7 +171,7 @@ export default function ProjectsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Projects Grid */}
       <section className="relative pb-24 px-6 md:px-16">
@@ -183,21 +185,20 @@ export default function ProjectsPage() {
                 }`}
               >
                 {/* Project Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-light text-white mb-2 leading-tight">
+                <div className="mb-4">
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-lg font-light text-white leading-tight flex-1 pr-4">
                       {project.title}
                     </h3>
                     
-                    {/* Status and Featured Badge */}
-                    <div className="flex items-center gap-2">
-                      <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium border ${getStatusColor(project.status)}`}>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium border ${getStatusColor(project.status)}`}>
                         {getStatusIcon(project.status)}
                         <span className="ml-1">{project.status.charAt(0).toUpperCase() + project.status.slice(1)}</span>
                       </span>
                       
                       {project.featured && (
-                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium bg-yellow-400/20 text-yellow-400 border border-yellow-400/30">
+                        <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-yellow-400/20 text-yellow-400 border border-yellow-400/30">
                           <Star className="w-3 h-3 mr-1" />
                           Featured
                         </span>
@@ -206,8 +207,8 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Progress Bar */}
-                  <div className="mb-4">
-                    <div className="flex justify-between text-xs text-white/50 mb-2">
+                  <div className="mb-3">
+                    <div className="flex justify-between text-xs text-white/40 mb-1">
                       <span>Progress</span>
                       <span>{project.progress}%</span>
                     </div>
@@ -218,46 +219,39 @@ export default function ProjectsPage() {
                       />
                     </div>
                   </div>
+                </div>
 
-                  {/* Description */}
-                  <p className="text-sm text-white/60 leading-relaxed mb-4 font-light">
-                    {project.description}
-                  </p>
+                {/* Description */}
+                <p className="text-sm text-white/50 leading-relaxed mb-4 font-light">
+                  {project.description}
+                </p>
 
-                  {/* Project Details - Minimal */}
-                  <div className="space-y-2 mb-4 text-xs text-white/50">
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-3 h-3" />
-                      <span>{project.funding}</span>
-                      <span>•</span>
-                      <span className="truncate">{project.fundingAgency}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-3 h-3" />
-                      <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-3 h-3" />
-                      <span>{project.team.length} members</span>
-                    </div>
+                {/* Project Details - Minimal */}
+                <div className="mb-4 text-xs text-white/40">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-3 h-3" />
+                    <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                    <span>•</span>
+                    <Users className="w-3 h-3" />
+                    <span>{project.team.length} members</span>
                   </div>
+                </div>
 
-                  {/* Technologies - Minimal */}
-                  <div className="flex flex-wrap gap-1">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-white/5 rounded text-xs text-white/50 border border-white/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-white/5 rounded text-xs text-white/40 border border-white/10">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
+                {/* Technologies - Minimal */}
+                <div className="flex flex-wrap gap-1">
+                  {project.technologies.slice(0, 3).map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-white/5 rounded text-xs text-white/40 border border-white/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.technologies.length > 3 && (
+                    <span className="px-2 py-1 bg-white/5 rounded text-xs text-white/30 border border-white/10">
+                      +{project.technologies.length - 3}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
