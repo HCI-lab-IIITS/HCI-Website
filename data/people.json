@@ -128,8 +128,7 @@
       "email": "mahaboob.shaik@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["VR Development", "Game-Based Learning"],
-      "bio": "Former undergraduate researcher who worked on VR platforms for geometry education. Now pursuing higher studies.",
-      "currentPosition": "Graduate Student at IIT Delhi"
+      "bio": "Former undergraduate researcher who worked on VR platforms for geometry education. Now pursuing higher studies."
     },
     {
       "id": 14,
@@ -139,8 +138,7 @@
       "email": "surya.tangirala@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["Virtual Reality", "Educational Technology"],
-      "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry.",
-      "currentPosition": "Software Engineer at Microsoft"
+      "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry."
     },
     {
       "id": 15,
@@ -150,8 +148,7 @@
       "email": "satyam.singh@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["VR Applications", "Computer Graphics"],
-      "bio": "Former undergraduate researcher specializing in VR applications and computer graphics. Now in academia.",
-      "currentPosition": "Research Assistant at IISc Bangalore"
+      "bio": "Former undergraduate researcher specializing in VR applications and computer graphics. Now in academia."
     },
     {
       "id": 16,
@@ -161,8 +158,7 @@
       "email": "vishawash.kumar@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["Virtual Reality", "Crystal Structures", "Educational VR"],
-      "bio": "Former team member who worked on VR systems for teaching crystal structures. Now pursuing PhD.",
-      "currentPosition": "PhD Student at Stanford University"
+      "bio": "Former team member who worked on VR systems for teaching crystal structures. Now pursuing PhD."
     },
     {
       "id": 17,
@@ -172,8 +168,7 @@
       "email": "sahil.gulati@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["VR Development", "Educational Technology"],
-      "bio": "Former undergraduate researcher who contributed to VR-based educational systems. Currently in industry.",
-      "currentPosition": "Product Manager at Meta"
+      "bio": "Former undergraduate researcher who contributed to VR-based educational systems. Currently in industry."
     },
     {
       "id": 18,
@@ -183,8 +178,7 @@
       "email": "bhargab.deka@alumni.iiits.ac.in",
       "imageUrl": null,
       "researchAreas": ["VR Research", "Human-Computer Interaction"],
-      "bio": "Former team member who worked on advanced VR research projects. Now a research scientist.",
-      "currentPosition": "Research Scientist at Google"
+      "bio": "Former team member who worked on advanced VR research projects. Now a research scientist."
     }
   ],
   "types": ["all", "faculty", "student", "alumni"],
