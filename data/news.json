@@ -5,90 +5,11 @@
       "title": "Rehab Poster Accepted at ISMAR Adjunct 2025",
       "excerpt": "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Aaugmented Reality.",
       "content": "The Human Computer Interaction Lab at IIIT Sri City has been working on significant personalized therapy solutions using extended reality technologies, using adaptive algorithms and immersive game design.",
-      "category": "Awards",
-      "date": "2025-01-15",
+      "category": "Publication",
+      "date": "2025-11-01",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
       "featured": true,
       "author": "HCI Lab Team"
-    },
-    {
-      "id": 2,
-      "title": "New Collaboration with Meta Reality Labs",
-      "excerpt": "We're excited to announce a new research partnership with Meta Reality Labs to explore the future of immersive computing and human-computer interaction.",
-      "content": "The HCI Lab has entered into a strategic research partnership with Meta Reality Labs to advance the frontiers of immersive computing. This collaboration will focus on developing next-generation interfaces that seamlessly blend physical and digital worlds, with particular emphasis on accessibility and inclusive design principles.",
-      "category": "Partnerships",
-      "date": "2025-01-10",
-      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=250&fit=crop",
-      "featured": true,
-      "author": "Dr. Himangshu Sarma"
-    },
-    {
-      "id": 3,
-      "title": "VR Learning Platform Deployed in 50+ Schools",
-      "excerpt": "Our VR-based physics education platform has been successfully deployed across 50+ schools, reaching over 10,000 students and showing significant improvements in learning outcomes.",
-      "content": "The VR-based physics education platform developed by our lab has achieved a major milestone with its deployment in 50+ schools nationwide. Initial results show a 40% improvement in student engagement and a 25% increase in physics concept retention compared to traditional teaching methods.",
-      "category": "Research Impact",
-      "date": "2025-01-08",
-      "image": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=250&fit=crop",
-      "featured": false,
-      "author": "Research Team"
-    },
-    {
-      "id": 4,
-      "title": "Brain-Computer Interface Breakthrough Published in Nature",
-      "excerpt": "Our latest research on EEG-based VR learning has been published in Nature, showcasing novel approaches to adaptive learning environments.",
-      "content": "A groundbreaking study on brain-computer interfaces for VR learning has been published in the prestigious journal Nature. The research demonstrates how real-time EEG monitoring can be used to create adaptive learning environments that respond to cognitive states, potentially revolutionizing personalized education.",
-      "category": "Publications",
-      "date": "2025-01-05",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
-      "featured": true,
-      "author": "Abhijit Patil"
-    },
-    {
-      "id": 5,
-      "title": "HCI Lab Hosts International VR Workshop",
-      "excerpt": "Leading researchers from around the world gathered at IIIT Sri City for our annual international workshop on Virtual Reality and Human-Computer Interaction.",
-      "content": "The HCI Lab successfully hosted its third annual international workshop on Virtual Reality and Human-Computer Interaction, bringing together over 100 researchers, practitioners, and industry experts. The event featured cutting-edge demonstrations, keynote presentations, and collaborative research sessions.",
-      "category": "Events",
-      "date": "2025-01-02",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop",
-      "featured": false,
-      "author": "Event Team"
-    },
-    {
-      "id": 6,
-      "title": "Sign Language Recognition System Launched",
-      "excerpt": "Our real-time Indian Sign Language to text conversion system has been launched, providing new communication possibilities for the deaf and hard-of-hearing community.",
-      "content": "The HCI Lab has launched a revolutionary real-time Indian Sign Language (ISL) to text conversion system. Using advanced computer vision and machine learning techniques, the system can accurately translate ISL gestures into text in real-time, breaking down communication barriers for the deaf and hard-of-hearing community.",
-      "category": "Product Launch",
-      "date": "2024-12-28",
-      "image": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400&h=250&fit=crop",
-      "featured": false,
-      "author": "Accessibility Team"
-    },
-    {
-      "id": 7,
-      "title": "Student Research Showcase 2024",
-      "excerpt": "Our annual student research showcase highlighted innovative projects in VR, AR, and accessibility technologies developed by undergraduate and graduate students.",
-      "content": "The HCI Lab's annual student research showcase featured over 20 innovative projects spanning virtual reality, augmented reality, and accessibility technologies. Students demonstrated their work to industry partners, faculty, and the broader community, showcasing the lab's commitment to nurturing the next generation of HCI researchers.",
-      "category": "Events",
-      "date": "2024-12-20",
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop",
-      "featured": false,
-      "author": "Student Team"
-    },
-    {
-      "id": 8,
-      "title": "AI-Powered Accessibility Tools Receive Patent",
-      "excerpt": "Our innovative AI-powered accessibility tools have been granted a patent, recognizing the novel approach to inclusive design in human-computer interaction.",
-      "content": "The HCI Lab has been granted a patent for its innovative AI-powered accessibility tools that automatically adapt user interfaces based on individual accessibility needs. This technology represents a significant advancement in inclusive design and has potential applications across various digital platforms.",
-      "category": "Innovation",
-      "date": "2024-12-15",
-      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop",
-      "featured": true,
-      "author": "Innovation Team"
     }
-  ],
-  "categories": ["all", "Awards", "Partnerships", "Research Impact", "Publications", "Events", "Product Launch", "Innovation"],
-  "years": ["all", "2025", "2024", "2023", "2022"]
+  ]
 }
