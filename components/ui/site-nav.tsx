@@ -8,17 +8,19 @@ import { Newspaper, Users2, FolderGit2, ScrollText, Home, Menu, X } from 'lucide
 export function SiteNav() {
   const router = useRouter();
   const pathname = usePathname();
-  const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
+    setIsHydrated(true);
+
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      // This effect only runs on client, so we don't need mobile detection here
+      // We'll use CSS classes for responsive behavior
     };
 
-    checkMobile();
+    // Only add resize listener if needed
     window.addEventListener('resize', checkMobile);
-
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -79,61 +81,60 @@ export function SiteNav() {
     setIsMobileMenuOpen(false); // Close mobile menu after navigation
   };
 
+  // Use CSS-only responsive approach to prevent hydration mismatch
   return (
-    <div className="fixed top-4 left-4 z-50 flex items-center gap-4">
-      {isMobile ? (
-        // Mobile Navigation
-        <div className="relative">
-          {/* Hamburger Menu Button with Current Page Name */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-b from-background/20 to-background/10 backdrop-blur-lg border border-border/40 shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-5 w-5 text-white" />
-            ) : (
-              <Menu className="h-5 w-5 text-white" />
-            )}
-            <span className="text-white/90 font-medium text-sm">{active}</span>
-          </button>
-
-          {/* Mobile Menu Dropdown */}
-          {isMobileMenuOpen && (
-            <div className="absolute top-full left-0 mt-2 w-64 bg-gradient-to-b from-background/20 to-background/10 backdrop-blur-lg border border-border/40 shadow-lg rounded-2xl p-4">
-              <div className="space-y-2">
-                {items.map((item) => {
-                  const Icon = item.icon;
-                  const isActive = item.label === active;
-
-                  return (
-                    <button
-                      key={item.label}
-                      onClick={() => handleItemClick(item.label)}
-                      className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
-                        isActive
-                          ? 'bg-white/10 text-white border border-white/20'
-                          : 'text-white/70 hover:text-white hover:bg-white/5'
-                      }`}
-                    >
-                      <Icon className={`h-5 w-5 ${isActive ? item.iconColor : 'text-white/70'}`} />
-                      <span className="font-medium">{item.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+    <div className="fixed top-4 left-4 md:left-1/2 md:-translate-x-1/2 z-50 flex items-center gap-4">
+      {/* Mobile Navigation - Hidden on desktop */}
+      <div className="block md:hidden relative">
+        {/* Hamburger Menu Button with Current Page Name */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-b from-background/20 to-background/10 backdrop-blur-lg border border-border/40 shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-5 w-5 text-white" />
+          ) : (
+            <Menu className="h-5 w-5 text-white" />
           )}
-        </div>
-      ) : (
-        // Desktop Navigation
-        <div className="flex items-center gap-3">
-          <MenuBar
-            items={items}
-            activeItem={active}
-            onItemClick={handleItemClick}
-          />
-        </div>
-      )}
+          <span className="text-white/90 font-medium text-sm">{active}</span>
+        </button>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 mt-2 w-64 bg-gradient-to-b from-background/20 to-background/10 backdrop-blur-lg border border-border/40 shadow-lg rounded-2xl p-4">
+            <div className="space-y-2">
+              {items.map((item) => {
+                const Icon = item.icon;
+                const isActive = item.label === active;
+
+                return (
+                  <button
+                    key={item.label}
+                    onClick={() => handleItemClick(item.label)}
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
+                      isActive
+                        ? 'bg-white/10 text-white border border-white/20'
+                        : 'text-white/70 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    <Icon className={`h-5 w-5 ${isActive ? item.iconColor : 'text-white/70'}`} />
+                    <span className="font-medium">{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Desktop Navigation - Hidden on mobile */}
+      <div className="hidden md:flex items-center gap-3">
+        <MenuBar
+          items={items}
+          activeItem={active}
+          onItemClick={handleItemClick}
+        />
+      </div>
     </div>
   );
 }

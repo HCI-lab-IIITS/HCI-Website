@@ -390,21 +390,21 @@ export default function Hero({
           <span className="text-xs font-light tracking-tight text-white/80">{badgeText}</span>
         </div>
 
-        <div className="flex items-center gap-50">
-          <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
-            {title}
-          </h1>
+        <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 lg:gap-40">
           {logoImageUrl && (
-            <div ref={logoRef} className="flex-shrink-0">
+            <div ref={logoRef} className="flex-shrink-0 order-1 sm:order-2">
               <Image
                 src={logoImageUrl}
                 alt={logoAltText || "Logo"}
                 width={400}
                 height={400}
-                className="w-100 h-auto object-contain"
+                className="w-100 sm:w-100 lg:w-100 h-auto object-contain"
               />
             </div>
           )}
+          <h1 ref={headerRef} className="max-w-2xl text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-white order-2 sm:order-1 text-center sm:text-left">
+            {title}
+          </h1>
         </div>
 
         <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
