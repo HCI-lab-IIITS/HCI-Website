@@ -5,11 +5,12 @@
       "title": "Rehab Poster Accepted at ISMAR Adjunct 2025",
       "excerpt": "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Aaugmented Reality.",
       "content": "The Human Computer Interaction Lab at IIIT Sri City has been working on significant personalized therapy solutions using extended reality technologies, using adaptive algorithms and immersive game design.",
-      "category": "Publication",
+      "category": "Publications",
       "date": "2025-09-01",
       "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
       "featured": true,
-      "author": "HCI Lab Team"
+      "author": "HCI Lab Team",
+      "link": "https://ismar2025.org/accepted-papers"
     }
   ],
   "categories": ["all", "Awards", "Partnerships", "Research Impact", "Publications", "Events", "Product Launch", "Innovation"],

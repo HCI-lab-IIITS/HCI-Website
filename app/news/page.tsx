@@ -15,6 +15,7 @@ interface NewsArticle {
   image: string;
   featured: boolean;
   author: string;
+  link: string;
 }
 
 export default function NewsPage() {
@@ -187,9 +188,14 @@ export default function NewsPage() {
 
                   {/* Read More Link */}
                   <div className="pt-2 border-t border-white/10">
-                    <button className="text-xs text-white/50 hover:text-white/70 transition-colors font-light">
+                    <a
+                      href={article.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-xs text-white/70 hover:text-white transition-all duration-200 font-light backdrop-blur-sm"
+                    >
                       Read more →
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
