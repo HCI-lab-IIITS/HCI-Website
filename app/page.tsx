@@ -17,6 +17,8 @@ export default function DemoOne() {
           { text: "Meet the Team", href: "/people" }
         ]}
         microDetails={["scroll to see more"]}
+        logoImageUrl="/logo.png"
+        logoAltText="HCI Lab Logo"
       />
       
       {/* Research Focus Areas */}
