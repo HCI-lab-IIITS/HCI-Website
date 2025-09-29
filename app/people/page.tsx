@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Users, GraduationCap, Award } from 'lucide-react';
+import { Search, Users, GraduationCap, Award, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import peopleData from '../../data/people.json';
 
@@ -82,7 +82,7 @@ export default function PeoplePage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/40" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/60 z-10" />
               <input
                 type="text"
                 placeholder="Search by name, email, or research area..."
@@ -93,30 +93,36 @@ export default function PeoplePage() {
             </div>
             
             <div className="flex gap-3">
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-              >
+              <div className="relative">
+                <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                >
                 {peopleData.types.map((type) => (
                   <option key={type} value={type} className="bg-black text-white">
                     {type === 'all' ? 'All Types' : type.charAt(0).toUpperCase() + type.slice(1)}
                   </option>
                 ))}
               </select>
+              </div>
 
               {(selectedType === 'student' || selectedType === 'alumni') && (
-                <select
-                  value={selectedYear}
-                  onChange={(e) => setSelectedYear(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-                >
+                <div className="relative">
+                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                  <select
+                    value={selectedYear}
+                    onChange={(e) => setSelectedYear(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  >
                   {(selectedType === 'student' ? peopleData.studentYears : peopleData.alumniYears).map((year) => (
                     <option key={year} value={year} className="bg-black text-white">
                       {year === 'all' ? 'All Years' : year}
                     </option>
                   ))}
                 </select>
+                </div>
               )}
             </div>
           </div>
@@ -156,11 +162,11 @@ export default function PeoplePage() {
                     <div className="flex flex-wrap gap-2 mb-2">
                       <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium border ${getTypeColor(person.type)}`}>
                         {person.type === 'faculty' ? (
-                          <GraduationCap className="w-3 h-3 mr-1" />
+                          <GraduationCap className="w-3 h-3 mr-1 z-10" />
                         ) : person.type === 'student' ? (
-                          <Users className="w-3 h-3 mr-1" />
+                          <Users className="w-3 h-3 mr-1 z-10" />
                         ) : (
-                          <Award className="w-3 h-3 mr-1" />
+                          <Award className="w-3 h-3 mr-1 z-10" />
                         )}
                         {person.type === 'faculty' ? 'Faculty' : person.type === 'student' ? 'Student' : 'Alumni'}
                       </span>

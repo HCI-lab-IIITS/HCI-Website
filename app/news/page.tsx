@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Calendar, Newspaper, Star } from 'lucide-react';
+import { Search, Calendar, Newspaper, Star, FolderOpen } from 'lucide-react';
 import Image from 'next/image';
 import newsData from '../../data/news.json';
 
@@ -79,7 +79,7 @@ export default function NewsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/40" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/60 z-10" />
               <input
                 type="text"
                 placeholder="Search news articles..."
@@ -90,29 +90,35 @@ export default function NewsPage() {
             </div>
             
             <div className="flex gap-3">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-              >
+              <div className="relative">
+                <FolderOpen className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                >
                 {newsData.categories.map((category) => (
                   <option key={category} value={category} className="bg-black text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
                 ))}
               </select>
+              </div>
 
-              <select
-                value={selectedYear}
-                onChange={(e) => setSelectedYear(e.target.value)}
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-              >
+              <div className="relative">
+                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                <select
+                  value={selectedYear}
+                  onChange={(e) => setSelectedYear(e.target.value)}
+                  className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                >
                 {newsData.years.map((year) => (
                   <option key={year} value={year} className="bg-black text-white">
                     {year === 'all' ? 'All Years' : year}
                   </option>
                 ))}
               </select>
+              </div>
 
               <button
                 onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
@@ -152,7 +158,7 @@ export default function NewsPage() {
                   />
                   {article.featured && (
                     <div className="absolute top-4 right-4 bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded-lg text-xs font-medium border border-yellow-400/30 backdrop-blur-sm">
-                      <Star className="w-3 h-3 inline mr-1" />
+                      <Star className="w-3 h-3 inline mr-1 z-10" />
                       Featured
                     </div>
                   )}
@@ -180,7 +186,7 @@ export default function NewsPage() {
                   {/* Meta Information */}
                   <div className="flex items-center justify-between text-xs text-white/40 mb-4">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-3 h-3" />
+                      <Calendar className="w-3 h-3 z-10" />
                       <span>{formatDate(article.date)}</span>
                     </div>
                     <span className="text-white/50">By {article.author}</span>

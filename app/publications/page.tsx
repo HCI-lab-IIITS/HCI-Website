@@ -67,7 +67,7 @@ export default function PublicationsPage() {
           <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
             {/* Search */}
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Search publications, authors..."
@@ -79,7 +79,7 @@ export default function PublicationsPage() {
 
             {/* Year Filter */}
             <div className="relative">
-              <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+              <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
@@ -95,7 +95,7 @@ export default function PublicationsPage() {
 
             {/* Type Filter */}
             <div className="relative">
-              <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/40" />
+              <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
