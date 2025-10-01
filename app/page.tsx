@@ -110,19 +110,19 @@ export default function DemoOne() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-light text-white mb-2">27+</div>
+              <div className="text-3xl md:text-4xl font-light text-white mb-2">30+</div>
               <div className="text-white/60 text-sm">Publications</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-light text-white mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-light text-white mb-2">7+</div>
               <div className="text-white/60 text-sm">Research Projects</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-light text-white mb-2">8</div>
+              <div className="text-3xl md:text-4xl font-light text-white mb-2">5</div>
               <div className="text-white/60 text-sm">Years Active</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-light text-white mb-2">50+</div>
+              <div className="text-3xl md:text-4xl font-light text-white mb-2">5+</div>
               <div className="text-white/60 text-sm">Collaborations</div>
             </div>
           </div>
