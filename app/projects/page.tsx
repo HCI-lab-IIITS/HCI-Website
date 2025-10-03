@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, FolderGit2, Calendar, Users, Star, Play, CheckCircle, Clock } from 'lucide-react';
+import { Search, FolderGit2, Calendar, Users, Star, Play, CheckCircle, Clock, Building, Cpu } from 'lucide-react';
 import projectsData from '../../data/projects.json';
 
 interface Project {
@@ -106,7 +106,7 @@ export default function ProjectsPage() {
           <div className="space-y-4">
             {/* Search Bar */}
             <div className="relative max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/40" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/60 z-10" />
               <input
                 type="text"
                 placeholder="Search by title, description, technologies, or team members..."
@@ -119,41 +119,50 @@ export default function ProjectsPage() {
             {/* Filters Row */}
             <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
               <div className="flex flex-wrap gap-3">
-                <select
-                  value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-                >
+                <div className="relative">
+                  <CheckCircle className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                  <select
+                    value={selectedStatus}
+                    onChange={(e) => setSelectedStatus(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  >
                   {projectsData.statuses.map((status) => (
                     <option key={status} value={status} className="bg-black text-white">
                       {status === 'all' ? 'All Status' : status.charAt(0).toUpperCase() + status.slice(1)}
                     </option>
                   ))}
                 </select>
+                </div>
 
-                <select
-                  value={selectedAgency}
-                  onChange={(e) => setSelectedAgency(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-                >
+                <div className="relative">
+                  <Building className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                  <select
+                    value={selectedAgency}
+                    onChange={(e) => setSelectedAgency(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  >
                   {projectsData.fundingAgencies.map((agency) => (
                     <option key={agency} value={agency} className="bg-black text-white">
                       {agency === 'all' ? 'All Funding Agencies' : agency}
                     </option>
                   ))}
                 </select>
+                </div>
 
-                <select
-                  value={selectedTechnology}
-                  onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
-                >
+                <div className="relative">
+                  <Cpu className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
+                  <select
+                    value={selectedTechnology}
+                    onChange={(e) => setSelectedTechnology(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  >
                   {projectsData.technologies.map((tech) => (
                     <option key={tech} value={tech} className="bg-black text-white">
                       {tech === 'all' ? 'All Technologies' : tech}
                     </option>
                   ))}
                 </select>
+                </div>
               </div>
 
               {/* Featured Toggle */}
@@ -193,13 +202,13 @@ export default function ProjectsPage() {
                     
                     <div className="flex items-center gap-2 flex-shrink-0">
                       <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium border ${getStatusColor(project.status)}`}>
-                        {getStatusIcon(project.status)}
+                        <span className="z-10">{getStatusIcon(project.status)}</span>
                         <span className="ml-1">{project.status.charAt(0).toUpperCase() + project.status.slice(1)}</span>
                       </span>
                       
                       {project.featured && (
                         <span className="inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-yellow-400/20 text-yellow-400 border border-yellow-400/30">
-                          <Star className="w-3 h-3 mr-1" />
+                          <Star className="w-3 h-3 mr-1 z-10" />
                           Featured
                         </span>
                       )}
@@ -229,10 +238,10 @@ export default function ProjectsPage() {
                 {/* Project Details - Minimal */}
                 <div className="mb-4 text-xs text-white/40">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-3 h-3" />
+                    <Calendar className="w-3 h-3 z-10" />
                     <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
                     <span>•</span>
-                    <Users className="w-3 h-3" />
+                    <Users className="w-3 h-3 z-10" />
                     <span>{project.team.length} members</span>
                   </div>
                 </div>

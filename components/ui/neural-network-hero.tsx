@@ -5,6 +5,7 @@ import { Canvas, useFrame, extend, ReactThreeFiber, useThree } from '@react-thre
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -235,6 +236,8 @@ interface HeroProps {
   badgeLabel?: string;
   ctaButtons?: Array<{ text: string; href: string; primary?: boolean }>;
   microDetails?: Array<string>;
+  logoImageUrl?: string;
+  logoAltText?: string;
 }
 
 export default function Hero({
@@ -246,10 +249,13 @@ export default function Hero({
     { text: "Get started", href: "#get-started", primary: true },
     { text: "View showcase", href: "#showcase" }
   ],
-  microDetails = ["Low‑weight font", "Tight tracking", "Subtle motion"]
+  microDetails = ["Low‑weight font", "Tight tracking", "Subtle motion"],
+  logoImageUrl,
+  logoAltText
 }: HeroProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
+  const logoRef = useRef<HTMLDivElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
   const badgeRef = useRef<HTMLDivElement | null>(null);
@@ -293,6 +299,17 @@ export default function Hero({
           transformOrigin: '50% 100%',
         });
 
+        // Animate the logo if it exists
+        if (logoRef.current) {
+          gsap.set(logoRef.current, {
+            filter: 'blur(16px)',
+            yPercent: 30,
+            autoAlpha: 0,
+            scale: 1.06,
+            transformOrigin: '50% 100%',
+          });
+        }
+
         if (badgeRef.current) {
           gsap.set(badgeRef.current, { autoAlpha: 0, y: -8 });
         }
@@ -319,6 +336,7 @@ export default function Hero({
           tl.to(badgeRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, 0.0);
         }
 
+        // Animate the text lines
         tl.to(
           split.lines,
           {
@@ -331,6 +349,21 @@ export default function Hero({
           },
           0.1,
         );
+
+        // Animate the logo if it exists
+        if (logoRef.current) {
+          tl.to(
+            logoRef.current,
+            {
+              filter: 'blur(0px)',
+              yPercent: 0,
+              autoAlpha: 1,
+              scale: 1,
+              duration: 0.9,
+            },
+            0.1,
+          );
+        }
 
         if (paraRef.current) {
           tl.to(paraRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.55');
@@ -357,9 +390,22 @@ export default function Hero({
           <span className="text-xs font-light tracking-tight text-white/80">{badgeText}</span>
         </div>
 
-        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
-          {title}
-        </h1>
+        <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 lg:gap-40">
+          {logoImageUrl && (
+            <div ref={logoRef} className="flex-shrink-0 order-1 sm:order-2">
+              <Image
+                src={logoImageUrl}
+                alt={logoAltText || "Logo"}
+                width={400}
+                height={400}
+                className="w-100 sm:w-100 lg:w-100 h-auto object-contain"
+              />
+            </div>
+          )}
+          <h1 ref={headerRef} className="max-w-2xl text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-white order-2 sm:order-1 text-center sm:text-left">
+            {title}
+          </h1>
+        </div>
 
         <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
           {description}
