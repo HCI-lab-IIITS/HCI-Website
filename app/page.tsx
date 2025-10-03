@@ -9,7 +9,7 @@ export default function DemoOne() {
     <div className="w-screen min-h-screen flex flex-col relative">
       <Hero 
         title="Human Computer Interaction Lab IIITS"
-        description="HCI lab at IIITS is one of the lead labs in India pushing the boundaries of Human Computer Interaction and crafting the future"
+        description="HCI lab at IIITS is one of the leading labs in India pushing the boundaries of Human Computer Interaction and crafting the future."
         badgeText="XR Hackathon"
         badgeLabel="New"
         ctaButtons={[
