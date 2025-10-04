@@ -167,7 +167,7 @@
       "type": "student",
       "year": "2023",
       "email": "satyamkumar.s19@iiits.in",
-      "imageUrl": "/SatyamKumar.jpg",
+      "imageUrl": "/Satyam_singh.jpg",
       "researchAreas": ["AR navigations", "Machine Learning"],
       "bio": "Undergraduate researcher working on AR applications in Tourism and real world navigation."
     },
@@ -207,7 +207,7 @@
       "type": "alumni",
       "year": "2023",
       "email": "satyamkumar.s19@iiits.in",
-      "imageUrl": "/SatyamKumar.jpg",
+      "imageUrl": null,
       "researchAreas": ["VR Development", "Game-Based Learning"],
       "bio": ""
     },
