@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Users, GraduationCap, Award, Calendar } from 'lucide-react';
+import { Search, Users, GraduationCap, Award, Calendar, Briefcase } from 'lucide-react';
 import Image from 'next/image';
 import peopleData from '../../data/people.json';
 
@@ -38,16 +38,18 @@ export default function PeoplePage() {
   };
 
   const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'faculty':
-        return 'bg-purple-400/20 text-purple-400 border-purple-400/30';
-      case 'student':
-        return 'bg-blue-400/20 text-blue-400 border-blue-400/30';
-      case 'alumni':
-        return 'bg-amber-400/20 text-amber-400 border-amber-400/30';
-      default:
-        return 'bg-gray-400/20 text-gray-400 border-gray-400/30';
-    }
+  switch (type.toLowerCase()) { // Use .toLowerCase() for consistency
+    case 'faculty':
+      return 'bg-purple-400/20 text-purple-400 border-purple-400/30';
+    case 'jrf': // Add this new case
+      return 'bg-cyan-400/20 text-cyan-400 border-cyan-400/30';
+    case 'student':
+      return 'bg-blue-400/20 text-blue-400 border-blue-400/30';
+    case 'alumni':
+      return 'bg-amber-400/20 text-amber-400 border-amber-400/30';
+    default:
+      return 'bg-gray-400/20 text-gray-400 border-gray-400/30';
+  }
   };
 
   const getYearColor = (year: string) => {
@@ -161,16 +163,20 @@ export default function PeoplePage() {
                     
                     <div className="flex flex-wrap gap-2 mb-2">
                       <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium border ${getTypeColor(person.type)}`}>
-                        {person.type === 'faculty' ? (
+                        {person.type.toLowerCase() === 'faculty' ? (
                           <GraduationCap className="w-3 h-3 mr-1 z-10" />
-                        ) : person.type === 'student' ? (
+                        ) : person.type.toLowerCase() === 'student' ? (
                           <Users className="w-3 h-3 mr-1 z-10" />
+                        ) : person.type.toLowerCase() === 'jrf' ? ( // New condition for the icon
+                          <Briefcase className="w-3 h-3 mr-1 z-10" />
                         ) : (
                           <Award className="w-3 h-3 mr-1 z-10" />
                         )}
-                        {person.type === 'faculty' ? 'Faculty' : person.type === 'student' ? 'Student' : 'Alumni'}
+                        {person.type.toLowerCase() === 'faculty' ? 'Faculty' 
+                        : person.type.toLowerCase() === 'student' ? 'Student'
+                        : person.type.toLowerCase() === 'jrf' ? 'JRF' // New condition for the text
+                        : 'Alumni'}
                       </span>
-                      
                       {person.year && (
                         <span className={`inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium border ${getYearColor(person.year)}`}>
                           {person.year}

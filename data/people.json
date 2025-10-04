@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Dr. Himangshu Sarma",
-      "type": "Faculty",
+      "type": "faculty",
       "title": "Assistant Professor & Lab Lead",
       "email": "himangshu.sarma@iiits.in",
       "imageUrl": "/Dr.Himangshu.png",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Dr. Annushree Bablani",
-      "type": "Faculty",
+      "type": "faculty",
       "email": "annushree.bablani@iiits.in",
       "imageUrl": "/AnnushreeMam.png",
       "researchAreas": ["Brain Computer Interface", "EEG data classification", "Artificial Neural Networks", "Machine Learning"],
@@ -22,7 +22,7 @@
     {
       "id": 3,
       "name": "Dr. Mrinmoy Ghorai",
-      "type": "Faculty",
+      "type": "faculty",
       "email": "mrinmoy.ghorai@iiits.in",
       "imageUrl": "/Mrinmoy-Ghorai.jpg",
       "researchAreas": ["Image Processing","Computer Vision", "Machine Learning"],
@@ -31,7 +31,7 @@
     {
       "id": 4,
       "name": "Prathik M Hadagali",
-      "type": "Junior Research Fellow",
+      "type": "jrf",
       "year": "PG",
       "email": "jrf2.hs@iiits.in",
       "imageUrl": "/Prathik Hadagali.jpg",
@@ -41,7 +41,7 @@
     {
       "id": 5,
       "name": "Dhanvanth Singari",
-      "type": "Junior Research Fellow",
+      "type": "jrf",
       "year": "PG",
       "email": "jrf1.hs@iiits.in",
       "imageUrl": "/Dhanvanth.jpg",
@@ -72,7 +72,7 @@
       
       "id": 8,
       "name": "Aditya Pal",
-      "type": "Student",
+      "type": "student",
       "year": "UG4",
       "email": "aditya.pl22@iiits.in",
       "imageUrl": "/AdityaPal.jpg",
@@ -83,7 +83,7 @@
       
       "id": 9,
       "name": "Abhiram",
-      "type": "Student",
+      "type": "student",
       "year": "UG4",
       "email": "abhiram.k22@iiits.in",
       "imageUrl": "/Abhiram.jpg",
@@ -94,7 +94,7 @@
       
       "id": 10,
       "name": "Vihaan",
-      "type": "Student",
+      "type": "student",
       "year": "UG4",
       "email": "vihaanreddy.t22@iiits.in",
       "imageUrl": "/Vihaan.jpg",
@@ -114,7 +114,7 @@
     {
       "id": 12,
       "name": "Pheelip Pritipal",
-      "type": "Student",
+      "type": "student",
       "year": "UG3",
       "email": "pheelippritipal.r23@iiits.in",
       "imageUrl": "/Pheelip1.png",
@@ -164,7 +164,7 @@
     {
       "id": 17,
       "name": "Satyam Kumar Singh",
-      "type": "Student",
+      "type": "student",
       "year": "2023",
       "email": "satyamkumar.s19@iiits.in",
       "imageUrl": "/SatyamKumar.jpg",
@@ -174,7 +174,7 @@
     {
       "id": 18,
       "name": "Jai Krithik",
-      "type": "Student",
+      "type": "student",
       "year": "UG2",
       "email": "jaikrithik.s24@iiits.in",
       "imageUrl": "/Jaikrithik.jpg",
@@ -184,7 +184,7 @@
     {
       "id": 19,
       "name": "Krish Kathiriya",
-      "type": "Student",
+      "type": "student",
       "year": "UG2",
       "email": "krishrajeshbhai.k24@iiits.in",
       "imageUrl": "/Krish.jpg",
@@ -194,7 +194,7 @@
     {
       "id": 20,
       "name": "Prajwal Gundala",
-      "type": "Student",
+      "type": "student",
       "year": "UG2",
       "email": "prajwal.g24@iiits.in",
       "imageUrl": "/Prajwal'.png",
@@ -272,7 +272,7 @@
       "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry."
     }
   ],
-  "types": ["all", "faculty", "student", "alumni"],
+  "types": ["all", "faculty", "student", "alumni", "jrf"],
   "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"],
   "alumniYears": ["all", "2020", "2021", "2022", "2023", "2024", "2025"] 
 }
