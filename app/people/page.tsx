@@ -192,7 +192,7 @@ export default function PeoplePage() {
                   <p className="text-sm text-amber-400/80 mb-3 font-light">
                     Currently: {person.currentPosition}
                   </p>
-                )/*}
+                )*/}
 
                 {/* Bio */}
                 <p className="text-sm text-white/70 leading-relaxed mb-4 font-light">
