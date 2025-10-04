@@ -4,21 +4,6 @@ import { useState, useMemo } from 'react';
 import { Search, FolderGit2, Calendar, Users, Star, Play, CheckCircle, Clock, Building, Cpu } from 'lucide-react';
 import projectsData from '../../data/projects.json';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  status: 'active' | 'completed' | 'planned';
-  progress: number;
-  startDate: string;
-  endDate: string;
-  team: string[];
-  technologies: string[];
-  funding: string;
-  fundingAgency: string;
-  featured: boolean;
-}
-
 export default function ProjectsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedStatus, setSelectedStatus] = useState('all');
@@ -239,7 +224,7 @@ export default function ProjectsPage() {
                 <div className="mb-4 text-xs text-white/40">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-3 h-3 z-10" />
-                    <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                    <span>{formatDate(project.startDate!)} - {formatDate(project.endDate!)}</span>
                     <span>•</span>
                     <Users className="w-3 h-3 z-10" />
                     <span>{project.team.length} members</span>

@@ -19,7 +19,7 @@
       "content" : "The study analyzes how different locomotion methods and virtual environments affect brain activity measured by EEG to better understand neural dynamics, cognitive load, and motor control during extended reality experiences. It offers insights for designing more intuitive XR locomotion interfaces and adaptive brain-driven navigation systems.",
       "category": "Publications",
       "date"    : "2025-10-13",
-      "image"   : "",
+      "image"   : "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
       "featured": true,
       "author"  : "HCI Lab Team",
       "link"    : ""
@@ -27,16 +27,14 @@
     {
       "id"      : 3,
       "title"   : "XR HACKATHON '25 Kicks Off, Challenges Innovators to Unleash their imagination",
+      "excerpt" : "This hackathon challenges students to develop innovative XR concepts and turn them into reality, showcasing their talent and competing for exciting recognition.",
       "content" : "This is for the students to come up with innovative, out-of-the-box XR concepts and turn them into reality. Showcase their talent, collaborate with peers, and compete for exciting recognition!",
-      "category": "Hackathon",
+      "category": "Events",
       "date"    : "2025-09-17",
-      "image"   : "",
+      "image"   : "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=250&fit=crop",
       "featured": true,
       "author"  : "HCI Lab Team",
       "link"    : ""
-    },
-    {
-      "id"
     }
   ],
   "categories": ["all", "Awards", "Partnerships", "Research Impact", "Publications", "Events", "Product Launch", "Innovation"],

@@ -9,10 +9,7 @@ export function SiteNav() {
   const router = useRouter();
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isHydrated, setIsHydrated] = useState(false);
-
   useEffect(() => {
-    setIsHydrated(true);
 
     const checkMobile = () => {
       // This effect only runs on client, so we don't need mobile detection here
@@ -135,7 +132,7 @@ export function SiteNav() {
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <Zap className="h-5 w-5 text-purple-400" />
-                    <span className="font-medium">XR Hack '25</span>
+                    <span className="font-medium">XR Hack &apos;25</span>
                   </a>
 
 
@@ -177,7 +174,7 @@ export function SiteNav() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-400/10 to-pink-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl"></div>
             <Zap className="h-4 w-4 flex-shrink-0 relative z-10 group-hover:scale-110 transition-transform duration-300" />
-            <span className="text-sm font-medium whitespace-nowrap relative z-10">XR Hack '25</span>
+            <span className="text-sm font-medium whitespace-nowrap relative z-10">XR Hack &apos;25</span>
           </a>
           <a
             href="/global-game-jam"

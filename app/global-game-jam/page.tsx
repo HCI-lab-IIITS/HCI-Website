@@ -23,7 +23,7 @@ export default function GlobalGameJamPage() {
               Coming Soon
             </h2>
             <p className="text-white/60 text-lg max-w-2xl mx-auto">
-              We're preparing an amazing Global Game Jam experience. Stay tuned for updates on dates, themes, and registration details.
+              We&apos;re preparing an amazing Global Game Jam experience. Stay tuned for updates on dates, themes, and registration details.
             </p>
           </div>
         </div>

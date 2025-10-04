@@ -7,7 +7,7 @@ export default function XRHack25Page() {
       <div className="pt-24 pb-12 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-extralight text-white/100 tracking-tight mb-4">
-            XR Hack '25
+            XR Hack &apos;25
           </h1>
           <p className="text-lg text-white/70 font-light max-w-2xl">
             Experience the future of extended reality through our premier hackathon event
