@@ -117,9 +117,10 @@
       "type": "student",
       "year": "UG3",
       "email": "pheelippritipal.r23@iiits.in",
-      "imageUrl": "/Pheelip1.png",
-      "researchAreas": [""],
-      "bio": ""
+      "imageUrl": "/Pheelip1.jpg",
+      "researchAreas": ["Machine learning, data-driven systems, Immersive Tech, Game Development, Interactive VR applications"],
+      "bio": "Student in Artificial Intelligence & Data Science, with experience in deep learning, Python, and Unity, and leadership as co-lead of the IOTA club."
+
     },
     {
       "id": 13,
@@ -178,7 +179,7 @@
       "year": "UG2",
       "email": "jaikrithik.s24@iiits.in",
       "imageUrl": "/Jaikrithik.jpg",
-      "researchAreas": [""],
+      "researchAreas": ["VR Development"],
       "bio": "Undergraduate researcher working on XR applications in Rehabilitation and Surgery."
     },
     {
@@ -198,11 +199,21 @@
       "year": "UG2",
       "email": "prajwal.g24@iiits.in",
       "imageUrl": "/Prajwal'.png",
-      "researchAreas": ["XR development", ""],
+      "researchAreas": ["XR development"],
       "bio": "Undergraduate researcher working on XR applications in Rehabilitation and Surgery."
     },
     {
       "id": 21,
+      "name": "Jaynil Panjwani",
+      "type": "Student",
+      "year": "2024",
+      "email": "jaynil.dp24@iiits.in",
+      "imageUrl": "/jaynil.png",
+      "researchAreas": ["IoT,Augmented Reality ,Communication, AIML"],
+      "bio": "Undergraduate researcher working on AR applications in Tourism and real world navigation."
+    },
+    {
+      "id": 22,
       "name": "Satyam Kumar Singh",
       "type": "alumni",
       "year": "2023",
@@ -212,7 +223,7 @@
       "bio": ""
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "Shiva Rama Krishna",
       "type": "alumni",
       "year": "2024",
@@ -222,7 +233,7 @@
       "bio": "Former undergraduate researcher who worked on Developing VR simulations for physics education, particularly projectile motion."
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "Vedantam Sai Suvanth",
       "type": "alumni",
       "year": "2024",
@@ -232,7 +243,7 @@
       "bio": "Former undergraduate researcher who worked on Creating immersive educational experiences using virtual reality."
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "Shardul Kurdukar",
       "type": "alumni",
       "year": "2024",
@@ -242,7 +253,7 @@
       "bio": "Former undergraduate researcher who worked on Developing game-based VR platforms for educational purposes."
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "Nishant Shinde",
       "type": "alumni",
       "year": "2025",
@@ -252,7 +263,7 @@
       "bio": "Former undergraduate researcher who worked on Enhancing STEM curriculum with virtual reality simulations for electricity and magnetism."
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "Dr. Mahaboob Shaik",
       "type": "alumni",
       "year": "2023",
@@ -262,7 +273,7 @@
       "bio": "Former undergraduate researcher who worked on VR platforms for geometry education. Now pursuing higher studies."
     },
     {
-      "id": 27,
+      "id": 28,
       "name": "Surya Teja Tangirala",
       "type": "alumni",
       "year": "2023",
