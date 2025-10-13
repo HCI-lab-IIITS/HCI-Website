@@ -117,9 +117,10 @@
       "type": "Student",
       "year": "UG3",
       "email": "pheelippritipal.r23@iiits.in",
-      "imageUrl": "/Pheelip1.png",
-      "researchAreas": [""],
-      "bio": ""
+      "imageUrl": "/Pheelip1.jpg",
+      "researchAreas": ["Machine learning, data-driven systems, Immersive Tech, Game Development, Interactive VR applications"],
+      "bio": "Student in Artificial Intelligence & Data Science, with experience in deep learning, Python, and Unity, and leadership as co-lead of the IOTA club."
+
     },
     {
       "id": 13,
