@@ -277,7 +277,7 @@
       "type":"student",
       "year":"ug1",
       "email": "pratishtha.p25@iiits.in",
-      "imageurl": "null",
+      "imageurl": null,
       "researchAreas": ["XR development"],
       "bio":"Undergraduate researcher working on extended xr rehab."
     }
