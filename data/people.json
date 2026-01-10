@@ -280,6 +280,16 @@
       "imageurl": null,
       "researchAreas": ["XR development"],
       "bio":"Undergraduate researcher working on extended xr rehab."
+    },
+    {
+      "id": 29,
+      "name": "Ashiwn A J",
+      "type":"student",
+      "year":"ug1",
+      "email": "ashiwn.a25@iiits.in",
+      "imageurl": null,
+      "researchAreas": ["XR development"],
+      "bio":"Undergraduate researcher working on extended xr rehab."
     }
   ],
   "types": ["all", "faculty", "student", "alumni", "jrf"],
