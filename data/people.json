@@ -270,6 +270,16 @@
       "imageUrl": null,
       "researchAreas": ["Virtual Reality", "Educational Technology"],
       "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry."
+    },
+    {
+      "id": 28,
+      "name": "Pratishtha Prasoon",
+      "type":"student",
+      "year":"ug1",
+      "email": "pratishtha.p25@iiits.in",
+      "imageurl": "null",
+      "researchAreas": ["XR development"],
+      "bio":"Undergraduate researcher working on extended xr rehab."
     }
   ],
   "types": ["all", "faculty", "student", "alumni", "jrf"],
