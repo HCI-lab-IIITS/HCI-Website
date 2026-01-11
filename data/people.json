@@ -293,14 +293,14 @@
     },
     
     {
-      "id": 28,
-      "name": "Ashwin  ",
+      "id": 30,
+      "name": "Vijaya sri  ",
       "type":"student",
       "year":"ug1",
-      "email": "ashwin.a25@iiits.in",
-      "imageurl": "null",
-      "researchAreas": ["XR development"],
-      "bio":"Undergraduate researcher working on extended xr rehab."
+      "email": "vijayasri.c25@iiits.in",
+      "imageurl": null,
+      "researchAreas": ["computer vision "],
+      "bio":"Undergraduate researcher working on Indian sign language."
     }
     
   ],
