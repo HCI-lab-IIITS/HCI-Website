@@ -1,0 +1,204 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Tirumala Darshan with AR",
+      "description": "Immersive AR for Tirumala Darshan - Navigate , Discover Idols, and Experience 3D Divine Realms",
+      "status": "active",
+      "progress": 50,
+      "startDate": "2025-03-01",
+      "endDate": "2026-09-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Prathik M Hadagali",
+        "Yaswanth Sai",
+        "Charan Goud",
+        "Rama Krishna",
+        "Jaynil",
+        "Satyam Kumar"
+      ],
+      "technologies": [
+        "ARCore",
+        "LangChain",
+        "Neural Networks",
+        "Unity"
+      ],
+      "funding": "Rs. 13,80,860",
+      "fundingAgency": "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF), DST, Govt of India",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Design and development of communication system for the speech and hearing disorder persons",
+      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "status": "active",
+      "progress": 50,
+      "startDate": "2025-02-01",
+      "endDate": "2027-03-01",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Dhanvanth Singari",
+        "Aditya Pal",
+        "Anudeep Tippabathuni",
+        "Dwara Gowri Sri Prabha",
+        "Abhilash Surapuchetty",
+        "Susrith Dasari",
+        "Sambi Reddy Kalumuri",
+        "Mamatha Jonnalagadda"
+      ],
+      "technologies": [
+        "Deep Learning",
+        "Computer Vision",
+        "Transfer Learning on Vision Models",
+        "Holistic Pose Detection",
+        "Transformers",
+        "Generative Models"
+      ],
+      "funding": "Rs. 24,59,424",
+      "fundingAgency": "IHub-Data IIIT Hyderabad DST India, DST, Govt of India",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Design and development of communication system for the speech and hearing disorder persons",
+      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "status": "completed",
+      "progress": 50,
+      "startDate": "2023-12-01",
+      "endDate": "2025-07-31",
+      "team": [
+        "Dr. Himangshu Sarma"
+      ],
+      "technologies": [
+        "Deep Learning",
+        "Computer Vision",
+        "Transfer Learning on Vision Models",
+        "Holistic Pose Detection",
+        "Transformers",
+        "Generative Models"
+      ],
+      "funding": "Rs. 20,67,920",
+      "fundingAgency": "IDEAS, ISI Kolkata, DST, Govt of India",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Development of Game platform through VR and AR for School Education",
+      "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2021-12-01",
+      "endDate": "2023-12-31",
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Abhijit Patil"
+      ],
+      "technologies": [
+        "Unity",
+        "VR Development",
+        "Physics Simulation",
+        "Educational Technology"
+      ],
+      "funding": "Rs. 1640720",
+      "fundingAgency": "Anusandhan National Research Foundation(ANRF, SERB), Government of India",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Computer vision algorithm for transformation of Night time Images to corresponding Day time",
+      "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2020-05-01",
+      "endDate": "2021-05-01",
+      "team": [
+        "Dr. Himangshu Sarma"
+      ],
+      "technologies": [
+        "Computer vision"
+      ],
+      "funding": "Rs. 9,94,943",
+      "fundingAgency": "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI), DRDO, Govt of India",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "title": "Modular XR Platform for Upper Limb Rehabilitation",
+      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "status": "active",
+      "progress": 60,
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand"
+      ],
+      "technologies": [
+        "Mixed Reality",
+        "Motion Tracking",
+        "Rehabilitation Science",
+        "Personalization Algorithms"
+      ],
+      "featured": true
+    },
+    {
+      "id": 7,
+      "title": "Learning Physics through Computer Vision",
+      "description": "Comprehensive VR simulation platform for Crystal Structure.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2019-12-01",
+      "endDate": "2020-09-01",
+      "team": [
+        "Dr. Himangshu Sarma"
+      ],
+      "technologies": [
+        "VR Development",
+        "Physics Simulation",
+        "Educational Design",
+        "User Experience"
+      ],
+      "funding": "Rs. 2,50,000",
+      "fundingAgency": "TEQIP III",
+      "featured": true
+    }
+  ],
+  "statuses": ["all", "active", "completed", "planned"],
+  "fundingAgencies": [
+    "all",
+    "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
+    "IHub-Data IIIT Hyderabad DST India",
+    "IDEAS, ISI Kolkata",
+    "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI)",
+    "Anusandhan National Research Foundation",
+    "Science and Engineering Research Board (SERB)",
+    "Department of Science and Technology (DST)",
+    "TEQIP III"
+  ],
+  "technologies": [
+    "all",
+    "ARCore",
+    "LangChain",
+    "Neural Networks",
+    "Unity",
+    "Deep Learning",
+    "Computer Vision",
+    "Transfer Learning on Vision Models",
+    "Holistic Pose Detection",
+    "Transformers",
+    "Generative Models",
+    "VR Development",
+    "Physics Simulation",
+    "Educational Technology",
+    "EEG Signal Processing",
+    "Machine Learning",
+    "VR Integration",
+    "Real-time Analytics",
+    "Mixed Reality",
+    "Motion Tracking",
+    "Rehabilitation Science",
+    "Personalization Algorithms",
+    "Educational Design",
+    "User Experience"
+  ]
+}
