@@ -301,7 +301,7 @@
       "imageurl": null,
       "researchAreas": ["computer vision "],
       "bio":"Undergraduate researcher working on Indian sign language."
-    },
+    }
     
   ],
   "types": ["all", "faculty", "student", "alumni", "jrf"],
