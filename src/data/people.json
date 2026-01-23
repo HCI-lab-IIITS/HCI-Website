@@ -307,4 +307,4 @@
   "types": ["all", "faculty", "student", "alumni", "jrf"],
   "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"],
   "alumniYears": ["all", "2020", "2021", "2022", "2023", "2024", "2025"] 
-}
+} 
