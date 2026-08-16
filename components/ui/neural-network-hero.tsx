@@ -1,17 +1,17 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { Canvas, useFrame, extend, ReactThreeFiber, useThree } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
-import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
+import { ChevronDown, Sparkles, Move3d, Eye } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 gsap.registerPlugin(useGSAP);
 
-// ===================== SHADER =====================
+// ===================== EXECUTIVE SLATE/GOLD SHADER =====================
 const vertexShader = `
   varying vec2 vUv;
   void main() {
@@ -33,11 +33,9 @@ const fragmentShader = `
   vec4 sigmoid(vec4 x) { return 1. / (1. + exp(-x)); }
   
   vec4 cppn_fn(vec2 coordinate, float in0, float in1, float in2) {
-    // layer 1 *********************************************************************
     buf[6] = vec4(coordinate.x, coordinate.y, 0.3948333106474662 + in0, 0.36 + in1);
     buf[7] = vec4(0.14 + in2, sqrt(coordinate.x * coordinate.x + coordinate.y * coordinate.y), 0., 0.);
 
-    // layer 2 ********************************************************************
     buf[0] = mat4(vec4(6.5404263, -3.6126034, 0.7590882, -1.13613), vec4(2.4582713, 3.1660357, 1.2219609, 0.06276096), vec4(-5.478085, -6.159632, 1.8701609, -4.7742867), vec4(6.039214, -5.542865, -0.90925294, 3.251348))
     * buf[6]
     + mat4(vec4(0.8473259, -5.722911, 3.975766, 1.6522468), vec4(-0.24321538, 0.5839259, -1.7661959, -5.350116), vec4(0.0, 0.0, 0.0, 0.0), vec4(0.0, 0.0, 0.0, 0.0))
@@ -53,7 +51,6 @@ const fragmentShader = `
     buf[0] = sigmoid(buf[0]);
     buf[1] = sigmoid(buf[1]);
 
-    // layer 3 ********************************************************************
     buf[2] = mat4(vec4(-15.219568, 8.095543, -2.429353, -1.9381982), vec4(-5.951362, 4.3115187, 2.6393783, 1.274315), vec4(-7.3145227, 6.7297835, 5.2473326, 5.9411426), vec4(5.0796127, 8.979051, -1.7278991, -1.158976))
     * buf[6]
     + mat4(vec4(-11.967154, -11.608155, 6.1486754, 11.237008), vec4(2.124141, -6.263192, -1.7050359, -0.7021966), vec4(0.0, 0.0, 0.0, 0.0), vec4(0.0, 0.0, 0.0, 0.0))
@@ -69,7 +66,6 @@ const fragmentShader = `
     buf[2] = sigmoid(buf[2]);
     buf[3] = sigmoid(buf[3]);
 
-    // layer 5 & 6 ****************************************************************
     buf[4] = mat4(vec4(5.214916, -7.183024, 2.7228765, 2.6592617), vec4(-5.601878, -25.3591, 4.067988, 0.4602802), vec4(-10.57759, 24.286327, 21.102104, 37.546658), vec4(4.3024497, -1.9625226, 2.3458803, -1.372816))
     * buf[0]
     + mat4(vec4(-17.6526, -10.507558, 2.2587414, 12.462782), vec4(6.265566, -502.75443, -12.642513, 0.9112289), vec4(-10.983244, 20.741234, -9.701768, -0.7635988), vec4(5.383626, 1.4819539, -4.1911616, -4.8444734))
@@ -93,7 +89,6 @@ const fragmentShader = `
     buf[4] = sigmoid(buf[4]);
     buf[5] = sigmoid(buf[5]);
 
-    // layer 7 & 8 ****************************************************************
     buf[6] = mat4(vec4(-1.61102, 0.7970257, 1.4675229, 0.20917463), vec4(-28.793737, -7.1390953, 1.5025433, 4.656581), vec4(-10.94861, 39.66238, 0.74318546, -10.095605), vec4(-0.7229728, -1.5483948, 0.7301322, 2.1687684))
     * buf[0]
     + mat4(vec4(3.2547753, 21.489103, -1.0194173, -3.3100595), vec4(-3.7316632, -3.3792162, -7.223193, -0.23685838), vec4(13.1804495, 0.7916005, 5.338587, 5.687114), vec4(-4.167605, -17.798311, -6.815736, -1.6451967))
@@ -125,32 +120,21 @@ const fragmentShader = `
     buf[6] = sigmoid(buf[6]);
     buf[7] = sigmoid(buf[7]);
 
-    // layer 9 ********************************************************************
-    buf[0] = mat4(vec4(1.6794263, 1.3817469, 2.9625452, 0.0), vec4(-1.8834411, -1.4806935, -3.5924516, 0.0), vec4(-1.3279216, -1.0918057, -2.3124623, 0.0), vec4(0.2662234, 0.23235129, 0.44178495, 0.0))
-    * buf[0]
-    + mat4(vec4(-0.6299101, -0.5945583, -0.9125601, 0.0), vec4(0.17828953, 0.18300213, 0.18182953, 0.0), vec4(-2.96544, -2.5819945, -4.9001055, 0.0), vec4(1.4195864, 1.1868085, 2.5176322, 0.0))
-    * buf[1]
-    + mat4(vec4(-1.2584374, -1.0552157, -2.1688404, 0.0), vec4(-0.7200217, -0.52666044, -1.438251, 0.0), vec4(0.15345335, 0.15196142, 0.272854, 0.0), vec4(0.945728, 0.8861938, 1.2766753, 0.0))
-    * buf[2]
-    + mat4(vec4(-2.4218085, -1.968602, -4.35166, 0.0), vec4(-22.683098, -18.0544, -41.954372, 0.0), vec4(0.63792, 0.5470648, 1.1078634, 0.0), vec4(-1.5489894, -1.3075932, -2.6444845, 0.0))
-    * buf[3]
-    + mat4(vec4(-0.49252132, -0.39877754, -0.91366625, 0.0), vec4(0.95609266, 0.7923952, 1.640221, 0.0), vec4(0.30616966, 0.15693925, 0.8639857, 0.0), vec4(1.1825981, 0.94504964, 2.176963, 0.0))
-    * buf[4]
-    + mat4(vec4(0.35446745, 0.3293795, 0.59547555, 0.0), vec4(-0.58784515, -0.48177817, -1.0614829, 0.0), vec4(2.5271258, 1.9991658, 4.6846647, 0.0), vec4(0.13042648, 0.08864098, 0.30187556, 0.0))
-    * buf[5]
-    + mat4(vec4(-1.7718065, -1.4033192, -3.3355875, 0.0), vec4(3.1664357, 2.638297, 5.378702, 0.0), vec4(-3.1724713, -2.6107926, -5.549295, 0.0), vec4(-2.851368, -2.249092, -5.3013067, 0.0))
-    * buf[6]
-    + mat4(vec4(1.5203838, 1.2212278, 2.8404984, 0.0), vec4(1.5210563, 1.2651345, 2.683903, 0.0), vec4(2.9789467, 2.4364579, 5.2347264, 0.0), vec4(2.2270417, 1.8825914, 3.8028636, 0.0))
-    * buf[7]
-    + vec4(-1.5468478, -3.6171484, 0.24762098, 0.0);
-
     buf[0] = sigmoid(buf[0]);
-    return vec4(buf[0].x , buf[0].y , buf[0].z, 1.0);
+    float v = (buf[0].x + buf[0].y + buf[0].z) * 0.333;
+    vec3 navyDark = vec3(0.035, 0.051, 0.086); // #090d16
+    vec3 slateNavy = vec3(0.06, 0.11, 0.20);   // #0f1c33
+    vec3 goldAccent = vec3(0.77, 0.66, 0.50);  // #c5a880
+    
+    vec3 color = mix(navyDark, slateNavy, smoothstep(0.1, 0.7, v));
+    color = mix(color, goldAccent * 0.45, smoothstep(0.65, 0.95, buf[0].x));
+    
+    return vec4(color, 1.0);
   }
   
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
+    gl_FragColor = cppn_fn(uv, 0.08 * sin(0.2 * iTime), 0.08 * sin(0.5 * iTime), 0.08 * sin(0.3 * iTime));
   }
 `;
 
@@ -160,14 +144,13 @@ const CPPNShaderMaterial = shaderMaterial(
   fragmentShader
 );
 
-extend({ CPPNShaderMaterial });
-
 function ShaderPlane() {
   const meshRef = useRef<THREE.Mesh>(null!);
   type CPPNMaterialInstance = THREE.ShaderMaterial & {
     iTime: number;
     iResolution: THREE.Vector2;
   };
+  const shaderMat = useMemo(() => new CPPNShaderMaterial(), []);
   const materialRef = useRef<CPPNMaterialInstance>(null!);
   const viewport = useThree((state) => state.viewport);
 
@@ -181,245 +164,136 @@ function ShaderPlane() {
   return (
     <mesh ref={meshRef} position={[0, 0, -0.5]} scale={[viewport.width, viewport.height, 1]}>
       <planeGeometry args={[2, 2]} />
-      <cPPNShaderMaterial ref={materialRef} side={THREE.DoubleSide} />
+      <primitive object={shaderMat} ref={materialRef} side={THREE.DoubleSide} attach="material" />
     </mesh>
   );
 }
 
 function ShaderBackground() {
   const canvasRef = useRef<HTMLDivElement | null>(null);
-  
   const camera = useMemo(() => ({ position: [0, 0, 1] as [number, number, number], fov: 75, near: 0.1, far: 1000 }), []);
   
   useGSAP(
     () => {
       if (!canvasRef.current) return;
-      
       gsap.set(canvasRef.current, {
         filter: 'blur(20px)',
         scale: 1.1,
-        autoAlpha: 0.7
-      });
-      
-      gsap.to(canvasRef.current, {
-        filter: 'blur(0px)',
-        scale: 1,
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: 'power3.out',
-        delay: 0.3
       });
     },
     { scope: canvasRef }
   );
-  
+
   return (
-    <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
-      <Canvas
-        camera={camera}
-        gl={{ antialias: true, alpha: false }}
-        dpr={[1, 2]}
-        style={{ width: '100%', height: '100%' }}
-      >
+    <div ref={canvasRef} className="absolute inset-0 z-0 h-full w-full pointer-events-none">
+      <Canvas camera={camera} resize={{ debounce: 0 }} gl={{ preserveDrawingBuffer: true }}>
         <ShaderPlane />
       </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
     </div>
   );
 }
 
-// ===================== HERO =====================
 interface HeroProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   badgeText?: string;
   badgeLabel?: string;
   ctaButtons?: Array<{ text: string; href: string; primary?: boolean }>;
-  microDetails?: Array<string>;
+  microDetails?: string[];
   logoImageUrl?: string;
   logoAltText?: string;
 }
 
 export default function Hero({
-  title,
-  description,
-  badgeText = "Generative Surfaces",
-  badgeLabel = "New",
+  title = "Human Computer Interaction Lab IIITS",
+  description = "Pioneering spatial computing, cognitive neural interfaces, high-fidelity physics for VR, and Indian Sign Language AI translation at IIIT Sri City.",
+  badgeText = "IEEE ISMAR 2026 & DST Research",
+  badgeLabel = "Featured",
   ctaButtons = [
-    { text: "Get started", href: "#get-started", primary: true },
-    { text: "View showcase", href: "#showcase" }
+    { text: "Explore Publications", href: "/publications", primary: true },
+    { text: "Research Projects", href: "/projects" }
   ],
-  microDetails = ["Low‑weight font", "Tight tracking", "Subtle motion"],
-  logoImageUrl,
-  logoAltText
+  logoImageUrl = "/logo.png",
+  logoAltText = "HCI Lab Logo"
 }: HeroProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const headerRef = useRef<HTMLHeadingElement | null>(null);
-  const logoRef = useRef<HTMLDivElement | null>(null);
-  const paraRef = useRef<HTMLParagraphElement | null>(null);
-  const ctaRef = useRef<HTMLDivElement | null>(null);
-  const badgeRef = useRef<HTMLDivElement | null>(null);
-  const microRef = useRef<HTMLUListElement | null>(null);
-  const microItem1Ref = useRef<HTMLLIElement | null>(null);
-  const microItem2Ref = useRef<HTMLLIElement | null>(null);
-  const microItem3Ref = useRef<HTMLLIElement | null>(null);
-
-  useGSAP(
-    () => {
-      if (!headerRef.current) return;
-
-      document.fonts.ready.then(async () => {
-        let SplitTextPlugin: { new (el: Element, opts: { type: string; wordsClass?: string }): { lines: Element[] } } | null = null;
-        try {
-          const mod = await import('gsap/SplitText');
-          const named = (mod as unknown as { SplitText?: unknown }).SplitText;
-          const def = (mod as unknown as { default?: unknown }).default;
-          const candidate = named ?? def;
-          if (typeof candidate === 'function') {
-            SplitTextPlugin = candidate as {
-              new (el: Element, opts: { type: string; wordsClass?: string }): { lines: Element[] }
-            };
-            // Cast to never to satisfy gsap types without using any
-            gsap.registerPlugin(candidate as never);
-          }
-        } catch {}
-
-        const split = SplitTextPlugin
-          ? new SplitTextPlugin(headerRef.current!, {
-              type: 'lines',
-              wordsClass: 'lines',
-            })
-          : { lines: [headerRef.current!] as Element[] };
-
-        gsap.set(split.lines, {
-          filter: 'blur(16px)',
-          yPercent: 30,
-          autoAlpha: 0,
-          scale: 1.06,
-          transformOrigin: '50% 100%',
-        });
-
-        // Animate the logo if it exists
-        if (logoRef.current) {
-          gsap.set(logoRef.current, {
-            filter: 'blur(16px)',
-            yPercent: 30,
-            autoAlpha: 0,
-            scale: 1.06,
-            transformOrigin: '50% 100%',
-          });
-        }
-
-        if (badgeRef.current) {
-          gsap.set(badgeRef.current, { autoAlpha: 0, y: -8 });
-        }
-        if (paraRef.current) {
-          gsap.set(paraRef.current, { autoAlpha: 0, y: 8 });
-        }
-        if (ctaRef.current) {
-          gsap.set(ctaRef.current, { autoAlpha: 0, y: 8 });
-        }
-        const microItems = [
-          microItem1Ref.current,
-          microItem2Ref.current,
-          microItem3Ref.current,
-        ].filter((el): el is HTMLLIElement => Boolean(el));
-        if (microItems.length > 0) {
-          gsap.set(microItems, { autoAlpha: 0, y: 6 });
-        }
-
-        const tl = gsap.timeline({
-          defaults: { ease: 'power3.out' },
-        });
-
-        if (badgeRef.current) {
-          tl.to(badgeRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, 0.0);
-        }
-
-        // Animate the text lines
-        tl.to(
-          split.lines,
-          {
-            filter: 'blur(0px)',
-            yPercent: 0,
-            autoAlpha: 1,
-            scale: 1,
-            duration: 0.9,
-            stagger: 0.15,
-          },
-          0.1,
-        );
-
-        // Animate the logo if it exists
-        if (logoRef.current) {
-          tl.to(
-            logoRef.current,
-            {
-              filter: 'blur(0px)',
-              yPercent: 0,
-              autoAlpha: 1,
-              scale: 1,
-              duration: 0.9,
-            },
-            0.1,
-          );
-        }
-
-        if (paraRef.current) {
-          tl.to(paraRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.55');
-        }
-        if (ctaRef.current) {
-          tl.to(ctaRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.35');
-        }
-        if (microItems.length > 0) {
-          tl.to(microItems, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 }, '-=0.25');
-        }
-      });
-    },
-    { scope: sectionRef },
-  );
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen w-full overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden py-24 px-4 sm:px-8 md:px-16 z-10">
       <ShaderBackground />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
-        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
-          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
-          <span className="h-1 w-1 rounded-full bg-white/40" />
-          <span className="text-xs font-light tracking-tight text-white/80">{badgeText}</span>
+      {/* FLOATING 3D SPATIAL VR HEADSET & CONTROLLER GLASS ACCENTS */}
+      <motion.div
+        animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/4 left-6 md:left-20 pointer-events-none z-10 hidden sm:flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl text-[#c5a880]"
+      >
+        <Move3d className="w-8 h-8 text-[#38bdf8]" />
+        <div className="text-left">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block">6DOF Controller</span>
+          <span className="text-xs font-medium text-white">Spatial Motion Physics</span>
+        </div>
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, 15, 0], rotate: [0, -4, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute bottom-1/4 right-6 md:right-20 pointer-events-none z-10 hidden sm:flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl text-[#c5a880]"
+      >
+        <Eye className="w-8 h-8 text-[#c5a880]" />
+        <div className="text-left">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 block">EOG Gaze Iris</span>
+          <span className="text-xs font-medium text-white">Eye Tracking Interface</span>
+        </div>
+      </motion.div>
+
+      {/* MAIN LIQUID FROSTED GLASS CARD - VERTICALLY CENTERED */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative z-20 max-w-5xl w-full mx-auto p-8 sm:p-12 md:p-16 rounded-3xl bg-slate-900/60 border border-white/15 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.6)] flex flex-col items-center text-center"
+      >
+        {/* Top Badge */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-[#c5a880]/30 bg-[#c5a880]/10 px-4 py-1.5 backdrop-blur-md mb-8">
+          <Sparkles className="w-3.5 h-3.5 text-[#c5a880]" />
+          <span className="text-[10px] font-mono uppercase tracking-[0.1em] text-[#c5a880]">{badgeLabel}</span>
+          <span className="h-1 w-1 rounded-full bg-[#c5a880]" />
+          <span className="text-xs font-light tracking-tight text-white/90">{badgeText}</span>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center sm:items-center gap-6 sm:gap-8 lg:gap-40">
+        {/* Central Logo & Title Layout */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-8">
           {logoImageUrl && (
-            <div ref={logoRef} className="flex-shrink-0 order-1 sm:order-2">
-              <Image
+            <div className="flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={logoImageUrl}
-                alt={logoAltText || "Logo"}
-                width={400}
-                height={400}
-                className="w-100 sm:w-100 lg:w-100 h-auto object-contain"
+                alt={logoAltText || "HCI Logo"}
+                className="w-56 sm:w-72 md:w-80 h-auto object-contain filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.9)]"
               />
             </div>
           )}
-          <h1 ref={headerRef} className="max-w-2xl text-left text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-[1.05] tracking-tight text-white order-2 sm:order-1 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-[1.08] tracking-tight text-white max-w-xl text-center md:text-left">
             {title}
           </h1>
         </div>
 
-        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
+        {/* Description */}
+        <p className="max-w-2xl text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-10">
           {description}
         </p>
 
-        <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
+        {/* Action Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-4">
           {ctaButtons.map((button, index) => (
             <a
               key={index}
               href={button.href}
-              className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 ${
+              className={`rounded-xl px-7 py-3.5 text-xs font-mono uppercase tracking-wider transition-all duration-300 ${
                 button.primary
-                  ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
-                  : "text-white/80 hover:bg-white/5"
+                  ? "bg-[#c5a880] text-black font-semibold hover:bg-white shadow-lg shadow-[#c5a880]/20 scale-105"
+                  : "bg-slate-900/80 text-white border border-white/20 hover:border-[#c5a880]/50 backdrop-blur-md"
               }`}
             >
               {button.text}
@@ -427,38 +301,12 @@ export default function Hero({
           ))}
         </div>
 
-        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-white/60">
-          {microDetails.map((detail, index) => {
-            const refMap = [microItem1Ref, microItem2Ref, microItem3Ref] as const;
-            const liRef = index < refMap.length ? refMap[index] : undefined;
-            const isScrollText = detail.toLowerCase().includes('scroll');
-            return (
-              <li key={index} ref={liRef} className="flex items-center gap-2">
-                {isScrollText ? (
-                  <ChevronDown className="h-3 w-3 text-white/60 animate-bounce" />
-                ) : (
-                  <span className="h-1 w-1 rounded-full bg-white/40" />
-                )}
-                {detail}
-                
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
+        {/* Micro Scroll Hint */}
+        <div className="mt-12 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400">
+          <ChevronDown className="h-4 w-4 text-[#c5a880] animate-bounce" />
+          <span>Scroll down to explore research initiatives</span>
+        </div>
+      </motion.div>
     </section>
   );
 }
-
-declare module '@react-three/fiber' {
-  interface ThreeElements {
-    cPPNShaderMaterial: ReactThreeFiber.ThreeElement<typeof THREE.ShaderMaterial> & {
-      iTime?: number;
-      iResolution?: THREE.Vector2;
-    };
-  }
-}
-
-

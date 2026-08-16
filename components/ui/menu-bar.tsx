@@ -56,7 +56,13 @@ const sharedTransition = { duration: 0.5 }
 export const MenuBar = React.forwardRef<HTMLDivElement, MenuBarProps>(
   ({ className, items, activeItem, onItemClick, ...props }, ref) => {
     const { theme } = useTheme()
-    const isDarkTheme = theme === 'dark'
+    const [mounted, setMounted] = React.useState(false)
+
+    React.useEffect(() => {
+      setMounted(true)
+    }, [])
+
+    const isDarkTheme = !mounted || theme === 'dark' || theme === undefined
 
     return (
       <motion.nav

@@ -1,0 +1,14 @@
+{
+  "publications": [
+    {
+      "title": "Publication Title 1",
+      "authors": ["Author One", "Author Two"],
+      "link": "https://example.com/publication1"
+    },
+    {
+      "title": "Publication Title 2",
+      "authors": ["Author One", "Author Three"],
+      "link": "https://example.com/publication2"
+    }
+  ]
+}
