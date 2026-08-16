@@ -1,0 +1,11 @@
+PUBLICATIONS
+
+1. Title: [Publication Title]
+   Authors: [Author 1, Author 2, ...]
+   Link: [URL]
+
+2. Title: [Publication Title]
+   Authors: [Author 1, Author 2, ...]
+   Link: [URL]
+
+(Add more entries as needed)

@@ -1,0 +1,10 @@
+1. Project Title: AI Generated Video Detection via Temporal Graphs and Neighborhood Consistency Regularization
+
+2. Project Summary: We propose a Graph Neural Network for detecting AI generated videos. By enforcing Neighborhood Consistency Regularization exclusively across temporal edges, our model prevents spatial overfitting to known artifacts. This structural constraint significantly improves out of distribution generalization, achieving state-of-the-art robustness on unseen generative models.
+
+3. Team Members: Mohit Jignesh Madhu
+
+4. External Collaborators: None
+
+5. Publications JSON file: None
+

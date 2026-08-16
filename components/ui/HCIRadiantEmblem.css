@@ -1,0 +1,45 @@
+.hci-emblem-wrapper {
+  user-select: none;
+  touch-action: none;
+  display: inline-block;
+  perspective: 1000px;
+}
+
+.hci-emblem-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hci-emblem-wrapper:hover .hci-emblem-svg {
+  transform: scale(1.03) translateZ(10px);
+}
+
+@keyframes neuralPulse {
+  0%, 100% {
+    opacity: 0.4;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    opacity: 1;
+    stroke-dashoffset: 20;
+  }
+}
+
+.animate-neural-pulse {
+  animation: neuralPulse 3s infinite ease-in-out;
+}
+
+@keyframes irisPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px #38bdf8);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px #38bdf8);
+  }
+}
+
+.animate-iris-glow {
+  animation: irisPulse 2s infinite ease-in-out;
+}

@@ -1,0 +1,23 @@
+WEBSITE MATERIAL REQUIREMENTS - SUBMISSION CHECKLIST
+
+Each team must submit the following for their project website:
+
+1. Project Title
+2. Project Summary - plain text, under 50 words
+3. Team Members - full names of all members
+4. External Collaborators
+5. Publications JSON file - lists all publications, authors, and links
+6. Images - 6+ high-quality images of the project
+7. Main Banner Image - one high-resolution hero/banner image
+8. Video - 1 short teaser video of the project/team (required)
+9. Deployments - links to any live deployments/demos (if applicable)
+
+NOTES:
+- All links must be publicly accessible.
+- Images should be high resolution (suitable for web banners/galleries).
+- Suggested JSON file name: publications.json
+
+Please send all materials as a single folder/drive link to [https://drive.google.com/drive/folders/1P_U4DeHGrcwlYVJ7jeV7DEqix_-yP10U?usp=sharing] following the folder format provided in "template" zip folder.
+
+
+******* PLEASE DO NOT DELETE OR MODIFY THE TEMPLATE FOLDER *******

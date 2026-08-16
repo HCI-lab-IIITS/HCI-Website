@@ -6,8 +6,8 @@
       "description": "Immersive AR for Tirumala Darshan - Navigate , Discover Idols, and Experience 3D Divine Realms",
       "status": "active",
       "progress": 50,
-      "startDate": "2021-01-01",
-      "endDate": "2022-12-31",
+      "startDate": "2025-03-01",
+      "endDate": "2026-09-31",
       "team": [
         "Dr. Himangshu Sarma",
         "Prathik M Hadagali",
@@ -15,7 +15,7 @@
         "Charan Goud",
         "Rama Krishna",
         "Jaynil",
-        "Satyma Kumar"
+        "Satyam Kumar"
       ],
       "technologies": [
         "ARCore",
@@ -23,10 +23,10 @@
         "Neural Networks",
         "Unity"
       ],
-      "funding": "$1.3M",
-      "fundingAgency": "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
-      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
-      "featured": true
+      "funding": "Rs. 13,80,860",
+      "fundingAgency": "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF), DST, Govt of India",
+      "featured": true,
+      "bannerImage": "/photos/lab/vr_teleconsultation.jpg"
     },
     {
       "id": 2,
@@ -34,8 +34,8 @@
       "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
       "status": "active",
       "progress": 50,
-      "startDate": "2023-01-01",
-      "endDate": "2025-12-31",
+      "startDate": "2025-02-01",
+      "endDate": "2027-03-01",
       "team": [
         "Dr. Himangshu Sarma",
         "Dhanvanth Singari",
@@ -55,197 +55,155 @@
         "Transformers",
         "Generative Models"
       ],
-      "funding": "$1.5B",
-      "fundingAgency": "IHub-Data IIIT Hyderabad DST India",
-      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
-      "featured": true
+      "funding": "Rs. 24,59,424",
+      "fundingAgency": "IHub-Data IIIT Hyderabad DST India, DST, Govt of India",
+      "featured": true,
+      "bannerImage": "/photos/lab/isl_gesture_recording.jpg"
     },
     {
       "id": 3,
-      "title": "NeuroLink: Advanced Brain-Computer Interface",
-      "description": "Developing next-generation brain-computer interfaces for paralyzed patients to control devices through neural signals.",
-      "status": "active",
-      "progress": 75,
-      "startDate": "2023-01-15",
-      "endDate": "2024-12-31",
+      "title": "Design and development of communication system for the speech and hearing disorder persons",
+      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "status": "completed",
+      "progress": 50,
+      "startDate": "2023-12-01",
+      "endDate": "2025-07-31",
       "team": [
-        "Dr. Sarah Chen",
-        "Alex Kumar",
-        "Lisa Wang"
+        "Dr. Himangshu Sarma"
       ],
       "technologies": [
-        "Python",
-        "TensorFlow",
-        "Arduino",
-        "C++"
+        "Deep Learning",
+        "Computer Vision",
+        "Transfer Learning on Vision Models",
+        "Holistic Pose Detection",
+        "Transformers",
+        "Generative Models"
       ],
-      "funding": "$2.5M",
-      "fundingAgency": "National Science Foundation",
-      "image": "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop",
-      "featured": true
+      "funding": "Rs. 20,67,920",
+      "fundingAgency": "IDEAS, ISI Kolkata, DST, Govt of India",
+      "featured": true,
+      "bannerImage": "/photos/conferences/ieee_ismar_keynote.jpg"
     },
     {
       "id": 4,
-      "title": "GestureFlow: Contactless Interaction System",
-      "description": "Creating an advanced gesture recognition system for touchless interaction in healthcare and public spaces.",
-      "status": "active",
-      "progress": 60,
-      "startDate": "2023-06-01",
-      "endDate": "2025-05-31",
+      "title": "Development of Game platform through VR and AR for School Education",
+      "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "status": "completed",
+      "progress": 100,
+      "startDate": "2021-12-01",
+      "endDate": "2023-12-31",
       "team": [
-        "Prof. Michael Johnson",
-        "David Kim",
-        "Maria Garcia"
+        "Dr. Himangshu Sarma",
+        "Abhijit Patil"
       ],
       "technologies": [
-        "OpenCV",
-        "PyTorch",
-        "JavaScript",
-        "WebRTC"
+        "Unity",
+        "VR Development",
+        "Physics Simulation",
+        "Educational Technology"
       ],
-      "funding": "$1.8M",
-      "fundingAgency": "Department of Health Research",
-      "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=250&fit=crop",
-      "featured": true
+      "funding": "Rs. 1640720",
+      "fundingAgency": "Anusandhan National Research Foundation(ANRF, SERB), Government of India",
+      "featured": true,
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg"
     },
     {
       "id": 5,
-      "title": "EyeGuide: Attention-Based Navigation",
-      "description": "Developing eye-tracking technology for enhanced navigation systems for visually impaired users.",
+      "title": "Computer vision algorithm for transformation of Night time Images to corresponding Day time",
+      "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
       "status": "completed",
       "progress": 100,
-      "startDate": "2022-03-01",
-      "endDate": "2023-08-31",
+      "startDate": "2020-05-01",
+      "endDate": "2021-05-01",
       "team": [
-        "Dr. Emily Rodriguez",
-        "Tom Anderson",
-        "Rachel Brown"
+        "Dr. Himangshu Sarma"
       ],
       "technologies": [
-        "Unity",
-        "C#",
-        "Python",
-        "OpenCV"
+        "Computer vision"
       ],
-      "funding": "$1.2M",
-      "fundingAgency": "Accessibility Research Foundation",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop",
-      "featured": false
+      "funding": "Rs. 9,94,943",
+      "fundingAgency": "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI), DRDO, Govt of India",
+      "featured": true,
+      "bannerImage": "/supplementary/Screenshot 2026-08-08 193155.png"
     },
     {
       "id": 6,
-      "title": "HaptiCare: Medical Haptic Training",
-      "description": "Virtual reality training system with haptic feedback for medical students and healthcare professionals.",
+      "title": "Modular XR Platform for Upper Limb Rehabilitation",
+      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
       "status": "active",
-      "progress": 45,
-      "startDate": "2023-09-01",
-      "endDate": "2025-08-31",
+      "progress": 60,
       "team": [
-        "Dr. Rachel Brown",
-        "James Wilson",
-        "Alex Kumar"
+        "Dr. Himangshu Sarma",
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand"
       ],
       "technologies": [
-        "Unity",
-        "C#",
-        "Haptic SDK",
-        "VR"
+        "Mixed Reality",
+        "Motion Tracking",
+        "Rehabilitation Science",
+        "Personalization Algorithms"
       ],
-      "funding": "$3.0M",
-      "fundingAgency": "Medical Education Innovation Fund",
-      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop",
-      "featured": true
+      "featured": true,
+      "bannerImage": "/photos/lab/vr_teleconsultation.jpg"
     },
     {
       "id": 7,
-      "title": "AIChef: Cooking Assistant Interface",
-      "description": "An AI-powered cooking assistant with natural language processing and computer vision capabilities.",
-      "status": "planning",
-      "progress": 15,
-      "startDate": "2024-02-01",
-      "endDate": "2026-01-31",
-      "team": [
-        "Prof. Michael Johnson",
-        "Lisa Wang"
-      ],
-      "technologies": [
-        "React",
-        "Node.js",
-        "Python",
-        "OpenAI API"
-      ],
-      "funding": "$800K",
-      "fundingAgency": "Technology Innovation Grant",
-      "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=250&fit=crop",
-      "featured": false
-    },
-    {
-      "id": 8,
-      "title": "SmartHome Hub: Elderly Care System",
-      "description": "IoT-based smart home system designed specifically for elderly care and independent living.",
+      "title": "Learning Physics through Computer Vision",
+      "description": "Comprehensive VR simulation platform for Crystal Structure.",
       "status": "completed",
       "progress": 100,
-      "startDate": "2021-01-01",
-      "endDate": "2022-12-31",
+      "startDate": "2019-12-01",
+      "endDate": "2020-09-01",
       "team": [
-        "Dr. Sarah Chen",
-        "Maria Garcia",
-        "David Kim"
+        "Dr. Himangshu Sarma"
       ],
       "technologies": [
-        "IoT",
-        "Arduino",
-        "React",
-        "MongoDB"
+        "VR Development",
+        "Physics Simulation",
+        "Educational Design",
+        "User Experience"
       ],
-      "funding": "$1.5M",
-      "fundingAgency": "Aging Research Institute",
-      "image": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop",
-      "featured": false
-    },
-    {
-      "id": 9,
-      "title": "A virtual reality experience that simulates real-life surgeries for immersive training and practice",
-      "description": "A VR-based surgical simulation that combines detailed human anatomy with realistic operating room procedures, offering learners immersive and safe hands-on training. ",
-      "status": "active",
-      "progress": 20,
-      "startDate": "2025-02-01",
-      "endDate": "_",
-      "team": [
-        "Dr. Himangshu Sarma",
-        "Krish kathiriya",
-        "Jai krithik",
-        "prajwal"
-      ],
-      "technologies": [
-        "",
-        ""
-      ],
-      "funding": "",
-      "fundingAgency": "",
-      "image": "_",
-      "featured": false
+      "funding": "Rs. 2,50,000",
+      "fundingAgency": "TEQIP III",
+      "featured": true,
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg"
     }
   ],
-  "statuses": [
+  "statuses": ["all", "active", "completed", "planned"],
+  "fundingAgencies": [
     "all",
-    "active",
-    "completed",
-    "planning"
+    "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
+    "IHub-Data IIIT Hyderabad DST India",
+    "IDEAS, ISI Kolkata",
+    "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI)",
+    "Anusandhan National Research Foundation",
+    "Science and Engineering Research Board (SERB)",
+    "Department of Science and Technology (DST)",
+    "TEQIP III"
   ],
   "technologies": [
-    "Python",
-    "TensorFlow",
+    "all",
+    "ARCore",
+    "LangChain",
+    "Neural Networks",
     "Unity",
-    "React",
-    "OpenCV",
-    "C++",
-    "JavaScript",
-    "PyTorch",
-    "C#",
-    "Arduino",
-    "IoT",
-    "VR",
-    "Node.js"
+    "Deep Learning",
+    "Computer Vision",
+    "Transfer Learning on Vision Models",
+    "Holistic Pose Detection",
+    "Transformers",
+    "Generative Models",
+    "VR Development",
+    "Physics Simulation",
+    "Educational Technology",
+    "EEG Signal Processing",
+    "Machine Learning",
+    "VR Integration",
+    "Real-time Analytics",
+    "Mixed Reality",
+    "Motion Tracking",
+    "Rehabilitation Science",
+    "Personalization Algorithms"
   ]
 }
