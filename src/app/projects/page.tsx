@@ -77,7 +77,7 @@ export default function ProjectsPage() {
   }, [searchTerm, selectedStatus, selectedCategory, showFeaturedOnly]);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
+    <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
       {/* Research Initiatives Header Banner */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

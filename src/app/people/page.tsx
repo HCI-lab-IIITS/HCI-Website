@@ -44,7 +44,7 @@ export default function PeoplePage() {
   };
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
+    <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
       {/* Ambient Background Glows */}
       <div className="absolute top-20 left-1/3 w-96 h-96 bg-[#1e293b]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-96 right-10 w-96 h-96 bg-[#c5a880]/10 rounded-full blur-3xl pointer-events-none" />

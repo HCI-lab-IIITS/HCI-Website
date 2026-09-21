@@ -47,7 +47,7 @@ export default function GlobalGameJamPage() {
   ];
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
+    <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
       {/* Top Breadcrumb */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}

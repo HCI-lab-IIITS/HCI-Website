@@ -69,7 +69,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white overflow-x-hidden font-sans">
+    <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white overflow-x-hidden font-sans">
       
       {/* HERO SECTION WITH COLOR BENDS BACKGROUND */}
       <section className="relative min-h-screen w-full flex items-center overflow-hidden py-24 px-6 md:px-16 z-10 border-b border-white/10 bg-[#090d16]">

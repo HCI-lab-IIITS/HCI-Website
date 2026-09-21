@@ -62,7 +62,7 @@ export default function NewsPage() {
   };
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-black">
+    <div className="w-full min-h-screen flex flex-col relative bg-black">
       {/* Header */}
       <div className="pt-24 pb-8 sm:pb-12 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
