@@ -63,8 +63,10 @@
         }
       ],
       "team": [
+        "Suryansh Bakshi",
         "Chaitanya Anand",
-        "Abhijit Patil",
+        "Phileep Raipure",
+        "Vaishnav Kameswaran",
         "Dr. Himangshu Sarma"
       ],
       "externalCollaborators": [
@@ -88,8 +90,10 @@
         {
           "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
           "authors": [
+            "Suryansh Bakshi",
             "Chaitanya Anand",
-            "Abhijit Patil",
+            "Phileep Raipure",
+            "Vaishnav Kameswaran",
             "Himangshu Sarma"
           ],
           "journal": "Under Review / ACM CHI 2027",
@@ -98,8 +102,10 @@
         {
           "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
           "authors": [
-            "Abhijit Patil",
+            "Suryansh Bakshi",
             "Chaitanya Anand",
+            "Phileep Raipure",
+            "Vaishnav Kameswaran",
             "Himangshu Sarma"
           ],
           "journal": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
