@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
@@ -19,9 +20,15 @@ import {
   Eye,
   X,
   Download,
-  Maximize2
+  Maximize2,
+  Compass
 } from 'lucide-react';
 import projectsData from '@/data/projects.json';
+
+const SpatialModelViewer = dynamic(
+  () => import('@/components/ui/spatial-model-viewer').then((mod) => mod.SpatialModelViewer),
+  { ssr: false }
+);
 
 interface GalleryImage {
   src: string;
@@ -103,6 +110,16 @@ export default function ProjectDetailPage() {
   const hasFunding = Boolean(project?.funding || project?.fundingAgency);
   const hasTechnologies = Boolean(project?.technologies && project.technologies.length > 0);
   const hasDeployments = Boolean(project?.deployments && project.deployments.length > 0);
+  const isSpatialProject = [
+    'mr-teleconsultation',
+    'vr-badminton',
+    'tirumala-darshan-ar',
+    'phylos',
+    'egoscore',
+    'modular-xr-upper-limb-rehab',
+    'vr-school-education',
+    'vr-stem-electromagnetism'
+  ].includes(project?.slug || '');
 
   return (
     <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
@@ -248,6 +265,23 @@ export default function ProjectDetailPage() {
                   <p key={idx}>{para}</p>
                 ))}
               </div>
+            </section>
+          )}
+
+          {/* Interactive 3D Spatial Model & Kinematic Telemetry Viewport */}
+          {isSpatialProject && (
+            <section className="flex flex-col gap-3">
+              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#c5a880] font-mono">
+                <Compass className="w-3.5 h-3.5" />
+                <span>INTERACTIVE 3D SPATIAL MODEL & KINEMATIC TELEMETRY</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white tracking-tight">
+                Real-Time 3D Mesh & Spatial Coordinate Simulator
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-400 font-light leading-relaxed">
+                Explore an interactive WebGL OpenXR spatial asset preview. Rotate, orbit, and toggle mesh visualization modes to inspect simulated sub-millimeter 6DOF coordinate tracking.
+              </p>
+              <SpatialModelViewer projectSlug={project.slug} projectTitle={project.title} />
             </section>
           )}
 
