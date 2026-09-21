@@ -5,7 +5,7 @@ import { Home } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="w-screen min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
+    <div className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 text-slate-300 text-xs tracking-wide uppercase mb-6 backdrop-blur-md">
         <span>Page Not Found</span>
       </div>
