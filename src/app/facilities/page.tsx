@@ -77,7 +77,7 @@ const equipmentList: EquipmentItem[] = [
     ],
     capabilities: 'Quantifies mental workload, engagement, and cognitive fatigue during immersive VR learning and teleconsultation sessions to validate cognitive fit models.',
     associatedProjects: [
-      { title: 'EEG Neurological VR Learning (ISMAR)', slug: 'vr-stem-electromagnetism' }
+      { title: 'EEG Neurological VR Learning (ISMAR)', slug: 'vr-school-education' }
     ]
   },
   {
@@ -109,6 +109,7 @@ const equipmentList: EquipmentItem[] = [
     associatedProjects: [
       { title: 'GNN AI Video Detection', slug: 'gnn-video-detection' },
       { title: 'GraphCLaRa (ACM CIKM 2026)', slug: 'graphclara' },
+      { title: 'DPLA-Retriever (ACM WWW 2026)', slug: 'dpla-retriever' },
       { title: 'PHYLOS Bio-Inspired Architecture', slug: 'phylos' }
     ]
   },
