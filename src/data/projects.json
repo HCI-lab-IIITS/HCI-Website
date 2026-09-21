@@ -128,6 +128,24 @@
           "name": "Download ISMAR Paper PDF",
           "link": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
         }
+      ],
+      "features": [
+        {
+          "title": "Five-Stroke Biomechanical Taxonomy",
+          "description": "Full kinematic state machine covering Smash, Clear, Drop, Drive, and Lift strokes with Holt-linear velocity filtering."
+        },
+        {
+          "title": "ArmReachCalibrator Normalization",
+          "description": "Dynamic anthropometric scaling eliminates height and stature bias, standardizing scoring across players of all statures."
+        },
+        {
+          "title": "12-IMU Mocopi Full-Body Motion Capture",
+          "description": "Dual-sensor fusion combining Quest 6DOF controllers with 12 inertial body trackers for accurate forward-kinematic reconstruction."
+        },
+        {
+          "title": "Inverted Aerodynamic Drag Simulation",
+          "description": "High-fidelity quadratic shuttlecock aerodynamics replicating real-world high-drag trajectory physics in virtual courts."
+        }
       ]
     },
     {
@@ -333,7 +351,25 @@
           "pdf": "/papers/MRConsultation_IEEE_VR.pdf"
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Intentional Semantic Abstraction",
+          "description": "Calming pastel geometries and CVD-redundant multi-coding bridge specialist-patient communication without visceral anxiety."
+        },
+        {
+          "title": "Sub-Millimeter Anchor Stability",
+          "description": "Local-coordinate dynamic serialization engine maintains millimeter precision under 10x pinch scaling and rotation."
+        },
+        {
+          "title": "Unity / Three.js Handedness Bridge",
+          "description": "Seamlessly synchronizes 6DOF spatial coordinates and quaternions between Meta Quest 3 headsets and browser WebGL views."
+        },
+        {
+          "title": "Taubin Volume-Preserving CT Smoothing",
+          "description": "Automated medical imaging reconstruction pipeline yielding high-fidelity multi-organ models with sub-0.3mm Hausdorff error."
+        }
+      ]
     },
     {
       "id": 5,
@@ -652,7 +688,25 @@
           "pdf": "/papers/Modular_XR_Rehab_Poster.pdf"
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Controller-Free Hand Tracking",
+          "description": "Leverages native optical tracking on Meta Quest to enable natural motor exercises without bulky handheld hardware."
+        },
+        {
+          "title": "Clinician-Configurable Tolerance Corridors",
+          "description": "Allows physical therapists to dynamically adjust angular joint tolerance bounds (shoulder, elbow, wrist) per patient."
+        },
+        {
+          "title": "Dual-Loop Adaptation Model",
+          "description": "Balances clinical diagnostic requirements with real-time gamified scaffolding, preventing patient frustration and dropout."
+        },
+        {
+          "title": "Kinematic Compliance Analytics",
+          "description": "Captures 84.2% trajectory fidelity and provides clinicians with automated range-of-motion progress dashboards."
+        }
+      ]
     },
     {
       "id": 10,
@@ -1012,7 +1066,25 @@
           "year": 2026
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Decoupled Parameter Latent Attention",
+          "description": "Decoupled dual-phase architecture executing full-corpus 21M passage search within 2.58 GB active VRAM."
+        },
+        {
+          "title": "Single-GPU 8B LLM Co-location",
+          "description": "Frees over 21.4 GB of VRAM on a single NVIDIA RTX 4090 to host an 8B parameter reader model (Llama-3/Mistral)."
+        },
+        {
+          "title": "Entity-Gated 2-Hop Adaptive Bridging",
+          "description": "Dynamic routing router automatically triggers secondary hops on multi-hop questions while bypassing single-hop queries."
+        },
+        {
+          "title": "Sub-4ms Amortized Retrieval",
+          "description": "High-throughput vector search delivering 263.2 queries per second across English Wikipedia."
+        }
+      ]
     },
     {
       "id": 17,
@@ -1078,7 +1150,25 @@
           "year": 2027
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Poincaré Hyperbolic Graph Retrieval",
+          "description": "Continuous Riemannian manifold embeddings supporting hierarchical episodic memory recall without geometric distortion."
+        },
+        {
+          "title": "Multi-Signal Perceptual Scoring",
+          "description": "Fuses 6 orthogonal visual-acoustic signals (head fixation, audio energy, face engagement, zoom kinematics, novelty, emotion) into composite frame importance."
+        },
+        {
+          "title": "Ebbinghaus Temporal Retention",
+          "description": "Cognitive exponential decay modeling that organically deprioritizes routine experiences while preserving key autobiographical anchors."
+        },
+        {
+          "title": "Meta Ray-Ban Wearables Integration",
+          "description": "Native Android integration using Meta Wearables DAT for hands-free 1080p egocentric capture and spatial microphone streaming."
+        }
+      ]
     },
     {
       "id": 18,
@@ -1142,7 +1232,25 @@
           "year": 2027
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Predictive Multiplicity Audit",
+          "description": "Proves candidate selection variance is dominated by model representation rather than job descriptions (rho = 0.682)."
+        },
+        {
+          "title": "Empirical Gatekeeping Proof (75k Decisions)",
+          "description": "Reveals systemic exclusion of non-traditional candidates (Disparate Impact Ratio = 0.31, p < 1e-8), violating EEOC 4/5ths rule."
+        },
+        {
+          "title": "Pluralistic Borda Selection Model",
+          "description": "Multi-model consensus recovery expands qualified True Positive hires by +61.44% and restores demographic equity."
+        },
+        {
+          "title": "Macroeconomic Agent-Based Simulation",
+          "description": "Mesa ABM calibrated to 9.3M real vacancies shows vendor diversity increases total annual employment clearance by +5.07%."
+        }
+      ]
     },
     {
       "id": 19,
@@ -1207,7 +1315,25 @@
           "pdf": "/papers/CIKM_Graph_Routing.pdf"
         }
       ],
-      "deployments": []
+      "deployments": [],
+      "features": [
+        {
+          "title": "Causal Partitioned Compressor (CPC)",
+          "description": "Imposes architectural decoupling between semantic similarity and multi-hop reasoning sub-representations in a single forward pass."
+        },
+        {
+          "title": "Zero Jacobian Orthogonality",
+          "description": "Enforces strict mathematical independence between routing and semantic embeddings, preventing catastrophic capacity collapse."
+        },
+        {
+          "title": "Differentiable Graph Routing",
+          "description": "Dynamic topological propagation across knowledge subgraphs achieving superior passage recall on complex multi-hop queries."
+        },
+        {
+          "title": "Local Sparse Training Fix",
+          "description": "Eliminates dense scaling walls by restricting backpropagation to active localized graph neighborhoods."
+        }
+      ]
     },
     {
       "id": 20,

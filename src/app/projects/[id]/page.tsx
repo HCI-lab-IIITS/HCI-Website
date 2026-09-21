@@ -70,6 +70,7 @@ interface Project {
   fundingAgency?: string | null;
   featured?: boolean;
   technologies?: string[];
+  features?: { title: string; description: string }[];
   publications?: Publication[];
   deployments?: Deployment[];
 }
@@ -264,6 +265,37 @@ export default function ProjectDetailPage() {
               <div className="text-slate-300 text-base leading-relaxed space-y-4 font-light border-l-2 border-[#c5a880]/50 pl-5 pt-1">
                 {project.description.split('\n\n').map((para, idx) => (
                   <p key={idx}>{para}</p>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Key System Features & Architectural Highlights */}
+          {project.features && project.features.length > 0 && (
+            <section className="flex flex-col gap-5">
+              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#c5a880] font-mono border-b border-white/10 pb-3">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>ARCHITECTURAL & SCIENTIFIC HIGHLIGHTS</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {project.features.map((feat, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-md flex flex-col justify-between hover:border-[#c5a880]/40 transition-colors"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[10px] font-mono text-[#38bdf8] font-semibold">
+                          0{idx + 1}.
+                        </span>
+                        <h4 className="text-sm font-medium text-white">{feat.title}</h4>
+                      </div>
+                      <p className="text-xs text-slate-300 font-light leading-relaxed">
+                        {feat.description}
+                      </p>
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>
