@@ -161,7 +161,13 @@
       "fundingAgency": null,
       "featured": true,
       "publications": [],
-      "deployments": []
+      "deployments": [
+        {
+          "name": "EOG Demonstration Video (MP4)",
+          "link": "/projects/eog-interface/Demo_video.mp4"
+        }
+      ],
+      "video": "/projects/eog-interface/Demo_video.mp4"
     },
     {
       "id": 4,
