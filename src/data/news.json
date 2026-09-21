@@ -2,41 +2,65 @@
   "news": [
     {
       "id": 1,
-      "title"   : "Rehab Poster Accepted at ISMAR Adjunct 2025",
-      "excerpt" : "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Augmented Reality.",
-      "content" : "The Human Computer Interaction Lab at IIIT Sri City has been developing personalized therapy solutions using extended reality technologies, adaptive algorithms, and interactive rehabilitation systems.",
+      "title": "Rehab Poster Accepted at ISMAR Adjunct 2025",
+      "excerpt": "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Augmented Reality.",
+      "content": "The Human Computer Interaction Lab at IIIT Sri City has been developing personalized therapy solutions using extended reality technologies, adaptive algorithms, and interactive rehabilitation systems.",
       "category": "Publications",
-      "date"    : "2025-09-01",
-      "image"   : "/photos/lab/vr_teleconsultation.jpg",
+      "date": "2025-09-01",
+      "image": "/photos/lab/vr_teleconsultation.jpg",
       "featured": true,
-      "author"  : "HCI Lab Team",
-      "link"    : "https://ismar2025.org/accepted-papers"
+      "author": "HCI Lab Team",
+      "link": "https://ismar2025.org/accepted-papers"
     },
     {
-      "id"      : 2,
-      "title"   : "EEG Poster Accepted at ISMAR Adjunct 2025",
-      "excerpt" : "This study presents a comprehensive investigation of the neural correlates of locomotion in extended reality, combining high-density EEG with systematically varied environments and interaction techniques.",
-      "content" : "The study analyzes how different locomotion methods and virtual environments affect brain activity measured by EEG to better understand neural dynamics, cognitive load, and motor control during extended reality experiences. It offers insights for designing more intuitive XR locomotion interfaces and adaptive brain-driven navigation systems.",
+      "id": 2,
+      "title": "EEG Poster Accepted at ISMAR Adjunct 2025",
+      "excerpt": "This study presents a comprehensive investigation of the neural correlates of locomotion in extended reality, combining high-density EEG with systematically varied environments and interaction techniques.",
+      "content": "The study analyzes how different locomotion methods and virtual environments affect brain activity measured by EEG to better understand neural dynamics, cognitive load, and motor control during extended reality experiences. It offers insights for designing more intuitive XR locomotion interfaces and adaptive brain-driven navigation systems.",
       "category": "Publications",
-      "date"    : "2025-10-13",
-      "image"   : "/photos/conferences/ieee_ismar_keynote.jpg",
+      "date": "2025-10-13",
+      "image": "/photos/conferences/ieee_ismar_keynote.jpg",
       "featured": true,
-      "author"  : "HCI Lab Team",
-      "link"    : ""
+      "author": "HCI Lab Team",
+      "link": ""
     },
     {
-      "id"      : 3,
-      "title"   : "XR Hackathon '25: Student Innovation in Extended Reality",
-      "excerpt" : "The annual XR Hackathon brings together students and researchers to develop spatial computing applications, immersive environments, and assistive technologies.",
-      "content" : "Organized by the HCI Lab at IIIT Sri City, the XR Hackathon provides an interdisciplinary platform for students to prototype extended reality solutions, collaborate with peers and research mentors, and explore novel interaction paradigms.",
+      "id": 3,
+      "title": "XR Hackathon '25: Student Innovation in Extended Reality",
+      "excerpt": "The annual XR Hackathon brings together students and researchers to develop spatial computing applications, immersive environments, and assistive technologies.",
+      "content": "Organized by the HCI Lab at IIIT Sri City, the XR Hackathon provides an interdisciplinary platform for students to prototype extended reality solutions, collaborate with peers and research mentors, and explore novel interaction paradigms.",
       "category": "Events",
-      "date"    : "2025-09-17",
-      "image"   : "/photos/events/xr_hack_2025.jpg",
+      "date": "2025-09-17",
+      "image": "/photos/events/xr_hack_2025.jpg",
       "featured": true,
-      "author"  : "HCI Lab Team",
-      "link"    : ""
+      "author": "HCI Lab Team",
+      "link": "/xr-hack-25"
+    },
+    {
+      "id": 4,
+      "title": "Global Game Jam '25 Hosted at IIIT Sri City",
+      "excerpt": "Over 80 developers, artists, and sound designers participated in the 48-hour global game development challenge hosted by the HCI Lab.",
+      "content": "Focusing on inclusive game design, interactive narrative engines, and novel control mechanics, participants produced 14 playable prototypes evaluated by faculty and industry mentors.",
+      "category": "Events",
+      "date": "2025-01-26",
+      "image": "/photos/events/global_game_jam.jpg",
+      "featured": true,
+      "author": "HCI Lab Team",
+      "link": "/global-game-jam"
+    },
+    {
+      "id": 5,
+      "title": "DPLA-Retriever: Single-GPU Neural Retrieval for 21M Passages",
+      "excerpt": "Under review at ACM WWW 2026, introducing dual-phase lexical-aware neural retrieval capable of co-locating with LLMs on single GPUs.",
+      "content": "Led by lab researchers Chaitanya Anand and Dr. Himangshu Sarma, DPLA-Retriever achieves competitive nDCG@10 scores while slashing VRAM footprints, enabling accessible neural search on commodity hardware.",
+      "category": "Research Impact",
+      "date": "2026-02-15",
+      "image": "/photos/conferences/chi_2026_presentation.jpg",
+      "featured": true,
+      "author": "Chaitanya Anand",
+      "link": "/projects/dpla-retriever"
     }
   ],
   "categories": ["all", "Awards", "Partnerships", "Research Impact", "Publications", "Events", "Product Launch", "Innovation"],
-  "years": ["all", "2025", "2024", "2023", "2022"]
+  "years": ["all", "2026", "2025", "2024", "2023", "2022"]
 }

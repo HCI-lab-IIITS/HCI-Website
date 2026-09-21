@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Link from 'next/link';
 import { Search, Calendar, Newspaper, Star, FolderOpen } from 'lucide-react';
 import Image from 'next/image';
 import newsData from '../../data/news.json';
@@ -193,16 +194,27 @@ export default function NewsPage() {
                   </div>
 
                   {/* Read More Link */}
-                  <div className="pt-2 border-t border-white/10">
-                    <a
-                      href={article.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-xs text-white/70 hover:text-white transition-all duration-200 font-light backdrop-blur-sm"
-                    >
-                      Read more →
-                    </a>
-                  </div>
+                  {article.link && article.link.trim() !== '' && (
+                    <div className="pt-2 border-t border-white/10">
+                      {article.link.startsWith('http') ? (
+                        <a
+                          href={article.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/30 rounded-lg text-xs text-white/70 hover:text-white transition-all duration-200 font-light backdrop-blur-sm"
+                        >
+                          Read more →
+                        </a>
+                      ) : (
+                        <Link
+                          href={article.link}
+                          className="inline-flex items-center px-3 py-1.5 bg-[#c5a880]/15 hover:bg-[#c5a880] text-[#c5a880] hover:text-black border border-[#c5a880]/30 hover:border-[#c5a880] rounded-lg text-xs font-mono uppercase tracking-wider transition-all duration-200 font-medium backdrop-blur-sm"
+                        >
+                          View initiative →
+                        </Link>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
