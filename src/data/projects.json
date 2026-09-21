@@ -539,12 +539,12 @@
       "endDate": "2021-05-01",
       "summary": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
       "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
-      "bannerImage": "/supplementary/Screenshot 2026-08-08 193155.png",
+      "bannerImage": "/projects/night-to-day/pipeline_architecture.png",
       "galleryImages": [
         {
-          "src": "/supplementary/Screenshot 2026-08-08 193155.png",
-          "title": "Night to Day Output",
-          "caption": "Computer vision transformation sample."
+          "src": "/projects/night-to-day/pipeline_architecture.png",
+          "title": "Retinex & Dual-Attention Architecture",
+          "caption": "Retinex-decomposed contrast enhancement and cycle-consistent illumination transfer pipeline for real-time edge processing."
         }
       ],
       "team": [
@@ -812,12 +812,12 @@
       "endDate": "2023-08-31",
       "summary": "Deep learning embedded vision system running on edge hardware to recognize road sign typography under occlusions and provide low-latency spoken alerts to drivers.",
       "description": "A robust advanced driver-assistance system (ADAS) integrating convolutional neural networks for real-time traffic sign detection, classification under varying lighting and adverse weather conditions, and synthetic speech synthesis for non-intrusive auditory alerts.",
-      "bannerImage": "/supplementary/Screenshot 2026-08-08 193155.png",
+      "bannerImage": "/projects/traffic-sign/pipeline_architecture.png",
       "galleryImages": [
         {
-          "src": "/supplementary/Screenshot 2026-08-08 193155.png",
-          "title": "Traffic Sign Detection",
-          "caption": "Real-time road sign detection and classification overlay."
+          "src": "/projects/traffic-sign/pipeline_architecture.png",
+          "title": "Traffic Sign Detection & Feedback Architecture",
+          "caption": "Edge deep learning pipeline integrating multi-scale sign classification with contextual acoustic and speech warning generation."
         }
       ],
       "team": [
