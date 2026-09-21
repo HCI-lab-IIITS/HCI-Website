@@ -69,9 +69,17 @@ export function SiteNav() {
   };
 
   return (
-    <div className="fixed top-4 left-4 md:left-1/2 md:-translate-x-1/2 z-50 flex items-center gap-4">
-      {/* Mobile Navigation */}
-      <div className="block md:hidden relative">
+    <>
+      {/* Mobile Backdrop */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+      <div className="fixed top-4 left-4 md:left-1/2 md:-translate-x-1/2 z-50 flex items-center gap-4">
+        {/* Mobile Navigation */}
+        <div className="block md:hidden relative">
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900/90 backdrop-blur-xl border border-[#d4af37]/40 shadow-xl"
@@ -164,5 +172,6 @@ export function SiteNav() {
         </div>
       </div>
     </div>
-  );
+  </>
+);
 }

@@ -24,6 +24,10 @@ export default function Home() {
       caption: "IEEE ISMAR 2026: VR Badminton Adaptive Biomechanical Coaching"
     },
     {
+      image: "/projects/egoscore/fig4_egograph_system_arch.png",
+      caption: "ACM CHI 2027: EgoScore Steerable Topological Memory for Smart Glasses"
+    },
+    {
       image: "/photos/lab/vr_teleconsultation.jpg",
       caption: "MRConsultation: Asynchronous 6DOF Pre-Surgical Spatial Teleconsultation"
     },
@@ -34,6 +38,14 @@ export default function Home() {
   ];
 
   const stickyCardsData = [
+    {
+      id: "egoscore",
+      title: "EgoScore: Steerable Topological Memory for Egocentric Wearables",
+      category: "ACM CHI 2027",
+      description: "Multi-signal perceptual importance scoring and Poincaré hyperbolic graph retrieval for Meta Ray-Ban smart glasses lifelogging.",
+      link: "/projects/egoscore",
+      image: "/projects/egoscore/fig4_egograph_system_arch.png"
+    },
     {
       id: "mr-teleconsult",
       title: "MRConsultation: Pre-Surgical Spatial Teleconsultation",
