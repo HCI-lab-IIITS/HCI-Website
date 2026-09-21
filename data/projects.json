@@ -1031,6 +1031,124 @@
         }
       ],
       "deployments": []
+    },
+    {
+      "id": 19,
+      "slug": "graphclara",
+      "title": "GraphCLaRa: Decoupling Semantic Alignment from Reasoning Potential in Dense Retrieval via Causal Representation Partitioning",
+      "category": "Information Retrieval & Graph Systems",
+      "status": "active",
+      "progress": 90,
+      "startDate": "2024-10-01",
+      "endDate": "2026-10-31",
+      "summary": "Dense retrieval systems encode documents into a single semantic vector, coupling factual content with logical implication. GraphCLaRa introduces a causal partition mask over distilled reasoning LLMs, enforcing architecturally disjoint reasoning and semantic sub-representations within a single forward pass alongside differentiable Personalized PageRank graph routing.",
+      "description": "Dense retrieval systems achieve strong recall by encoding documents into a single semantic vector, but this geometry couples factual content with logical implication into one undifferentiated space.\n\nWe present GraphCLaRa, a retrieval architecture that imposes a causal partition mask over a distilled reasoning LLM (DeepSeek-R1-Distill-Qwen), enforcing architecturally disjoint reasoning (M_r) and semantic (M_s) sub-representations within a single forward pass. Within an oracle-corpus evaluation setting (665,766-passage index), GraphCLaRa CPC embeddings achieve 81.2% NQ Recall@5—matching ColBERTv2 (83.7%) within the confidence interval—validating representation quality and ranking precision under controlled corpus conditions.\n\nThe project formulates a differentiable Personalized PageRank (PPR) routing layer using implicit differentiation alongside a Convex Residual Highway that bounds the multi-hop Lipschitz constant, characterizing the scaling limits of end-to-end differentiable routing on large document graphs.",
+      "bannerImage": "/projects/graphclara/fig1_architecture.png",
+      "galleryImages": [
+        {
+          "src": "/projects/graphclara/fig1_architecture.png",
+          "title": "GraphCLaRa System Architecture",
+          "caption": "Causal partition mask decoupling semantic alignment from reasoning potential in dense passage retrieval."
+        },
+        {
+          "src": "/projects/graphclara/fig2_cpc_mask.png",
+          "title": "Causal Representation Partitioning Mask",
+          "caption": "Block-diagonal attention mask structure enforcing gradient output orthogonality."
+        },
+        {
+          "src": "/projects/graphclara/fig3_lipschitz.png",
+          "title": "Lipschitz Contraction Bounds",
+          "caption": "Convex residual highway bounding iterative multi-hop retrieval dynamics."
+        },
+        {
+          "src": "/projects/graphclara/fig5_nq_recall.png",
+          "title": "NQ Recall@5 Comparison",
+          "caption": "Oracle-corpus retrieval benchmark matching ColBERTv2 ranking precision."
+        }
+      ],
+      "team": [
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "Dense Retrieval",
+        "DeepSeek-R1-Distill-Qwen",
+        "Causal Representation Partitioning",
+        "Differentiable PageRank (PPR)",
+        "Implicit Differentiation",
+        "Lipschitz Contraction",
+        "PyTorch"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "Decoupling Semantic Alignment from Reasoning Potential in Dense Retrieval via Causal Representation Partitioning",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
+          "year": 2026
+        }
+      ],
+      "deployments": []
+    },
+    {
+      "id": 20,
+      "slug": "really-understand-papers",
+      "title": "ReallyUnderstandPapers.com: Autonomous AI Research Agent & Pedagogical Paper Coach",
+      "category": "Agentic AI & Interactive Learning Environments",
+      "status": "active",
+      "progress": 95,
+      "startDate": "2024-07-01",
+      "endDate": "2026-12-31",
+      "summary": "An autonomous, agentic research assistant and pedagogical paper coach built on decoupled React/FastAPI architectures, LangGraph, and MCP with Reflexion-style self-critique loops, literature cross-verification, and sandboxed interactive code execution.",
+      "description": "ReallyUnderstandPapers.com moves beyond conventional RAG chatbots by employing a genuine Reflexion-style self-critique loop, automated literature cross-checking, and interactive sandboxed coding challenges.\n\nIt ingests academic papers, autonomously researches context across academic indexes (alphaXiv, Semantic Scholar, Tavily), verifies empirical claims, and coaches users through three distinct engagement tracks: Learn (scaffolded code stubs executing in isolated E2B sandboxes against unit tests), Prototype (generating runnable downscaled implementations), and Twist (verifying user-proposed algorithmic modifications via MCP literature search before coding).",
+      "bannerImage": "/projects/reallyunderstandpapers/mascot.jpg",
+      "galleryImages": [
+        {
+          "src": "/projects/reallyunderstandpapers/mascot.jpg",
+          "title": "ReallyUnderstandPapers Interactive Coach",
+          "caption": "Autonomous pedagogical paper coach agent interface and mascot branding."
+        }
+      ],
+      "team": [
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "LangGraph",
+        "Model Context Protocol (MCP)",
+        "Reflexion Self-Critique",
+        "FastAPI",
+        "React",
+        "E2B Sandboxing",
+        "Academic Index Integration"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "Scaffolded Paper Coaching: An Agentic Reflexion Framework for Interactive Academic Code Replication",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Preprint & System Demonstration / HCI Lab IIIT Sri City",
+          "year": 2026
+        }
+      ],
+      "deployments": [
+        {
+          "name": "ReallyUnderstandPapers Platform",
+          "link": "https://reallyunderstandpapers.com"
+        }
+      ]
     }
   ],
   "statuses": [
@@ -1053,6 +1171,8 @@
     "NLP & Biomechanical Simulation",
     "Information Retrieval & Systems",
     "Wearable Computing & Memory Augmentation",
-    "Human-Centered AI & Algorithmic Fairness"
+    "Human-Centered AI & Algorithmic Fairness",
+    "Information Retrieval & Graph Systems",
+    "Agentic AI & Interactive Learning Environments"
   ]
 }

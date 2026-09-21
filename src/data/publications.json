@@ -440,6 +440,17 @@
       "journal": "Under Review / AAAI Conference on Human Computation and AI for Social Impact (AAAI 2027)",
       "year": 2027,
       "type": "Conference"
+    },
+    {
+      "id": 35,
+      "title": "Decoupling Semantic Alignment from Reasoning Potential in Dense Retrieval via Causal Representation Partitioning",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
+      "year": 2026,
+      "type": "Conference"
     }
   ],
   "years": [
