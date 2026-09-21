@@ -120,7 +120,7 @@ export default function PeoplePage() {
             >
               <ProfileCard
                 name={person.name}
-                title={person.title || person.type.toUpperCase()}
+                title={person.title || (person.year ? `${person.year} Researcher` : person.type.toUpperCase())}
                 handle={person.name.toLowerCase().replace(/[^a-z]/g, '') || 'hcilab'}
                 status={person.researchAreas[0] || 'HCI Researcher'}
                 contactText="Email"
