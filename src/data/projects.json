@@ -46,14 +46,14 @@
     {
       "id": 2,
       "slug": "vr-badminton",
-      "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
+      "title": "XR Badminton: Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform",
       "category": "Virtual Reality & Physics Simulation",
       "status": "active",
       "progress": 90,
       "startDate": "2024-06-01",
       "endDate": "2026-06-30",
-      "summary": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
-      "description": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
+      "summary": "An adaptive VR badminton coaching system featuring high-fidelity aerodynamics, multi-stroke kinematics with Holt-linear state filtering, dynamic body-scaled target calibration, and full-body IMU tracking.",
+      "description": "XR Badminton combines standalone Quest 6-DoF tracking with a 12-IMU Sony Mocopi full-body suit to capture true forward-kinematic bone vectors across a 5-stroke taxonomy (Smash, Clear, Drop, Drive, Lift). An ArmReachCalibrator dynamically computes body-scaled targets, mathematically eliminating stature bias, while a neuro-symbolic verbalizer delivers real-time biomechanical feedback.",
       "bannerImage": "/photos/conferences/ieee_ismar_keynote.jpg",
       "galleryImages": [
         {
@@ -63,27 +63,43 @@
         }
       ],
       "team": [
-        "Dr. Himangshu Sarma",
-        "Abhijit Patil"
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Dr. Himangshu Sarma"
       ],
       "externalCollaborators": [
-        "IEEE ISMAR"
+        "IEEE ISMAR",
+        "ACM CHI 2027"
       ],
       "technologies": [
         "Virtual Reality",
         "Physics Simulation",
         "Adaptive Coaching",
         "Unity",
-        "Biomechanical Tracking"
+        "Biomechanical Tracking",
+        "12-IMU Sony Mocopi",
+        "Holt-Linear Kinematics",
+        "Neuro-Symbolic AI"
       ],
       "funding": null,
       "fundingAgency": null,
       "featured": true,
       "publications": [
         {
+          "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
+          "authors": [
+            "Chaitanya Anand",
+            "Abhijit Patil",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / ACM CHI 2027",
+          "year": 2027
+        },
+        {
           "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
           "authors": [
-            "HCI Lab Researchers",
+            "Abhijit Patil",
+            "Chaitanya Anand",
             "Himangshu Sarma"
           ],
           "journal": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
@@ -147,11 +163,11 @@
       "title": "MRConsultation: Asynchronous Mixed Reality Pre-Surgical Teleconsultation System",
       "category": "Mixed Reality & Healthcare Spatial Computing",
       "status": "active",
-      "progress": 65,
+      "progress": 85,
       "startDate": "2025-01-01",
       "endDate": "2026-11-30",
-      "summary": "An asynchronous Mixed Reality teleconsultation platform enabling surgical teams and patients to conduct spatial 3D pre-surgical planning with interactive 6DOF organ models.",
-      "description": "An asynchronous Mixed Reality teleconsultation platform enabling surgical teams and patients to conduct spatial 3D pre-surgical planning with interactive 6DOF organ models.",
+      "summary": "An asymmetric asynchronous Mixed Reality teleconsultation platform bridging pre-surgical patient-clinician communication via intentional semantic abstraction, dynamic local-coordinate serialization, and interactive 6DOF organ models.",
+      "description": "MRConsultation enables surgical specialists and patients to asynchronously inspect, annotate, and review volumetric 3D organ models. Grounded in Cognitive Fit Theory, it incorporates Intentional Semantic Abstraction to present calming geometries without diagnostic loss, validated through an N=27 clinical usability study (SUS 77.22, UEQ-S Pragmatic +2.15). Features sub-millimeter dynamic coordinate serialization running at 89.7 FPS on Meta Quest 3 and WebGL Three.js.",
       "bannerImage": "/projects/mr-teleconsult/1.png",
       "galleryImages": [
         {
@@ -221,22 +237,49 @@
         }
       ],
       "team": [
-        "HCI Lab Research Team",
-        "Dr. Himangshu Sarma"
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma",
+        "HCI Lab Research Team"
       ],
-      "externalCollaborators": [],
+      "externalCollaborators": [
+        "ACM CHI 2027",
+        "IEEE VR 2026"
+      ],
       "technologies": [
         "Mixed Reality",
-        "Spatial Teleconsultation",
-        "3D Organ Rendering",
+        "Meta Quest 3",
+        "Three.js WebGL",
+        "6DOF Spatial Anchors",
+        "Dynamic Coordinate Serialization",
+        "Intentional Semantic Abstraction",
+        "Taubin Smoothing",
         "Healthcare UX",
-        "Spatial Computing",
-        "Unity"
+        "Unity",
+        "C#"
       ],
       "funding": null,
       "fundingAgency": null,
       "featured": true,
-      "publications": [],
+      "publications": [
+        {
+          "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / ACM CHI 2027",
+          "year": 2027
+        },
+        {
+          "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / IEEE VR 2026 & TVCG",
+          "year": 2026
+        }
+      ],
       "deployments": []
     },
     {
@@ -443,14 +486,14 @@
     {
       "id": 9,
       "slug": "modular-xr-upper-limb-rehab",
-      "title": "Modular XR Platform for Upper Limb Rehabilitation",
+      "title": "Modular Standalone XR Platform for Upper Limb Stroke Rehabilitation",
       "category": "Mixed Reality & Healthcare",
       "status": "active",
-      "progress": 60,
+      "progress": 75,
       "startDate": "2024-01-01",
       "endDate": "2026-06-30",
-      "summary": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
-      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "summary": "A modular standalone extended reality platform for upper limb stroke rehabilitation, featuring clinician-configurable tolerance corridors, dual-loop adaptation, and controller-free optical hand tracking on Meta Quest.",
+      "description": "A modular XR rehabilitation system designed for stroke survivors. It decouples task presentation from kinematic evaluation windows, utilizing controller-free optical hand tracking on Meta Quest. Clinicians configure dynamic tolerance corridors across shoulder, elbow, and wrist kinematics, validated through an N=21 clinical evaluation (SUS 73.50, R-TLX 4.18/10).",
       "bannerImage": "/photos/lab/vr_teleconsultation.jpg",
       "galleryImages": [
         {
@@ -460,17 +503,24 @@
         }
       ],
       "team": [
-        "Dr. Himangshu Sarma",
         "Sambhav Manohar",
         "Mohit Madhu",
-        "Chaitanya Anand"
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Gabriel Zachmann",
+        "Dr. Himangshu Sarma"
       ],
-      "externalCollaborators": [],
+      "externalCollaborators": [
+        "IEEE ISMAR",
+        "ACM CHI EA 2026"
+      ],
       "technologies": [
         "Mixed Reality",
+        "Optical Hand Tracking",
         "Motion Tracking",
         "Rehabilitation Science",
-        "Personalization Algorithms"
+        "Dual-Loop Adaptation",
+        "Kinematic Tolerance Corridors"
       ],
       "funding": null,
       "fundingAgency": null,
@@ -488,6 +538,17 @@
           ],
           "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
           "year": 2025
+        },
+        {
+          "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
+          "authors": [
+            "Sambhav Manohar",
+            "Mohit Madhu",
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
+          "year": 2026
         }
       ],
       "deployments": []
@@ -795,6 +856,51 @@
         }
       ],
       "deployments": []
+    },
+    {
+      "id": 17,
+      "slug": "dpla-retriever",
+      "title": "DPLA-Retriever: Memory-Efficient Web-Scale Retrieval and Single-GPU LLM Co-location",
+      "category": "Information Retrieval & Systems",
+      "status": "active",
+      "progress": 85,
+      "startDate": "2024-08-01",
+      "endDate": "2026-05-01",
+      "summary": "A memory-efficient multi-tier retrieval framework indexing 21 million Wikipedia passages inside 2.58 GB active VRAM, allowing full co-location of an 8B LLM reader on a single consumer GPU.",
+      "description": "DPLA-Retriever (Decoupled Parameter-disjoint Latent Attention) resolves the multi-vector memory bottleneck in web-scale retrieval. By dynamically synthesizing 8 compact latent memory tokens via Perceiver Cross-Attention on-the-fly and employing Entity-Gated 2-Hop Adaptive Bridging, DPLA searches the complete 21,015,324-passage English Wikipedia corpus on a single NVIDIA GeForce RTX 4090 within 2.58 GB active VRAM (8.7x lower than ColBERT v2). This leaves 21.4 GB free to co-locate an 8B LLM reader (Llama-3-8B) on the same GPU, delivering 37.90% MuSiQue R@20 at 3.80 ms amortized query latency (263.2 QPS).",
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg",
+      "galleryImages": [],
+      "team": [
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [
+        "ACM WWW 2026"
+      ],
+      "technologies": [
+        "Information Retrieval",
+        "Multi-Vector MaxSim",
+        "Perceiver Cross-Attention",
+        "FAISS IVF-PQ",
+        "LLM Co-location",
+        "PyTorch",
+        "LoRA Disjoint Adapters"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "Memory-Efficient Multi-Tier Retrieval for Web-Scale Passage Search and Single-GPU LLM Co-location",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / ACM Web Conference (WWW 2026)",
+          "year": 2026
+        }
+      ],
+      "deployments": []
     }
   ],
   "statuses": [
@@ -814,6 +920,7 @@
     "Mixed Reality & Healthcare",
     "Computer Vision & Assistive Health",
     "Intelligent Transportation & HCI",
-    "NLP & Biomechanical Simulation"
+    "NLP & Biomechanical Simulation",
+    "Information Retrieval & Systems"
   ]
 }

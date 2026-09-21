@@ -46,14 +46,14 @@
     {
       "id": 2,
       "slug": "vr-badminton",
-      "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
+      "title": "XR Badminton: Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform",
       "category": "Virtual Reality & Physics Simulation",
       "status": "active",
       "progress": 90,
       "startDate": "2024-06-01",
       "endDate": "2026-06-30",
-      "summary": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
-      "description": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
+      "summary": "An adaptive VR badminton coaching system featuring high-fidelity aerodynamics, multi-stroke kinematics with Holt-linear state filtering, dynamic body-scaled target calibration, and full-body IMU tracking.",
+      "description": "XR Badminton combines standalone Quest 6-DoF tracking with a 12-IMU Sony Mocopi full-body suit to capture true forward-kinematic bone vectors across a 5-stroke taxonomy (Smash, Clear, Drop, Drive, Lift). An ArmReachCalibrator dynamically computes body-scaled targets, mathematically eliminating stature bias, while a neuro-symbolic verbalizer delivers real-time biomechanical feedback.",
       "bannerImage": "/photos/conferences/ieee_ismar_keynote.jpg",
       "galleryImages": [
         {
@@ -63,27 +63,43 @@
         }
       ],
       "team": [
-        "Dr. Himangshu Sarma",
-        "Abhijit Patil"
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Dr. Himangshu Sarma"
       ],
       "externalCollaborators": [
-        "IEEE ISMAR"
+        "IEEE ISMAR",
+        "ACM CHI 2027"
       ],
       "technologies": [
         "Virtual Reality",
         "Physics Simulation",
         "Adaptive Coaching",
         "Unity",
-        "Biomechanical Tracking"
+        "Biomechanical Tracking",
+        "12-IMU Sony Mocopi",
+        "Holt-Linear Kinematics",
+        "Neuro-Symbolic AI"
       ],
       "funding": null,
       "fundingAgency": null,
       "featured": true,
       "publications": [
         {
+          "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
+          "authors": [
+            "Chaitanya Anand",
+            "Abhijit Patil",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review / ACM CHI 2027",
+          "year": 2027
+        },
+        {
           "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
           "authors": [
-            "HCI Lab Researchers",
+            "Abhijit Patil",
+            "Chaitanya Anand",
             "Himangshu Sarma"
           ],
           "journal": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
