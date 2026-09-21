@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Calendar, BookOpen, Quote, Copy, Check, X, Sparkles, FileText, Download } from 'lucide-react';
+import { Search, Calendar, BookOpen, Quote, Copy, Check, X, Sparkles, FileText, Download, ExternalLink } from 'lucide-react';
 import publicationsData from '../../data/publications.json';
 
 interface Publication {
@@ -16,7 +16,9 @@ interface Publication {
   issue?: number;
   pages?: string;
   issn?: string;
+  pdf?: string;
   pdfUrl?: string;
+  link?: string;
 }
 
 export default function PublicationsPage() {
@@ -291,57 +293,78 @@ export default function PublicationsPage() {
               </div>
 
               {/* PDF Preview Screen Frame */}
-              <div className="flex-1 w-full bg-slate-900/90 border border-white/10 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center p-6 text-center">
-                
-                {/* Embedded Document Frame / Placeholder */}
-                <div className="w-full h-full flex flex-col items-center justify-between bg-[#0f172a] rounded-xl border border-white/10 p-6 overflow-y-auto">
-                  <div className="max-w-2xl w-full text-left space-y-4">
-                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                      <span className="text-xs font-mono uppercase tracking-widest text-[#06b6d4]">
-                        PREVIEW DOCUMENT [PDF]
-                      </span>
-                      <span className="text-xs font-mono text-slate-500">IEEE / ACM MANUSCRIPT</span>
+              <div className="flex-1 w-full bg-slate-900/90 border border-white/10 rounded-2xl overflow-hidden relative flex flex-col items-center justify-center p-2 sm:p-4 text-center">
+                {selectedPdfPub.pdf || selectedPdfPub.pdfUrl ? (
+                  <div className="w-full h-full flex flex-col">
+                    <iframe
+                      src={selectedPdfPub.pdf || selectedPdfPub.pdfUrl}
+                      className="w-full flex-1 rounded-xl border border-white/10 bg-slate-950"
+                      title={selectedPdfPub.title}
+                    />
+                    <div className="w-full pt-3 mt-3 border-t border-white/10 flex flex-wrap justify-between items-center text-xs text-slate-400">
+                      <span className="font-mono text-slate-400">Author Camera-Ready / Pre-Print PDF</span>
+                      <a
+                        href={selectedPdfPub.pdf || selectedPdfPub.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2.5 bg-[#06b6d4] text-black font-mono font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white transition-colors inline-flex items-center gap-2"
+                      >
+                        <Download className="w-4 h-4" /> Open / Download PDF
+                      </a>
                     </div>
+                  </div>
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-between bg-[#0f172a] rounded-xl border border-white/10 p-6 overflow-y-auto">
+                    <div className="max-w-2xl w-full text-left space-y-4">
+                      <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                        <span className="text-xs font-mono uppercase tracking-widest text-[#06b6d4]">
+                          DOCUMENT RECORD
+                        </span>
+                        <span className="text-xs font-mono text-slate-500">{selectedPdfPub.type.toUpperCase()} • {selectedPdfPub.year}</span>
+                      </div>
 
-                    <h2 className="text-xl md:text-2xl font-semibold text-white leading-snug">
-                      {selectedPdfPub.title}
-                    </h2>
+                      <h2 className="text-xl md:text-2xl font-semibold text-white leading-snug">
+                        {selectedPdfPub.title}
+                      </h2>
 
-                    <p className="text-xs font-mono text-[#c5a880]">
-                      {selectedPdfPub.authors.join(', ')}
-                    </p>
-
-                    <div className="p-4 bg-slate-950/80 border border-white/10 rounded-xl text-xs text-slate-300 font-light leading-relaxed">
-                      <p className="font-mono text-[11px] text-slate-400 mb-2 uppercase tracking-wider">
-                        Abstract Summary:
+                      <p className="text-xs font-mono text-[#c5a880]">
+                        {selectedPdfPub.authors.join(', ')}
                       </p>
-                      This publication details empirical research in human-computer interaction, spatial computing, and cognitive neural interfaces conducted at IIIT Sri City. The paper presents full system architecture, user study methodologies, and quantitative evaluations.
-                    </div>
 
-                    {/* Interactive Graphics Preview */}
-                    <div className="w-full h-48 rounded-xl overflow-hidden border border-white/10 relative">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/photos/conferences/chi_2026_presentation.jpg"
-                        alt="Publication Figure"
-                        className="w-full h-full object-cover opacity-80"
-                      />
-                      <div className="absolute bottom-2 left-2 px-3 py-1 bg-black/80 backdrop-blur-md rounded text-[10px] font-mono text-white/80 border border-white/10">
-                        Figure 1: Experimental Setup & Spatial Tracking
+                      <div className="p-4 bg-slate-950/80 border border-white/10 rounded-xl text-xs text-slate-300 font-light leading-relaxed">
+                        <p className="font-mono text-[11px] text-slate-400 mb-2 uppercase tracking-wider">
+                          Venue Record:
+                        </p>
+                        Published in <span className="text-white font-medium">{selectedPdfPub.journal}</span> ({selectedPdfPub.year}). Conducted at the Human-Computer Interaction Laboratory, Indian Institute of Information Technology Sri City.
+                      </div>
+
+                      {/* Interactive Graphics Preview */}
+                      <div className="w-full h-48 rounded-xl overflow-hidden border border-white/10 relative">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src="/photos/conferences/chi_2026_presentation.jpg"
+                          alt="Publication Figure"
+                          className="w-full h-full object-cover opacity-80"
+                        />
+                        <div className="absolute bottom-2 left-2 px-3 py-1 bg-black/80 backdrop-blur-md rounded text-[10px] font-mono text-white/80 border border-white/10">
+                          Laboratory Demonstration & Research Apparatus
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className="w-full pt-4 mt-4 border-t border-white/10 flex flex-wrap justify-between items-center text-xs text-slate-400">
-                    <span className="font-mono">Page 1 of 8</span>
-                    <button
-                      onClick={() => alert(`Opening paper link for: ${selectedPdfPub.title}`)}
-                      className="px-5 py-2.5 bg-[#06b6d4] text-black font-mono font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white transition-colors inline-flex items-center gap-2"
-                    >
-                      <Download className="w-4 h-4" /> Download Full PDF
-                    </button>
+                    <div className="w-full pt-4 mt-4 border-t border-white/10 flex flex-wrap justify-between items-center text-xs text-slate-400">
+                      <span className="font-mono text-slate-400">Academic Citation Indexed</span>
+                      <a
+                        href={`https://scholar.google.com/scholar?q=${encodeURIComponent(selectedPdfPub.title)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2.5 bg-[#06b6d4] text-black font-mono font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white transition-colors inline-flex items-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4" /> Find on Google Scholar
+                      </a>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </motion.div>
           </div>

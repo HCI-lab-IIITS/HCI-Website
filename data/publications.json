@@ -464,6 +464,38 @@
       "journal": "Under Review / Pre-print",
       "year": 2026,
       "type": "Preprint"
+    },
+    {
+      "id": 37,
+      "title": "Adaptive Coaching with High-Fidelity Physics for Virtual Reality Badminton Training",
+      "authors": [
+        "Suryansh Bakshi",
+        "Chaitanya Anand",
+        "Phileep Raipure",
+        "Vaishnav Kameswaran",
+        "Himangshu Sarma"
+      ],
+      "journal": "2026 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
+      "year": 2026,
+      "type": "Conference",
+      "pdf": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
+    },
+    {
+      "id": 38,
+      "title": "Immersive Augmented Reality Navigation and Architectural Exploration for Cultural Heritage: The Tirumala Experience",
+      "authors": [
+        "Dr. Himangshu Sarma",
+        "Prathik M Hadagali",
+        "Yaswanth Sai",
+        "Charan Goud",
+        "Rama Krishna",
+        "Jaynil",
+        "Satyam Kumar"
+      ],
+      "journal": "IEEE International Conference on Culture and Computing (IVMSP / ICARCV)",
+      "year": 2025,
+      "type": "Conference",
+      "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
     }
   ],
   "years": [
