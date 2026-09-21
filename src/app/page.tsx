@@ -20,7 +20,7 @@ export default function Home() {
       caption: "CHI 2026: Human-Centered AI & Spatial Computing Keynote"
     },
     {
-      image: "/photos/conferences/ieee_ismar_keynote.jpg",
+      image: "/projects/vr-badminton/teaser_system.png",
       caption: "IEEE ISMAR 2026: VR Badminton Adaptive Biomechanical Coaching"
     },
     {
@@ -28,7 +28,7 @@ export default function Home() {
       caption: "ACM CHI 2027: EgoScore Steerable Topological Memory for Smart Glasses"
     },
     {
-      image: "/photos/lab/vr_teleconsultation.jpg",
+      image: "/projects/mr-teleconsult/system_composite.png",
       caption: "MRConsultation: Asynchronous 6DOF Pre-Surgical Spatial Teleconsultation"
     },
     {
@@ -52,7 +52,7 @@ export default function Home() {
       category: "HEALTHCARE MR",
       description: "Enabling surgical teams to project and annotate volumetric 3D organ models asynchronously in shared 6DOF spatial coordinates.",
       link: "/projects/mr-teleconsultation",
-      image: "/photos/lab/vr_teleconsultation.jpg"
+      image: "/projects/mr-teleconsult/system_composite.png"
     },
     {
       id: "vr-badminton",
@@ -60,7 +60,7 @@ export default function Home() {
       category: "ACM CHI & ISMAR",
       description: "High-fidelity aerodynamics, multi-stroke kinematics with Holt-linear filtering, body-scaled calibration, and 12-IMU full-body tracking.",
       link: "/projects/vr-badminton",
-      image: "/photos/conferences/ieee_ismar_keynote.jpg"
+      image: "/projects/vr-badminton/teaser_system.png"
     },
     {
       id: "isl-translator",
@@ -76,7 +76,7 @@ export default function Home() {
       category: "ASSISTIVE TECH",
       description: "Hands-free spatial object selection and gaze interaction using Electrooculography (EOG) signals for motor accessibility.",
       link: "/projects/eog-object-selection",
-      image: "/supplementary/Screenshot 2026-08-08 193155.png"
+      image: "/projects/eog-interface/Screenshot 2026-08-08 193155.png"
     }
   ];
 
