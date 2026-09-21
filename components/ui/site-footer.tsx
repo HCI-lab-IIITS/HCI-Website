@@ -109,6 +109,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/facilities" className="hover:text-white transition-colors">
+                  Lab Facilities & Hardware
+                </Link>
+              </li>
+              <li>
                 <Link href="/xr-hack-25" className="hover:text-white transition-colors">
                   XR Hack &apos;25
                 </Link>

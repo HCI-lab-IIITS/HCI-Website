@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/publications',
     '/people',
     '/news',
+    '/facilities',
     '/xr-hack-25',
     '/global-game-jam',
   ].map((route) => ({

@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { MenuBar } from '@/components/ui/menu-bar';
-import { Newspaper, Users2, FolderGit2, ScrollText, Home, Menu, X, Gamepad2, Zap } from 'lucide-react';
+import { Newspaper, Users2, FolderGit2, ScrollText, Home, Menu, X, Gamepad2, Zap, Cpu } from 'lucide-react';
 
 export function SiteNav() {
   const router = useRouter();
@@ -44,6 +44,14 @@ export function SiteNav() {
         gradient:
           'radial-gradient(200px 200px at center, rgba(59,130,246,0.35), rgba(34,197,94,0.25), rgba(168,85,247,0.2))',
         iconColor: 'text-sky-400',
+      },
+      {
+        icon: Cpu,
+        label: 'Facilities',
+        href: '/facilities',
+        gradient:
+          'radial-gradient(200px 200px at center, rgba(14,165,233,0.35), rgba(99,102,241,0.25), rgba(168,85,247,0.2))',
+        iconColor: 'text-cyan-400',
       },
       {
         icon: Newspaper,
