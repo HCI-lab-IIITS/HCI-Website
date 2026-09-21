@@ -17,8 +17,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HCI Lab IIITS | Human Computer Interaction Laboratory",
-  description: "Spatial Computing, Virtual Reality Coaching, Indian Sign Language Deep Learning, EOG Target Tracking, and GNN Video Detection at IIIT Sri City.",
+  metadataBase: new URL("https://himangshu.net"),
+  title: {
+    default: "HCI Lab IIITS | Human-Computer Interaction Laboratory",
+    template: "%s | HCI Lab IIITS",
+  },
+  description:
+    "Spatial Computing, Virtual Reality Coaching, Indian Sign Language Deep Learning, EOG Target Tracking, and GNN Video Detection at the Indian Institute of Information Technology Sri City.",
+  keywords: [
+    "Human-Computer Interaction",
+    "HCI Lab",
+    "IIIT Sri City",
+    "Spatial Computing",
+    "Virtual Reality",
+    "XR Coaching",
+    "Sign Language Translation",
+    "EOG",
+    "Electrooculography",
+    "Dr. Himangshu Sarma",
+    "Assistive Technology",
+  ],
+  authors: [{ name: "Dr. Himangshu Sarma", url: "https://himangshu.net" }],
+  creator: "HCI Laboratory, IIIT Sri City",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://himangshu.net",
+    title: "HCI Lab IIITS | Human-Computer Interaction Laboratory",
+    description:
+      "Advancing human-centered computing, mixed reality environments, biomechanical physics simulation, and accessibility AI at IIIT Sri City.",
+    siteName: "HCI Lab IIIT Sri City",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 800,
+        alt: "HCI Lab IIIT Sri City Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HCI Lab IIITS | Human-Computer Interaction Laboratory",
+    description:
+      "Advancing spatial computing, virtual reality coaching, and accessibility AI at IIIT Sri City.",
+    images: ["/logo.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
