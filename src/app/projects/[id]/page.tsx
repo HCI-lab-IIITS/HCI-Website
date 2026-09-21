@@ -118,7 +118,8 @@ export default function ProjectDetailPage() {
     'egoscore',
     'modular-xr-upper-limb-rehab',
     'vr-school-education',
-    'vr-stem-electromagnetism'
+    'vr-stem-electromagnetism',
+    'mangaspace'
   ].includes(project?.slug || '');
 
   return (

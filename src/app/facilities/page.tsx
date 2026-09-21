@@ -31,7 +31,8 @@ const equipmentList: EquipmentItem[] = [
     capabilities: 'Powers stereoscopic mixed-reality pre-surgical teleconsultation, patient organ inspection with sub-millimeter dynamic coordinate synchronization, and interactive cultural heritage navigation.',
     associatedProjects: [
       { title: 'MRConsultation (IEEE VR)', slug: 'mr-teleconsultation' },
-      { title: 'Tirumala Darshan AR', slug: 'tirumala-darshan-ar' }
+      { title: 'Tirumala Darshan AR', slug: 'tirumala-darshan-ar' },
+      { title: 'MangaSpace (Sony Faculty Award)', slug: 'mangaspace' }
     ]
   },
   {
@@ -110,7 +111,8 @@ const equipmentList: EquipmentItem[] = [
       { title: 'GNN AI Video Detection', slug: 'gnn-video-detection' },
       { title: 'GraphCLaRa (ACM CIKM 2026)', slug: 'graphclara' },
       { title: 'DPLA-Retriever (ACM WWW 2026)', slug: 'dpla-retriever' },
-      { title: 'PHYLOS Bio-Inspired Architecture', slug: 'phylos' }
+      { title: 'PHYLOS Bio-Inspired Architecture', slug: 'phylos' },
+      { title: 'MangaSpace (Sony Faculty Award)', slug: 'mangaspace' }
     ]
   },
   {

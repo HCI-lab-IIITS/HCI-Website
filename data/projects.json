@@ -1319,6 +1319,68 @@
           "description": "Hypothalamic drive-reduction mechanisms (hunger, energy) dynamically modulate executive attention and motivation states."
         }
       ]
+    },
+    {
+      "id": 22,
+      "slug": "mangaspace",
+      "title": "MangaSpace: Material-Aware Physical Stylization & Artistic Deformation Priors for Mixed Reality",
+      "category": "Spatial Computing & Non-Photorealistic Rendering",
+      "status": "active",
+      "progress": 85,
+      "startDate": "2025-10",
+      "endDate": "2027-04",
+      "summary": "Material-aware physical-artistic stylization engine for Meta Quest 3, bridging continuum mechanics with non-linear anime exaggeration and view-invariant non-photorealistic inking.",
+      "description": "MangaSpace investigates the perceptual foundations of artistic exaggeration in mixed reality spatial computing. By replacing naive 2D filter overlays with an object-space Viscoelastic-to-Artistic Projection Operator, the system maps physical mechanical impedance tensors (Young's modulus, damping, restitution) to volume-preserving squash-and-stretch deformations and normal-oriented 3D onomatopoeia decals within an empirical 45ms visuo-haptic integration window. Standalone 90 FPS execution on Meta Quest 3 is enabled via an asynchronous RTX 4090 neural co-processor.",
+      "bannerImage": "/projects/mangaspace/teaser.jpg",
+      "galleryImages": [
+        {
+          "src": "/projects/mangaspace/teaser.jpg",
+          "title": "MangaSpace System Concept Teaser",
+          "caption": "First-person mixed reality living room transformation with geometry-anchored physical stylization and material-aware dynamic onomatopoeia."
+        }
+      ],
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Chaitanya Anand"
+      ],
+      "externalCollaborators": [
+        "Sony Research Award Program (Faculty Innovation Award 2026)"
+      ],
+      "technologies": [
+        "Meta Quest 3",
+        "OpenXR",
+        "Unity",
+        "Color Passthrough",
+        "Continuum Mechanics",
+        "Viscoelastic Deformation",
+        "Taubin Filtering",
+        "Non-Photorealistic Rendering (NPR)",
+        "NVIDIA RTX 4090"
+      ],
+      "funding": "Sony Research Award Program 2026",
+      "fundingAgency": "Sony Group Corporation",
+      "publications": [
+        "MangaSpace: Semantic Material-Aware Physical Stylization and Artistic Deformation Priors for Mixed Reality (Sony Faculty Innovation Award Proposal 2026)"
+      ],
+      "featured": true,
+      "features": [
+        {
+          "title": "Viscoelastic-to-Artistic Projection Operator",
+          "description": "Formal mapping from physical mechanical impedance tensors [E, zeta, e, mu] to volume-preserving anime exaggeration manifolds."
+        },
+        {
+          "title": "Visuo-Haptic Integration Window (tau <= 45ms)",
+          "description": "Formulates cross-modal bounds where visual pseudo-haptic exaggeration modulates perceived tactile stiffness without inducing sensorimotor dissonance."
+        },
+        {
+          "title": "View-Invariant Object-Space Inking",
+          "description": "Parameterizes non-photorealistic outlines and halftoning over 3D object manifolds, eliminating binocular retinal rivalry and AR cybersickness."
+        },
+        {
+          "title": "Dual-Tier Heterogeneous Pipeline",
+          "description": "Combines 90 FPS standalone Meta Quest 3 OpenXR tracking and client-side Taubin mesh deformation with asynchronous 10 Hz RTX 4090 semantic segmentation."
+        }
+      ]
     }
   ],
   "statuses": [
@@ -1344,6 +1406,7 @@
     "Human-Centered AI & Algorithmic Fairness",
     "Information Retrieval & Graph Systems",
     "Agentic AI & Interactive Learning Environments",
-    "Cognitive Modeling & Bio-Inspired AI"
+    "Cognitive Modeling & Bio-Inspired AI",
+    "Spatial Computing & Non-Photorealistic Rendering"
   ]
 }

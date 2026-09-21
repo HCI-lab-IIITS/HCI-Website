@@ -45,6 +45,12 @@ function SpatialAsset({
         primaryGeom: new THREE.DodecahedronGeometry(1.3, 1),
         secondaryGeom: new THREE.OctahedronGeometry(1.8, 2)
       };
+    } else if (projectSlug === 'mangaspace') {
+      // Stylized non-linear viscoelastic deformation manifold
+      return {
+        primaryGeom: new THREE.TorusKnotGeometry(1.1, 0.35, 120, 20, 3, 5),
+        secondaryGeom: new THREE.DodecahedronGeometry(1.7, 1)
+      };
     } else {
       // Default 6DOF spatial bounding coordinate system
       return {
@@ -73,11 +79,14 @@ function SpatialAsset({
   });
 
   const materialProps = useMemo(() => {
+    const isManga = projectSlug === 'mangaspace';
+    const isMR = projectSlug === 'mr-teleconsultation';
+    const isEgo = projectSlug === 'egoscore';
     return {
-      color: projectSlug === 'mr-teleconsultation' ? '#f43f5e' : projectSlug === 'egoscore' ? '#a855f7' : '#38bdf8',
-      roughness: 0.25,
-      metalness: 0.75,
-      emissive: projectSlug === 'mr-teleconsultation' ? '#881337' : projectSlug === 'egoscore' ? '#3b0764' : '#0369a1',
+      color: isMR ? '#f43f5e' : isEgo ? '#a855f7' : isManga ? '#fbbf24' : '#38bdf8',
+      roughness: isManga ? 0.4 : 0.25,
+      metalness: isManga ? 0.5 : 0.75,
+      emissive: isMR ? '#881337' : isEgo ? '#3b0764' : isManga ? '#78350f' : '#0369a1',
       emissiveIntensity: 0.35,
       wireframe: mode === 'wireframe',
       transparent: true,
