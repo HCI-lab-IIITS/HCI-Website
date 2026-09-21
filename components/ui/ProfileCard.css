@@ -22,7 +22,7 @@
   perspective: 800px;
   transform: translate3d(0, 0, 0.1px);
   position: relative;
-  touch-action: none;
+  touch-action: pan-y;
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
