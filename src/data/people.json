@@ -188,10 +188,9 @@
       "researchAreas": [
         "Spatial Computing & Wearables",
         "Mixed Reality & Healthcare Teleconsultation",
-        "Sports Biomechanics & VR Kinematics",
-        "Egocentric Vision & Memory Augmentation"
+        "Sports Biomechanics & VR Kinematics"
       ],
-      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City. Researches wearable egocentric memory architectures (EgoScore), asymmetric mixed reality surgical teleconsultation, and neuro-symbolic VR coaching systems."
+      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City. Researches asymmetric mixed reality surgical teleconsultation and neuro-symbolic VR coaching systems."
     },
     {
       "id": 16,
