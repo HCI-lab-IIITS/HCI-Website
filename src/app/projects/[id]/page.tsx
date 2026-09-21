@@ -346,6 +346,7 @@ export default function ProjectDetailPage() {
               <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-black aspect-video shadow-2xl">
                 <video
                   controls
+                  preload="metadata"
                   src={project.video}
                   className="w-full h-full object-contain"
                   poster={project.bannerImage}
