@@ -6,20 +6,20 @@ import { Sparkles, Home } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="w-screen min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 text-center">
-      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs tracking-wide uppercase mb-6 backdrop-blur-md">
-        <Sparkles className="w-3.5 h-3.5" /> 404 - Spatial Node Not Found
+      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-white/5 text-slate-300 text-xs tracking-wide uppercase mb-6 backdrop-blur-md">
+        <span>Page Not Found</span>
       </div>
       <h1 className="text-6xl md:text-8xl font-extralight text-white mb-4 tracking-tight">
         404
       </h1>
-      <p className="text-lg text-white/60 font-light max-w-md mb-8">
-        The requested page or spatial coordinate could not be located on the HCI Lab node network.
+      <p className="text-base sm:text-lg text-slate-400 font-light max-w-md mb-8">
+        The page you are looking for does not exist or may have been moved.
       </p>
       <Link
         href="/"
-        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-2xl text-sm font-light text-white shadow-lg shadow-purple-500/25 border border-purple-400/30 transition-all"
+        className="inline-flex items-center gap-2 px-6 py-3 bg-[#c5a880] hover:bg-white text-black rounded-xl text-xs font-mono uppercase tracking-wider font-semibold transition-all shadow-lg"
       >
-        <Home className="w-4 h-4" /> Return to HCI Home
+        <Home className="w-4 h-4" /> Return to Home
       </Link>
     </div>
   );

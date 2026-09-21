@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { MenuBar } from '@/components/ui/menu-bar';
 import { Newspaper, Users2, FolderGit2, ScrollText, Home, Menu, X, Gamepad2, Zap } from 'lucide-react';
 
@@ -107,23 +108,23 @@ export function SiteNav() {
               })}
 
               <div className="pt-4 mt-4 border-t border-white/10 space-y-2">
-                <a
+                <Link
                   href="/xr-hack-25"
                   className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-purple-300 hover:bg-purple-950/40 border border-purple-500/30 transition-all"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Zap className="h-5 w-5 text-purple-400" />
                   <span className="font-medium">XR Hack &apos;25</span>
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="/global-game-jam"
                   className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-green-300 hover:bg-green-950/40 border border-green-500/30 transition-all"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <Gamepad2 className="h-5 w-5 text-green-400" />
                   <span className="font-medium">Global Game Jam</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -139,7 +140,7 @@ export function SiteNav() {
         />
 
         <div className="flex items-center gap-3 ml-2 pl-6 border-l border-white/15">
-          <a
+          <Link
             href="/xr-hack-25"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-950/50 hover:bg-purple-900/60 border border-purple-500/50 rounded-xl text-purple-300 hover:text-white transition-all backdrop-blur-md relative group"
             style={{
@@ -148,9 +149,9 @@ export function SiteNav() {
           >
             <Zap className="h-4 w-4 text-purple-400 group-hover:scale-125 transition-transform" />
             <span className="text-xs font-semibold whitespace-nowrap">XR Hack &apos;25</span>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/global-game-jam"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-950/50 hover:bg-green-900/60 border border-green-500/50 rounded-xl text-green-300 hover:text-white transition-all backdrop-blur-md relative group"
             style={{
@@ -159,7 +160,7 @@ export function SiteNav() {
           >
             <Gamepad2 className="h-4 w-4 text-green-400 group-hover:scale-125 transition-transform" />
             <span className="text-xs font-semibold whitespace-nowrap">Global Game Jam</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
