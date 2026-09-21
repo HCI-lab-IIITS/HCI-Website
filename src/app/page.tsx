@@ -298,7 +298,8 @@ export default function Home() {
                 desc: "Hands-free spatial gaze interaction and Electrooculography (EOG) signal processing for motor-accessible computing.",
                 borderColor: "group-hover:border-[#38bdf8]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",
-                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]"
+                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]",
+                link: "/projects/eog-object-selection"
               },
               {
                 icon: Layers,
@@ -306,7 +307,8 @@ export default function Home() {
                 desc: "High-fidelity physics simulation for athletic training, augmented reality spatial navigation, and pre-surgical mixed reality.",
                 borderColor: "group-hover:border-[#c5a880]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
-                iconBg: "bg-[#c5a880]/15 text-[#c5a880]"
+                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
+                link: "/projects/vr-badminton"
               },
               {
                 icon: Brain,
@@ -314,7 +316,8 @@ export default function Home() {
                 desc: "Deep learning transformer architectures translating Indian Sign Language (ISL) gestures into real-time speech and text.",
                 borderColor: "group-hover:border-[#c5a880]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
-                iconBg: "bg-[#c5a880]/15 text-[#c5a880]"
+                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
+                link: "/projects/isl-translation"
               },
               {
                 icon: Cpu,
@@ -322,7 +325,8 @@ export default function Home() {
                 desc: "Asynchronous 6DOF spatial computing frameworks enabling collaborative 3D anatomical organ annotation.",
                 borderColor: "group-hover:border-[#38bdf8]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",
-                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]"
+                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]",
+                link: "/projects/mr-teleconsultation"
               }
             ].map((pillar, idx) => (
               <motion.div
@@ -331,23 +335,27 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className={`group bg-slate-900/80 border border-white/10 rounded-2xl p-6 sm:p-8 transition-all duration-500 backdrop-blur-xl flex flex-col justify-between ${pillar.borderColor} ${pillar.glowColor}`}
               >
-                <div>
-                  <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-500 group-hover:scale-105 ${pillar.iconBg}`}>
-                    <pillar.icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                <Link
+                  href={pillar.link}
+                  className={`group bg-slate-900/80 border border-white/10 rounded-2xl p-6 sm:p-8 transition-all duration-500 backdrop-blur-xl flex flex-col justify-between h-full ${pillar.borderColor} ${pillar.glowColor}`}
+                >
+                  <div>
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-500 group-hover:scale-105 ${pillar.iconBg}`}>
+                      <pillar.icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-light text-white mb-2 sm:mb-3 group-hover:text-[#c5a880] transition-colors">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
+                      {pillar.desc}
+                    </p>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-light text-white mb-2 sm:mb-3 group-hover:text-[#c5a880] transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-light">
-                    {pillar.desc}
-                  </p>
-                </div>
-                <div className="mt-5 sm:mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-500 group-hover:text-[#c5a880] transition-colors">
-                  <span>Learn More</span>
-                  <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </div>
+                  <div className="mt-5 sm:mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-500 group-hover:text-[#c5a880] transition-colors">
+                    <span>Explore Project</span>
+                    <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -412,9 +420,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 md:gap-8 text-center">
             {[
-              { num: "35+", label: "Peer-Reviewed Papers", sub: "ACM CHI, CIKM, ISMAR, AAAI" },
+              { num: "38+", label: "Peer-Reviewed Papers", sub: "ACM CHI, CIKM, ISMAR, AAAI" },
               { num: "₹88L+", label: "Research Grants", sub: "DST, SERB, DRDO, ISI" },
-              { num: "20+", label: "Active Research Projects", sub: "Wearables, XR, Graph IR" },
+              { num: "21+", label: "Active Research Projects", sub: "Wearables, XR, Graph IR" },
               { num: "5+", label: "Years of Academic Excellence", sub: "Est. IIIT Sri City" }
             ].map((stat, idx) => (
               <motion.div
