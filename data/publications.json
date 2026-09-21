@@ -2,17 +2,6 @@
   "publications": [
     {
       "id": 1,
-      "title": "Adaptive Coaching with High-Fidelity Physics for Virtual Reality Badminton Training",
-      "authors": [
-        "Abhijit Patil",
-        "Himangshu Sarma"
-      ],
-      "journal": "2026 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
-      "year": 2026,
-      "type": "Conference"
-    },
-    {
-      "id": 2,
       "title": "Towards a Modular XR Platform for Personalized Upper Limb Rehab",
       "authors": [
         "Sambhav Manohar",
@@ -27,7 +16,7 @@
       "type": "Conference"
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Neurological Insights into Interactive VR Learning: An EEG-Based Comparative Study",
       "authors": [
         "Abhijit Patil",
@@ -39,7 +28,7 @@
       "type": "Conference"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "PageLLM: Incremental approach for updating a Security Knowledge Graph by using Page ranking and Large language model.",
       "authors": [
         "Mishra, Chinmaya",
@@ -54,7 +43,7 @@
       "pages": "104045"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "ChronoSentinel: Incremental temporal embedding for Security Knowledge Graph using Dynamic Reachability Centrality and Efficient language model.",
       "authors": [
         "Mishra, Chinmaya",
@@ -68,7 +57,7 @@
       "issn": "1566-2535"
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "Integrated dual-level dependency analysis framework for multi-task judicial decision prognosis in murder cases.",
       "authors": [
         "Madambakam, Prameela",
@@ -81,7 +70,7 @@
       "pages": "112002"
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "A Case study on VR Teaching: Projectile Motion and Gravity",
       "authors": [
         "Shiva Rama Krishna",
@@ -95,7 +84,7 @@
       "pages": "329-330"
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "Enhancing STEM curriculum with virtual reality: electricity and magnetism simulations.",
       "authors": [
         "Shinde, Nishant",
@@ -107,7 +96,7 @@
       "pages": "1-20"
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "Game Based Virtual Reality Platform for Geometry.",
       "authors": [
         "Sarma, Himangshu",
@@ -121,7 +110,7 @@
       "pages": "4812-4818"
     },
     {
-      "id": 10,
+      "id": 9,
       "title": "Teaching and Learning Crystal structures through Virtual Reality based systems",
       "authors": [
         "Vishawash Kumar",
@@ -137,7 +126,7 @@
       "issn": "1474-0346"
     },
     {
-      "id": 11,
+      "id": 10,
       "title": "A text to animation system for physical exercises.",
       "authors": [
         "Sarma, Himangshu",
@@ -154,7 +143,7 @@
       "pages": "1589-1604"
     },
     {
-      "id": 12,
+      "id": 11,
       "title": "Development and analysis of speech recognition systems for Assamese using HTK",
       "authors": [
         "Himangshu Sarma",
@@ -166,7 +155,7 @@
       "type": "Journal"
     },
     {
-      "id": 13,
+      "id": 12,
       "title": "Updating Bayesian networks using crowds",
       "authors": [
         "Himangshu Sarma",
@@ -183,7 +172,7 @@
       "pages": "529-540"
     },
     {
-      "id": 14,
+      "id": 13,
       "title": "A Traffic Sign Recognition and Speech-Based Feedback Generation System to Assist Drivers.",
       "authors": [
         "Sarma, Himangshu",
@@ -195,7 +184,7 @@
       "pages": "53-57"
     },
     {
-      "id": 15,
+      "id": 14,
       "title": "Semantic Map Injected GAN Training for Image-to-Image Translation.",
       "authors": [
         "Kshatriya, Balaram Singh",
@@ -212,7 +201,7 @@
       "pages": "235-249"
     },
     {
-      "id": 16,
+      "id": 15,
       "title": "A Self Learning Yoga Monitoring System Based on Pose Estimation.",
       "authors": [
         "Movva, Prahitha",
@@ -225,7 +214,7 @@
       "pages": "81-91"
     },
     {
-      "id": 17,
+      "id": 16,
       "title": "Data augmentation enhanced speaker enrollment for text-dependent speaker verification.",
       "authors": [
         "Sarkar, Achintya Kumar",
@@ -239,7 +228,7 @@
       "pages": "1-6"
     },
     {
-      "id": 18,
+      "id": 17,
       "title": "Finding out the needy one from Tweets: An analysis using# kerelafloods.",
       "authors": [
         "Ranjan, Rahul",
@@ -252,7 +241,7 @@
       "pages": "184-187"
     },
     {
-      "id": 19,
+      "id": 18,
       "title": "A speech-based driver assisting module for Intelligent Transport System",
       "authors": [
         "Himangshu Sarma",
@@ -263,7 +252,7 @@
       "type": "Conference"
     },
     {
-      "id": 20,
+      "id": 19,
       "title": "A Step Towards Textual Instructions to Virtual Actions.",
       "authors": [
         "Himangshu Sarma",
@@ -276,7 +265,7 @@
       "type": "Conference"
     },
     {
-      "id": 21,
+      "id": 20,
       "title": "Virtual Movement from Textual Instructions.",
       "authors": [
         "Himangshu Sarma"
@@ -286,7 +275,7 @@
       "type": "Conference"
     },
     {
-      "id": 22,
+      "id": 21,
       "title": "A Step Towards Automated Simulation in Industry",
       "authors": [
         "Himangshu Sarma",
@@ -298,7 +287,7 @@
       "type": "Conference"
     },
     {
-      "id": 23,
+      "id": 22,
       "title": "Towards Generating Virtual Movement from Textual Instructions A Case Study in Quality Assessment.",
       "authors": [
         "Himangshu Sarma",
@@ -311,7 +300,7 @@
       "type": "Conference"
     },
     {
-      "id": 24,
+      "id": 23,
       "title": "Virtual Movement from Textual Instructions.",
       "authors": [
         "Himangshu Sarma"
@@ -321,7 +310,7 @@
       "type": "Conference"
     },
     {
-      "id": 25,
+      "id": 24,
       "title": "Development of Assamese Speech Corpus and Automatic Transcription Using HTK.",
       "authors": [
         "Sarma, Himangshu",
@@ -334,7 +323,7 @@
       "pages": "119-132"
     },
     {
-      "id": 26,
+      "id": 25,
       "title": "A Preliminary Study on the VOT Patterns of the Assamese Language and Its Nalbaria Variety.",
       "authors": [
         "Nath, Sanghamitra",
@@ -347,7 +336,7 @@
       "pages": "542-552"
     },
     {
-      "id": 27,
+      "id": 26,
       "title": "Assamese Dialect Translation System- A Preliminary Proposal.",
       "authors": [
         "Nath, Sanghamitra",
@@ -359,7 +348,7 @@
       "type": "Conference"
     },
     {
-      "id": 28,
+      "id": 27,
       "title": "Development and transcription of Assamese speech corpus.",
       "authors": [
         "Sarma, Himangshu",
@@ -371,10 +360,69 @@
       "journal": "National seminar cum Conference on Recent threads and Techniques in Computer Sciences, Kokrajhar, Assam, India",
       "year": 2013,
       "type": "Conference"
+    },
+    {
+      "id": 28,
+      "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 29,
+      "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
+      "year": 2026,
+      "type": "Conference"
+    },
+    {
+      "id": 30,
+      "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
+      "authors": [
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 31,
+      "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
+      "authors": [
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
+      "year": 2026,
+      "type": "Conference"
+    },
+    {
+      "id": 32,
+      "title": "Memory-Efficient Multi-Tier Retrieval for Web-Scale Passage Search and Single-GPU LLM Co-location",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM Web Conference (WWW 2026)",
+      "year": 2026,
+      "type": "Conference"
     }
   ],
   "years": [
     "all",
+    2027,
     2026,
     2025,
     2024,

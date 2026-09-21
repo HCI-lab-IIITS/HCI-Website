@@ -301,8 +301,22 @@
       "imageurl": null,
       "researchAreas": ["computer vision "],
       "bio":"Undergraduate researcher working on Indian sign language."
+    },
+    {
+      "id": 31,
+      "name": "Chaitanya Anand",
+      "type": "student",
+      "year": "UG4",
+      "email": "chaitanya.a22@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "Spatial Computing",
+        "Mixed Reality & Healthcare UX",
+        "Sports Biomechanics & VR Coaching",
+        "Web-Scale Retrieval & Neural Systems"
+      ],
+      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City. Researches asymmetric mixed reality surgical teleconsultation, neuro-symbolic VR coaching systems, stroke rehabilitation exergames, and web-scale neural retrieval."
     }
-    
   ],
   "types": ["all", "faculty", "student", "alumni", "jrf"],
   "studentYears": ["all", "UG1", "UG2", "UG3", "UG4", "PG1", "PG2", "PhD"],

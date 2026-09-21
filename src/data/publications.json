@@ -360,10 +360,70 @@
       "journal": "National seminar cum Conference on Recent threads and Techniques in Computer Sciences, Kokrajhar, Assam, India",
       "year": 2013,
       "type": "Conference"
+    },
+    {
+      "id": 28,
+      "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 29,
+      "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
+      "year": 2026,
+      "type": "Conference"
+    },
+    {
+      "id": 30,
+      "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
+      "authors": [
+        "Chaitanya Anand",
+        "Abhijit Patil",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 31,
+      "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
+      "authors": [
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
+      "year": 2026,
+      "type": "Conference"
+    },
+    {
+      "id": 32,
+      "title": "Memory-Efficient Multi-Tier Retrieval for Web-Scale Passage Search and Single-GPU LLM Co-location",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM Web Conference (WWW 2026)",
+      "year": 2026,
+      "type": "Conference"
     }
   ],
   "years": [
     "all",
+    2027,
+    2026,
     2025,
     2024,
     2023,
