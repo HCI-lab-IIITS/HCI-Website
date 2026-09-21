@@ -39,15 +39,15 @@ export default function Home() {
       title: "MRConsultation: Pre-Surgical Spatial Teleconsultation",
       category: "HEALTHCARE MR",
       description: "Enabling surgical teams to project and annotate volumetric 3D organ models asynchronously in shared 6DOF spatial coordinates.",
-      link: "/projects",
+      link: "/projects/mr-teleconsultation",
       image: "/photos/lab/vr_teleconsultation.jpg"
     },
     {
       id: "vr-badminton",
-      title: "VR Badminton Physics & Athletic Coaching",
-      category: "IEEE ISMAR 2026",
-      description: "High-fidelity physics simulation for VR athletic training, providing real-time biomechanical stroke feedback and aerodynamics.",
-      link: "/projects",
+      title: "XR Badminton: Multi-Stroke Neuro-Symbolic VR Coaching",
+      category: "ACM CHI & ISMAR",
+      description: "High-fidelity aerodynamics, multi-stroke kinematics with Holt-linear filtering, body-scaled calibration, and 12-IMU full-body tracking.",
+      link: "/projects/vr-badminton",
       image: "/photos/conferences/ieee_ismar_keynote.jpg"
     },
     {
@@ -55,7 +55,7 @@ export default function Home() {
       title: "Indian Sign Language (ISL) Gesture Translator",
       category: "ACCESSIBILITY AI",
       description: "Deep learning transformer model translating Indian Sign Language gestures into real-time spoken and written sentences.",
-      link: "/projects",
+      link: "/projects/isl-translation",
       image: "/photos/lab/isl_gesture_recording.jpg"
     },
     {
@@ -63,7 +63,7 @@ export default function Home() {
       title: "VISI-SCROLL: EOG Electrooculography Interface",
       category: "ASSISTIVE TECH",
       description: "Hands-free spatial object selection and gaze interaction using Electrooculography (EOG) signals for motor accessibility.",
-      link: "/projects",
+      link: "/projects/eog-object-selection",
       image: "/supplementary/Screenshot 2026-08-08 193155.png"
     }
   ];
