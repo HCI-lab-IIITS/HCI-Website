@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Search, Star, ArrowRight } from 'lucide-react';
+import { Search, Star, ArrowRight, Video, FileText } from 'lucide-react';
 import projectsData from '@/data/projects.json';
 
 interface GalleryImage {
@@ -44,6 +44,7 @@ interface Project {
   fundingAgency?: string;
   featured?: boolean;
   bannerImage: string;
+  video?: string;
   galleryImages?: GalleryImage[];
   deployments?: Deployment[];
   publications?: Publication[];
@@ -199,11 +200,23 @@ export default function ProjectsPage() {
                     </div>
                   )}
 
-                  {project.galleryImages && project.galleryImages.length > 0 && (
-                    <div className="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[10px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md border border-white/20 text-slate-300">
-                      {project.galleryImages.length} {project.galleryImages.length === 1 ? 'PHOTO' : 'PHOTOS'}
-                    </div>
-                  )}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 flex-wrap justify-end">
+                    {project.video && (
+                      <span className="flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-emerald-950/80 backdrop-blur-md border border-emerald-500/30 text-emerald-300 shadow-sm">
+                        <Video className="w-3 h-3 text-emerald-400" /> VIDEO
+                      </span>
+                    )}
+                    {project.publications && project.publications.some((pub) => Boolean(pub.pdf)) && (
+                      <span className="flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-amber-950/80 backdrop-blur-md border border-amber-500/30 text-amber-300 shadow-sm">
+                        <FileText className="w-3 h-3 text-amber-400" /> PAPER
+                      </span>
+                    )}
+                    {project.galleryImages && project.galleryImages.length > 0 && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md border border-white/20 text-slate-300">
+                        {project.galleryImages.length} {project.galleryImages.length === 1 ? 'PHOTO' : 'PHOTOS'}
+                      </span>
+                    )}
+                  </div>
 
                   {project.category && (
                     <div className="absolute bottom-3 left-3 right-3">
