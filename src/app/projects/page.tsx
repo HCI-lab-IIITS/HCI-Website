@@ -77,24 +77,24 @@ export default function ProjectsPage() {
   }, [searchTerm, selectedStatus, selectedCategory, showFeaturedOnly]);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-28 pb-28 px-6 md:px-16 overflow-x-hidden font-sans">
-      {/* MIT Media Lab Inspired Header Banner */}
+    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
+      {/* Research Initiatives Header Banner */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto w-full mb-12 border-b border-white/15 pb-10"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-12 border-b border-white/15 pb-6 sm:pb-10"
       >
         <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#c5a880] font-mono mb-3">
           <span>HCI LAB</span>
           <span>/</span>
           <span>RESEARCH & INITIATIVES</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-light tracking-tight text-white mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-light tracking-tight text-white mb-3 sm:mb-4">
           Research Projects
         </h1>
-        <p className="text-base md:text-lg text-slate-400 font-light max-w-3xl leading-relaxed">
-          Exploring spatial computing, multi-modal mixed reality, cognitive neural interfaces, high-fidelity biomechanical VR, and speech/gesture accessibility AI. Inspired by the rigorous interdisciplinary methodology of the MIT Media Lab.
+        <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light max-w-3xl leading-relaxed">
+          Interdisciplinary research across spatial computing, mixed reality, assistive neural interfaces, biomechanical physics simulation, and accessibility AI at IIIT Sri City.
         </p>
       </motion.div>
 
@@ -103,7 +103,7 @@ export default function ProjectsPage() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="max-w-7xl mx-auto w-full mb-10 flex flex-col gap-4 bg-slate-900/60 p-5 rounded-2xl border border-white/10 backdrop-blur-md shadow-xl"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-10 flex flex-col gap-4 bg-slate-900/60 p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/10 backdrop-blur-md shadow-xl"
       >
         <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
           {/* Search */}

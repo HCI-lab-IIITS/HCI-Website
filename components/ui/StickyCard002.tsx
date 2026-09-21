@@ -92,48 +92,48 @@ export default function StickyCard002({ cards, className }: StickyCard002Props) 
 
   return (
     <div className={`relative w-full ${className || ''}`} ref={container}>
-      <div className="sticky-cards relative flex h-screen w-full items-center justify-center overflow-hidden px-4 py-8 md:px-12">
-        <div className="relative h-[85vh] w-full max-w-4xl overflow-hidden rounded-3xl">
+      <div className="sticky-cards relative flex h-screen w-full items-center justify-center overflow-hidden px-3 sm:px-6 md:px-12 py-4 sm:py-8">
+        <div className="relative h-[82vh] sm:h-[85vh] w-full max-w-4xl overflow-hidden rounded-2xl sm:rounded-3xl">
           {cards.map((card, i) => (
             <div
               key={card.id}
               ref={(el) => {
                 cardRefs.current[i] = el;
               }}
-              className="absolute inset-0 h-full w-full rounded-3xl overflow-hidden bg-slate-900/90 border border-white/15 backdrop-blur-2xl shadow-2xl flex flex-col md:flex-row"
+              className="absolute inset-0 h-full w-full rounded-2xl sm:rounded-3xl overflow-hidden bg-slate-900/90 border border-white/15 backdrop-blur-2xl shadow-2xl flex flex-col md:flex-row"
             >
               {/* Image Block */}
-              <div className="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden bg-slate-950">
+              <div className="w-full md:w-1/2 h-44 sm:h-60 md:h-full relative overflow-hidden bg-slate-950 flex-shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-md text-[10px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md border border-white/20 text-[#c5a880]">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 px-2.5 py-1 rounded-md text-[9px] sm:text-[10px] font-mono uppercase tracking-wider bg-black/80 backdrop-blur-md border border-white/20 text-[#c5a880]">
                   {card.category}
                 </div>
               </div>
 
               {/* Text Block */}
-              <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-between">
+              <div className="w-full md:w-1/2 p-5 sm:p-7 md:p-12 flex flex-col justify-between overflow-y-auto md:overflow-y-visible">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#38bdf8] font-mono block mb-2">
-                    FEATURED RESEARCH PROJECT {i + 1} OF {cards.length}
+                  <span className="text-[10px] sm:text-xs uppercase tracking-widest text-[#38bdf8] font-mono block mb-1.5 sm:mb-2">
+                    RESEARCH INITIATIVE {i + 1} OF {cards.length}
                   </span>
-                  <h3 className="text-2xl md:text-3xl font-light text-white mb-4 leading-tight">
+                  <h3 className="text-lg sm:text-2xl md:text-3xl font-light text-white mb-2 sm:mb-4 leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-slate-300 font-light leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-300 font-light leading-relaxed mb-4 sm:mb-6 line-clamp-3 sm:line-clamp-none">
                     {card.description}
                   </p>
                 </div>
 
                 <Link
                   href={card.link || '/projects'}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#c5a880] text-black font-semibold text-xs uppercase tracking-wider hover:bg-white transition-colors w-fit shadow-lg shadow-[#c5a880]/15"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-6 sm:py-3 rounded-xl bg-[#c5a880] text-black font-semibold text-xs uppercase tracking-wider hover:bg-white transition-colors w-fit shadow-lg shadow-[#c5a880]/15"
                 >
-                  <span>Explore Project Specs</span>
+                  <span>View Project Details</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>

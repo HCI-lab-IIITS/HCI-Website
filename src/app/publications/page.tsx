@@ -56,7 +56,7 @@ export default function PublicationsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white pt-28 pb-24 px-4 md:px-16 overflow-x-hidden relative font-sans">
+    <div className="min-h-screen bg-black text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden relative font-sans">
       {/* Ambient Glows */}
       <div className="absolute top-20 right-1/4 w-96 h-96 bg-[#1a4993]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-96 left-10 w-96 h-96 bg-[#d4af37]/15 rounded-full blur-3xl pointer-events-none" />
@@ -66,15 +66,15 @@ export default function PublicationsPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-7xl mx-auto w-full mb-12"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-12"
       >
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#f3d068] text-xs tracking-wide uppercase mb-4 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 text-[#f3d068] text-xs tracking-wide uppercase mb-3 sm:mb-4 backdrop-blur-md">
           <Sparkles className="w-3.5 h-3.5" /> Peer-Reviewed Academic Literature
         </div>
-        <h1 className="text-4xl md:text-6xl font-extralight tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extralight tracking-tight mb-3 sm:mb-4">
           Publications & Research Papers
         </h1>
-        <p className="text-lg text-white/70 font-light max-w-2xl">
+        <p className="text-sm sm:text-base md:text-lg text-white/70 font-light max-w-2xl">
           Scientific contributions from the Human-Computer Interaction Lab at IIIT Sri City across IEEE ISMAR, HCII, ICVGIP, and leading international venues.
         </p>
       </motion.div>

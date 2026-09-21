@@ -105,14 +105,14 @@ export default function ProjectDetailPage() {
   const hasDeployments = Boolean(project?.deployments && project.deployments.length > 0);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-28 px-6 md:px-16 overflow-x-hidden font-sans">
+    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
       
       {/* Top Breadcrumb Bar */}
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="max-w-7xl mx-auto w-full mb-8 flex items-center justify-between border-b border-white/10 pb-4"
+        className="max-w-7xl mx-auto w-full mb-6 sm:mb-8 flex items-center justify-between border-b border-white/10 pb-4"
       >
         <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-[#c5a880] font-mono">
           <Link
@@ -143,10 +143,10 @@ export default function ProjectDetailPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto w-full mb-12"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-12"
       >
         {/* Banner Container */}
-        <div className="relative w-full h-[320px] md:h-[460px] rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-slate-950 mb-8 group">
+        <div className="relative w-full h-[240px] sm:h-[340px] md:h-[460px] rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-slate-950 mb-6 sm:mb-8 group">
           {project.bannerImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -164,16 +164,16 @@ export default function ProjectDetailPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-[#090d16]/50 to-transparent" />
 
           {/* Banner Overlays */}
-          <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex flex-col items-start">
-            <div className="flex flex-wrap items-center gap-2.5 mb-3">
+          <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 md:bottom-10 md:left-10 md:right-10 flex flex-col items-start">
+            <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">
               {project.category && (
-                <span className="px-3 py-1 bg-[#c5a880] text-black font-mono font-bold text-[10px] uppercase tracking-widest rounded-none shadow-lg">
+                <span className="px-2.5 sm:px-3 py-1 bg-[#c5a880] text-black font-mono font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-none shadow-lg">
                   {project.category}
                 </span>
               )}
               {project.status && (
                 <span
-                  className={`px-3 py-1 font-mono text-[10px] uppercase tracking-widest border backdrop-blur-md ${
+                  className={`px-2.5 sm:px-3 py-1 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest border backdrop-blur-md ${
                     project.status === 'active'
                       ? 'border-emerald-500/50 bg-emerald-950/70 text-emerald-300'
                       : 'border-blue-500/50 bg-blue-950/70 text-blue-300'
@@ -190,7 +190,7 @@ export default function ProjectDetailPage() {
               )}
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-light tracking-tight text-white max-w-4xl leading-tight">
+            <h1 className="text-xl sm:text-3xl md:text-5xl font-light tracking-tight text-white max-w-4xl leading-tight">
               {project.title}
             </h1>
           </div>
@@ -198,7 +198,7 @@ export default function ProjectDetailPage() {
 
         {/* Executive Summary Callout Box */}
         {(project.summary || project.funding) && (
-          <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-r from-slate-900/90 to-black/80 border border-[#c5a880]/30 shadow-xl backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-r from-slate-900/90 to-black/80 border border-[#c5a880]/30 shadow-xl backdrop-blur-md flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             {project.summary && (
               <div className="flex-1">
                 <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#c5a880] mb-2">

@@ -44,8 +44,8 @@ export default function PeoplePage() {
   };
 
   return (
-    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-28 pb-24 px-4 md:px-16 overflow-x-hidden font-sans">
-      {/* MIT Media Lab Inspired Background Glows */}
+    <div className="w-screen min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
+      {/* Ambient Background Glows */}
       <div className="absolute top-20 left-1/3 w-96 h-96 bg-[#1e293b]/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-96 right-10 w-96 h-96 bg-[#c5a880]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -54,17 +54,17 @@ export default function PeoplePage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto w-full mb-12 border-b border-white/15 pb-10"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-12 border-b border-white/15 pb-6 sm:pb-10"
       >
         <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#c5a880] font-mono mb-3">
           <span>HCI LAB</span>
           <span>/</span>
           <span>RESEARCHERS & TEAM</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-light tracking-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-light tracking-tight mb-3 sm:mb-4">
           People of HCI Lab
         </h1>
-        <p className="text-base md:text-lg text-slate-400 font-light max-w-3xl leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-slate-400 font-light max-w-3xl leading-relaxed">
           Meet the faculty directors, research fellows, PhD scholars, undergraduate researchers, and alumni advancing human-computer interaction, spatial computing, and inclusion AI at IIIT Sri City.
         </p>
       </motion.div>
@@ -74,9 +74,9 @@ export default function PeoplePage() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="max-w-7xl mx-auto w-full mb-12"
+        className="max-w-7xl mx-auto w-full mb-8 sm:mb-12"
       >
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900/60 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-slate-900/60 p-4 rounded-xl sm:rounded-2xl border border-white/10 backdrop-blur-md">
           <div className="relative flex-1 max-w-md w-full">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
             <input
@@ -88,7 +88,7 @@ export default function PeoplePage() {
             />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2 w-full md:w-auto">
             {peopleData.types.map((type) => (
               <button
                 key={type}
