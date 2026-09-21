@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { SiteNav } from "@/components/ui/site-nav";
 import { LenisProvider } from "@/components/ui/lenis-provider";
+import { SiteFooter } from "@/components/ui/site-footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <LenisProvider>
             <SiteNav />
             {children}
+            <SiteFooter />
           </LenisProvider>
         </ThemeProvider>
       </body>
