@@ -412,9 +412,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 md:gap-8 text-center">
             {[
-              { num: "30+", label: "Peer-Reviewed Papers", sub: "IEEE ISMAR, HCII, ICVGIP" },
+              { num: "35+", label: "Peer-Reviewed Papers", sub: "ACM CHI, CIKM, ISMAR, AAAI" },
               { num: "₹88L+", label: "Research Grants", sub: "DST, SERB, DRDO, ISI" },
-              { num: "11+", label: "Active Innovation Projects", sub: "XR, GNN, ISL AI" },
+              { num: "20+", label: "Active Research Projects", sub: "Wearables, XR, Graph IR" },
               { num: "5+", label: "Years of Academic Excellence", sub: "Est. IIIT Sri City" }
             ].map((stat, idx) => (
               <motion.div
