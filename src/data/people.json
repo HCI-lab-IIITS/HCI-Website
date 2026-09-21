@@ -18,6 +18,7 @@
       "id": 2,
       "name": "Dr. Annushree Bablani",
       "type": "faculty",
+      "title": "Assistant Professor",
       "email": "annushree.bablani@iiits.in",
       "imageUrl": "/AnnushreeMam.png",
       "researchAreas": [
@@ -26,12 +27,13 @@
         "Artificial Neural Networks",
         "Machine Learning"
       ],
-      "bio": "Leading research in HCI and VR applications for education and rehabilitation."
+      "bio": "Specializing in Brain-Computer Interfaces (BCI), EEG biosignal classification, artificial neural networks, and neurological cognitive dynamics in VR."
     },
     {
       "id": 3,
       "name": "Dr. Mrinmoy Ghorai",
       "type": "faculty",
+      "title": "Assistant Professor",
       "email": "mrinmoy.ghorai@iiits.in",
       "imageUrl": "/Mrinmoy-Ghorai.jpg",
       "researchAreas": [
@@ -39,7 +41,7 @@
         "Computer Vision",
         "Machine Learning"
       ],
-      "bio": "Leading research in HCI and VR applications for education and rehabilitation."
+      "bio": "Specializing in advanced image processing, computer vision, multi-modal perception, and applied deep learning."
     },
     {
       "id": 4,
