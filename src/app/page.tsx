@@ -4,8 +4,8 @@ import dynamic from "next/dynamic";
 
 const Balatro = dynamic(() => import("@/components/ui/Balatro"), { ssr: false });
 const ColorBends = dynamic(() => import("@/components/ui/ColorBends"), { ssr: false });
+import FogUnderlay from "@/components/ui/FogUnderlay";
 import ShapeGrid from "@/components/ui/ShapeGrid";
-import MaskedHeading from "@/components/ui/MaskedHeading";
 import MorphSlider from "@/components/ui/MorphSlider";
 import ProfileCard from "@/components/ui/ProfileCard";
 import StickyCard002 from "@/components/ui/StickyCard002";
@@ -133,23 +133,37 @@ export default function Home() {
               <span className="text-xs font-mono tracking-wider text-white/90">IEEE ISMAR 2026 & DST</span>
             </motion.div>
 
-            {/* Masked Heading (Text-Through-Image Reveal) */}
+            {/* Heading with Animated Fog Underlay */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="w-full mb-6"
+              className="relative w-full mb-6 py-2"
             >
-              <MaskedHeading
-                text="HUMAN COMPUTER INTERACTION"
-                src="/photos/lab/vr_teleconsultation.jpg"
-                align="left"
-                weight={900}
-                textScale={0.095}
-                fillScale={1.3}
-                parallax={30}
-                className="uppercase tracking-tighter filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.9)]"
+              {/* Atmospheric Animated Fog Underlay */}
+              <FogUnderlay
+                colors={[
+                  'rgba(82, 39, 255, 0.45)',
+                  'rgba(56, 189, 248, 0.40)',
+                  'rgba(197, 168, 128, 0.35)',
+                  'rgba(255, 159, 252, 0.25)'
+                ]}
+                speed={0.7}
+                density={24}
               />
+
+              <div className="relative z-10">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter uppercase leading-[0.95] text-white select-none filter drop-shadow-[0_10px_30px_rgba(0,0,0,0.95)]">
+                  Human Computer <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300">
+                    Interaction
+                  </span>{' '}
+                  <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] via-[#e5c9a4] to-[#f5e0c4] font-mono text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-widest inline-block mt-2">
+                    Lab IIITS
+                  </span>
+                </h1>
+              </div>
             </motion.div>
 
             {/* Subtext */}

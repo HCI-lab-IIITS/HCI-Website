@@ -2,12 +2,257 @@
   "projects": [
     {
       "id": 1,
-      "title": "Tirumala Darshan with AR",
-      "description": "Immersive AR for Tirumala Darshan - Navigate , Discover Idols, and Experience 3D Divine Realms",
+      "slug": "gnn-video-detection",
+      "title": "AI Generated Video Detection via Temporal Graphs and Neighborhood Consistency Regularization",
+      "category": "Deep Learning & Computer Vision",
       "status": "active",
-      "progress": 50,
+      "progress": 80,
+      "startDate": "2024-01-01",
+      "endDate": "2026-12-31",
+      "summary": "We propose a Graph Neural Network for detecting AI generated videos. By enforcing Neighborhood Consistency Regularization exclusively across temporal edges, our model prevents spatial overfitting to known artifacts. This structural constraint significantly improves out of distribution generalization, achieving state-of-the-art robustness on unseen generative models.",
+      "description": "We propose a Graph Neural Network for detecting AI generated videos. By enforcing Neighborhood Consistency Regularization exclusively across temporal edges, our model prevents spatial overfitting to known artifacts. This structural constraint significantly improves out of distribution generalization, achieving state-of-the-art robustness on unseen generative models.",
+      "bannerImage": "/projects/gnn-video/pipeline1 (1).png",
+      "galleryImages": [
+        {
+          "src": "/projects/gnn-video/pipeline1 (1).png",
+          "title": "Architecture Pipeline",
+          "caption": "Temporal graph construction and neighborhood consistency regularization pipeline."
+        },
+        {
+          "src": "/projects/gnn-video/Fig5_Matrix_Roll_Option1.png",
+          "title": "Evaluation Matrix",
+          "caption": "Performance matrix across synthetic video generation models."
+        }
+      ],
+      "team": [
+        "Mohit Jignesh Madhu",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "Graph Neural Networks",
+        "Deep Learning",
+        "Temporal Graphs",
+        "AI Video Detection",
+        "Computer Vision",
+        "Neighborhood Consistency Regularization"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [],
+      "deployments": []
+    },
+    {
+      "id": 2,
+      "slug": "vr-badminton",
+      "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
+      "category": "Virtual Reality & Physics Simulation",
+      "status": "active",
+      "progress": 90,
+      "startDate": "2024-06-01",
+      "endDate": "2026-06-30",
+      "summary": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
+      "description": "An adaptive VR badminton coaching system featuring high-fidelity physics simulations, real-time biomechanical analysis, and intelligent stroke velocity feedback mechanisms for personalized athletic training.",
+      "bannerImage": "/photos/conferences/ieee_ismar_keynote.jpg",
+      "galleryImages": [
+        {
+          "src": "/photos/conferences/ieee_ismar_keynote.jpg",
+          "title": "ISMAR Presentation",
+          "caption": "Presentation and demonstration of VR Badminton Training."
+        }
+      ],
+      "team": [
+        "Dr. Himangshu Sarma",
+        "Abhijit Patil"
+      ],
+      "externalCollaborators": [
+        "IEEE ISMAR"
+      ],
+      "technologies": [
+        "Virtual Reality",
+        "Physics Simulation",
+        "Adaptive Coaching",
+        "Unity",
+        "Biomechanical Tracking"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "Adaptive Coaching with High- Fidelity Physics for Virtual Reality Badminton Training",
+          "authors": [
+            "HCI Lab Researchers",
+            "Himangshu Sarma"
+          ],
+          "journal": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+          "year": 2026,
+          "pdf": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
+        }
+      ],
+      "deployments": [
+        {
+          "name": "Download ISMAR Paper PDF",
+          "link": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "eog-object-selection",
+      "title": "VISI - SCROLL: EOG-Based Hands-Free Object Selection System",
+      "category": "Assistive Technology & Biosignals",
+      "status": "active",
+      "progress": 75,
+      "startDate": "2024-09-01",
+      "endDate": "2026-08-31",
+      "summary": "A bio-potential EOG device that enables motor-disabled users to control computers using eye movements, offering hands-free access to navigate and scroll digital interfaces.",
+      "description": "This project aims to recreate BCI and EOG devices that enable motor-disabled users to control their computers using only their eye movements, offering hands-free access to navigate and scroll through digital interfaces.",
+      "bannerImage": "/projects/eog-interface/Screenshot 2026-08-08 193155.png",
+      "galleryImages": [
+        {
+          "src": "/projects/eog-interface/Screenshot 2026-08-08 193155.png",
+          "title": "System Interface",
+          "caption": "Hands-free object selection HUD."
+        },
+        {
+          "src": "/projects/eog-interface/WhatsApp Image 2026-08-08 at 19.16.12.jpeg",
+          "title": "EOG Acquisition Setup",
+          "caption": "Electrode setup and signal acquisition testing."
+        }
+      ],
+      "team": [
+        "Abhigyan Rutwik Bharadhwaj Pendyala",
+        "Aditya Sahoo",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "EOG Signal Processing",
+        "Assistive Technology",
+        "Eye Tracking",
+        "Human-Computer Interaction",
+        "Embedded Hardware"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [],
+      "deployments": []
+    },
+    {
+      "id": 4,
+      "slug": "mr-teleconsultation",
+      "title": "MRConsultation: Asynchronous Mixed Reality Pre-Surgical Teleconsultation System",
+      "category": "Mixed Reality & Healthcare Spatial Computing",
+      "status": "active",
+      "progress": 65,
+      "startDate": "2025-01-01",
+      "endDate": "2026-11-30",
+      "summary": "An asynchronous Mixed Reality teleconsultation platform enabling surgical teams and patients to conduct spatial 3D pre-surgical planning with interactive 6DOF organ models.",
+      "description": "An asynchronous Mixed Reality teleconsultation platform enabling surgical teams and patients to conduct spatial 3D pre-surgical planning with interactive 6DOF organ models.",
+      "bannerImage": "/projects/mr-teleconsult/1.png",
+      "galleryImages": [
+        {
+          "src": "/projects/mr-teleconsult/1.png",
+          "title": "3D Organ Rendering",
+          "caption": "Interactive 3D organ visualization."
+        },
+        {
+          "src": "/projects/mr-teleconsult/2.png",
+          "title": "Surgical Inspection",
+          "caption": "Multi-angle surgical planning view."
+        },
+        {
+          "src": "/projects/mr-teleconsult/3.png",
+          "title": "Anatomical Slicing",
+          "caption": "Volumetric clipping plane visualizer."
+        },
+        {
+          "src": "/projects/mr-teleconsult/4.png",
+          "title": "Spatial Annotation",
+          "caption": "Annotation and markups on 3D models."
+        },
+        {
+          "src": "/projects/mr-teleconsult/5.png",
+          "title": "Session Recording",
+          "caption": "Asynchronous spatial session capture."
+        },
+        {
+          "src": "/projects/mr-teleconsult/6.png",
+          "title": "Clinical Interface",
+          "caption": "Surgeon Heads-Up Display."
+        },
+        {
+          "src": "/projects/mr-teleconsult/7.png",
+          "title": "Segmentation View",
+          "caption": "Tissue segmentation overlay."
+        },
+        {
+          "src": "/projects/mr-teleconsult/8.png",
+          "title": "Spatial Anchoring",
+          "caption": "Coordinate calibration."
+        },
+        {
+          "src": "/projects/mr-teleconsult/9.png",
+          "title": "Trajectory Planning",
+          "caption": "Incision path simulation."
+        },
+        {
+          "src": "/projects/mr-teleconsult/10.png",
+          "title": "Patient Consultation",
+          "caption": "Patient communication mode."
+        },
+        {
+          "src": "/projects/mr-teleconsult/11.png",
+          "title": "Web Dashboard",
+          "caption": "Companion web interface."
+        },
+        {
+          "src": "/projects/mr-teleconsult/12.png",
+          "title": "Performance Telemetry",
+          "caption": "Rendering fidelity monitor."
+        },
+        {
+          "src": "/projects/mr-teleconsult/13.png",
+          "title": "Pilot Evaluation",
+          "caption": "Clinical pilot evaluation."
+        }
+      ],
+      "team": [
+        "HCI Lab Research Team",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "Mixed Reality",
+        "Spatial Teleconsultation",
+        "3D Organ Rendering",
+        "Healthcare UX",
+        "Spatial Computing",
+        "Unity"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [],
+      "deployments": []
+    },
+    {
+      "id": 5,
+      "slug": "tirumala-darshan-ar",
+      "title": "Tirumala Darshan with AR",
+      "category": "Augmented Reality & Cultural Heritage",
+      "status": "active",
+      "progress": 80,
       "startDate": "2025-03-01",
       "endDate": "2026-09-31",
+      "summary": "Immersive AR for Tirumala Darshan - Navigate, Discover Idols, and Experience 3D Divine Realms.",
+      "description": "Immersive AR for Tirumala Darshan - Navigate , Discover Idols, and Experience 3D Divine Realms",
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg",
+      "galleryImages": [],
+      "video": "/projects/tirumala-ar/lv_0_20260720182251.mp4",
       "team": [
         "Dr. Himangshu Sarma",
         "Prathik M Hadagali",
@@ -16,6 +261,9 @@
         "Rama Krishna",
         "Jaynil",
         "Satyam Kumar"
+      ],
+      "externalCollaborators": [
+        "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)"
       ],
       "technologies": [
         "ARCore",
@@ -26,16 +274,48 @@
       "funding": "Rs. 13,80,860",
       "fundingAgency": "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF), DST, Govt of India",
       "featured": true,
-      "bannerImage": "/photos/lab/vr_teleconsultation.jpg"
+      "publications": [
+        {
+          "title": "Tirumala AR Camera Ready Manuscript",
+          "authors": [
+            "HCI Lab Team",
+            "Himangshu Sarma"
+          ],
+          "journal": "Research Publication",
+          "year": 2025,
+          "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
+        }
+      ],
+      "deployments": [
+        {
+          "name": "Download Research Paper PDF",
+          "link": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
+        },
+        {
+          "name": "Project Video (MP4)",
+          "link": "/projects/tirumala-ar/lv_0_20260720182251.mp4"
+        }
+      ]
     },
     {
-      "id": 2,
+      "id": 6,
+      "slug": "isl-translation",
       "title": "Design and development of communication system for the speech and hearing disorder persons",
-      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "category": "Deep Learning & Computer Vision",
       "status": "active",
-      "progress": 50,
+      "progress": 70,
       "startDate": "2025-02-01",
       "endDate": "2027-03-01",
+      "summary": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
+      "bannerImage": "/photos/lab/isl_gesture_recording.jpg",
+      "galleryImages": [
+        {
+          "src": "/photos/lab/isl_gesture_recording.jpg",
+          "title": "Gesture Recording",
+          "caption": "Dataset recording for Indian Sign Language translation."
+        }
+      ],
       "team": [
         "Dr. Himangshu Sarma",
         "Dhanvanth Singari",
@@ -46,6 +326,10 @@
         "Susrith Dasari",
         "Sambi Reddy Kalumuri",
         "Mamatha Jonnalagadda"
+      ],
+      "externalCollaborators": [
+        "IHub-Data IIIT Hyderabad DST India",
+        "IDEAS, ISI Kolkata"
       ],
       "technologies": [
         "Deep Learning",
@@ -58,43 +342,34 @@
       "funding": "Rs. 24,59,424",
       "fundingAgency": "IHub-Data IIIT Hyderabad DST India, DST, Govt of India",
       "featured": true,
-      "bannerImage": "/photos/lab/isl_gesture_recording.jpg"
+      "publications": [],
+      "deployments": []
     },
     {
-      "id": 3,
-      "title": "Design and development of communication system for the speech and hearing disorder persons",
-      "description": "Developing a model to do real time conversion of Indian Sign Language(ISL) to sentence.",
-      "status": "completed",
-      "progress": 50,
-      "startDate": "2023-12-01",
-      "endDate": "2025-07-31",
-      "team": [
-        "Dr. Himangshu Sarma"
-      ],
-      "technologies": [
-        "Deep Learning",
-        "Computer Vision",
-        "Transfer Learning on Vision Models",
-        "Holistic Pose Detection",
-        "Transformers",
-        "Generative Models"
-      ],
-      "funding": "Rs. 20,67,920",
-      "fundingAgency": "IDEAS, ISI Kolkata, DST, Govt of India",
-      "featured": true,
-      "bannerImage": "/photos/conferences/ieee_ismar_keynote.jpg"
-    },
-    {
-      "id": 4,
+      "id": 7,
+      "slug": "vr-school-education",
       "title": "Development of Game platform through VR and AR for School Education",
-      "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "category": "Virtual Reality & Education",
       "status": "completed",
       "progress": 100,
       "startDate": "2021-12-01",
       "endDate": "2023-12-31",
+      "summary": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg",
+      "galleryImages": [
+        {
+          "src": "/photos/conferences/chi_2026_presentation.jpg",
+          "title": "VR STEM Presentation",
+          "caption": "Presentation of VR platform for physics and geometry education."
+        }
+      ],
       "team": [
         "Dr. Himangshu Sarma",
         "Abhijit Patil"
+      ],
+      "externalCollaborators": [
+        "Anusandhan National Research Foundation (ANRF, SERB)"
       ],
       "technologies": [
         "Unity",
@@ -102,21 +377,59 @@
         "Physics Simulation",
         "Educational Technology"
       ],
-      "funding": "Rs. 1640720",
+      "funding": "Rs. 16,40,720",
       "fundingAgency": "Anusandhan National Research Foundation(ANRF, SERB), Government of India",
       "featured": true,
-      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg"
+      "publications": [
+        {
+          "title": "A Case study on VR Teaching: Projectile Motion and Gravity",
+          "authors": [
+            "Shiva Rama Krishna",
+            "Vedantam Sai Suvanth",
+            "Shardul Kurdukar",
+            "Himangshu Sarma"
+          ],
+          "journal": "2024 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct)",
+          "year": 2024,
+          "link": "https://doi.org/10.1109/ISMAR-Adjunct.2024.00072"
+        },
+        {
+          "title": "Neurological Insights into Interactive VR Learning: An EEG-Based Comparative Study",
+          "authors": [
+            "Abhijit Patil",
+            "Himangshu Sarma",
+            "Annushree Bablani"
+          ],
+          "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
+          "year": 2025
+        }
+      ],
+      "deployments": []
     },
     {
-      "id": 5,
+      "id": 8,
+      "slug": "night-to-day-transformation",
       "title": "Computer vision algorithm for transformation of Night time Images to corresponding Day time",
-      "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
+      "category": "Computer Vision",
       "status": "completed",
       "progress": 100,
       "startDate": "2020-05-01",
       "endDate": "2021-05-01",
+      "summary": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
+      "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
+      "bannerImage": "/supplementary/Screenshot 2026-08-08 193155.png",
+      "galleryImages": [
+        {
+          "src": "/supplementary/Screenshot 2026-08-08 193155.png",
+          "title": "Night to Day Output",
+          "caption": "Computer vision transformation sample."
+        }
+      ],
       "team": [
         "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [
+        "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI)"
       ],
       "technologies": [
         "Computer vision"
@@ -124,39 +437,85 @@
       "funding": "Rs. 9,94,943",
       "fundingAgency": "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI), DRDO, Govt of India",
       "featured": true,
-      "bannerImage": "/supplementary/Screenshot 2026-08-08 193155.png"
+      "publications": [],
+      "deployments": []
     },
     {
-      "id": 6,
+      "id": 9,
+      "slug": "modular-xr-upper-limb-rehab",
       "title": "Modular XR Platform for Upper Limb Rehabilitation",
-      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "category": "Mixed Reality & Healthcare",
       "status": "active",
       "progress": 60,
+      "startDate": "2024-01-01",
+      "endDate": "2026-06-30",
+      "summary": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "description": "Personalized extended reality platform for upper limb rehabilitation with adaptive therapy modules.",
+      "bannerImage": "/photos/lab/vr_teleconsultation.jpg",
+      "galleryImages": [
+        {
+          "src": "/photos/lab/vr_teleconsultation.jpg",
+          "title": "Rehabilitation Simulation",
+          "caption": "Extended reality upper limb therapy module."
+        }
+      ],
       "team": [
         "Dr. Himangshu Sarma",
         "Sambhav Manohar",
         "Mohit Madhu",
         "Chaitanya Anand"
       ],
+      "externalCollaborators": [],
       "technologies": [
         "Mixed Reality",
         "Motion Tracking",
         "Rehabilitation Science",
         "Personalization Algorithms"
       ],
+      "funding": null,
+      "fundingAgency": null,
       "featured": true,
-      "bannerImage": "/photos/lab/vr_teleconsultation.jpg"
+      "publications": [
+        {
+          "title": "Towards a Modular XR Platform for Personalized Upper Limb Rehab",
+          "authors": [
+            "Sambhav Manohar",
+            "Mohit Madhu",
+            "Chaitanya Anand",
+            "Abhijit Patil",
+            "Gabriel Zachmann",
+            "Himangshu Sarma"
+          ],
+          "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
+          "year": 2025
+        }
+      ],
+      "deployments": []
     },
     {
-      "id": 7,
+      "id": 10,
+      "slug": "learning-physics-cv",
       "title": "Learning Physics through Computer Vision",
-      "description": "Comprehensive VR simulation platform for Crystal Structure.",
+      "category": "Virtual Reality & Education",
       "status": "completed",
       "progress": 100,
       "startDate": "2019-12-01",
       "endDate": "2020-09-01",
+      "summary": "Comprehensive VR simulation platform for Crystal Structure.",
+      "description": "Comprehensive VR simulation platform for Crystal Structure.",
+      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg",
+      "galleryImages": [
+        {
+          "src": "/photos/conferences/chi_2026_presentation.jpg",
+          "title": "Crystal Structure Simulation",
+          "caption": "VR simulation platform for Crystal Structure."
+        }
+      ],
       "team": [
         "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [
+        "TEQIP III"
       ],
       "technologies": [
         "VR Development",
@@ -167,43 +526,36 @@
       "funding": "Rs. 2,50,000",
       "fundingAgency": "TEQIP III",
       "featured": true,
-      "bannerImage": "/photos/conferences/chi_2026_presentation.jpg"
+      "publications": [
+        {
+          "title": "Teaching and Learning Crystal structures through Virtual Reality based systems",
+          "authors": [
+            "Vishawash Kumar",
+            "Sahil Gulati",
+            "Bhargab Deka",
+            "Himangshu Sarma"
+          ],
+          "journal": "Advanced Engineering Informatics",
+          "year": 2021
+        }
+      ],
+      "deployments": []
     }
   ],
-  "statuses": ["all", "active", "completed", "planned"],
-  "fundingAgencies": [
+  "statuses": [
     "all",
-    "IIT Tirupati Navavishkar I-Hub Foundation (IITTNiF)",
-    "IHub-Data IIIT Hyderabad DST India",
-    "IDEAS, ISI Kolkata",
-    "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI)",
-    "Anusandhan National Research Foundation",
-    "Science and Engineering Research Board (SERB)",
-    "Department of Science and Technology (DST)",
-    "TEQIP III"
+    "active",
+    "completed"
   ],
-  "technologies": [
+  "categories": [
     "all",
-    "ARCore",
-    "LangChain",
-    "Neural Networks",
-    "Unity",
-    "Deep Learning",
+    "Deep Learning & Computer Vision",
+    "Virtual Reality & Physics Simulation",
+    "Assistive Technology & Biosignals",
+    "Mixed Reality & Healthcare Spatial Computing",
+    "Augmented Reality & Cultural Heritage",
+    "Virtual Reality & Education",
     "Computer Vision",
-    "Transfer Learning on Vision Models",
-    "Holistic Pose Detection",
-    "Transformers",
-    "Generative Models",
-    "VR Development",
-    "Physics Simulation",
-    "Educational Technology",
-    "EEG Signal Processing",
-    "Machine Learning",
-    "VR Integration",
-    "Real-time Analytics",
-    "Mixed Reality",
-    "Motion Tracking",
-    "Rehabilitation Science",
-    "Personalization Algorithms"
+    "Mixed Reality & Healthcare"
   ]
 }

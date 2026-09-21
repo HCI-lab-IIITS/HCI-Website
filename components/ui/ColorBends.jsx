@@ -113,7 +113,7 @@ export default function ColorBends({
   style = {},
   rotation = 90,
   speed = 0.2,
-  colors = [],
+  colors = ['#5227FF', '#FF9FFC', '#7cff67'],
   transparent = true,
   autoRotate = 0,
   scale = 1,
