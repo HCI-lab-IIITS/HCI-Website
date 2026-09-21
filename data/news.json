@@ -7,7 +7,7 @@
       "content": "The Human Computer Interaction Lab at IIIT Sri City has been developing personalized therapy solutions using extended reality technologies, adaptive algorithms, and interactive rehabilitation systems.",
       "category": "Publications",
       "date": "2025-09-01",
-      "image": "/photos/lab/vr_teleconsultation.jpg",
+      "image": "/projects/xr-rehab/platform_architecture.png",
       "featured": true,
       "author": "HCI Lab Team",
       "link": "https://ismar2025.org/accepted-papers"
@@ -55,7 +55,7 @@
       "content": "Led by lab researchers Chaitanya Anand and Dr. Himangshu Sarma, DPLA-Retriever achieves competitive nDCG@10 scores while slashing VRAM footprints, enabling accessible neural search on commodity hardware.",
       "category": "Research Impact",
       "date": "2026-02-15",
-      "image": "/photos/conferences/chi_2026_presentation.jpg",
+      "image": "/projects/dpla-retriever/dpla_architecture.png",
       "featured": true,
       "author": "Chaitanya Anand",
       "link": "/projects/dpla-retriever"
