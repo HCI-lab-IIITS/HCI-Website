@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Calendar, BookOpen, Quote, Copy, Check, X, Sparkles, FileText, Download, ExternalLink } from 'lucide-react';
-import publicationsData from '../../data/publications.json';
+import publicationsData from '@/data/publications.json';
 
 interface Publication {
   id: number;
