@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import { Renderer, Program, Triangle, Mesh, Texture } from 'ogl';
 import './HalftoneReveal.css';
 
-const DEFAULT_SRC = 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1200&fit=crop';
+const DEFAULT_SRC = '/photos/conferences/chi_2026_presentation.jpg';
 
 const hexToRgb = (hex) => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex || '');

@@ -8,19 +8,19 @@ const TRANSITIONS = { melt: 0, ripple: 1, shear: 2, swirl: 3 };
 
 const DEFAULT_ITEMS = [
   {
-    image: '/supplementary/pipeline1 (1).png',
+    image: '/projects/gnn-video/pipeline1 (1).png',
     caption: 'AI Video Detection via GNNs'
   },
   {
-    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1600&auto=format&fit=crop',
+    image: '/photos/conferences/ieee_ismar_keynote.jpg',
     caption: 'VR Badminton Physics Engine Coaching'
   },
   {
-    image: '/supplementary/Screenshot 2026-08-08 193155.png',
+    image: '/projects/eog-interface/Screenshot 2026-08-08 193155.png',
     caption: 'EOG Hands-Free Object Selection'
   },
   {
-    image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1600&auto=format&fit=crop',
+    image: '/photos/conferences/chi_2026_presentation.jpg',
     caption: 'Tirumala AR Temple Spatial Navigation'
   }
 ];
