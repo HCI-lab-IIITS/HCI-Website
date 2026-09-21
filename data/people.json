@@ -382,6 +382,62 @@
         "computer vision "
       ],
       "bio": "Undergraduate researcher working on Indian sign language."
+    },
+    {
+      "id": 31,
+      "name": "Chaitanya Anand",
+      "type": "student",
+      "year": "UG4",
+      "email": "chaitanya.a22@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "Spatial Computing",
+        "Virtual Reality & Healthcare UX",
+        "Sports Biomechanics & VR Coaching",
+        "Web-Scale Retrieval & Systems"
+      ],
+      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City. Researches asymmetric mixed reality surgical teleconsultation, neuro-symbolic VR coaching systems, stroke rehabilitation exergames, and web-scale neural retrieval."
+    },
+    {
+      "id": 32,
+      "name": "Suryansh Bakshi",
+      "type": "student",
+      "year": "UG4",
+      "email": "suryansh.b22@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "Virtual Reality",
+        "Biomechanical Simulation",
+        "Sports Technology"
+      ],
+      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City working on high-fidelity VR physics simulation and adaptive athletic coaching."
+    },
+    {
+      "id": 33,
+      "name": "Phileep Raipure",
+      "type": "student",
+      "year": "UG4",
+      "email": "phileep.r22@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "Virtual Reality",
+        "Motion Kinematics",
+        "Biomechanical Tracking"
+      ],
+      "bio": "Undergraduate researcher at HCI Lab IIIT Sri City working on body-scaled kinematics and full-body IMU tracking for VR athletic training."
+    },
+    {
+      "id": 34,
+      "name": "Vaishnav Kameswaran",
+      "type": "faculty",
+      "email": "vaishnav.kameswaran@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "Human-Computer Interaction",
+        "Accessibility",
+        "Virtual Reality"
+      ],
+      "bio": "Collaborating researcher in Human-Computer Interaction, accessibility, and immersive computing."
     }
   ],
   "types": [
