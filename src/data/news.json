@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title"   : "Rehab Poster Accepted at ISMAR Adjunct 2025",
-      "excerpt" : "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Aaugmented Reality.",
-      "content" : "The Human Computer Interaction Lab at IIIT Sri City has been working on significant personalized therapy solutions using extended reality technologies, using adaptive algorithms and immersive game design.",
+      "excerpt" : "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Augmented Reality.",
+      "content" : "The Human Computer Interaction Lab at IIIT Sri City has been developing personalized therapy solutions using extended reality technologies, adaptive algorithms, and interactive rehabilitation systems.",
       "category": "Publications",
       "date"    : "2025-09-01",
       "image"   : "/photos/lab/vr_teleconsultation.jpg",
@@ -26,9 +26,9 @@
     },
     {
       "id"      : 3,
-      "title"   : "XR HACKATHON '25 Kicks Off, Challenges Innovators to Unleash their imagination",
-      "excerpt" : "This hackathon challenges students to develop innovative XR concepts and turn them into reality, showcasing their talent and competing for exciting recognition.",
-      "content" : "This is for the students to come up with innovative, out-of-the-box XR concepts and turn them into reality. Showcase their talent, collaborate with peers, and compete for exciting recognition!",
+      "title"   : "XR Hackathon '25: Student Innovation in Extended Reality",
+      "excerpt" : "The annual XR Hackathon brings together students and researchers to develop spatial computing applications, immersive environments, and assistive technologies.",
+      "content" : "Organized by the HCI Lab at IIIT Sri City, the XR Hackathon provides an interdisciplinary platform for students to prototype extended reality solutions, collaborate with peers and research mentors, and explore novel interaction paradigms.",
       "category": "Events",
       "date"    : "2025-09-17",
       "image"   : "/photos/events/xr_hack_2025.jpg",

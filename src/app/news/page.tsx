@@ -63,39 +63,39 @@ export default function NewsPage() {
   return (
     <div className="w-screen min-h-screen flex flex-col relative bg-black">
       {/* Header */}
-      <div className="pt-24 pb-12 px-6 md:px-16">
+      <div className="pt-24 pb-8 sm:pb-12 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extralight text-white/100 tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extralight text-white/100 tracking-tight mb-3 sm:mb-4">
             News & Updates
           </h1>
-          <p className="text-lg text-white/70 font-light max-w-2xl">
+          <p className="text-sm sm:text-base md:text-lg text-white/70 font-light max-w-2xl">
             Stay updated with the latest research breakthroughs, awards, and developments from our lab
           </p>
         </div>
       </div>
 
       {/* Search and Filters */}
-      <div className="px-6 md:px-16 pb-8">
+      <div className="px-4 sm:px-6 md:px-16 pb-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
-            <div className="relative flex-1 max-w-md">
+            <div className="relative flex-1 max-w-md w-full">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/60 z-10" />
               <input
                 type="text"
                 placeholder="Search news articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm text-sm"
               />
             </div>
             
-            <div className="flex gap-3">
-              <div className="relative">
+            <div className="flex flex-wrap gap-2.5 sm:gap-3 w-full md:w-auto">
+              <div className="relative flex-1 sm:flex-initial">
                 <FolderOpen className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  className="w-full sm:w-auto pl-10 pr-4 py-2.5 sm:py-3 bg-white/5 border border-white/10 rounded-xl text-xs text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm appearance-none cursor-pointer"
                 >
                 {newsData.categories.map((category) => (
                   <option key={category} value={category} className="bg-black text-white">
@@ -105,12 +105,12 @@ export default function NewsPage() {
               </select>
               </div>
 
-              <div className="relative">
+              <div className="relative flex-1 sm:flex-initial">
                 <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60 z-20 pointer-events-none" />
                 <select
                   value={selectedYear}
                   onChange={(e) => setSelectedYear(e.target.value)}
-                  className="pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm"
+                  className="w-full sm:w-auto pl-10 pr-4 py-2.5 sm:py-3 bg-white/5 border border-white/10 rounded-xl text-xs text-white focus:outline-none focus:border-white/30 transition-colors backdrop-blur-sm appearance-none cursor-pointer"
                 >
                 {newsData.years.map((year) => (
                   <option key={year} value={year} className="bg-black text-white">
@@ -122,13 +122,13 @@ export default function NewsPage() {
 
               <button
                 onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
-                className={`px-4 py-3 rounded-xl border transition-colors backdrop-blur-sm flex items-center gap-2 ${
+                className={`px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl border text-xs transition-colors backdrop-blur-sm flex items-center gap-2 ${
                   showFeaturedOnly
                     ? 'bg-yellow-400/20 text-yellow-400 border-yellow-400/30'
                     : 'bg-white/5 text-white/70 border-white/10 hover:border-white/30'
                 }`}
               >
-                <Star className="w-4 h-4" />
+                <Star className="w-3.5 h-3.5" />
                 Featured Only
               </button>
             </div>
@@ -137,7 +137,7 @@ export default function NewsPage() {
       </div>
 
       {/* News Grid */}
-      <section className="relative pb-24 px-6 md:px-16">
+      <section className="relative pb-24 px-4 sm:px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {filteredNews.map((article: NewsArticle) => (
