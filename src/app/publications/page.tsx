@@ -27,6 +27,31 @@ export default function PublicationsPage() {
   const [selectedPdfPub, setSelectedPdfPub] = useState<Publication | null>(null);
   const [copied, setCopied] = useState(false);
 
+  const downloadAllBibtex = () => {
+    const bibContent = filteredPublications.map(pub => {
+      const firstAuthor = pub.authors[0]?.split(' ').pop()?.replace(/[^a-zA-Z]/g, '').toLowerCase() || 'sarma';
+      const key = `${firstAuthor}${pub.year}_${pub.id}`;
+      const entryType = pub.type === 'Conference' ? 'inproceedings' : pub.type === 'Book Chapter' ? 'incollection' : 'article';
+      const venueField = pub.type === 'Conference' ? 'booktitle' : 'journal';
+      return `@${entryType}{${key},
+  title = {${pub.title}},
+  author = {${pub.authors.join(' and ')}},
+  ${venueField} = {${pub.journal}},
+  year = {${pub.year}}${pub.volume ? `,\n  volume = {${pub.volume}}` : ''}${pub.pages ? `,\n  pages = {${pub.pages}}` : ''}
+}`;
+    }).join('\n\n');
+
+    const blob = new Blob([bibContent], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `hci_lab_iiits_publications_${selectedYear !== 'all' ? selectedYear : 'all'}.bib`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const filteredPublications = useMemo(() => {
     return (publicationsData.publications as Publication[]).filter((pub: Publication) => {
       const matchesSearch =
@@ -130,6 +155,16 @@ export default function PublicationsPage() {
                 ))}
               </select>
             </div>
+
+            {/* Export All BibTeX */}
+            <button
+              onClick={downloadAllBibtex}
+              title="Download BibTeX citations for current selection"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-[#d4af37]/20 hover:bg-[#d4af37] text-[#f3d068] hover:text-black border border-[#d4af37]/40 hover:border-[#d4af37] rounded-xl text-xs font-mono uppercase tracking-wider font-semibold transition-all duration-300 shadow-md backdrop-blur-md"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Export BibTeX ({filteredPublications.length})</span>
+            </button>
           </div>
         </div>
 
