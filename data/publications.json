@@ -13,7 +13,8 @@
       ],
       "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
       "year": 2025,
-      "type": "Conference"
+      "type": "Conference",
+      "pdfUrl": "/papers/Modular_XR_Rehab_Paper.pdf"
     },
     {
       "id": 2,
@@ -381,7 +382,8 @@
       ],
       "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
       "year": 2026,
-      "type": "Conference"
+      "type": "Conference",
+      "pdfUrl": "/papers/MRConsultation_IEEE_VR.pdf"
     },
     {
       "id": 30,
@@ -395,7 +397,8 @@
       ],
       "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
       "year": 2027,
-      "type": "Conference"
+      "type": "Conference",
+      "pdfUrl": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
     },
     {
       "id": 31,
@@ -408,7 +411,8 @@
       ],
       "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
       "year": 2026,
-      "type": "Conference"
+      "type": "Conference",
+      "pdfUrl": "/papers/Modular_XR_Rehab_Poster.pdf"
     },
     {
       "id": 32,
@@ -452,7 +456,8 @@
       ],
       "journal": "Under Review / 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
       "year": 2026,
-      "type": "Conference"
+      "type": "Conference",
+      "pdfUrl": "/papers/CIKM_Graph_Routing.pdf"
     },
     {
       "id": 36,

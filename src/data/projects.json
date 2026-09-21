@@ -319,7 +319,8 @@
             "Himangshu Sarma"
           ],
           "journal": "Under Review / IEEE VR 2026 & TVCG",
-          "year": 2026
+          "year": 2026,
+          "pdf": "/papers/MRConsultation_IEEE_VR.pdf"
         }
       ],
       "deployments": []
@@ -536,12 +537,32 @@
       "endDate": "2026-06-30",
       "summary": "A modular standalone extended reality platform for upper limb stroke rehabilitation, featuring clinician-configurable tolerance corridors, dual-loop adaptation, and controller-free optical hand tracking on Meta Quest.",
       "description": "A modular XR rehabilitation system designed for stroke survivors. It decouples task presentation from kinematic evaluation windows, utilizing controller-free optical hand tracking on Meta Quest. Clinicians configure dynamic tolerance corridors across shoulder, elbow, and wrist kinematics, validated through an N=21 clinical evaluation (SUS 73.50, R-TLX 4.18/10).",
-      "bannerImage": "/photos/lab/vr_teleconsultation.jpg",
+      "bannerImage": "/projects/xr-rehab/platform_architecture.png",
       "galleryImages": [
         {
-          "src": "/photos/lab/vr_teleconsultation.jpg",
-          "title": "Rehabilitation Simulation",
-          "caption": "Extended reality upper limb therapy module."
+          "src": "/projects/xr-rehab/platform_architecture.png",
+          "title": "Modular Platform Architecture",
+          "caption": "Decoupled architecture separating real-time OpenXR kinematics tracking, tolerance corridor adaptation, and clinical dashboard synchronization."
+        },
+        {
+          "src": "/projects/xr-rehab/teaser_pipeline.png",
+          "title": "System Pipeline & Interaction Overview",
+          "caption": "End-to-end rehabilitation pipeline featuring optical hand tracking, kinematic parameterization, and therapist control."
+        },
+        {
+          "src": "/projects/xr-rehab/exercise_interface.png",
+          "title": "Spatial Exercise Interface",
+          "caption": "Gamified exergame modules presenting target reaching trajectories with real-time biofeedback."
+        },
+        {
+          "src": "/projects/xr-rehab/hardware_setup.jpg",
+          "title": "Standalone XR Hardware Configuration",
+          "caption": "Meta Quest standalone deployment showing controller-free optical hand tracking and unencumbered patient interaction."
+        },
+        {
+          "src": "/projects/xr-rehab/kinematics_evaluation.png",
+          "title": "Kinematic Trajectory & Recovery Evaluation",
+          "caption": "Comparative analysis of stroke survivor range-of-motion trajectories across therapy sessions."
         }
       ],
       "team": [
@@ -579,7 +600,8 @@
             "Himangshu Sarma"
           ],
           "journal": "2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR 2025)",
-          "year": 2025
+          "year": 2025,
+          "pdf": "/papers/Modular_XR_Rehab_Paper.pdf"
         },
         {
           "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
@@ -590,7 +612,8 @@
             "Himangshu Sarma"
           ],
           "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
-          "year": 2026
+          "year": 2026,
+          "pdf": "/papers/Modular_XR_Rehab_Poster.pdf"
         }
       ],
       "deployments": []
@@ -900,7 +923,7 @@
       "deployments": []
     },
     {
-      "id": 17,
+      "id": 16,
       "slug": "dpla-retriever",
       "title": "DPLA-Retriever: Memory-Efficient Web-Scale Retrieval and Single-GPU LLM Co-location",
       "category": "Information Retrieval & Systems",
@@ -1133,7 +1156,8 @@
             "Himangshu Sarma"
           ],
           "journal": "Under Review / 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
-          "year": 2026
+          "year": 2026,
+          "pdf": "/papers/CIKM_Graph_Routing.pdf"
         }
       ],
       "deployments": []
