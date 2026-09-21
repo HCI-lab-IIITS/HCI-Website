@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles, Home } from "lucide-react";
+import { Home } from "lucide-react";
 
 export default function NotFound() {
   return (

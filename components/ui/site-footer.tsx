@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, MapPin, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, ExternalLink } from 'lucide-react';
 
 export function SiteFooter() {
   return (
