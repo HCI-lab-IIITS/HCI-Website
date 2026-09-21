@@ -501,6 +501,18 @@
       "year": 2025,
       "type": "Conference",
       "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
+    },
+    {
+      "id": 39,
+      "title": "MangaSpace: Semantic Material-Aware Physical Stylization and Artistic Deformation Priors for Mixed Reality",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Sony Research Award Program (Faculty Innovation Award 2026)",
+      "year": 2026,
+      "type": "Preprint",
+      "pdfUrl": "/papers/MangaSpace_Research_Proposal.pdf"
     }
   ],
   "years": [
@@ -523,6 +535,7 @@
     "all",
     "Conference",
     "Journal",
-    "Book Chapter"
+    "Book Chapter",
+    "Preprint"
   ]
 }
