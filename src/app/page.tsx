@@ -34,6 +34,10 @@ export default function Home() {
     {
       image: "/photos/lab/isl_gesture_recording.jpg",
       caption: "Indian Sign Language AI: Multi-Modal Gesture Recognition Setup"
+    },
+    {
+      image: "/projects/mangaspace/teaser.jpg",
+      caption: "Sony Faculty Award '26: MangaSpace Material-Aware Mixed Reality Exaggeration"
     }
   ];
 
@@ -77,6 +81,14 @@ export default function Home() {
       description: "Hands-free spatial object selection and gaze interaction using Electrooculography (EOG) signals for motor accessibility.",
       link: "/projects/eog-object-selection",
       image: "/projects/eog-interface/Screenshot 2026-08-08 193155.png"
+    },
+    {
+      id: "mangaspace",
+      title: "MangaSpace: Physical Stylization & Deformation Priors in MR",
+      category: "SONY RESEARCH AWARD '26",
+      description: "Viscoelastic-to-artistic projection mapping continuous mechanical impedance to volume-preserving anime deformation manifolds for Meta Quest 3.",
+      link: "/projects/mangaspace",
+      image: "/projects/mangaspace/teaser.jpg"
     }
   ];
 
@@ -422,7 +434,7 @@ export default function Home() {
             {[
               { num: "38+", label: "Peer-Reviewed Papers", sub: "ACM CHI, CIKM, ISMAR, AAAI" },
               { num: "₹88L+", label: "Research Grants", sub: "DST, SERB, DRDO, ISI" },
-              { num: "21+", label: "Active Research Projects", sub: "Wearables, XR, Graph IR" },
+              { num: "22+", label: "Active Research Projects", sub: "Wearables, XR, Graph IR" },
               { num: "5+", label: "Years of Academic Excellence", sub: "Est. IIIT Sri City" }
             ].map((stat, idx) => (
               <motion.div
