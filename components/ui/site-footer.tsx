@@ -45,6 +45,11 @@ export function SiteFooter() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400 font-light">
               <li>
+                <Link href="/projects/egoscore" className="hover:text-white transition-colors">
+                  Wearable Computing & EgoScore
+                </Link>
+              </li>
+              <li>
                 <Link href="/projects/vr-badminton" className="hover:text-white transition-colors">
                   Spatial Computing & VR Coaching
                 </Link>
@@ -67,6 +72,11 @@ export function SiteFooter() {
               <li>
                 <Link href="/projects/dpla-retriever" className="hover:text-white transition-colors">
                   Neural Retrieval & LLM Systems
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects/phylos" className="hover:text-white transition-colors">
+                  Bio-Inspired AI & PHYLOS
                 </Link>
               </li>
             </ul>

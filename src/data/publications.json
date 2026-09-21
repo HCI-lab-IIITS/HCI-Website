@@ -422,6 +422,17 @@
       "type": "Conference"
     },
     {
+      "id": 33,
+      "title": "EgoScore: Importance-Weighted Retrieval for Egocentric Lifelogging via Multi-Signal Perceptual Scoring",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
       "id": 34,
       "title": "Algorithmic Collusion in Two-Sided Labor Markets: AI Resume Screeners, Algorithmic Monoculture, and Wage Compression",
       "authors": [
@@ -442,6 +453,17 @@
       "journal": "Under Review / 35th ACM International Conference on Information and Knowledge Management (CIKM 2026)",
       "year": 2026,
       "type": "Conference"
+    },
+    {
+      "id": 36,
+      "title": "PHYLOS: A Biologically Inspired Modular Architecture for Lifelong Autonomous Control via Localized Plasticity and Thalamic Routing",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / Pre-print",
+      "year": 2026,
+      "type": "Preprint"
     }
   ],
   "years": [

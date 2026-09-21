@@ -59,6 +59,30 @@
       "featured": true,
       "author": "Chaitanya Anand",
       "link": "/projects/dpla-retriever"
+    },
+    {
+      "id": 6,
+      "title": "EgoScore: Steerable Topological Memory Graph for Smart Glasses",
+      "excerpt": "Under review at ACM CHI 2027, introducing multi-signal perceptual importance scoring and Poincaré hyperbolic event graph indexing for wearable lifelogging.",
+      "content": "Developed at the HCI Lab IIIT Sri City by Chaitanya Anand and Dr. Himangshu Sarma, EgoScore bridges cognitive memory theory and egocentric computer vision for always-on smart glasses (Meta Ray-Ban). By fusing 6 orthogonal perceptual signals with Ebbinghaus temporal decay, the system empowers users with steerable retrieval across daily life archives.",
+      "category": "Publications",
+      "date": "2026-03-01",
+      "image": "/projects/egoscore/fig4_egograph_system_arch.png",
+      "featured": true,
+      "author": "Chaitanya Anand",
+      "link": "/projects/egoscore"
+    },
+    {
+      "id": 7,
+      "title": "GraphCLaRa: Causal Representation Partitioning in Dense Retrieval",
+      "excerpt": "Under review at ACM CIKM 2026, decoupling semantic alignment from reasoning potential via causal partition masks and differentiable PageRank routing.",
+      "content": "GraphCLaRa establishes a new paradigm in neural retrieval by imposing architecturally disjoint reasoning and semantic sub-representations within a single forward pass over DeepSeek-R1-Distill-Qwen models, achieving 81.2% NQ Recall@5 under controlled corpus conditions.",
+      "category": "Publications",
+      "date": "2026-02-20",
+      "image": "/projects/graphclara/fig1_architecture.png",
+      "featured": false,
+      "author": "HCI Lab Team",
+      "link": "/projects/graphclara"
     }
   ],
   "categories": [
