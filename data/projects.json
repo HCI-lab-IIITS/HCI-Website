@@ -901,6 +901,136 @@
         }
       ],
       "deployments": []
+    },
+    {
+      "id": 17,
+      "slug": "egoscore",
+      "title": "EgoScore: Importance-Weighted Retrieval for Egocentric Lifelogging via Multi-Signal Perceptual Scoring",
+      "category": "Wearable Computing & Memory Augmentation",
+      "status": "active",
+      "progress": 95,
+      "startDate": "2024-08-01",
+      "endDate": "2027-04-30",
+      "summary": "When users wear always-on egocentric cameras (such as Meta Ray-Ban glasses), they accumulate hours of video daily. EgoScore operationalizes moment importance across social significance, emotional salience, novelty, and memorability by fusing six perceptual signals with Ebbinghaus-inspired temporal decay.",
+      "description": "EgoScore introduces importance-weighted retrieval for egocentric lifelogging. Drawing on Dual-Process Memory Theory (Tulving & Baddeley) and Event Segmentation Theory (Zacks et al.), the system indexes 2-minute egocentric video segments into a steerable topological memory graph.\\n\\nThe pipeline extracts six orthogonal perceptual signals—SigLIP visual novelty, YOLOv8/v11 social presence, optical flow activity intensity, Whisper audio affect, MediaPipe interaction density, and Mahalanobis contextual surprise—fused with an Ebbinghaus forgetting curve. In a within-subjects user study (N=16) searching personal lifelogs, importance-reranked retrieval achieved significantly higher satisfaction than semantic-only retrieval (p < .01), with 75% of participants preferring the importance-aware system for daily lifelogging and memory augmentation.",
+      "bannerImage": "/projects/egoscore/fig4_egograph_system_arch.png",
+      "galleryImages": [
+        {
+          "src": "/projects/egoscore/fig4_egograph_system_arch.png",
+          "title": "EgoGraph System Architecture",
+          "caption": "End-to-end pipeline: video ingestion, multi-signal extraction, Poincaré embedding projection, and real-time steerable reranking."
+        },
+        {
+          "src": "/projects/egoscore/fig1_signal_extraction_flow.png",
+          "title": "Perceptual Signal Extraction Flow",
+          "caption": "Parallel feature extraction pipeline across visual novelty, social gaze, activity, and audio prosody."
+        },
+        {
+          "src": "/projects/egoscore/fig2_poincare_vs_euclidean.png",
+          "title": "Poincaré Hyperbolic vs Euclidean Embedding",
+          "caption": "Hierarchical event tree representation in Poincaré ball space demonstrating superior representation of episodic memory hierarchies."
+        },
+        {
+          "src": "/projects/egoscore/fig5_disorientation_memory_prosthetic.png",
+          "title": "Assistive Memory Prosthetic Architecture",
+          "caption": "Clinical memory prosthetic evaluation showing disorientation mitigation via contextual event recall."
+        }
+      ],
+      "team": [
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "Egocentric Computer Vision",
+        "Wearable Computing",
+        "Poincaré Hyperbolic Embeddings",
+        "SigLIP ViT-So400M",
+        "Multi-Signal Fusion",
+        "Ebbinghaus Temporal Decay",
+        "Meta Ray-Ban Smart Glasses",
+        "FAISS HNSW32",
+        "Human-Centered AI"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "EgoScore: Importance-Weighted Retrieval for Egocentric Lifelogging via Multi-Signal Perceptual Scoring",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review, ACM Conference on Human Factors in Computing Systems (CHI 2027)",
+          "year": 2027
+        }
+      ],
+      "deployments": []
+    },
+    {
+      "id": 18,
+      "slug": "aclm-labor-markets",
+      "title": "Algorithmic Collusion in Two-Sided Labor Markets: AI Resume Screeners, Monoculture, and Wage Compression",
+      "category": "Human-Centered AI & Algorithmic Fairness",
+      "status": "active",
+      "progress": 90,
+      "startDate": "2024-09-01",
+      "endDate": "2027-02-28",
+      "summary": "Investigating how algorithmic monoculture in automated hiring pipelines induces structural wage compression and correlated candidate rejection through agent-based macroeconomic simulations and two-stage cross-encoder re-ranking audits.",
+      "description": "This project investigates the market-level consequences of widespread adoption of proprietary AI resume screeners in two-sided labor markets. When competing employers rely on identical or correlated deep language representations (such as MPNet bi-encoders and DeBERTa cross-encoders), subtle scoring biases compound across hiring funnels.\\n\\nUsing a calibrated Mesa-based agent-based model (ABM) coupled with Bertrand-Mullainathan audit protocols and Fairlearn intersectional disparity evaluations compliant with NYC Local Law 144, we quantify how algorithmic monoculture elevates Correlated Rejection Rates (CRR) and compresses entry-level wages, disproportionately penalizing non-traditional career trajectories.",
+      "bannerImage": "/projects/aclm/monoculture_exclusion_curve.png",
+      "galleryImages": [
+        {
+          "src": "/projects/aclm/monoculture_exclusion_curve.png",
+          "title": "Monoculture Exclusion Dynamics",
+          "caption": "Correlated rejection curves illustrating candidate lockout under shared algorithmic screening architectures."
+        },
+        {
+          "src": "/projects/aclm/abm_market_dynamics.png",
+          "title": "Agent-Based Market Dynamics",
+          "caption": "Mesa agent-based simulation tracking wage distribution shifts and employer screening equilibria."
+        },
+        {
+          "src": "/projects/aclm/cross_model_correlation_matrix.png",
+          "title": "Cross-Model Correlation Matrix",
+          "caption": "Cross-architecture similarity evaluation across proprietary and open-source language models."
+        },
+        {
+          "src": "/projects/aclm/fairness_disparity_chart.png",
+          "title": "Demographic Fairness Disparities",
+          "caption": "NYC Local Law 144 compliance audits across intersectional candidate demographic cohorts."
+        }
+      ],
+      "team": [
+        "Chaitanya Anand",
+        "Dr. Himangshu Sarma"
+      ],
+      "externalCollaborators": [],
+      "technologies": [
+        "Agent-Based Modeling",
+        "DeBERTa-v3 Cross-Encoder",
+        "Fairlearn",
+        "Algorithmic Auditing",
+        "Empirical Economics",
+        "SHAP Explainability",
+        "PyTorch"
+      ],
+      "funding": null,
+      "fundingAgency": null,
+      "featured": true,
+      "publications": [
+        {
+          "title": "Algorithmic Collusion in Two-Sided Labor Markets: AI Resume Screeners, Algorithmic Monoculture, and Wage Compression",
+          "authors": [
+            "Chaitanya Anand",
+            "Himangshu Sarma"
+          ],
+          "journal": "Under Review, AAAI Conference on Human Computation and AI for Social Impact (AAAI 2027)",
+          "year": 2027
+        }
+      ],
+      "deployments": []
     }
   ],
   "statuses": [
@@ -921,6 +1051,8 @@
     "Computer Vision & Assistive Health",
     "Intelligent Transportation & HCI",
     "NLP & Biomechanical Simulation",
-    "Information Retrieval & Systems"
+    "Information Retrieval & Systems",
+    "Wearable Computing & Memory Augmentation",
+    "Human-Centered AI & Algorithmic Fairness"
   ]
 }

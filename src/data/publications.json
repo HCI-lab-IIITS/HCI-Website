@@ -418,6 +418,28 @@
       "journal": "Under Review / ACM Web Conference (WWW 2026)",
       "year": 2026,
       "type": "Conference"
+    },
+    {
+      "id": 33,
+      "title": "EgoScore: Importance-Weighted Retrieval for Egocentric Lifelogging via Multi-Signal Perceptual Scoring",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 34,
+      "title": "Algorithmic Collusion in Two-Sided Labor Markets: AI Resume Screeners, Algorithmic Monoculture, and Wage Compression",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / AAAI Conference on Human Computation and AI for Social Impact (AAAI 2027)",
+      "year": 2027,
+      "type": "Conference"
     }
   ],
   "years": [
