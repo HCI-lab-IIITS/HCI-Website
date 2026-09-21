@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Search, Calendar, Newspaper, Star, FolderOpen } from 'lucide-react';
 import Image from 'next/image';
-import newsData from '../../data/news.json';
+import newsData from '@/data/news.json';
 
 interface NewsArticle {
   id: number;

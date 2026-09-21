@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Mail, BookOpen, Briefcase, UserCheck } from 'lucide-react';
 import ProfileCard from '@/components/ui/ProfileCard';
-import peopleData from '../../data/people.json';
+import peopleData from '@/data/people.json';
 
 interface Person {
   id: number;
