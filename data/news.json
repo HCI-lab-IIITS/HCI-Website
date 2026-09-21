@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "id": 8,
+      "title": "MangaSpace: Physical-Artistic Mixed Reality Nominated for Sony Faculty Award",
+      "excerpt": "Our research on semantic material-aware physical stylization and artistic deformation priors for Meta Quest 3 has been nominated for the Sony Research Award Program 2026.",
+      "content": "Addressing the visuo-haptic uncanny valley and sensorimotor dissociation in mixed reality, MangaSpace establishes a theoretical foundation for non-physical exaggeration in spatial computing. The system maps mechanical impedance tensors to volume-preserving anime deformation manifolds within an empirical 45ms integration window, executing standalone at 90 FPS on Meta Quest 3 via an asynchronous RTX 4090 neural co-processor.",
+      "category": "Awards",
+      "date": "2026-03-05",
+      "image": "/projects/mangaspace/teaser.jpg",
+      "featured": true,
+      "author": "Dr. Himangshu Sarma & Chaitanya Anand",
+      "link": "/projects/mangaspace"
+    },
+    {
       "id": 1,
       "title": "Rehab Poster Accepted at ISMAR Adjunct 2025",
       "excerpt": "Our research on 'Towards a Modular XR Platform for Personalized Upper Limb Rehab' has been accepted to the IEEE International Symposium on Mixed and Augmented Reality.",
