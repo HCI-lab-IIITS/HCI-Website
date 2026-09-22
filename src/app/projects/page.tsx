@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Star, Layers, Users, Calendar, ArrowUpRight, CheckCircle2, Clock, Video, FileText, ArrowRight } from 'lucide-react';
+import { Search, Star, Layers, Users, Calendar, ArrowUpRight, CheckCircle2, Clock, Video, FileText, ArrowRight, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import projectsData from '@/data/projects.json';
 
@@ -56,6 +56,7 @@ export default function ProjectsPage() {
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
+  const [fundingFilter, setFundingFilter] = useState<'all' | 'funded' | 'non-funded'>('all');
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -69,6 +70,13 @@ export default function ProjectsPage() {
 
   const categories = useMemo(() => {
     return projectsData.categories || ['all', 'HCI', 'XR', 'CV', 'BCI'];
+  }, []);
+
+  const fundingCounts = useMemo(() => {
+    const all = projectsData.projects as unknown as Project[];
+    const funded = all.filter((p) => Boolean(p.funding && p.funding.trim() !== '')).length;
+    const nonFunded = all.length - funded;
+    return { all: all.length, funded, nonFunded };
   }, []);
 
   const filteredProjects = useMemo(() => {
@@ -87,9 +95,15 @@ export default function ProjectsPage() {
         (Array.isArray(project.domains) && project.domains.includes(selectedCategory));
       const matchesFeatured = !showFeaturedOnly || project.featured;
 
-      return matchesSearch && matchesStatus && matchesCategory && matchesFeatured;
+      const isFunded = Boolean(project.funding && project.funding.trim() !== '');
+      const matchesFunding =
+        fundingFilter === 'all' ||
+        (fundingFilter === 'funded' && isFunded) ||
+        (fundingFilter === 'non-funded' && !isFunded);
+
+      return matchesSearch && matchesStatus && matchesCategory && matchesFeatured && matchesFunding;
     });
-  }, [searchTerm, selectedStatus, selectedCategory, showFeaturedOnly]);
+  }, [searchTerm, selectedStatus, selectedCategory, showFeaturedOnly, fundingFilter]);
 
   return (
     <div className="w-full min-h-screen flex flex-col relative bg-[#090d16] text-white pt-24 pb-20 px-4 sm:px-6 md:px-16 overflow-x-hidden font-sans">
@@ -120,9 +134,9 @@ export default function ProjectsPage() {
         transition={{ duration: 0.5, delay: 0.1 }}
         className="max-w-7xl mx-auto w-full mb-8 sm:mb-10 flex flex-col gap-4 bg-slate-900/60 p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/10 backdrop-blur-md shadow-xl"
       >
-        <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center">
+        <div className="flex flex-col lg:flex-row gap-4 justify-between items-start lg:items-center">
           {/* Search */}
-          <div className="relative w-full md:w-96">
+          <div className="relative w-full lg:w-80">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
             <input
               type="text"
@@ -133,32 +147,71 @@ export default function ProjectsPage() {
             />
           </div>
 
-          {/* Status & Featured Controls */}
-          <div className="flex flex-wrap gap-2 items-center w-full md:w-auto">
-            {['all', 'active', 'completed'].map((status) => (
+          {/* Controls: Funding Filter + Status + Featured */}
+          <div className="flex flex-wrap gap-2.5 items-center w-full lg:w-auto">
+            {/* Funding Filter Button Group */}
+            <div className="flex items-center p-1 bg-slate-950/80 rounded-xl border border-white/10">
               <button
-                key={status}
-                onClick={() => setSelectedStatus(status)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider transition-all border ${
-                  selectedStatus === status
-                    ? 'bg-[#c5a880] text-black border-[#c5a880] font-semibold'
-                    : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/20'
+                onClick={() => setFundingFilter('all')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-all ${
+                  fundingFilter === 'all'
+                    ? 'bg-[#c5a880] text-black font-semibold shadow'
+                    : 'text-slate-400 hover:text-white'
                 }`}
               >
-                {status === 'all' ? 'ALL STATUS' : status}
+                All
               </button>
-            ))}
+              <button
+                onClick={() => setFundingFilter('funded')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-1.5 ${
+                  fundingFilter === 'funded'
+                    ? 'bg-emerald-500 text-black font-semibold shadow'
+                    : 'text-slate-400 hover:text-emerald-400'
+                }`}
+              >
+                <DollarSign className="w-3.5 h-3.5" />
+                <span>Funded ({fundingCounts.funded})</span>
+              </button>
+              <button
+                onClick={() => setFundingFilter('non-funded')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase tracking-wider transition-all ${
+                  fundingFilter === 'non-funded'
+                    ? 'bg-slate-700 text-white font-semibold shadow'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <span>Non-Funded ({fundingCounts.nonFunded})</span>
+              </button>
+            </div>
 
+            {/* Status Pills */}
+            <div className="flex items-center gap-1">
+              {['all', 'active', 'completed'].map((status) => (
+                <button
+                  key={status}
+                  onClick={() => setSelectedStatus(status)}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider transition-all border ${
+                    selectedStatus === status
+                      ? 'bg-white text-black border-white font-semibold'
+                      : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/20'
+                  }`}
+                >
+                  {status === 'all' ? 'All Status' : status}
+                </button>
+              ))}
+            </div>
+
+            {/* Featured Toggle */}
             <button
               onClick={() => setShowFeaturedOnly(!showFeaturedOnly)}
-              className={`px-4 py-2 rounded-xl text-xs font-mono uppercase tracking-wider border transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-xl text-xs font-mono uppercase tracking-wider border transition-all flex items-center gap-1.5 ${
                 showFeaturedOnly
                   ? 'bg-[#38bdf8]/20 text-[#38bdf8] border-[#38bdf8]'
                   : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/20'
               }`}
             >
               <Star className="w-3.5 h-3.5 fill-current" />
-              FEATURED
+              Featured
             </button>
           </div>
         </div>
@@ -170,7 +223,7 @@ export default function ProjectsPage() {
             const domainLabels: Record<string, string> = {
               all: 'ALL DOMAINS',
               HCI: 'HCI • Human-Computer Interaction',
-              XR: 'XR • Extended Reality',
+              XR: 'XR • Extended Reality (VR / AR / MR)',
               CV: 'CV • Computer Vision',
               BCI: 'BCI • Brain-Computer Interfaces'
             };
@@ -208,11 +261,11 @@ export default function ProjectsPage() {
                 <div className="h-52 w-full relative overflow-hidden bg-slate-950 border-b border-white/10 cursor-pointer">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={project.bannerImage || '/photos/lab/vr_teleconsultation.jpg'}
+                    src={project.bannerImage || '/photos/lab/generic_research_cover.jpg'}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/photos/lab/vr_teleconsultation.jpg';
+                      (e.target as HTMLImageElement).src = '/photos/lab/generic_research_cover.jpg';
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
@@ -224,6 +277,11 @@ export default function ProjectsPage() {
                   )}
 
                   <div className="absolute top-3 right-3 flex items-center gap-1.5 flex-wrap justify-end">
+                    {project.funding && (
+                      <span className="flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-emerald-950/90 backdrop-blur-md border border-emerald-500/40 text-emerald-300 shadow-sm">
+                        <DollarSign className="w-3 h-3 text-emerald-400" /> FUNDED
+                      </span>
+                    )}
                     {project.video && (
                       <span className="flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono uppercase tracking-wider bg-emerald-950/80 backdrop-blur-md border border-emerald-500/30 text-emerald-300 shadow-sm">
                         <Video className="w-3 h-3 text-emerald-400" /> VIDEO

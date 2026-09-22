@@ -53,7 +53,7 @@ export function SiteFooter() {
               <li>
                 <Link href="/projects?domain=XR" className="hover:text-white transition-colors group block">
                   <span className="text-white font-medium group-hover:text-[#38bdf8] transition-colors">XR</span>
-                  <span className="text-slate-400 text-xs block">Extended Reality (VR / AR)</span>
+                  <span className="text-slate-400 text-xs block">Extended Reality (VR / AR / MR)</span>
                 </Link>
               </li>
               <li>

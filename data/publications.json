@@ -1,6 +1,73 @@
 {
   "publications": [
     {
+      "id": 28,
+      "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference"
+    },
+    {
+      "id": 30,
+      "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
+      "authors": [
+        "Suryansh Bakshi",
+        "Chaitanya Anand",
+        "Phileep Raipure",
+        "Vaishnav Kameswaran",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
+      "year": 2027,
+      "type": "Conference",
+      "pdfUrl": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
+    },
+    {
+      "id": 29,
+      "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
+      "authors": [
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
+      "year": 2026,
+      "type": "Conference",
+      "pdfUrl": "/papers/MRConsultation_IEEE_VR.pdf"
+    },
+    {
+      "id": 31,
+      "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
+      "authors": [
+        "Sambhav Manohar",
+        "Mohit Madhu",
+        "Chaitanya Anand",
+        "Himangshu Sarma"
+      ],
+      "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
+      "year": 2026,
+      "type": "Conference",
+      "pdfUrl": "/papers/Modular_XR_Rehab_Poster.pdf"
+    },
+    {
+      "id": 37,
+      "title": "Adaptive Coaching with High-Fidelity Physics for Virtual Reality Badminton Training",
+      "authors": [
+        "Suryansh Bakshi",
+        "Chaitanya Anand",
+        "Phileep Raipure",
+        "Vaishnav Kameswaran",
+        "Himangshu Sarma"
+      ],
+      "journal": "2026 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
+      "year": 2026,
+      "type": "Conference",
+      "pdf": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
+    },
+    {
       "id": 1,
       "title": "Towards a Modular XR Platform for Personalized Upper Limb Rehab",
       "authors": [
@@ -71,6 +138,23 @@
       "pages": "112002"
     },
     {
+      "id": 38,
+      "title": "Immersive Augmented Reality Navigation and Architectural Exploration for Cultural Heritage: The Tirumala Experience",
+      "authors": [
+        "Dr. Himangshu Sarma",
+        "Prathik M Hadagali",
+        "Yaswanth Sai",
+        "Charan Goud",
+        "Rama Krishna",
+        "Jaynil",
+        "Satyam Kumar"
+      ],
+      "journal": "IEEE International Conference on Culture and Computing (IVMSP / ICARCV)",
+      "year": 2025,
+      "type": "Conference",
+      "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
+    },
+    {
       "id": 6,
       "title": "A Case study on VR Teaching: Projectile Motion and Gravity",
       "authors": [
@@ -109,68 +193,6 @@
       "year": 2023,
       "type": "Conference",
       "pages": "4812-4818"
-    },
-    {
-      "id": 9,
-      "title": "Teaching and Learning Crystal structures through Virtual Reality based systems",
-      "authors": [
-        "Vishawash Kumar",
-        "Sahil Gulati",
-        "Bhargab Deka",
-        "Himangshu Sarma"
-      ],
-      "journal": "Advanced Engineering Informatics",
-      "year": 2021,
-      "type": "Journal",
-      "volume": 50,
-      "pages": "101362",
-      "issn": "1474-0346"
-    },
-    {
-      "id": 10,
-      "title": "A text to animation system for physical exercises.",
-      "authors": [
-        "Sarma, Himangshu",
-        "Robert Porzel",
-        "Jan D. Smeddinck",
-        "Rainer Malaka",
-        "Arun Baran Samaddar"
-      ],
-      "journal": "The Computer Journal",
-      "year": 2018,
-      "type": "Journal",
-      "volume": 61,
-      "issue": 11,
-      "pages": "1589-1604"
-    },
-    {
-      "id": 11,
-      "title": "Development and analysis of speech recognition systems for Assamese using HTK",
-      "authors": [
-        "Himangshu Sarma",
-        "Navanath Saharia",
-        "Utpal Sharma"
-      ],
-      "journal": "ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)",
-      "year": 2017,
-      "type": "Journal"
-    },
-    {
-      "id": 12,
-      "title": "Updating Bayesian networks using crowds",
-      "authors": [
-        "Himangshu Sarma",
-        "Arun B Samaddar",
-        "Robert Porzel",
-        "Jan D Smeddinck",
-        "Rainer Malaka"
-      ],
-      "journal": "Neural Network World (NNW)",
-      "year": 2017,
-      "type": "Journal",
-      "volume": 27,
-      "issue": 5,
-      "pages": "529-540"
     },
     {
       "id": 13,
@@ -215,6 +237,22 @@
       "pages": "81-91"
     },
     {
+      "id": 9,
+      "title": "Teaching and Learning Crystal structures through Virtual Reality based systems",
+      "authors": [
+        "Vishawash Kumar",
+        "Sahil Gulati",
+        "Bhargab Deka",
+        "Himangshu Sarma"
+      ],
+      "journal": "Advanced Engineering Informatics",
+      "year": 2021,
+      "type": "Journal",
+      "volume": 50,
+      "pages": "101362",
+      "issn": "1474-0346"
+    },
+    {
       "id": 16,
       "title": "Data augmentation enhanced speaker enrollment for text-dependent speaker verification.",
       "authors": [
@@ -227,6 +265,23 @@
       "year": 2021,
       "type": "Conference",
       "pages": "1-6"
+    },
+    {
+      "id": 10,
+      "title": "A text to animation system for physical exercises.",
+      "authors": [
+        "Sarma, Himangshu",
+        "Robert Porzel",
+        "Jan D. Smeddinck",
+        "Rainer Malaka",
+        "Arun Baran Samaddar"
+      ],
+      "journal": "The Computer Journal",
+      "year": 2018,
+      "type": "Journal",
+      "volume": 61,
+      "issue": 11,
+      "pages": "1589-1604"
     },
     {
       "id": 17,
@@ -251,6 +306,35 @@
       "journal": "3rd International Conference on Contemporary Computing and Informatics (IC3I)",
       "year": 2018,
       "type": "Conference"
+    },
+    {
+      "id": 11,
+      "title": "Development and analysis of speech recognition systems for Assamese using HTK",
+      "authors": [
+        "Himangshu Sarma",
+        "Navanath Saharia",
+        "Utpal Sharma"
+      ],
+      "journal": "ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)",
+      "year": 2017,
+      "type": "Journal"
+    },
+    {
+      "id": 12,
+      "title": "Updating Bayesian networks using crowds",
+      "authors": [
+        "Himangshu Sarma",
+        "Arun B Samaddar",
+        "Robert Porzel",
+        "Jan D Smeddinck",
+        "Rainer Malaka"
+      ],
+      "journal": "Neural Network World (NNW)",
+      "year": 2017,
+      "type": "Journal",
+      "volume": 27,
+      "issue": 5,
+      "pages": "529-540"
     },
     {
       "id": 19,
@@ -361,101 +445,6 @@
       "journal": "National seminar cum Conference on Recent threads and Techniques in Computer Sciences, Kokrajhar, Assam, India",
       "year": 2013,
       "type": "Conference"
-    },
-    {
-      "id": 28,
-      "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
-      "authors": [
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
-      "year": 2027,
-      "type": "Conference"
-    },
-    {
-      "id": 29,
-      "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
-      "authors": [
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
-      "year": 2026,
-      "type": "Conference",
-      "pdfUrl": "/papers/MRConsultation_IEEE_VR.pdf"
-    },
-    {
-      "id": 30,
-      "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
-      "authors": [
-        "Suryansh Bakshi",
-        "Chaitanya Anand",
-        "Phileep Raipure",
-        "Vaishnav Kameswaran",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
-      "year": 2027,
-      "type": "Conference",
-      "pdfUrl": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
-    },
-    {
-      "id": 31,
-      "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
-      "authors": [
-        "Sambhav Manohar",
-        "Mohit Madhu",
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
-      "year": 2026,
-      "type": "Conference",
-      "pdfUrl": "/papers/Modular_XR_Rehab_Poster.pdf"
-    },
-    {
-      "id": 32,
-      "title": "Memory-Efficient Multi-Tier Retrieval for Web-Scale Passage Search and Single-GPU LLM Co-location",
-      "authors": [
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / ACM Web Conference (WWW 2026)",
-      "year": 2026,
-      "type": "Conference"
-    },
-    {
-      "id": 37,
-      "title": "Adaptive Coaching with High-Fidelity Physics for Virtual Reality Badminton Training",
-      "authors": [
-        "Suryansh Bakshi",
-        "Chaitanya Anand",
-        "Phileep Raipure",
-        "Vaishnav Kameswaran",
-        "Himangshu Sarma"
-      ],
-      "journal": "2026 IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
-      "year": 2026,
-      "type": "Conference",
-      "pdf": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
-    },
-    {
-      "id": 38,
-      "title": "Immersive Augmented Reality Navigation and Architectural Exploration for Cultural Heritage: The Tirumala Experience",
-      "authors": [
-        "Dr. Himangshu Sarma",
-        "Prathik M Hadagali",
-        "Yaswanth Sai",
-        "Charan Goud",
-        "Rama Krishna",
-        "Jaynil",
-        "Satyam Kumar"
-      ],
-      "journal": "IEEE International Conference on Culture and Computing (IVMSP / ICARCV)",
-      "year": 2025,
-      "type": "Conference",
-      "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
     }
   ],
   "years": [

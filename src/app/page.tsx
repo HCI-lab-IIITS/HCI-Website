@@ -24,8 +24,8 @@ export default function Home() {
       caption: "IEEE ISMAR 2026: VR Badminton Adaptive Biomechanical Coaching"
     },
     {
-      image: "/projects/dpla-retriever/dpla_architecture.png",
-      caption: "ACM WWW 2026: DPLA-Retriever Single-GPU Web-Scale Neural Retrieval"
+      image: "/projects/xr-rehab/platform_architecture.png",
+      caption: "IEEE ISMAR 2025: Modular Standalone XR Platform for Upper Limb Rehabilitation"
     },
     {
       image: "/projects/mr-teleconsult/system_composite.png",
@@ -38,14 +38,6 @@ export default function Home() {
   ];
 
   const stickyCardsData = [
-    {
-      id: "dpla-retriever",
-      title: "DPLA-Retriever: Single-GPU Neural Retrieval for 21M Passages",
-      category: "ACM WWW 2026",
-      description: "Memory-efficient multi-tier retrieval framework indexing 21 million passages within 2.58 GB active VRAM, allowing full co-location of an 8B LLM reader.",
-      link: "/projects/dpla-retriever",
-      image: "/projects/dpla-retriever/dpla_architecture.png"
-    },
     {
       id: "mr-teleconsult",
       title: "MRConsultation: Pre-Surgical Spatial Teleconsultation",
@@ -71,12 +63,12 @@ export default function Home() {
       image: "/photos/lab/isl_gesture_recording.jpg"
     },
     {
-      id: "visi-scroll",
-      title: "VISI-SCROLL: EOG Electrooculography Interface",
-      category: "ASSISTIVE TECH",
-      description: "Hands-free spatial object selection and gaze interaction using Electrooculography (EOG) signals for motor accessibility.",
-      link: "/projects/eog-object-selection",
-      image: "/projects/eog-interface/Screenshot 2026-08-08 193155.png"
+      id: "xr-rehab",
+      title: "Modular Standalone XR Upper Limb Rehabilitation",
+      category: "HEALTHCARE XR",
+      description: "Personalized motor therapy exergaming with 84.2% trajectory compliance, real-time kinematic analytics, and standalone VR/MR adaptation for stroke recovery.",
+      link: "/projects/modular-xr-upper-limb-rehab",
+      image: "/projects/xr-rehab/platform_architecture.png"
     }
   ];
 
@@ -314,7 +306,7 @@ export default function Home() {
               {
                 domain: "XR",
                 icon: Layers,
-                title: "Extended Reality (VR / AR)",
+                title: "Extended Reality (VR / AR / MR)",
                 desc: "High-fidelity physics simulation for athletic training, asynchronous surgical teleconsultation, and cultural heritage exploration.",
                 borderColor: "group-hover:border-[#38bdf8]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",

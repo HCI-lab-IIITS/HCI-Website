@@ -163,7 +163,7 @@ export default function ProjectDetailPage() {
               className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.05] group-hover:scale-[1.02] transition-transform duration-700"
               onError={(e) => {
                 // Fallback gracefully
-                (e.target as HTMLImageElement).src = '/photos/lab/vr_teleconsultation.jpg';
+                (e.target as HTMLImageElement).src = '/photos/lab/generic_research_cover.jpg';
               }}
             />
           ) : (
@@ -332,7 +332,7 @@ export default function ProjectDetailPage() {
                       alt={img.title || `Project Image ${idx + 1}`}
                       className="w-full h-full object-cover filter brightness-90 group-hover:brightness-100 group-hover:scale-105 transition-all duration-500"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/photos/lab/vr_teleconsultation.jpg';
+                        (e.target as HTMLImageElement).src = '/photos/lab/generic_research_cover.jpg';
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
@@ -630,7 +630,7 @@ export default function ProjectDetailPage() {
                 alt={project.galleryImages[selectedImageIndex].title || 'Gallery image'}
                 className="max-w-full max-h-[70vh] object-contain rounded-xl shadow-2xl border border-white/20"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/photos/lab/vr_teleconsultation.jpg';
+                  (e.target as HTMLImageElement).src = '/photos/lab/generic_research_cover.jpg';
                 }}
               />
 

@@ -66,7 +66,7 @@ export default function PublicationsPage() {
       const matchesType = selectedType === 'all' || pub.type === selectedType;
 
       return matchesSearch && matchesYear && matchesType;
-    });
+    }).sort((a, b) => (b.year || 0) - (a.year || 0));
   }, [searchTerm, selectedYear, selectedType]);
 
   const getTypeColor = (type: string) => {

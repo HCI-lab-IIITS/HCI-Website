@@ -47,18 +47,6 @@
       "featured": true,
       "author": "HCI Lab Team",
       "link": "/global-game-jam"
-    },
-    {
-      "id": 5,
-      "title": "DPLA-Retriever: Single-GPU Neural Retrieval for 21M Passages",
-      "excerpt": "Under review at ACM WWW 2026, introducing dual-phase lexical-aware neural retrieval capable of co-locating with LLMs on single GPUs.",
-      "content": "Led by lab researchers Chaitanya Anand and Dr. Himangshu Sarma, DPLA-Retriever achieves competitive nDCG@10 scores while slashing VRAM footprints, enabling accessible neural search on commodity hardware.",
-      "category": "Research Impact",
-      "date": "2026-02-15",
-      "image": "/projects/dpla-retriever/dpla_architecture.png",
-      "featured": true,
-      "author": "Chaitanya Anand",
-      "link": "/projects/dpla-retriever"
     }
   ],
   "categories": [

@@ -35,6 +35,39 @@ const equipmentList: EquipmentItem[] = [
     ]
   },
   {
+    name: 'Meta Quest 2 Virtual Reality Headsets (×3)',
+    category: 'Spatial Computing & XR',
+    tag: 'Head-Mounted Display',
+    specs: [
+      '3× Meta Quest 2 Standalone VR Headsets',
+      'High-Resolution Fast-Switch LCD (1832 × 1920 per eye)',
+      'Qualcomm Snapdragon XR2 Platform with 6DOF Optical Tracking',
+      'Ergonomic Touch Controllers & High-Bitrate PC Link Support'
+    ],
+    capabilities: 'Facilitates multi-student educational interventions, classroom-scale geometry learning studies, and baseline comparative spatial performance testing.',
+    associatedProjects: [
+      { title: 'VR School Education Platform', slug: 'vr-school-education' },
+      { title: 'VR STEM Electromagnetism', slug: 'vr-stem-electromagnetism' },
+      { title: 'VR Geometry Learning Platform', slug: 'vr-geometry-learning' }
+    ]
+  },
+  {
+    name: 'Meta Ray-Ban Smart Glasses (×1)',
+    category: 'Spatial Computing & XR',
+    tag: 'Wearable AI & Smart Glasses',
+    specs: [
+      '1× Meta Ray-Ban Smart Glasses',
+      'Ultra-Wide 12 MP Camera Sensor with 1080p Video Capture',
+      'Open-Ear Directional Audio & 5-Microphone Array for Spatial Audio',
+      'Qualcomm Snapdragon AR1 Gen 1 Multimodal Processing Platform'
+    ],
+    capabilities: 'Supports first-person egocentric perception research, wearable multimodal assistive interactions, and contextual auditory cues for intelligent driver assistance.',
+    associatedProjects: [
+      { title: 'Driver Assistance & Traffic Sign Feedback', slug: 'traffic-sign-driver-feedback' },
+      { title: 'Indian Sign Language Translation', slug: 'isl-translation' }
+    ]
+  },
+  {
     name: '12-IMU Sony Mocopi Motion Capture System',
     category: 'Biomechanical Kinematics',
     tag: 'Inertial Motion Capture',
@@ -81,20 +114,36 @@ const equipmentList: EquipmentItem[] = [
     ]
   },
   {
-    name: 'Dual NVIDIA RTX 4090 Deep Learning Workstation',
+    name: 'NVIDIA RTX 4090 Deep Learning Workstation',
     category: 'Neural Compute',
     tag: 'High-Performance Computing',
     specs: [
-      '2× NVIDIA GeForce RTX 4090 (24GB GDDR6X per GPU, 48GB VRAM Total)',
+      'NVIDIA GeForce RTX 4090 (24GB GDDR6X VRAM)',
       '128GB DDR5 5600MHz System Memory',
       'AMD Ryzen 9 7950X 16-Core / 32-Thread Processor',
       'High-Speed PCIe Gen 5 NVMe Scratch Arrays'
     ],
-    capabilities: 'Accelerates training of temporal Graph Neural Networks for video forgery detection, web-scale neural retrieval, and multi-modal computer vision models.',
+    capabilities: 'Accelerates training of temporal Graph Neural Networks for video forgery detection, deep representation learning, and multi-modal computer vision models.',
     associatedProjects: [
       { title: 'GNN AI Video Detection', slug: 'gnn-video-detection' },
-      { title: 'DPLA-Retriever (ACM WWW 2026)', slug: 'dpla-retriever' },
       { title: 'ISL Gesture Translation', slug: 'isl-translation' }
+    ]
+  },
+  {
+    name: '3× NVIDIA RTX A4000 Workstations (Intel Core i9-12900K)',
+    category: 'Neural Compute',
+    tag: 'Compute Workstations',
+    specs: [
+      '3× Dedicated Workstations with NVIDIA RTX A4000 (16GB GDDR6 ECC VRAM each)',
+      'Intel Core i9-12900K Processor (16 Cores / 24 Threads, up to 5.2 GHz)',
+      '64GB DDR5 System Memory per workstation',
+      'High-Speed PCIe NVMe Solid State Storage Arrays'
+    ],
+    capabilities: 'Powers continuous deep learning inference, parallel video processing pipelines, physics simulations, and student experiment execution.',
+    associatedProjects: [
+      { title: 'GNN AI Video Detection', slug: 'gnn-video-detection' },
+      { title: 'Self-Learning Yoga Pose Estimation', slug: 'yoga-pose-estimation' },
+      { title: 'Night-to-Day Image Transformation', slug: 'night-to-day-transformation' }
     ]
   },
   {

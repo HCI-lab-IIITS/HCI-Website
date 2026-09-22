@@ -608,14 +608,8 @@
       "endDate": "2023-12-31",
       "summary": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
       "description": "Interactive virtual reality platform for teaching projectile motion and gravity concepts through immersive simulations.",
-      "bannerImage": "/projects/vr-school/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/vr-school/pipeline_architecture.png",
-          "title": "VR Projectile Motion & EEG Learning Platform",
-          "caption": "Unity 3D Newtonian physics simulation with real-time Emotiv/OpenBCI 16-channel EEG cognitive load monitoring (IEEE ISMAR)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma",
         "Abhijit Patil"
@@ -691,14 +685,8 @@
       "endDate": "2021-05-01",
       "summary": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
       "description": "Computer vision algorithm for transformation of Night time Images to corresponding Day time.",
-      "bannerImage": "/projects/night-to-day/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/night-to-day/pipeline_architecture.png",
-          "title": "Retinex & Dual-Attention Architecture",
-          "caption": "Retinex-decomposed contrast enhancement and cycle-consistent illumination transfer pipeline for real-time edge processing."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma"
       ],
@@ -860,14 +848,8 @@
       "endDate": "2020-09-01",
       "summary": "Comprehensive VR simulation platform for Crystal Structure.",
       "description": "Comprehensive VR simulation platform for Crystal Structure.",
-      "bannerImage": "/projects/learning-physics/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/learning-physics/pipeline_architecture.png",
-          "title": "Spatial Crystallography & 3D Lattice Architecture",
-          "caption": "14 Bravais lattice unit cell visualizer and interactive simulated Bragg X-ray diffraction system (Advanced Engineering Informatics)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma"
       ],
@@ -931,14 +913,8 @@
       "endDate": "2022-07-31",
       "summary": "Real-time computer vision pose estimation framework providing biomechanical joint-angle correction and feedback for unassisted yoga practice.",
       "description": "This project develops an intelligent self-learning yoga monitoring system utilizing multi-keypoint pose estimation. The system tracks 2D/3D human joint landmarks, analyzes real-time biomechanical angles against reference postures, and provides corrective visual and audio feedback to practitioners.",
-      "bannerImage": "/projects/yoga-pose/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/yoga-pose/pipeline_architecture.png",
-          "title": "Biomechanical Yoga Pose Estimation Pipeline",
-          "caption": "Monocular computer vision framework extracting 33 skeletal keypoints and computing real-time joint-angle DTW deviations (Springer HCII)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Prahitha Movva",
         "Hemanth Pasupuleti",
@@ -1003,14 +979,8 @@
       "endDate": "2024-04-30",
       "summary": "Interactive 6DOF virtual reality environment allowing students to visualize invisible 3D electromagnetic vector fields, manipulate charges, and assemble virtual circuits.",
       "description": "An immersive educational virtual reality platform designed to enhance understanding of abstract physics concepts in electricity and magnetism. Students interactively place positive and negative point charges, visualize dynamic 3D field line vectors in real time, and assemble circuit components with immediate physical simulation.",
-      "bannerImage": "/projects/vr-stem/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/vr-stem/pipeline_architecture.png",
-          "title": "3D Electromagnetic Vector Field Engine",
-          "caption": "Real-time GPU Maxwell and Coulomb vector field computation with 6DOF spatial particle advection and virtual circuit assembly (Springer MTAP)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Nishant Shinde",
         "Dr. Himangshu Sarma"
@@ -1072,14 +1042,8 @@
       "endDate": "2023-08-31",
       "summary": "Deep learning embedded vision system running on edge hardware to recognize road sign typography under occlusions and provide low-latency spoken alerts to drivers.",
       "description": "A robust advanced driver-assistance system (ADAS) integrating convolutional neural networks for real-time traffic sign detection, classification under varying lighting and adverse weather conditions, and synthetic speech synthesis for non-intrusive auditory alerts.",
-      "bannerImage": "/projects/traffic-sign/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/traffic-sign/pipeline_architecture.png",
-          "title": "Traffic Sign Detection & Feedback Architecture",
-          "caption": "Edge deep learning pipeline integrating multi-scale sign classification with contextual acoustic and speech warning generation."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma",
         "Dr. Navanath Saharia"
@@ -1141,14 +1105,8 @@
       "endDate": "2023-11-30",
       "summary": "Immersive 3D geometry sandbox enabling students to manipulate geometric solids, inspect intersecting planes in spatial coordinates, and learn spatial proofs interactively.",
       "description": "A gamified virtual reality application engineered to cultivate spatial reasoning and 3D geometric intuition in school curricula. Users interactively slice, rotate, and intersect Polyhedra, cylinders, and spheres to visualize complex geometric theorems.",
-      "bannerImage": "/projects/vr-geometry/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/vr-geometry/pipeline_architecture.png",
-          "title": "Spatial 3D Geometry Sandbox Architecture",
-          "caption": "Immersive polyhedral solid manipulation and spatial reasoning sandbox with 6DOF cross-section slicing (IEEE BigData)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma",
         "Mahaboob Shaik",
@@ -1214,14 +1172,8 @@
       "endDate": "2018-10-31",
       "summary": "Semantic parser converting freeform clinical and exercise text instructions into synchronized 3D avatar animations for physical therapy.",
       "description": "An end-to-end framework combining natural language processing, semantic action ontology mapping, and procedural 3D character animation. The system accepts natural language descriptions of physiotherapy and athletic routines, producing biomechanically accurate avatar animations.",
-      "bannerImage": "/projects/text-to-exercise/pipeline_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/text-to-exercise/pipeline_architecture.png",
-          "title": "NLP Text-to-Animation Semantic Architecture",
-          "caption": "Natural language semantic dependency parser extracting action frames and mapping inverse kinematics trajectories for physical therapy (Oxford Computer Journal)."
-        }
-      ],
+      "bannerImage": "/photos/lab/generic_research_cover.jpg",
+      "galleryImages": [],
       "team": [
         "Dr. Himangshu Sarma",
         "Robert Porzel",
@@ -1275,83 +1227,6 @@
         {
           "title": "Interactive Multi-Angle Avatar Rendering",
           "description": "Allows patients to orbit 360 degrees around the virtual coach to inspect correct joint angles and posture alignment."
-        }
-      ],
-      "domains": [
-        "HCI"
-      ]
-    },
-    {
-      "id": 16,
-      "slug": "dpla-retriever",
-      "title": "DPLA-Retriever: Memory-Efficient Web-Scale Retrieval and Single-GPU LLM Co-location",
-      "category": "HCI",
-      "status": "active",
-      "progress": 85,
-      "startDate": "2024-08-01",
-      "endDate": "2026-05-01",
-      "summary": "A memory-efficient multi-tier retrieval framework indexing 21 million Wikipedia passages inside 2.58 GB active VRAM, allowing full co-location of an 8B LLM reader on a single consumer GPU.",
-      "description": "DPLA-Retriever (Decoupled Parameter-disjoint Latent Attention) resolves the multi-vector memory bottleneck in web-scale retrieval. By dynamically synthesizing 8 compact latent memory tokens via Perceiver Cross-Attention on-the-fly and employing Entity-Gated 2-Hop Adaptive Bridging, DPLA searches the complete 21,015,324-passage English Wikipedia corpus on a single NVIDIA GeForce RTX 4090 within 2.58 GB active VRAM (8.7x lower than ColBERT v2). This leaves 21.4 GB free to co-locate an 8B LLM reader (Llama-3-8B) on the same GPU, delivering 37.90% MuSiQue R@20 at 3.80 ms amortized query latency (263.2 QPS).",
-      "bannerImage": "/projects/dpla-retriever/dpla_architecture.png",
-      "galleryImages": [
-        {
-          "src": "/projects/dpla-retriever/dpla_architecture.png",
-          "title": "DPLA Multi-Tier Architecture",
-          "caption": "Decoupled Parameter-Disjoint Latent Attention pipeline for 21M-passage search and single-GPU 8B LLM co-location."
-        },
-        {
-          "src": "/projects/dpla-retriever/colocation_latency_memory.png",
-          "title": "Memory Footprint & Hardware Economics",
-          "caption": "Comparative evaluation demonstrating 2.58 GB VRAM footprint (vs 22.0 GB ColBERT v2) and ,600 workstation single-GPU deployment."
-        }
-      ],
-      "team": [
-        "Chaitanya Anand",
-        "Dr. Himangshu Sarma"
-      ],
-      "externalCollaborators": [
-        "ACM WWW 2026"
-      ],
-      "technologies": [
-        "Information Retrieval",
-        "Multi-Vector MaxSim",
-        "Perceiver Cross-Attention",
-        "FAISS IVF-PQ",
-        "LLM Co-location",
-        "PyTorch",
-        "LoRA Disjoint Adapters"
-      ],
-      "funding": null,
-      "fundingAgency": null,
-      "featured": true,
-      "publications": [
-        {
-          "title": "Memory-Efficient Multi-Tier Retrieval for Web-Scale Passage Search and Single-GPU LLM Co-location",
-          "authors": [
-            "Chaitanya Anand",
-            "Himangshu Sarma"
-          ],
-          "journal": "Under Review / ACM Web Conference (WWW 2026)",
-          "year": 2026
-        }
-      ],
-      "deployments": [],
-      "features": [
-        {
-          "title": "Decoupled Parameter Latent Attention",
-          "description": "Decoupled dual-phase architecture executing full-corpus 21M passage search within 2.58 GB active VRAM."
-        },
-        {
-          "title": "Single-GPU 8B LLM Co-location",
-          "description": "Frees over 21.4 GB of VRAM on a single NVIDIA RTX 4090 to host an 8B parameter reader model (Llama-3/Mistral)."
-        },
-        {
-          "title": "Entity-Gated 2-Hop Adaptive Bridging",
-          "description": "Dynamic routing router automatically triggers secondary hops on multi-hop questions while bypassing single-hop queries."
-        },
-        {
-          "title": "Sub-4ms Amortized Retrieval",
-          "description": "High-throughput vector search delivering 263.2 queries per second across English Wikipedia."
         }
       ],
       "domains": [

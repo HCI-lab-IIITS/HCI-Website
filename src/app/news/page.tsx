@@ -149,13 +149,15 @@ export default function NewsPage() {
                 }`}
               >
                 {/* Article Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={article.image}
+                <div className="relative h-48 overflow-hidden bg-slate-900">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={article.image || '/photos/lab/generic_research_cover.jpg'}
                     alt={article.title}
-                    width={400}
-                    height={192}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = '/photos/lab/generic_research_cover.jpg';
+                    }}
                   />
                   {article.featured && (
                     <div className="absolute top-4 right-4 bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded-lg text-xs font-medium border border-yellow-400/30 backdrop-blur-sm">
