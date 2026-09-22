@@ -4,7 +4,7 @@
       "id": 1,
       "slug": "gnn-video-detection",
       "title": "AI Generated Video Detection via Temporal Graphs and Neighborhood Consistency Regularization",
-      "category": "Deep Learning & Computer Vision",
+      "category": "CV",
       "status": "active",
       "progress": 80,
       "startDate": "2024-01-01",
@@ -59,13 +59,16 @@
           "title": "High-Throughput Video Verification",
           "description": "Accelerates graph convolution inference on Dual NVIDIA RTX 4090 GPUs to enable near-real-time authenticity screening."
         }
+      ],
+      "domains": [
+        "CV"
       ]
     },
     {
       "id": 2,
       "slug": "vr-badminton",
       "title": "XR Badminton: Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform",
-      "category": "Virtual Reality & Physics Simulation",
+      "category": "XR",
       "status": "active",
       "progress": 90,
       "startDate": "2024-06-01",
@@ -164,13 +167,17 @@
           "title": "Inverted Aerodynamic Drag Simulation",
           "description": "High-fidelity quadratic shuttlecock aerodynamics replicating real-world high-drag trajectory physics in virtual courts."
         }
+      ],
+      "domains": [
+        "XR",
+        "HCI"
       ]
     },
     {
       "id": 3,
       "slug": "eog-object-selection",
       "title": "VISI - SCROLL: EOG-Based Hands-Free Object Selection System",
-      "category": "Assistive Technology & Biosignals",
+      "category": "BCI",
       "status": "active",
       "progress": 75,
       "startDate": "2024-09-01",
@@ -231,13 +238,17 @@
           "title": "Assistive Motor Rehabilitation Interface",
           "description": "Enables completely hands-free environmental interaction, wheelchair control, and assistive communication."
         }
+      ],
+      "domains": [
+        "BCI",
+        "HCI"
       ]
     },
     {
       "id": 4,
       "slug": "mr-teleconsultation",
       "title": "MRConsultation: Asynchronous Mixed Reality Pre-Surgical Teleconsultation System",
-      "category": "Mixed Reality & Healthcare Spatial Computing",
+      "category": "XR",
       "status": "active",
       "progress": 85,
       "startDate": "2025-01-01",
@@ -405,13 +416,17 @@
           "title": "Taubin Volume-Preserving CT Smoothing",
           "description": "Automated medical imaging reconstruction pipeline yielding high-fidelity multi-organ models with sub-0.3mm Hausdorff error."
         }
+      ],
+      "domains": [
+        "XR",
+        "HCI"
       ]
     },
     {
       "id": 5,
       "slug": "tirumala-darshan-ar",
       "title": "Tirumala Darshan with AR",
-      "category": "Augmented Reality & Cultural Heritage",
+      "category": "XR",
       "status": "active",
       "progress": 80,
       "startDate": "2025-03-01",
@@ -507,13 +522,16 @@
           "title": "Cross-Platform AR/VR Deployment",
           "description": "Seamlessly runs across mobile AR devices and Meta Quest 3 headsets via optimized OpenXR pipelines."
         }
+      ],
+      "domains": [
+        "XR"
       ]
     },
     {
       "id": 6,
       "slug": "isl-translation",
       "title": "Design and development of communication system for the speech and hearing disorder persons",
-      "category": "Deep Learning & Computer Vision",
+      "category": "HCI",
       "status": "active",
       "progress": 70,
       "startDate": "2025-02-01",
@@ -573,13 +591,17 @@
           "title": "Real-Time Bi-Directional Speech Synthesis",
           "description": "Converts recognized signs into synthesized spoken audio while providing live captions for inclusive communication."
         }
+      ],
+      "domains": [
+        "HCI",
+        "CV"
       ]
     },
     {
       "id": 7,
       "slug": "vr-school-education",
       "title": "Development of Game platform through VR and AR for School Education",
-      "category": "Virtual Reality & Education",
+      "category": "BCI",
       "status": "completed",
       "progress": 100,
       "startDate": "2021-12-01",
@@ -652,13 +674,17 @@
           "title": "Collaborative Multi-Student Classrooms",
           "description": "Multi-user networked spatial environments allowing teachers and peers to collaborate inside shared virtual labs."
         }
+      ],
+      "domains": [
+        "BCI",
+        "XR"
       ]
     },
     {
       "id": 8,
       "slug": "night-to-day-transformation",
       "title": "Computer vision algorithm for transformation of Night time Images to corresponding Day time",
-      "category": "Computer Vision",
+      "category": "CV",
       "status": "completed",
       "progress": 100,
       "startDate": "2020-05-01",
@@ -704,13 +730,16 @@
           "title": "Real-Time Embedded Edge Inference",
           "description": "Quantized network architectures optimized for deployment on in-vehicle intelligent transportation systems."
         }
+      ],
+      "domains": [
+        "CV"
       ]
     },
     {
       "id": 9,
       "slug": "modular-xr-upper-limb-rehab",
       "title": "Modular Standalone XR Platform for Upper Limb Stroke Rehabilitation",
-      "category": "Mixed Reality & Healthcare",
+      "category": "XR",
       "status": "active",
       "progress": 75,
       "startDate": "2024-01-01",
@@ -814,13 +843,17 @@
           "title": "Kinematic Compliance Analytics",
           "description": "Captures 84.2% trajectory fidelity and provides clinicians with automated range-of-motion progress dashboards."
         }
+      ],
+      "domains": [
+        "XR",
+        "HCI"
       ]
     },
     {
       "id": 10,
       "slug": "learning-physics-cv",
       "title": "Learning Physics through Computer Vision",
-      "category": "Virtual Reality & Education",
+      "category": "CV",
       "status": "completed",
       "progress": 100,
       "startDate": "2019-12-01",
@@ -881,13 +914,17 @@
           "title": "Real-to-Sim Discrepancy Diagnostics",
           "description": "Surfaces real-world aerodynamic drag and frictional losses, teaching students why physical experiments diverge from ideal models."
         }
+      ],
+      "domains": [
+        "CV",
+        "XR"
       ]
     },
     {
       "id": 11,
       "slug": "yoga-pose-estimation",
       "title": "Self-Learning Yoga Monitoring System Based on Pose Estimation",
-      "category": "Computer Vision & Assistive Health",
+      "category": "CV",
       "status": "completed",
       "progress": 100,
       "startDate": "2021-08-01",
@@ -949,13 +986,17 @@
           "title": "Privacy-Preserving On-Device Processing",
           "description": "Executes 100% of computer vision pose estimation locally in the client browser without external video streaming."
         }
+      ],
+      "domains": [
+        "CV",
+        "HCI"
       ]
     },
     {
       "id": 12,
       "slug": "vr-stem-electromagnetism",
       "title": "Enhancing STEM Curriculum with Virtual Reality: Electricity and Magnetism Simulations",
-      "category": "Virtual Reality & Education",
+      "category": "XR",
       "status": "completed",
       "progress": 100,
       "startDate": "2022-06-01",
@@ -1015,13 +1056,16 @@
           "title": "Empirically Validated STEM Learning Gains",
           "description": "Classroom study demonstrates significant retention and spatial conceptual comprehension improvements over 2D diagrams."
         }
+      ],
+      "domains": [
+        "XR"
       ]
     },
     {
       "id": 13,
       "slug": "traffic-sign-driver-feedback",
       "title": "Traffic Sign Recognition and Speech-Based Feedback Generation System for Driver Assistance",
-      "category": "Intelligent Transportation & HCI",
+      "category": "HCI",
       "status": "completed",
       "progress": 100,
       "startDate": "2022-01-01",
@@ -1081,13 +1125,16 @@
           "title": "Embedded Low-Power In-Cabin Deployment",
           "description": "Operates within a 5W power budget on edge AI microcomputers (Jetson Nano/Orin) for broad fleet retrofitting."
         }
+      ],
+      "domains": [
+        "HCI"
       ]
     },
     {
       "id": 14,
       "slug": "vr-geometry-learning",
       "title": "Game-Based Virtual Reality Platform for Spatial 3D Geometry Learning",
-      "category": "Virtual Reality & Education",
+      "category": "XR",
       "status": "completed",
       "progress": 100,
       "startDate": "2022-09-01",
@@ -1151,13 +1198,16 @@
           "title": "Classroom-Scale Multi-User HMD Integration",
           "description": "Optimized lightweight WebXR engine allowing entire classrooms to explore spatial geometry simultaneously."
         }
+      ],
+      "domains": [
+        "XR"
       ]
     },
     {
       "id": 15,
       "slug": "text-to-exercise-animation",
       "title": "Natural Language Text-to-Animation System for Physical Exercises and Rehabilitation",
-      "category": "NLP & Biomechanical Simulation",
+      "category": "HCI",
       "status": "completed",
       "progress": 100,
       "startDate": "2017-01-01",
@@ -1226,13 +1276,16 @@
           "title": "Interactive Multi-Angle Avatar Rendering",
           "description": "Allows patients to orbit 360 degrees around the virtual coach to inspect correct joint angles and posture alignment."
         }
+      ],
+      "domains": [
+        "HCI"
       ]
     },
     {
       "id": 16,
       "slug": "dpla-retriever",
       "title": "DPLA-Retriever: Memory-Efficient Web-Scale Retrieval and Single-GPU LLM Co-location",
-      "category": "Information Retrieval & Systems",
+      "category": "HCI",
       "status": "active",
       "progress": 85,
       "startDate": "2024-08-01",
@@ -1300,6 +1353,9 @@
           "title": "Sub-4ms Amortized Retrieval",
           "description": "High-throughput vector search delivering 263.2 queries per second across English Wikipedia."
         }
+      ],
+      "domains": [
+        "HCI"
       ]
     }
   ],
@@ -1310,17 +1366,9 @@
   ],
   "categories": [
     "all",
-    "Deep Learning & Computer Vision",
-    "Virtual Reality & Physics Simulation",
-    "Assistive Technology & Biosignals",
-    "Mixed Reality & Healthcare Spatial Computing",
-    "Augmented Reality & Cultural Heritage",
-    "Virtual Reality & Education",
-    "Computer Vision",
-    "Mixed Reality & Healthcare",
-    "Computer Vision & Assistive Health",
-    "Intelligent Transportation & HCI",
-    "NLP & Biomechanical Simulation",
-    "Information Retrieval & Systems"
+    "HCI",
+    "XR",
+    "CV",
+    "BCI"
   ]
 }

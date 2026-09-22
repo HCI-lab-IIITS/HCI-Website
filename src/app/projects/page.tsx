@@ -1,22 +1,22 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Star, Layers, Users, Calendar, ArrowUpRight, CheckCircle2, Clock, Video, FileText, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Search, Star, ArrowRight, Video, FileText } from 'lucide-react';
 import projectsData from '@/data/projects.json';
 
 interface GalleryImage {
   src: string;
-  title: string;
-  caption: string;
+  title?: string;
+  caption?: string;
 }
 
 interface Publication {
   title: string;
-  authors: string[];
-  journal: string;
-  year: number;
+  authors?: string[];
+  journal?: string;
+  year?: number;
   link?: string;
   pdf?: string;
 }
@@ -28,22 +28,23 @@ interface Deployment {
 
 interface Project {
   id: number;
-  slug: string;
+  slug?: string;
   title: string;
-  category: string;
+  category?: string;
+  domains?: string[];
   description: string;
   summary?: string;
-  status: string;
-  progress: number;
+  status?: string;
+  progress?: number;
   startDate?: string;
   endDate?: string;
   team: string[];
   externalCollaborators?: string[];
   technologies: string[];
-  funding?: string;
-  fundingAgency?: string;
+  funding?: string | null;
+  fundingAgency?: string | null;
   featured?: boolean;
-  bannerImage: string;
+  bannerImage?: string;
   video?: string;
   galleryImages?: GalleryImage[];
   deployments?: Deployment[];
@@ -56,8 +57,18 @@ export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const domain = params.get('domain');
+      if (domain && ['HCI', 'XR', 'CV', 'BCI'].includes(domain.toUpperCase())) {
+        setSelectedCategory(domain.toUpperCase());
+      }
+    }
+  }, []);
+
   const categories = useMemo(() => {
-    return projectsData.categories || ['all'];
+    return projectsData.categories || ['all', 'HCI', 'XR', 'CV', 'BCI'];
   }, []);
 
   const filteredProjects = useMemo(() => {
@@ -70,7 +81,10 @@ export default function ProjectsPage() {
         project.team.some((member) => member.toLowerCase().includes(searchTerm.toLowerCase()));
 
       const matchesStatus = selectedStatus === 'all' || project.status === selectedStatus;
-      const matchesCategory = selectedCategory === 'all' || project.category === selectedCategory;
+      const matchesCategory =
+        selectedCategory === 'all' ||
+        project.category === selectedCategory ||
+        (Array.isArray(project.domains) && project.domains.includes(selectedCategory));
       const matchesFeatured = !showFeaturedOnly || project.featured;
 
       return matchesSearch && matchesStatus && matchesCategory && matchesFeatured;
@@ -151,20 +165,29 @@ export default function ProjectsPage() {
 
         {/* Category Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-2 border-t border-white/5 scrollbar-thin">
-          <span className="text-[10px] font-mono uppercase text-slate-400 tracking-wider whitespace-nowrap">DOMAIN:</span>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1 rounded-lg text-[11px] font-mono uppercase tracking-wider transition-all whitespace-nowrap border ${
-                selectedCategory === cat
-                  ? 'bg-white text-black border-white font-semibold'
-                  : 'bg-slate-950/50 text-slate-400 border-white/10 hover:border-white/20'
-              }`}
-            >
-              {cat === 'all' ? 'ALL DOMAINS' : cat}
-            </button>
-          ))}
+          <span className="text-[10px] font-mono uppercase text-slate-400 tracking-wider whitespace-nowrap">RESEARCH DOMAIN:</span>
+          {categories.map((cat) => {
+            const domainLabels: Record<string, string> = {
+              all: 'ALL DOMAINS',
+              HCI: 'HCI • Human-Computer Interaction',
+              XR: 'XR • Extended Reality',
+              CV: 'CV • Computer Vision',
+              BCI: 'BCI • Brain-Computer Interfaces'
+            };
+            return (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-3 py-1.5 rounded-xl text-[11px] font-mono uppercase tracking-wider transition-all whitespace-nowrap border ${
+                  selectedCategory === cat
+                    ? 'bg-[#c5a880] text-black border-[#c5a880] font-semibold shadow-lg shadow-[#c5a880]/15'
+                    : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/25 hover:text-white'
+                }`}
+              >
+                {domainLabels[cat] || cat}
+              </button>
+            );
+          })}
         </div>
       </motion.div>
 
@@ -219,10 +242,21 @@ export default function ProjectsPage() {
                   </div>
 
                   {project.category && (
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <span className="text-[10px] font-mono uppercase text-[#c5a880] tracking-wider block mb-0.5">
+                    <div className="absolute bottom-3 left-3 right-3 flex items-center gap-1.5 flex-wrap">
+                      <span className="text-[10px] font-mono font-bold uppercase text-black bg-[#c5a880] px-2 py-0.5 rounded tracking-wider shadow-md">
                         {project.category}
                       </span>
+                      {Array.isArray(project.domains) &&
+                        project.domains
+                          .filter((d) => d !== project.category)
+                          .map((d) => (
+                            <span
+                              key={d}
+                              className="text-[10px] font-mono font-bold uppercase text-[#38bdf8] bg-black/80 border border-[#38bdf8]/40 px-2 py-0.5 rounded tracking-wider shadow-md"
+                            >
+                              {d}
+                            </span>
+                          ))}
                     </div>
                   )}
                 </div>

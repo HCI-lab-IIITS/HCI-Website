@@ -289,48 +289,61 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Research Focus Pillars Grid */}
+          {/* Research Focus Pillars: HCI, XR, CV, BCI */}
+          <div className="text-center mb-10">
+            <span className="text-xs uppercase tracking-widest text-[#c5a880] font-mono block mb-2">
+              HCI LAB / CORE PILLARS
+            </span>
+            <h3 className="text-2xl md:text-4xl font-light text-white">
+              Primary Research Domains
+            </h3>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {[
               {
-                icon: Eye,
-                title: "Assistive Gaze & EOG",
-                desc: "Hands-free spatial gaze interaction and Electrooculography (EOG) signal processing for motor-accessible computing.",
-                borderColor: "group-hover:border-[#38bdf8]/50",
-                glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",
-                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]",
-                link: "/projects/eog-object-selection"
+                domain: "HCI",
+                icon: Users,
+                title: "Human-Computer Interaction",
+                desc: "Accessible multimodal interfaces, Indian Sign Language neural translation, and intelligent interactive assistive systems.",
+                borderColor: "group-hover:border-[#c5a880]/50",
+                glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
+                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
+                link: "/projects?domain=HCI"
               },
               {
+                domain: "XR",
                 icon: Layers,
-                title: "Virtual Reality & Physics",
-                desc: "High-fidelity physics simulation for athletic training, augmented reality spatial navigation, and pre-surgical mixed reality.",
-                borderColor: "group-hover:border-[#c5a880]/50",
-                glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
-                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
-                link: "/projects/vr-badminton"
-              },
-              {
-                icon: Brain,
-                title: "Sign Language Translation",
-                desc: "Deep learning transformer architectures translating Indian Sign Language (ISL) gestures into real-time speech and text.",
-                borderColor: "group-hover:border-[#c5a880]/50",
-                glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
-                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
-                link: "/projects/isl-translation"
-              },
-              {
-                icon: Cpu,
-                title: "Medical Mixed Reality",
-                desc: "Asynchronous 6DOF spatial computing frameworks enabling collaborative 3D anatomical organ annotation.",
+                title: "Extended Reality (VR / AR)",
+                desc: "High-fidelity physics simulation for athletic training, asynchronous surgical teleconsultation, and cultural heritage exploration.",
                 borderColor: "group-hover:border-[#38bdf8]/50",
                 glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",
                 iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]",
-                link: "/projects/mr-teleconsultation"
+                link: "/projects?domain=XR"
+              },
+              {
+                domain: "CV",
+                icon: Eye,
+                title: "Computer Vision & AI",
+                desc: "Deep learning models for temporal video forgery detection, continuous human pose estimation, and low-light image enhancement.",
+                borderColor: "group-hover:border-[#38bdf8]/50",
+                glowColor: "group-hover:shadow-[0_0_25px_rgba(56,189,248,0.15)]",
+                iconBg: "bg-[#38bdf8]/10 text-[#38bdf8]",
+                link: "/projects?domain=CV"
+              },
+              {
+                domain: "BCI",
+                icon: Cpu,
+                title: "Brain-Computer Interfaces",
+                desc: "Electrooculography (EOG) gaze tracking, EEG neuro-cognitive workload analysis, and hands-free assistive bio-potential interfaces.",
+                borderColor: "group-hover:border-[#c5a880]/50",
+                glowColor: "group-hover:shadow-[0_0_25px_rgba(197,168,128,0.15)]",
+                iconBg: "bg-[#c5a880]/15 text-[#c5a880]",
+                link: "/projects?domain=BCI"
               }
             ].map((pillar, idx) => (
               <motion.div
-                key={pillar.title}
+                key={pillar.domain}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -341,8 +354,13 @@ export default function Home() {
                   className={`group bg-slate-900/80 border border-white/10 rounded-2xl p-6 sm:p-8 transition-all duration-500 backdrop-blur-xl flex flex-col justify-between h-full ${pillar.borderColor} ${pillar.glowColor}`}
                 >
                   <div>
-                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 sm:mb-6 transition-transform duration-500 group-hover:scale-105 ${pillar.iconBg}`}>
-                      <pillar.icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="flex items-center justify-between mb-5 sm:mb-6">
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-transform duration-500 group-hover:scale-105 ${pillar.iconBg}`}>
+                        <pillar.icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                      </div>
+                      <span className="text-xs font-mono font-bold tracking-widest text-[#c5a880] border border-[#c5a880]/30 px-2.5 py-1 rounded-md bg-[#c5a880]/10">
+                        {pillar.domain}
+                      </span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-light text-white mb-2 sm:mb-3 group-hover:text-[#c5a880] transition-colors">
                       {pillar.title}
@@ -352,7 +370,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="mt-5 sm:mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-500 group-hover:text-[#c5a880] transition-colors">
-                    <span>Explore Project</span>
+                    <span>Explore {pillar.domain} Projects</span>
                     <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

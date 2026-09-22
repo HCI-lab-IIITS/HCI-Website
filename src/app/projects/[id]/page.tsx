@@ -49,6 +49,7 @@ interface Project {
   slug?: string;
   title: string;
   category?: string;
+  domains?: string[];
   status?: string;
   progress?: number;
   startDate?: string;
@@ -127,7 +128,12 @@ export default function ProjectDetailPage() {
           {project.category && (
             <>
               <span className="text-white/30">/</span>
-              <span className="text-slate-400 truncate max-w-xs md:max-w-md">{project.category}</span>
+              <Link
+                href={`/projects?domain=${encodeURIComponent(project.category)}`}
+                className="text-slate-400 hover:text-[#c5a880] transition-colors truncate max-w-xs md:max-w-md"
+              >
+                {project.category}
+              </Link>
             </>
           )}
         </div>
@@ -169,10 +175,25 @@ export default function ProjectDetailPage() {
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 md:bottom-10 md:left-10 md:right-10 flex flex-col items-start">
             <div className="flex flex-wrap items-center gap-2 mb-2 sm:mb-3">
               {project.category && (
-                <span className="px-2.5 sm:px-3 py-1 bg-[#c5a880] text-black font-mono font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-none shadow-lg">
+                <Link
+                  href={`/projects?domain=${encodeURIComponent(project.category)}`}
+                  className="px-2.5 sm:px-3 py-1 bg-[#c5a880] text-black font-mono font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-md shadow-lg hover:bg-white transition-colors"
+                >
                   {project.category}
-                </span>
+                </Link>
               )}
+              {Array.isArray(project.domains) &&
+                project.domains
+                  .filter((d) => d !== project.category)
+                  .map((d) => (
+                    <Link
+                      key={d}
+                      href={`/projects?domain=${encodeURIComponent(d)}`}
+                      className="px-2.5 sm:px-3 py-1 bg-slate-800/80 text-[#38bdf8] border border-[#38bdf8]/30 font-mono font-bold text-[9px] sm:text-[10px] uppercase tracking-widest rounded-md shadow-lg hover:bg-[#38bdf8]/20 transition-colors"
+                    >
+                      {d}
+                    </Link>
+                  ))}
               {project.status && (
                 <span
                   className={`px-2.5 sm:px-3 py-1 font-mono text-[9px] sm:text-[10px] uppercase tracking-widest border backdrop-blur-md ${

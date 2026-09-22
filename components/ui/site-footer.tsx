@@ -38,45 +38,34 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Column 2: Research Focus */}
+          {/* Column 2: Research Domains */}
           <div className="lg:col-span-3">
             <h4 className="text-xs font-mono uppercase tracking-widest text-[#c5a880] mb-4">
               Research Domains
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400 font-light">
+            <ul className="space-y-3 text-xs sm:text-sm text-slate-400 font-light">
               <li>
-                <Link href="/projects/gnn-video-detection" className="hover:text-white transition-colors">
-                  AI Video Detection & Temporal GNNs
+                <Link href="/projects?domain=HCI" className="hover:text-white transition-colors group block">
+                  <span className="text-white font-medium group-hover:text-[#c5a880] transition-colors">HCI</span>
+                  <span className="text-slate-400 text-xs block">Human-Computer Interaction</span>
                 </Link>
               </li>
               <li>
-                <Link href="/projects/vr-badminton" className="hover:text-white transition-colors">
-                  Spatial Computing & VR Coaching
+                <Link href="/projects?domain=XR" className="hover:text-white transition-colors group block">
+                  <span className="text-white font-medium group-hover:text-[#38bdf8] transition-colors">XR</span>
+                  <span className="text-slate-400 text-xs block">Extended Reality (VR / AR)</span>
                 </Link>
               </li>
               <li>
-                <Link href="/projects/mr-teleconsultation" className="hover:text-white transition-colors">
-                  Healthcare Mixed Reality
+                <Link href="/projects?domain=CV" className="hover:text-white transition-colors group block">
+                  <span className="text-white font-medium group-hover:text-[#38bdf8] transition-colors">CV</span>
+                  <span className="text-slate-400 text-xs block">Computer Vision & AI</span>
                 </Link>
               </li>
               <li>
-                <Link href="/projects/eog-object-selection" className="hover:text-white transition-colors">
-                  Assistive Gaze & EOG Interfaces
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/isl-translation" className="hover:text-white transition-colors">
-                  Indian Sign Language Translation
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/dpla-retriever" className="hover:text-white transition-colors">
-                  Neural Retrieval & LLM Systems
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects/tirumala-darshan-ar" className="hover:text-white transition-colors">
-                  Cultural Heritage & AR Navigation
+                <Link href="/projects?domain=BCI" className="hover:text-white transition-colors group block">
+                  <span className="text-white font-medium group-hover:text-[#c5a880] transition-colors">BCI</span>
+                  <span className="text-slate-400 text-xs block">Brain-Computer Interfaces</span>
                 </Link>
               </li>
             </ul>
