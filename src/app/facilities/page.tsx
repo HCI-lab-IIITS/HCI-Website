@@ -31,23 +31,7 @@ const equipmentList: EquipmentItem[] = [
     capabilities: 'Powers stereoscopic mixed-reality pre-surgical teleconsultation, patient organ inspection with sub-millimeter dynamic coordinate synchronization, and interactive cultural heritage navigation.',
     associatedProjects: [
       { title: 'MRConsultation (IEEE VR)', slug: 'mr-teleconsultation' },
-      { title: 'Tirumala Darshan AR', slug: 'tirumala-darshan-ar' },
-      { title: 'MangaSpace (Sony Faculty Award)', slug: 'mangaspace' }
-    ]
-  },
-  {
-    name: 'Meta Ray-Ban Smart Glasses (Wearables DAT)',
-    category: 'Spatial Computing & XR',
-    tag: 'Wearable Egocentric AI',
-    specs: [
-      '12 MP Ultra-Wide Egocentric Camera',
-      '5-Microphone Spatial Audio Array',
-      'Meta Wearables Device Access Toolkit (DAT) Android Integration',
-      'Sub-50g Lightweight All-Day Ergonomic Form Factor'
-    ],
-    capabilities: 'Captures continuous egocentric video and audio streams for wearable lifelogging, multi-signal perceptual importance scoring, and Poincaré hyperbolic episodic memory retrieval.',
-    associatedProjects: [
-      { title: 'EgoScore (ACM CHI 2027)', slug: 'egoscore' }
+      { title: 'Tirumala Darshan AR', slug: 'tirumala-darshan-ar' }
     ]
   },
   {
@@ -106,29 +90,11 @@ const equipmentList: EquipmentItem[] = [
       'AMD Ryzen 9 7950X 16-Core / 32-Thread Processor',
       'High-Speed PCIe Gen 5 NVMe Scratch Arrays'
     ],
-    capabilities: 'Accelerates training of temporal Graph Neural Networks for video forgery detection, dense multi-modal neural retrieval, and offline hyperbolic graph embedding convergence.',
+    capabilities: 'Accelerates training of temporal Graph Neural Networks for video forgery detection, web-scale neural retrieval, and multi-modal computer vision models.',
     associatedProjects: [
       { title: 'GNN AI Video Detection', slug: 'gnn-video-detection' },
-      { title: 'GraphCLaRa (ACM CIKM 2026)', slug: 'graphclara' },
       { title: 'DPLA-Retriever (ACM WWW 2026)', slug: 'dpla-retriever' },
-      { title: 'PHYLOS Bio-Inspired Architecture', slug: 'phylos' },
-      { title: 'MangaSpace (Sony Faculty Award)', slug: 'mangaspace' }
-    ]
-  },
-  {
-    name: 'Local LLM & Reasoning Sandboxed Execution Cluster',
-    category: 'Neural Compute',
-    tag: 'Autonomous AI Infrastructure',
-    specs: [
-      'Hardware-Isolated Sandboxed Linux Compute Container',
-      'Local Quantized Inference Engines (vLLM, Ollama)',
-      'Support for DeepSeek-R1-Distill-Qwen, Llama-3-70B, Qwen-2.5',
-      'Automated Test Fixture & Code Sandboxing Environment'
-    ],
-    capabilities: 'Executes agentic paper comprehension, dynamic code synthesis, and sandboxed experiment verification without data egress, powering autonomous research workflows.',
-    associatedProjects: [
-      { title: 'ReallyUnderstandPapers', slug: 'really-understand-papers' },
-      { title: 'Algorithmic Collusion (AAAI)', slug: 'aclm-labor-markets' }
+      { title: 'ISL Gesture Translation', slug: 'isl-translation' }
     ]
   },
   {

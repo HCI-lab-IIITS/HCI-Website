@@ -45,8 +45,8 @@ export function SiteFooter() {
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-400 font-light">
               <li>
-                <Link href="/projects/egoscore" className="hover:text-white transition-colors">
-                  Wearable Computing & EgoScore
+                <Link href="/projects/gnn-video-detection" className="hover:text-white transition-colors">
+                  AI Video Detection & Temporal GNNs
                 </Link>
               </li>
               <li>
@@ -75,8 +75,8 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects/phylos" className="hover:text-white transition-colors">
-                  Bio-Inspired AI & PHYLOS
+                <Link href="/projects/tirumala-darshan-ar" className="hover:text-white transition-colors">
+                  Cultural Heritage & AR Navigation
                 </Link>
               </li>
             </ul>

@@ -24,8 +24,8 @@ export default function Home() {
       caption: "IEEE ISMAR 2026: VR Badminton Adaptive Biomechanical Coaching"
     },
     {
-      image: "/projects/egoscore/fig4_egograph_system_arch.png",
-      caption: "ACM CHI 2027: EgoScore Steerable Topological Memory for Smart Glasses"
+      image: "/projects/dpla-retriever/dpla_architecture.png",
+      caption: "ACM WWW 2026: DPLA-Retriever Single-GPU Web-Scale Neural Retrieval"
     },
     {
       image: "/projects/mr-teleconsult/system_composite.png",
@@ -34,21 +34,17 @@ export default function Home() {
     {
       image: "/photos/lab/isl_gesture_recording.jpg",
       caption: "Indian Sign Language AI: Multi-Modal Gesture Recognition Setup"
-    },
-    {
-      image: "/projects/mangaspace/teaser.jpg",
-      caption: "Sony Faculty Award '26: MangaSpace Material-Aware Mixed Reality Exaggeration"
     }
   ];
 
   const stickyCardsData = [
     {
-      id: "egoscore",
-      title: "EgoScore: Steerable Topological Memory for Egocentric Wearables",
-      category: "ACM CHI 2027",
-      description: "Multi-signal perceptual importance scoring and Poincaré hyperbolic graph retrieval for Meta Ray-Ban smart glasses lifelogging.",
-      link: "/projects/egoscore",
-      image: "/projects/egoscore/fig4_egograph_system_arch.png"
+      id: "dpla-retriever",
+      title: "DPLA-Retriever: Single-GPU Neural Retrieval for 21M Passages",
+      category: "ACM WWW 2026",
+      description: "Memory-efficient multi-tier retrieval framework indexing 21 million passages within 2.58 GB active VRAM, allowing full co-location of an 8B LLM reader.",
+      link: "/projects/dpla-retriever",
+      image: "/projects/dpla-retriever/dpla_architecture.png"
     },
     {
       id: "mr-teleconsult",
@@ -81,14 +77,6 @@ export default function Home() {
       description: "Hands-free spatial object selection and gaze interaction using Electrooculography (EOG) signals for motor accessibility.",
       link: "/projects/eog-object-selection",
       image: "/projects/eog-interface/Screenshot 2026-08-08 193155.png"
-    },
-    {
-      id: "mangaspace",
-      title: "MangaSpace: Physical Stylization & Deformation Priors in MR",
-      category: "SONY RESEARCH AWARD '26",
-      description: "Viscoelastic-to-artistic projection mapping continuous mechanical impedance to volume-preserving anime deformation manifolds for Meta Quest 3.",
-      link: "/projects/mangaspace",
-      image: "/projects/mangaspace/teaser.jpg"
     }
   ];
 
