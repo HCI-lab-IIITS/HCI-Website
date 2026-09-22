@@ -387,19 +387,6 @@
         "Biomechanical Tracking"
       ],
       "bio": "Undergraduate researcher at HCI Lab IIIT Sri City working on body-scaled kinematics and full-body IMU tracking for VR athletic training."
-    },
-    {
-      "id": 31,
-      "name": "Vaishnav Kameswaran",
-      "type": "faculty",
-      "email": "vaishnav.kameswaran@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "Human-Computer Interaction",
-        "Accessibility",
-        "Virtual Reality"
-      ],
-      "bio": "Collaborating researcher in Human-Computer Interaction, accessibility, and immersive computing."
     }
   ],
   "types": [
