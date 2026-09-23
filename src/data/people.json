@@ -47,25 +47,36 @@
       "id": 4,
       "name": "Prathik M Hadagali",
       "type": "jrf",
+      "title": "Junior Research Fellow",
       "year": "PG",
       "email": "jrf2.hs@iiits.in",
       "imageUrl": "/Prathik Hadagali.jpg",
       "researchAreas": [
-        " Machine Learning, Neural Networks, AR, LangGraph, AI Agents"
+        "Machine Learning",
+        "Neural Networks",
+        "Augmented Reality",
+        "LangGraph",
+        "AI Agents"
       ],
-      "bio": "Expertise in Machine Learning, Deep Learning, and NLP Skilled in building scalable AI models, NLP pipelines, and full-stack applications. Passionate about leveraging AI Agents."
+      "bio": "Expertise in Machine Learning, Deep Learning, and NLP Skilled in building scalable AI models, NLP pipelines, and full-stack applications. Passionate about leveraging AI Agents."
     },
     {
       "id": 5,
       "name": "Dhanvanth Singari",
       "type": "jrf",
+      "title": "Junior Research Fellow",
       "year": "PG",
       "email": "jrf1.hs@iiits.in",
       "imageUrl": "/Dhanvanth.jpg",
       "researchAreas": [
-        "Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Generative AI, Multimodal Learning, Human–Computer Interaction, and Assistive Technology."
+        "Machine Learning",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Generative AI",
+        "Human-Computer Interaction",
+        "Assistive Technology"
       ],
-      "bio": "AI researcher building sign language interpreters using machine learning, computer vision, and generative AI for accessible communication."
+      "bio": "AI researcher building sign language interpreters using machine learning, computer vision, and generative AI for accessible communication."
     },
     {
       "id": 6,
@@ -95,42 +106,6 @@
     },
     {
       "id": 8,
-      "name": "Aditya Pal",
-      "type": "student",
-      "year": "UG4",
-      "email": "aditya.pl22@iiits.in",
-      "imageUrl": "/AdityaPal.jpg",
-      "researchAreas": [
-        ""
-      ],
-      "bio": ""
-    },
-    {
-      "id": 9,
-      "name": "Abhiram",
-      "type": "student",
-      "year": "UG4",
-      "email": "abhiram.k22@iiits.in",
-      "imageUrl": "/Abhiram.jpg",
-      "researchAreas": [
-        "yoga-based exergames in VR, exploring poses like Suryanamaskar and Warrior for immersive health applications"
-      ],
-      "bio": "I’m Abhiram, a Computer Science student passionate about low-level systems, Game Development, Cybersecurity and AI."
-    },
-    {
-      "id": 10,
-      "name": "Vihaan",
-      "type": "student",
-      "year": "UG4",
-      "email": "vihaanreddy.t22@iiits.in",
-      "imageUrl": "/Vihaan.jpg",
-      "researchAreas": [
-        "GenAI, VR"
-      ],
-      "bio": "Undergraduate researcher exploring accessibility in VR through generative AI."
-    },
-    {
-      "id": 11,
       "name": "Abhijit Patil",
       "type": "student",
       "year": "UG3",
@@ -143,33 +118,7 @@
       "bio": "Undergraduate researcher focusing on EEG-based VR learning systems."
     },
     {
-      "id": 12,
-      "name": "Sambhav Manohar",
-      "type": "student",
-      "year": "UG2",
-      "email": "sambhav.m24@iiits.in",
-      "imageUrl": "/Sambhav.png",
-      "researchAreas": [
-        "Extended Reality",
-        "Adaptive Systems"
-      ],
-      "bio": "Developing modular XR platforms for upper limb rehabilitation."
-    },
-    {
-      "id": 13,
-      "name": "Mohit Madhu",
-      "type": "student",
-      "year": "UG2",
-      "email": "mohitmadhu.j24@iiits.in",
-      "imageUrl": "/mohit2.jpg",
-      "researchAreas": [
-        "VR Development",
-        "Human-Computer Interaction"
-      ],
-      "bio": "Working on immersive VR experiences for educational applications."
-    },
-    {
-      "id": 14,
+      "id": 9,
       "name": "Chaitanya Anand",
       "type": "student",
       "year": "UG4",
@@ -184,31 +133,33 @@
       "bio": "Undergraduate researcher at HCI Lab IIIT Sri City. Researches wearable egocentric memory architectures, asymmetric mixed reality surgical teleconsultation, and neuro-symbolic VR coaching systems."
     },
     {
-      "id": 15,
-      "name": "Satyam Kumar",
+      "id": 10,
+      "name": "Sambhav Manohar",
       "type": "student",
       "year": "UG2",
-      "email": "satyamkumar.m24@iiits.in",
-      "imageUrl": "/SatyamKumar.jpg",
+      "email": "sambhav.m24@iiits.in",
+      "imageUrl": "/Sambhav.png",
       "researchAreas": [
-        "AR navigations"
+        "Extended Reality",
+        "Adaptive Systems"
       ],
-      "bio": "Undergraduate researcher working on AR applications in Tourism and real world navigation."
+      "bio": "Developing modular XR platforms for upper limb rehabilitation."
     },
     {
-      "id": 16,
-      "name": "Jai Krithik",
+      "id": 11,
+      "name": "Mohit Madhu",
       "type": "student",
       "year": "UG2",
-      "email": "jaikrithik.s24@iiits.in",
-      "imageUrl": "/Jaikrithik.jpg",
+      "email": "mohitmadhu.j24@iiits.in",
+      "imageUrl": "/mohit2.jpg",
       "researchAreas": [
-        ""
+        "VR Development",
+        "Human-Computer Interaction"
       ],
-      "bio": "Undergraduate researcher working on XR applications in Rehabilitation and Surgery."
+      "bio": "Working on immersive VR experiences for educational applications."
     },
     {
-      "id": 17,
+      "id": 12,
       "name": "Krish Kathiriya",
       "type": "student",
       "year": "UG2",
@@ -221,147 +172,20 @@
       "bio": "Undergraduate researcher working on XR applications in Rehabilitation and Surgery."
     },
     {
-      "id": 18,
-      "name": "Prajwal Gundala",
+      "id": 13,
+      "name": "Vijaya Sri",
       "type": "student",
-      "year": "UG2",
-      "email": "prajwal.g24@iiits.in",
-      "imageUrl": "/Prajwal.png",
-      "researchAreas": [
-        "XR development",
-        ""
-      ],
-      "bio": "Undergraduate researcher working on XR applications in Rehabilitation and Surgery."
-    },
-    {
-      "id": 19,
-      "name": "Satyam Kumar Singh",
-      "type": "alumni",
-      "year": "2023",
-      "email": "satyamkumar.s19@iiits.in",
-      "imageUrl": "/Satyam_singh.jpg",
-      "researchAreas": [
-        "VR Development",
-        "Game-Based Learning"
-      ],
-      "bio": ""
-    },
-    {
-      "id": 20,
-      "name": "Shiva Rama Krishna",
-      "type": "alumni",
-      "year": "2024",
-      "email": "shivaramakrishna.m20@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "Physics Education",
-        "VR Simulations"
-      ],
-      "bio": "Former undergraduate researcher who worked on Developing VR simulations for physics education, particularly projectile motion."
-    },
-    {
-      "id": 21,
-      "name": "Vedantam Sai Suvanth",
-      "type": "alumni",
-      "year": "2024",
-      "email": "saisuvanth.v20@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "Educational Technology",
-        "VR Development"
-      ],
-      "bio": "Former undergraduate researcher who worked on Creating immersive educational experiences using virtual reality."
-    },
-    {
-      "id": 22,
-      "name": "Shardul Kurdukar",
-      "type": "alumni",
-      "year": "2024",
-      "email": "anirudhakurdukar.s20@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "Game Development",
-        "VR Education"
-      ],
-      "bio": "Former undergraduate researcher who worked on Developing game-based VR platforms for educational purposes."
-    },
-    {
-      "id": 23,
-      "name": "Nishant Shinde",
-      "type": "alumni",
-      "year": "2025",
-      "email": "nishant.s21@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "STEM Education",
-        "VR Simulations"
-      ],
-      "bio": "Former undergraduate researcher who worked on Enhancing STEM curriculum with virtual reality simulations for electricity and magnetism."
-    },
-    {
-      "id": 24,
-      "name": "Dr. Mahaboob Shaik",
-      "type": "alumni",
-      "year": "2023",
-      "email": "mahaboob.s19@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "VR Development",
-        "Game-Based Learning"
-      ],
-      "bio": "Former undergraduate researcher who worked on VR platforms for geometry education. Now pursuing higher studies."
-    },
-    {
-      "id": 25,
-      "name": "Surya Teja Tangirala",
-      "type": "alumni",
-      "year": "2023",
-      "email": "suryateja.t19@iiits.in",
-      "imageUrl": null,
-      "researchAreas": [
-        "Virtual Reality",
-        "Educational Technology"
-      ],
-      "bio": "Former team member who contributed to game-based VR platforms. Currently working in the tech industry."
-    },
-    {
-      "id": 26,
-      "name": "Pratishtha Prasoon",
-      "type": "student",
-      "year": "ug1",
-      "email": "pratishtha.p25@iiits.in",
-      "imageurl": null,
-      "researchAreas": [
-        "XR development"
-      ],
-      "bio": "Undergraduate researcher working on extended xr rehab."
-    },
-    {
-      "id": 27,
-      "name": "Ashiwn A J",
-      "type": "student",
-      "year": "ug1",
-      "email": "ashiwn.a25@iiits.in",
-      "imageurl": null,
-      "researchAreas": [
-        "XR development"
-      ],
-      "bio": "Undergraduate researcher working on extended xr rehab."
-    },
-    {
-      "id": 28,
-      "name": "Vijaya sri  ",
-      "type": "student",
-      "year": "ug1",
+      "year": "UG1",
       "email": "vijayasri.c25@iiits.in",
-      "imageurl": null,
+      "imageUrl": null,
       "researchAreas": [
-        "computer vision "
+        "Computer Vision",
+        "Indian Sign Language"
       ],
       "bio": "Undergraduate researcher working on Indian sign language."
     },
     {
-      "id": 29,
+      "id": 14,
       "name": "Suryansh Bakshi",
       "type": "student",
       "year": "UG4",
@@ -375,7 +199,7 @@
       "bio": "Undergraduate researcher at HCI Lab IIIT Sri City working on high-fidelity VR physics simulation and adaptive athletic coaching."
     },
     {
-      "id": 30,
+      "id": 15,
       "name": "Phileep Raipure",
       "type": "student",
       "year": "UG4",
@@ -387,6 +211,19 @@
         "Biomechanical Tracking"
       ],
       "bio": "Undergraduate researcher at HCI Lab IIIT Sri City working on body-scaled kinematics and full-body IMU tracking for VR athletic training."
+    },
+    {
+      "id": 16,
+      "name": "Nishant Shinde",
+      "type": "alumni",
+      "year": "2025",
+      "email": "nishant.s21@iiits.in",
+      "imageUrl": null,
+      "researchAreas": [
+        "STEM Education",
+        "VR Simulations"
+      ],
+      "bio": "Former undergraduate researcher who worked on Enhancing STEM curriculum with virtual reality simulations for electricity and magnetism."
     }
   ],
   "types": [
