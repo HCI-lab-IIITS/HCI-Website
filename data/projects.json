@@ -139,7 +139,7 @@
             "Vaishnav Kameswaran",
             "Himangshu Sarma"
           ],
-          "journal": "IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+          "journal": "Under Review / IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
           "year": 2026,
           "pdf": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
         }
@@ -485,19 +485,20 @@
       "featured": true,
       "publications": [
         {
-          "title": "Tirumala AR Camera Ready Manuscript",
+          "title": "HARI-AR: A Heritage Agent Reasoning Interface for Autonomous Outdoor Navigation and Semantic Spatial Reasoning",
           "authors": [
-            "HCI Lab Team",
-            "Himangshu Sarma"
+            "Prathik M Hadagali",
+            "Himangshu Sarma",
+            "Mrinmoy Ghorai"
           ],
-          "journal": "Research Publication",
-          "year": 2025,
+          "journal": "Under Review / IEEE International Symposium on Mixed and Augmented Reality (ISMAR 2026)",
+          "year": 2026,
           "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
         }
       ],
       "deployments": [
         {
-          "name": "Download Research Paper PDF",
+          "name": "Download HARI-AR Paper PDF",
           "link": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
         },
         {
@@ -571,8 +572,21 @@
       ],
       "funding": "Rs. 24,59,424",
       "fundingAgency": "IHub-Data IIIT Hyderabad DST India, DST, Govt of India",
-      "featured": true,
-      "publications": [],
+      "publications": [
+        {
+          "title": "Alphanumeric Fingerspelling: A New Large-Scale Dataset and Comparative Analysis of Methods for Indian Sign Language",
+          "authors": [
+            "Aditya Pal",
+            "Abraham Vellaiparambil Jose",
+            "Vaibhav Prajapati",
+            "K. Rangachary",
+            "Mrinmoy Ghorai",
+            "Himangshu Sarma"
+          ],
+          "journal": "Computer Graphics International (CGI) - Advances in Computer Graphics",
+          "year": 2025
+        }
+      ],
       "deployments": [],
       "features": [
         {
@@ -698,8 +712,22 @@
       ],
       "funding": "Rs. 9,94,943",
       "fundingAgency": "DRDO Young Scientist Laboratory – Artificial Intelligence (DYSL-AI), DRDO, Govt of India",
-      "featured": true,
-      "publications": [],
+      "publications": [
+        {
+          "title": "Semantic Map Injected GAN Training for Image-to-Image Translation",
+          "authors": [
+            "Balaram Singh Kshatriya",
+            "Shiv Ram Dubey",
+            "Himangshu Sarma",
+            "Kunal Chaudhary",
+            "Meva Ram Gurjar",
+            "Rahul Rai",
+            "Sunny Manchanda"
+          ],
+          "journal": "Proceedings of the Satellite Workshops of ICVGIP 2021",
+          "year": 2022
+        }
+      ],
       "deployments": [],
       "features": [
         {
@@ -880,7 +908,8 @@
             "Himangshu Sarma"
           ],
           "journal": "Advanced Engineering Informatics",
-          "year": 2021
+          "year": 2021,
+          "link": "https://doi.org/10.1016/j.aei.2021.101362"
         }
       ],
       "deployments": [],

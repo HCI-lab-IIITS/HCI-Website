@@ -89,21 +89,19 @@
       "pages": "112002"
     },
     {
-      "id": 38,
-      "title": "Immersive Augmented Reality Navigation and Architectural Exploration for Cultural Heritage: The Tirumala Experience",
+      "id": 39,
+      "title": "Alphanumeric Fingerspelling: A New Large-Scale Dataset and Comparative Analysis of Methods for Indian Sign Language",
       "authors": [
-        "Dr. Himangshu Sarma",
-        "Prathik M Hadagali",
-        "Yaswanth Sai",
-        "Charan Goud",
-        "Rama Krishna",
-        "Jaynil",
-        "Satyam Kumar"
+        "Aditya Pal",
+        "Abraham Vellaiparambil Jose",
+        "Vaibhav Prajapati",
+        "K. Rangachary",
+        "Mrinmoy Ghorai",
+        "Himangshu Sarma"
       ],
-      "journal": "IEEE International Conference on Culture and Computing (IVMSP / ICARCV)",
+      "journal": "Computer Graphics International (CGI) - Advances in Computer Graphics",
       "year": 2025,
-      "type": "Conference",
-      "pdf": "/projects/tirumala-ar/Final_camea_ready (1).pdf"
+      "type": "Conference"
     },
     {
       "id": 6,
