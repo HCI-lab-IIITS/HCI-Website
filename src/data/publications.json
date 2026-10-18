@@ -1,18 +1,6 @@
 {
   "publications": [
     {
-      "id": 29,
-      "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
-      "authors": [
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / IEEE Conference on Virtual Reality and 3D User Interfaces (IEEE VR 2026)",
-      "year": 2026,
-      "type": "Conference",
-      "pdfUrl": "/papers/MRConsultation_IEEE_VR.pdf"
-    },
-    {
       "id": 31,
       "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
       "authors": [
