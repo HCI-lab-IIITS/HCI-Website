@@ -1,32 +1,6 @@
 {
   "publications": [
     {
-      "id": 28,
-      "title": "Asymmetric Asynchronous Mixed Reality Teleconsultation: Empowering Pre-Operative Patient-Clinician Dialogue through Semantic Abstraction",
-      "authors": [
-        "Chaitanya Anand",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
-      "year": 2027,
-      "type": "Conference"
-    },
-    {
-      "id": 30,
-      "title": "XR Badminton: A Multi-Stroke Neuro-Symbolic Virtual Reality Coaching Platform with Body-Scaled Kinematics and Full-Body IMU Tracking",
-      "authors": [
-        "Suryansh Bakshi",
-        "Chaitanya Anand",
-        "Phileep Raipure",
-        "Vaishnav Kameswaran",
-        "Himangshu Sarma"
-      ],
-      "journal": "Under Review / ACM CHI Conference on Human Factors in Computing Systems (CHI 2027)",
-      "year": 2027,
-      "type": "Conference",
-      "pdfUrl": "/projects/vr-badminton/ismar26b-sub2438-i6.pdf"
-    },
-    {
       "id": 29,
       "title": "Local-Coordinate Serialization and Volumetric Smoothing for Low-Latency 6DOF Mixed Reality Consultation",
       "authors": [
@@ -449,7 +423,6 @@
   ],
   "years": [
     "all",
-    2027,
     2026,
     2025,
     2024,
