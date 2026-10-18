@@ -2,16 +2,20 @@
   "publications": [
     {
       "id": 31,
-      "title": "Adaptive Upper-Limb Rehabilitation Exergame in Standalone XR",
+      "title": "A Study in Transparent Adaptation and Joint-Level Feedback for Unsupervised Upper-Limb Rehabilitation",
       "authors": [
-        "Sambhav Manohar",
         "Mohit Madhu",
         "Chaitanya Anand",
-        "Himangshu Sarma"
+        "Sambhav Manohar",
+        "Abhijit Patil",
+        "Prajwal Gundala",
+        "Himangshu Sarma",
+        "Gabriel Zachmann"
       ],
-      "journal": "ACM CHI Extended Abstracts 2026 (CHI EA 2026)",
+      "journal": "Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26)",
       "year": 2026,
       "type": "Conference",
+      "doi": "https://doi.org/10.1145/3772363.3799393",
       "pdfUrl": "/papers/Modular_XR_Rehab_Poster.pdf"
     },
     {
