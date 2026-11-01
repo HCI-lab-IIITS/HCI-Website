@@ -432,7 +432,7 @@ export default function Home() {
             {[
               { num: "29+", label: "Peer-Reviewed Papers", sub: "ACM CHI, IEEE ISMAR, Elsevier, Springer" },
               { num: "₹88L+", label: "Research Grants", sub: "DST, SERB, DRDO, ISI" },
-              { num: "15+", label: "Active Research Projects", sub: "Wearables, XR, CV, BCI" },
+              { num: "17+", label: "Active Research Projects", sub: "Wearables, XR, CV, BCI" },
               { num: "5+", label: "Years of Academic Excellence", sub: "Est. IIIT Sri City" }
             ].map((stat, idx) => (
               <motion.div
